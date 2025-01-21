@@ -6,7 +6,7 @@ Collaborators: Lucia, Nikita, Josh
 
 ## Docker
 
-`docker-compose up -d' is the command to get the postgresql container running. There is a network 'cs22', so all containers that are deployed are under the same network and don't interact with any other containers that may be running. 
+`docker-compose up -d` is the command to get the postgresql container running. There is a network 'cs22', so all containers that are deployed are under the same network and don't interact with any other containers that may be running. 
 
 `docker-compose down` will stop all the containers running and the network. To stop an individual container you can run the command `docker stop <container_name_or_id>`
 
