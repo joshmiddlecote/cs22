@@ -1,11 +1,14 @@
 import psycopg2
 import csv
+import os 
+from dotenv import load_dotenv
 
+load_dotenv()
 # Database connection details
-host = "db"
-dbname = " "
-user = " "
-password = " "
+host = "localhost"
+dbname = os.getenv("DB_NAME")
+user = os.getenv("DB_USER")
+password = os.getenv("DB_PASSWORD")
 
 # Step 1: Connect to PostgreSQL database
 conn = psycopg2.connect(
