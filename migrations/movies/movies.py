@@ -15,6 +15,7 @@ def create_movies_table(cursor, conn):
             language VARCHAR(255),
             average_rating REAL,
             num_ratings BIGINT,
+            variance REAL,
             budget BIGINT DEFAULT 0,
             revenue BIGINT DEFAULT 0,
             overview VARCHAR(2000) DEFAULT NULL,
@@ -44,17 +45,17 @@ def insert_movie_data(cursor, conn):
         next(extra_details_csvreader)
         
         for row1, row2, row3 in zip(movie_csvreader, ratings_csvreader, extra_details_csvreader):
-            movie_id, title, genres = row1
-            _, average_rating, num_ratings = row2
+            movie_id, title, _ = row1
+            _, average_rating, num_ratings, variance = row2
             (budget, revenue, language, overview, runtime, tagline) = handle_missing_data(row3)
             year = re.search(r'\((\d{4})\)', title).group(1)
             title = re.sub(r'\s*\(\d{4}\)', '', title)
 
             cursor.execute("""
-                INSERT INTO movies (id, title, year_released, runtime, language, average_rating, num_ratings, budget, revenue, overview, tagline)
+                INSERT INTO movies (id, title, year_released, runtime, language, average_rating, num_ratings, variance, budget, revenue, overview, tagline)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (id) DO NOTHING;
-            """, (movie_id, title, year, runtime, language, average_rating, num_ratings, budget, revenue, overview, tagline))
+            """, (movie_id, title, year, runtime, language, average_rating, num_ratings, variance, budget, revenue, overview, tagline))
 
     conn.commit()
 
