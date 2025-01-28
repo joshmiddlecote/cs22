@@ -27,7 +27,29 @@ cursor.execute("""
         genres VARCHAR(255)
     );
 """)
+
+
+def createGenreLinkTable():
+    cursor.execute("""
+    CREATE TABLE GenreLink(
+        genreID INT PRIMARY KEY,
+        movieID INT NOT NULL,
+        FOREIGN KEY(movieID) REFERENCES Movies(movieID)
+    )
+    """)
+    
+
+def createGenresTable():
+    cursor.execute("""
+    CREATE TABLE Genres(
+        genreID INT PRIMARY KEY,
+        movieID INT NOT NULL,
+        FOREIGN KEY(movieID) REFERENCES Movies(movieID) 
+    """)
+
+
 conn.commit()
+
 
 # Step 3: Open the CSV file and load data into the table
 with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile:
