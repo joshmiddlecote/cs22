@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 import queries
 
 app = FastAPI()
-templates = Jinja2Templates(directory="../../templates")
+templates = Jinja2Templates(directory="../templates")
 
 @app.get("/movies")
 def read_root(request: Request):
