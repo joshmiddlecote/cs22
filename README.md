@@ -14,7 +14,11 @@ We will add to the docker compose file as the project goes on so that our app an
 
 ## Migrations
 
-`./migrations` will run the individual python scripts for tables to be created in the db and for data to be loaded in.
+`./migrations.sh` will run the individual python scripts for tables to be created in the db and for data to be loaded in.
+
+## Running the API
+
+`cd api` from root project directory and then `uvicorn main:app`. The default port is 8000. Optionally you can add `--reload` at the end, this will reload the app after every change made. This prevents from having to exit and start the app after every small change. 
 
 ## Branching
 
