@@ -102,7 +102,7 @@
             <p>{{ movie.director or 'N/A' }}</p>
 
             <h2>Runtime</h2>
-            <p>{{ movie.runtime }} minutes</p>
+            <p>{{ movie.runtime or 'N/A'}} minutes</p>
 
             <h2>Language</h2>
             <p>{{ movie.language_id or 'N/A' }}</p>
@@ -113,11 +113,11 @@
             <div class="budget-revenue">
                 <div>
                     <span>Budget:</span>
-                    <p>{{ movie.budget }}</p>
+                    <p>{{ movie.budget or 'N/A'}}</p>
                 </div>
                 <div>
                     <span>Revenue:</span>
-                    <p>{{ movie.revenue }}</p>
+                    <p>{{ movie.revenue or 'N/A'}}</p>
                 </div>
             </div>
         </div>

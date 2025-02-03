@@ -6,7 +6,7 @@
     <title>Movies List</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             background-color: #f4f4f9;
             color: #333;
@@ -15,42 +15,75 @@
             width: 80%;
             margin: 20px auto;
             padding: 20px;
+            text-align: center;
         }
         h1 {
-            text-align: center;
             font-size: 2.5em;
             color: #333;
             margin-bottom: 20px;
         }
+
+        .filter-box {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .filter-box label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .filter-box select {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .page-size-selector {
+            margin-bottom: 20px;
+        }
+        .page-size-selector label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        .page-size-selector select {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         .movie-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
+
         .movie-card {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.3s ease-in-out;
             text-align: center;
             padding: 15px;
-            height: 300px;
+            height: 320px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .movie-card:hover {
             transform: translateY(-5px);
-        }
-        .movie-card img {
-            max-width: 100%;
-            border-radius: 8px;
-            height: auto;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         .movie-card h3 {
-            font-size: 1.3em;
+            font-size: 1.4em;
             color: #333;
             margin: 10px 0;
         }
@@ -61,26 +94,33 @@
         }
         .movie-card .runtime {
             font-size: 1.1em;
-            color: #333;
+            font-weight: bold;
+            color: #444;
         }
+
         .pagination {
-            text-align: center;
             margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .pagination a {
+            padding: 10px 20px;
             margin: 0 5px;
-            padding: 10px 15px;
             text-decoration: none;
+            font-size: 1.1em;
             background-color: #4CAF50;
             color: white;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         .pagination a:hover {
             background-color: #45a049;
         }
         .pagination span {
-            margin: 0 5px;
-            padding: 10px 15px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -88,12 +128,42 @@
 
 <div class="container">
     <h1>Movies</h1>
+
+    <div class="filter-box">
+        <form method="GET" action="/movies">
+            <label for="year_released">Year Released:</label>
+            <select id="year_released" name="year_released">
+                <option value="">--Select Year--</option>
+                <option value="2022" {% if year_released == '2022' %}selected{% endif %}>2022</option>
+                <option value="2021" {% if year_released == '2021' %}selected{% endif %}>2021</option>
+                <option value="2020" {% if year_released == '2020' %}selected{% endif %}>2020</option>
+                <option value="2019" {% if year_released == '2019' %}selected{% endif %}>2019</option>
+            </select>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="">--Select Rating--</option>
+                <option value="1" {% if rating == '1' %}selected{% endif %}>1 Star</option>
+                <option value="2" {% if rating == '2' %}selected{% endif %}>2 Stars</option>
+                <option value="3" {% if rating == '3' %}selected{% endif %}>3 Stars</option>
+                <option value="4" {% if rating == '4' %}selected{% endif %}>4 Stars</option>
+                <option value="5" {% if rating == '5' %}selected{% endif %}>5 Stars</option>
+            </select>
+
+            <input type="hidden" name="page" value="1">
+            <input type="hidden" name="size" value="{{ size }}">
+
+            <button type="submit">Apply Filters</button>
+        </form>
+    </div>
+
     <div class="movie-list">
         {% for movie in movies %}
         <div class="movie-card">
             <a href="/movies/{{ movie.id }}">
                 <h3>{{ movie.title }}</h3>
-                <p>{{ movie.overview[:100] }}...</p>
+                <p>{{ movie.tagline[:100] }}</p>
+                <p> Rating: {{ movie.rating }}/5.00</p>
                 <p class="runtime">{{ movie.runtime }} minutes</p>
             </a>
         </div>
@@ -101,14 +171,34 @@
     </div>
 
     <div class="pagination">
-        {% if page > 1 %}
-            <a href="/movies?page={{ page - 1 }}&size={{ size }}">Previous</a>
-        {% endif %}
+        <a href="/movies?page={{ page - 1 }}&size={{ size }}
+            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+            Previous
+        </a>
 
-        {% if page < total_pages %}
-            <a href="/movies?page={{ page + 1 }}&size={{ size }}">Next</a>
-        {% endif %}
+        <a href="/movies?page={{ page + 1 }}&size={{ size }}
+            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+            Next
+        </a>
     </div>
+
+    <br/>
+
+    <div class="page-size-selector">
+        <form method="GET" action="/movies">
+            <label for="size">Results per page:</label>
+            <select id="size" name="size" onchange="this.form.submit()">
+                <option value="5" {% if size == 5 %}selected{% endif %}>5</option>
+                <option value="10" {% if size == 10 %}selected{% endif %}>10</option>
+                <option value="20" {% if size == 20 %}selected{% endif %}>20</option>
+                <option value="50" {% if size == 50 %}selected{% endif %}>50</option>
+            </select>
+            <input type="hidden" name="page" value="1">
+        </form>
+    </div>
+
 </div>
 
 </body>
