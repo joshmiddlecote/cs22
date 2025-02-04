@@ -28,7 +28,7 @@ cursor.execute("""
         movieId INT NOT NULL, 
         tag VARCHAR(255) NOT NULL,
         PRIMARY KEY (movieId, tag),
-        FOREIGN KEY (movieId) REFERENCES movies(movieId) ON DELETE CASCADE
+        FOREIGN KEY (movieId) REFERENCES movies(id) ON DELETE CASCADE
     );
 """)
 
