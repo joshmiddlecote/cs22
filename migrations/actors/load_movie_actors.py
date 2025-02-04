@@ -28,7 +28,7 @@ cursor.execute("""
         movieId INT NOT NULL, 
         actorId INT NOT NULL,
         PRIMARY KEY (movieId, actorId),
-        FOREIGN KEY (movieId) REFERENCES movies(movieId) ON DELETE CASCADE,
+        FOREIGN KEY (movieId) REFERENCES movies(id) ON DELETE CASCADE,
         FOREIGN KEY (actorId) REFERENCES actor_mapping(actorId) ON DELETE CASCADE
     );
 """)
