@@ -15,16 +15,13 @@ async def root():
 @app.get("/movies")
 def read_root(
         request: Request, page: int = Query(1, ge=1), size: int = Query(10, le=100), 
-        year_released: int | None = Query(default=None), rating: float | None = Query(default=None)):
-    
-    print(year_released)
-    print(rating)
+        year_released: str | None = Query(default=None), rating: str | None = Query(default=None)):
     
     start_index = (page - 1) * size
     (movies, total_pages) = movie_queries.get_all_movies(size, start_index, year_released, rating)
     return templates.TemplateResponse("index.html", 
         {"request": request, "movies": movies, "page": page, 
-         "size": size, "total_pages": total_pages})
+         "size": size, "total_pages": total_pages, "rating": rating, "year_released": year_released})
 
 @app.get("/movies/{movie_id}")
 def read_movie(request: Request, movie_id: int):

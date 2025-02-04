@@ -134,27 +134,24 @@
             <label for="year_released">Year Released:</label>
             <select id="year_released" name="year_released">
                 <option value="">--Select Year--</option>
-                <option value="2022" {% if year_released == '2022' %}selected{% endif %}>2022</option>
-                <option value="2021" {% if year_released == '2021' %}selected{% endif %}>2021</option>
-                <option value="2020" {% if year_released == '2020' %}selected{% endif %}>2020</option>
-                <option value="2019" {% if year_released == '2019' %}selected{% endif %}>2019</option>
+                {% for year in range(2025, 1969, -1) %}
+                    <option value="{{ year }}" {% if year_released == year|string %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
             </select>
-            
+        
             <label for="rating">Rating:</label>
             <select id="rating" name="rating">
                 <option value="">--Select Rating--</option>
-                <option value="1" {% if rating == '1' %}selected{% endif %}>1 Star</option>
-                <option value="2" {% if rating == '2' %}selected{% endif %}>2 Stars</option>
-                <option value="3" {% if rating == '3' %}selected{% endif %}>3 Stars</option>
-                <option value="4" {% if rating == '4' %}selected{% endif %}>4 Stars</option>
-                <option value="5" {% if rating == '5' %}selected{% endif %}>5 Stars</option>
+                {% for i in range(1, 6) %}
+                    <option value="{{ i }}" {% if rating == i|string %}selected{% endif %}>{{ i }} Star{% if i > 1 %}s{% endif %}</option>
+                {% endfor %}
             </select>
-
+        
             <input type="hidden" name="page" value="1">
             <input type="hidden" name="size" value="{{ size }}">
-
+        
             <button type="submit">Apply Filters</button>
-        </form>
+        </form>        
     </div>
 
     <div class="movie-list">
@@ -171,15 +168,11 @@
     </div>
 
     <div class="pagination">
-        <a href="/movies?page={{ page - 1 }}&size={{ size }}
-            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
-            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+        <a href="/movies?page={{ page - 1 }}&size={{ size }}&year_released={{ year_released }}&rating={{ rating }}">
             Previous
         </a>
 
-        <a href="/movies?page={{ page + 1 }}&size={{ size }}
-            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
-            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+        <a href="/movies?page={{ page + 1 }}&size={{ size }}&year_released={{ year_released }}&rating={{ rating }}">
             Next
         </a>
     </div>
