@@ -1,0 +1,113 @@
+award_id,award_name
+o1,MUSIC (Original Musical or Comedy Score)
+o2,MUSIC (Original Song)
+o3,WRITING (Screenplay Written Directly for the Screen)
+o4,ACTOR IN A LEADING ROLE
+o5,ACTRESS IN A SUPPORTING ROLE
+o6,MUSIC (Original Dramatic Score)
+o7,ACTRESS IN A LEADING ROLE
+o8,CINEMATOGRAPHY
+o9,COSTUME DESIGN
+o10,BEST PICTURE
+o11,WRITING (Screenplay Based on Material Previously Produced or Published)
+o12,DIRECTING
+o13,ACTOR IN A SUPPORTING ROLE
+o14,ART DIRECTION
+o15,FILM EDITING
+o16,VISUAL EFFECTS
+o17,MAKEUP
+o18,SOUND
+o19,SOUND EFFECTS EDITING
+o20,MUSIC (Original Score)
+o21,DOCUMENTARY (Feature)
+o22,MUSIC (Scoring)
+o23,MUSIC (Song)
+o24,ACTOR
+o25,WRITING (Screenplay--based on material from another medium)
+o26,ACTRESS
+o27,ART DIRECTION (Color)
+o28,CINEMATOGRAPHY (Color)
+o29,MUSIC (Music Score of a Dramatic or Comedy Picture)
+o30,OUTSTANDING MOTION PICTURE
+o31,MUSIC (Scoring of a Musical Picture)
+o32,WRITING (Story and Screenplay--written directly for the screen)
+o33,SOUND RECORDING
+o34,WRITING (Screenplay)
+o35,OUTSTANDING PRODUCTION
+o36,WRITING (Adaptation)
+o37,ART DIRECTION (Black-and-White)
+o38,CINEMATOGRAPHY (Black-and-White)
+o39,BEST MOTION PICTURE
+o40,COSTUME DESIGN (Black-and-White)
+o41,COSTUME DESIGN (Color)
+o42,MUSIC (Scoring of Music--adaptation or treatment)
+o43,WRITING (Motion Picture Story)
+o44,SPECIAL EFFECTS
+o45,MUSIC (Music Score of a Dramatic Picture)
+o46,WRITING (Original Screenplay)
+o47,SPECIAL VISUAL EFFECTS
+o48,WRITING (Original Story)
+o49,ASSISTANT DIRECTOR
+o50,DANCE DIRECTION
+o51,WRITING (Screenplay--Adapted)
+o52,SHORT SUBJECT (Cartoon)
+o53,MUSIC (Music Score--substantially original)
+o54,MUSIC (Original Song Score and Its Adaptation or Adaptation Score)
+o55,MUSIC (Scoring: Adaptation and Original Song Score)
+o56,MUSIC (Song--Original for the Picture)
+o57,MUSIC (Original Song Score and Its Adaptation -or- Adaptation Score)
+o58,WRITING (Screenplay Based on Material from Another Medium)
+o59,FOREIGN LANGUAGE FILM
+o60,WRITING (Screenplay Written Directly for the Screen--based on factual material or on story material not previously published or produced)
+o61,WRITING (Story and Screenplay--based on factual material or material not previously published or produced)
+o62,MUSIC (Original Music Score)
+o63,WRITING (Screenplay Adapted from Other Material)
+o64,MUSIC (Original Score--for a motion picture [not a musical])
+o65,WRITING (Story and Screenplay--based on material not previously published or produced)
+o66,WRITING (Original Motion Picture Story)
+o67,WRITING (Story and Screenplay)
+o68,SOUND EFFECTS
+o69,MUSIC (Score of a Musical Picture--original or adaptation)
+o70,SPECIAL ACHIEVEMENT AWARD (Visual Effects)
+o71,MUSIC (Scoring: Original Song Score and Adaptation -or- Scoring: Adaptation)
+o72,SPECIAL ACHIEVEMENT AWARD (Sound Effects Editing)
+o73,MUSIC (Original Song Score or Adaptation Score)
+o74,SOUND EDITING
+o75,ANIMATED FEATURE FILM
+o76,SHORT FILM (Animated)
+o77,DOCUMENTARY (Short Subject)
+o78,WRITING (Adapted Screenplay)
+o79,SOUND MIXING
+o80,MUSIC (Original Song Score)
+o81,PRODUCTION DESIGN
+o82,MAKEUP AND HAIRSTYLING
+o83,SHORT FILM (Live Action)
+g1,Best Original Song - Motion Picture
+g2,Best Performance by an Actor in a Motion Picture - Musical or Comedy
+g3,Best Performance by an Actor in a Motion Picture - Drama
+g4,Best Performance by an Actress in a Motion Picture - Drama
+g5,Best Director - Motion Picture
+g6,Best Performance by an Actress in a Supporting Role in any Motion Picture
+g7,Best Screenplay - Motion Picture
+g8,Best Original Score - Motion Picture
+g9,Best Performance by an Actress in a Motion Picture - Musical or Comedy
+g10,Best Performance by an Actor in a Supporting Role in any Motion Picture
+g11,Special Achievement Award
+g12,Actress In A Leading Role - Musical Or Comedy
+g13,Actress In A Leading Role
+g14,New Star Of The Year - Actress
+g15,New Star Of The Year - Actor
+g16,Cinematography - Black And White
+g17,Juvenile Performance
+g18,Foreign Film - English Language
+g19,Best Performance by an Actor in a Limited Series or a Motion Picture Made for Television
+g20,New Star Of The Year
+g21,Samuel Goldwyn International Award
+g22,Promoting International Understanding
+g23,Foreign Film - Foreign Language
+g24,Best Performance by an Actress in a Limited Series or a Motion Picture Made for Television
+g25,Cinematography - Color
+g26,Cinematography
+g27,Best Performance by an Actress in a Supporting Role in a Series; Limited Series or Motion Picture Made for Television
+g28,Best Performance by an Actor in a Supporting Role in a Series; Limited Series or Motion Picture Made for Television
+g29,Best Performance by an Actress In A Television Series - Drama

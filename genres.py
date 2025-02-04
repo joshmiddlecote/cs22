@@ -36,16 +36,6 @@ def create_genre_links_table(cursor, conn):
     conn.commit()
 
 
-def create_movies_table(cursor, conn):
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS movies(
-            id INT PRIMARY KEY,
-            title VARCHAR(255),
-            genres VARCHAR(255)
-        );
-    """)
-    conn.commit()
-
 
 def insert_genres(cursor, conn):
     with open('data/ml-latest-small/genres.csv', 'r') as file:
@@ -64,22 +54,6 @@ def insert_genres(cursor, conn):
             """, (id, genre_name, avg_rating, variance, total_ratings)) 
 
     conn.commit()
-
-
-def insert_movies(cursor, conn):
-    with open('data/ml-latest-small/movies.csv', 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            movie_id = int(row['movieId'])
-            title = row['title']
-            genres = row['genres'].split('|')
-
-            cursor.execute("""
-                INSERT INTO movies(id, title, genres)
-                VALUES (%s, %s, %s)
-            """, (movie_id, title, genres))
-
-        conn.commit()
 
 
 def insert_genre_links(cursor, conn):
@@ -121,14 +95,14 @@ def main():
         drop_tables(cursor, conn)
 
         # create tables
-        create_movies_table(cursor, conn)
+        # create_movies_table(cursor, conn)
         create_genres_table(cursor, conn)
         create_genre_links_table(cursor, conn)
         print('Finished creating all tables')
 
         # insert data
-        insert_movies(cursor, conn)
-        print('Finished inserting movies data.')
+        # insert_movies(cursor, conn)
+        # print('Finished inserting movies data.')
         insert_genres(cursor, conn)
         print('Finished inserting genres data')
         insert_genre_links(cursor, conn)
