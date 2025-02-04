@@ -20,6 +20,9 @@ def get_db():
 def get_all_movies(limit=10, offset=0, year=None, rating=None):
     with get_db() as conn:
         with conn.cursor() as cursor:
+
+            print("year: {}", year)
+            print("rating: {}", rating)
             sql = "SELECT * FROM movies WHERE 1=1 "
             (sql_for_filters, params, sql_with_offset, params_with_offset) = maybe_filter_by_params(sql, year, rating, limit, offset)
             cursor.execute(sql_with_offset, tuple(params_with_offset))
@@ -53,11 +56,11 @@ def maybe_filter_by_params(sql, year, rating, limit, offset):
     filters = []
     params = []
 
-    if year is not None:
+    if year is not None or "":
         filters.append("year_released >= %s ")
         params.append(year)
     
-    if rating is not None:
+    if rating is not None or "":
         filters.append("average_rating >= %s ")
         params.append(rating)
 

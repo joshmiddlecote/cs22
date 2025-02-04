@@ -1,3 +1,7 @@
+docker-compose up -d
+
+s
+
 echo "Migrations running..."
 
 python3 migrations/languages/languages.py
