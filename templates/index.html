@@ -97,6 +97,12 @@
             font-weight: bold;
             color: #444;
         }
+        .movie-poster {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
 
         .pagination {
             margin-top: 30px;
@@ -158,6 +164,7 @@
         {% for movie in movies %}
         <div class="movie-card">
             <a href="/movies/{{ movie.id }}">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
                 <h3>{{ movie.title }}</h3>
                 <p>{{ movie.tagline[:100] }}</p>
                 <p> Rating: {{ movie.rating }}/5.00</p>
@@ -168,11 +175,15 @@
     </div>
 
     <div class="pagination">
-        <a href="/movies?page={{ page - 1 }}&size={{ size }}&year_released={{ year_released }}&rating={{ rating }}">
+        <a href="/movies?page={{ page - 1 }}&size={{ size }}
+            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
             Previous
         </a>
 
-        <a href="/movies?page={{ page + 1 }}&size={{ size }}&year_released={{ year_released }}&rating={{ rating }}">
+        <a href="/movies?page={{ page + 1 }}&size={{ size }}
+            {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
             Next
         </a>
     </div>

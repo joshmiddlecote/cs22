@@ -20,7 +20,7 @@ def get_db():
 def get_all_movies(limit=10, offset=0, year=None, rating=None):
     with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT * FROM movies WHERE 1=1 "
+            sql = "SELECT id, title, runtime, average_rating, tagline, poster FROM movies WHERE 1=1 "
             (sql_for_filters, params, sql_with_offset, params_with_offset) = maybe_filter_by_params(sql, year, rating, limit, offset)
             cursor.execute(sql_with_offset, tuple(params_with_offset))
             movies = cursor.fetchall()
@@ -31,7 +31,7 @@ def get_all_movies(limit=10, offset=0, year=None, rating=None):
             total_movies = cursor.fetchone()[0]
             
             total_pages = (total_movies + limit - 1) // limit if limit > 0 else 0
-            movies =  [{'id': movie[0], 'title': movie[1], 'runtime': movie[3], 'rating': round(movie[6], 2), 'tagline': movie[12]} for movie in movies]
+            movies =  [{'id': movie[0], 'title': movie[1], 'runtime': movie[2], 'rating': round(movie[3], 2), 'tagline': movie[4], "poster": movie[5]} for movie in movies]
 
             return (movies, total_pages)
         
