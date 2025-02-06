@@ -1,0 +1,1760 @@
+year_film,year_ceremony,ceremony,award_id,nominee,film,winner
+1995,1996,53,1,"You've Got a Friend In Me, Randy Newman",Toy Story,False
+1995,1996,53,2,Steve Martin,Father of the Bride Part II,False
+1995,1996,53,3,Anthony Hopkins,Nixon,False
+1995,1996,53,4,Sharon Stone,Casino,True
+1995,1996,53,5,Martin Scorsese,Casino,False
+1995,1996,53,4,Emma Thompson,Sense and Sensibility,False
+1995,1996,53,6,Kate Winslet,Sense and Sensibility,False
+1995,1996,53,5,Ang Lee,Sense and Sensibility,False
+1995,1996,53,7,Emma Thompson,Sense and Sensibility,True
+1995,1996,53,8,Patrick Doyle,Sense and Sensibility,False
+1995,1996,53,2,John Travolta,Get Shorty,True
+1995,1996,53,7,Scott Frank,Get Shorty,False
+1995,1996,53,4,Elisabeth Shue,Leaving Las Vegas,False
+1995,1996,53,3,Nicolas Cage,Leaving Las Vegas,True
+1995,1996,53,5,Mike Figgis,Leaving Las Vegas,False
+1995,1996,53,4,Susan Sarandon,Dead Man Walking,False
+1995,1996,53,3,Sean Penn,Dead Man Walking,False
+1995,1996,53,7,Tim Robbins,Dead Man Walking,False
+1995,1996,53,3,Ian McKellen,Richard III,False
+1995,1996,53,9,Nicole Kidman,To Die For,True
+1995,1996,53,8,Alan Menken,Pocahontas,False
+1995,1996,53,1,"Colors of the Wind, Alan Menken, Stephen Schwartz",Pocahontas,True
+1995,1996,53,6,Mira Sorvino,Mighty Aphrodite,True
+1995,1996,53,3,Richard Dreyfuss,Mr. Holland's Opus,False
+1995,1996,53,7,Patrick Sheane Duncan,Mr. Holland's Opus,False
+1995,1996,53,5,Mel Gibson,Braveheart,True
+1995,1996,53,7,Randall Wallace,Braveheart,False
+1995,1996,53,8,James Horner,Braveheart,False
+1976,1977,34,3,Robert De Niro,Taxi Driver,False
+1976,1977,34,7,Paul Schrader,Taxi Driver,False
+1995,1996,53,6,Kathleen Quinlan,Apollo 13,False
+1995,1996,53,10,Ed Harris,Apollo 13,False
+1995,1996,53,5,Ron Howard,Apollo 13,False
+1995,1996,53,10,Tim Roth,Rob Roy,False
+1995,1996,53,1,"""Hold Me, Thrill Me, Kiss Me, Kill Me"", U2",Batman Forever,False
+1995,1996,53,8,Michael Kamen,Don Juan DeMarco,False
+1995,1996,53,1,"Have You Ever Really Loved a Woman?, Bryan Adams, Michael Kamen, Robert John Lange",Don Juan DeMarco,False
+1994,1995,52,2,Johnny Depp,Ed Wood,False
+1994,1995,52,10,Martin Landau,Ed Wood,True
+1994,1995,52,9,Emma Thompson,Junior,False
+1994,1995,52,2,Arnold Schwarzenegger,Junior,False
+1994,1995,52,1,"Look What Love Has Done, James Newton Howard, Carole Bayer Sager, James Ingram, Patty Smyth",Junior,False
+1977,1978,35,10,Alec Guinness,Star Wars: Episode IV - A New Hope,False
+1977,1978,35,5,George Lucas,Star Wars: Episode IV - A New Hope,False
+1977,1978,35,8,John Williams,Star Wars: Episode IV - A New Hope,True
+1994,1995,52,3,Brad Pitt,Legends of the Fall,False
+1994,1995,52,5,Edward Zwick,Legends of the Fall,False
+1994,1995,52,8,James Horner,Legends of the Fall,False
+1994,1995,52,3,Paul Newman,Nobody's Fool,False
+1994,1995,52,4,Jodie Foster,Nell,False
+1994,1995,52,8,Mark Isham,Nell,False
+1994,1995,52,5,Oliver Stone,Natural Born Killers,False
+1994,1995,52,3,John Travolta,Pulp Fiction,False
+1994,1995,52,6,Uma Thurman,Pulp Fiction,False
+1994,1995,52,10,Samuel L. Jackson,Pulp Fiction,False
+1994,1995,52,5,Quentin Tarantino,Pulp Fiction,False
+1994,1995,52,7,Quentin Tarantino,Pulp Fiction,True
+1994,1995,52,10,John Turturro,Quiz Show,False
+1994,1995,52,5,Robert Redford,Quiz Show,False
+1994,1995,52,7,Paul Attanasio,Quiz Show,False
+1994,1995,52,4,Miranda Richardson,Tom & Viv,False
+1993,1994,51,10,Leonardo DiCaprio,What's Eating Gilbert Grape,False
+1995,1996,53,9,Sandra Bullock,While You Were Sleeping,False
+1994,1995,52,6,Dianne Wiest,Bullets Over Broadway,True
+1994,1995,52,3,Tom Hanks,Forrest Gump,True
+1994,1995,52,6,Robin Wright,Forrest Gump,False
+1994,1995,52,10,Gary Sinise,Forrest Gump,False
+1994,1995,52,5,Robert Zemeckis,Forrest Gump,True
+1994,1995,52,7,Eric Roth,Forrest Gump,False
+1994,1995,52,8,Alan Silvestri,Forrest Gump,False
+1994,1995,52,9,Andie MacDowell,Four Weddings and a Funeral,False
+1994,1995,52,2,Hugh Grant,Four Weddings and a Funeral,True
+1994,1995,52,7,Richard Curtis,Four Weddings and a Funeral,False
+1994,1995,52,9,Geena Davis,Speechless,False
+1994,1995,52,9,Jamie Lee Curtis,True Lies,True
+1993,1994,51,9,Anjelica Huston,Addams Family Values,False
+1994,1995,52,4,Jessica Lange,Blue Sky,True
+1993,1994,51,6,Penelope Ann Miller,Carlito's Way,False
+1993,1994,51,10,Sean Penn,Carlito's Way,False
+1994,1995,52,1,"The Color of the Night, Lauren Christy, Jud J. Friedman, Dominic Frontiere",Color of Night,False
+1993,1994,51,2,Kevin Kline,Dave,False
+1993,1994,51,6,Rosie Perez,Fearless,False
+1994,1995,52,1,"I'll Remember, Madonna, Patrick Leonard, Richard Page",With Honors,False
+1993,1994,51,10,John Malkovich,In the Line of Fire,False
+1993,1994,51,3,Daniel Day-Lewis,In the Name of the Father,False
+1993,1994,51,6,Emma Thompson,In the Name of the Father,False
+1993,1994,51,1,"(You Made Me the) Thief of Your Heart, Bono, Gavin Friday, Maurice Seezer",In the Name of the Father,False
+1993,1994,51,9,Diane Keaton,Manhattan Murder Mystery,False
+1993,1994,51,2,Robin Williams,Mrs. Doubtfire,True
+1993,1994,51,3,Tom Hanks,Philadelphia,True
+1993,1994,51,7,Ron Nyswaner,Philadelphia,False
+1993,1994,51,1,"Streets of Philadelphia, Bruce Springsteen",Philadelphia,True
+1993,1994,51,1,"Again, Janet Jackson, Jimmy Jam, Terry Lewis",Poetic Justice,False
+1993,1994,51,3,Liam Neeson,Schindler's List,False
+1993,1994,51,10,Ralph Fiennes,Schindler's List,False
+1993,1994,51,5,Steven Spielberg,Schindler's List,True
+1993,1994,51,7,Steven Zaillian,Schindler's List,True
+1993,1994,51,8,John Williams,Schindler's List,False
+1993,1994,51,7,Robert Altman,Short Cuts,False
+1993,1994,51,9,Stockard Channing,Six Degrees of Separation,False
+1993,1994,51,9,Meg Ryan,Sleepless in Seattle,False
+1993,1994,51,2,Tom Hanks,Sleepless in Seattle,False
+1982,1983,40,8,Vangelis Papathanassiou,Blade Runner,False
+1990,1991,48,2,Macaulay Culkin,Home Alone,False
+1990,1991,48,9,Demi Moore,Ghost,False
+1990,1991,48,2,Patrick Swayze,Ghost,False
+1990,1991,48,6,Whoopi Goldberg,Ghost,True
+1992,1993,50,8,Alan Menken,Aladdin,True
+1992,1993,50,1,"A Whole New World, Alan Menken, Tim Rice",Aladdin,True
+1992,1993,50,1,"Friend Like Me, Alan Menken, Tim Rice",Aladdin,False
+1992,1993,50,1,"Prince Ali, Alan Menken, Tim Rice",Aladdin,False
+1992,1993,50,11,Robin Williams,Aladdin,False
+1990,1991,48,3,Kevin Costner,Dances with Wolves,False
+1990,1991,48,6,Mary McDonnell,Dances with Wolves,False
+1990,1991,48,5,Kevin Costner,Dances with Wolves,True
+1990,1991,48,7,Michael Blake,Dances with Wolves,True
+1990,1991,48,8,John Barry,Dances with Wolves,False
+1989,1990,47,2,Jack Nicholson,Batman,False
+1991,1992,49,8,Alan Menken,Beauty and the Beast,True
+1991,1992,49,1,"Beauty and the Beast, Alan Menken, Howard Ashman",Beauty and the Beast,True
+1991,1992,49,1,"Be Our Guest, Alan Menken, Howard Ashman",Beauty and the Beast,False
+1990,1991,48,9,Julia Roberts,Pretty Woman,True
+1990,1991,48,2,Richard Gere,Pretty Woman,False
+1990,1991,48,10,Hector Elizondo,Pretty Woman,False
+1996,1997,54,1,"""For the First Time"", James Newton Howard, Jud J. Friedman, Allan Dennis Rich",One Fine Day,False
+1996,1997,54,9,Frances McDormand,Fargo,False
+1996,1997,54,5,Joel Coen,Fargo,False
+1996,1997,54,7,Ethan Coen,Fargo,False
+1996,1997,54,10,Edward Norton,Primal Fear,True
+1988,1989,46,1,"Why Should I Worry?, Dan Hartman, Charlie Midnight",Oliver & Company,False
+1996,1997,54,7,John Sayles,Lone Star,False
+1996,1997,54,3,Mel Gibson,Ransom,False
+1996,1997,54,2,Kevin Costner,Tin Cup,False
+1952,1953,10,2,Donald O'Connor,Singin' in the Rain,True
+1961,1962,19,12,Audrey Hepburn,Breakfast at Tiffany's,False
+1944,1945,2,13,Ingrid Bergman,Gaslight,True
+1959,1960,17,2,Jack Lemmon,Some Like It Hot,True
+1959,1960,17,12,Marilyn Monroe,Some Like It Hot,True
+1963,1964,21,2,Cary Grant,Charade,False
+1963,1964,21,12,Audrey Hepburn,Charade,False
+1964,1965,22,2,Rex Harrison,My Fair Lady,True
+1964,1965,22,10,Stanley Holloway,My Fair Lady,False
+1964,1965,22,5,George Cukor,My Fair Lady,True
+1964,1965,22,12,Audrey Hepburn,My Fair Lady,False
+1954,1955,12,7,Ernest Lehman,Sabrina,True
+1953,1954,11,4,Audrey Hepburn,Roman Holiday,True
+1982,1983,40,2,Peter O'Toole,My Favorite Year,False
+1982,1983,40,6,Lainie Kazan,My Favorite Year,False
+1950,1951,8,4,Bette Davis,All About Eve,False
+1950,1951,8,6,Thelma Ritter,All About Eve,False
+1950,1951,8,10,George Sanders,All About Eve,False
+1950,1951,8,5,Joseph L. Mankiewicz,All About Eve,False
+1950,1951,8,7,Joseph L. Mankiewicz,All About Eve,True
+1957,1958,15,2,Maurice Chevalier,Love in the Afternoon,False
+1957,1958,15,12,Audrey Hepburn,Love in the Afternoon,False
+1958,1959,16,2,Maurice Chevalier,Gigi,False
+1958,1959,16,2,Louis Jourdan,Gigi,False
+1958,1959,16,6,Hermione Gingold,Gigi,True
+1958,1959,16,5,Vincente Minnelli,Gigi,True
+1958,1959,16,12,Leslie Caron,Gigi,False
+1956,1957,14,5,George Stevens,Giant,False
+1956,1957,14,14,Carroll Baker,Giant,True
+1956,1957,14,14,Jayne Mansfield,Giant,False
+1955,1956,13,11,James Dean,East of Eden,False
+1956,1957,14,2,Cantinflas,Around the World in 80 Days,True
+1956,1957,14,5,Michael Anderson,Around the World in 80 Days,False
+1958,1959,16,5,Richard Brooks,Cat on a Hot Tin Roof,False
+1955,1956,13,5,Joshua Logan,Picnic,True
+1996,1997,54,3,Liam Neeson,Michael Collins,False
+1996,1997,54,8,Elliot Goldenthal,Michael Collins,False
+1974,1975,32,9,Helen Hayes,Herbie Rides Again,False
+1960,1961,18,14,Hayley Mills,Pollyanna,True
+1991,1992,49,8,Michael Kamen,Robin Hood: Prince of Thieves,False
+1991,1992,49,1,"(Everything I Do) I Do It For You, Michael Kamen, Bryan Adams, Robert John Lange",Robin Hood: Prince of Thieves,False
+1964,1965,22,2,Dick Van Dyke,Mary Poppins,False
+1964,1965,22,8,Richard M. Sherman,Mary Poppins,False
+1964,1965,22,12,Julie Andrews,Mary Poppins,True
+1977,1978,35,8,Joel Hirschhorn,Pete's Dragon,False
+1971,1972,29,12,Angela Lansbury,Bedknobs and Broomsticks,False
+1996,1997,54,4,Brenda Blethyn,Secrets & Lies,True
+1996,1997,54,6,Marianne Jean-Baptiste,Secrets & Lies,False
+1996,1997,54,1,"""That Thing You Do!"", Adam Schlesinger",That Thing You Do!,False
+1967,1968,25,4,Faye Dunaway,Bonnie and Clyde,False
+1967,1968,25,3,Warren Beatty,Bonnie and Clyde,False
+1967,1968,25,10,Michael J. Pollard,Bonnie and Clyde,False
+1967,1968,25,5,Arthur Penn,Bonnie and Clyde,False
+1967,1968,25,7,Robert Benton,Bonnie and Clyde,False
+1967,1968,25,15,Michael J. Pollard,Bonnie and Clyde,False
+1987,1988,45,9,Jennifer Grey,Dirty Dancing,False
+1987,1988,45,2,Patrick Swayze,Dirty Dancing,False
+1987,1988,45,1,"(I've Had) The Time of My Life, Franke Previte, Donald Markowitz, John DeNicola",Dirty Dancing,True
+1986,1987,44,10,Tom Berenger,Platoon,True
+1986,1987,44,5,Oliver Stone,Platoon,True
+1986,1987,44,7,Oliver Stone,Platoon,False
+1992,1993,50,4,Sharon Stone,Basic Instinct,False
+1992,1993,50,8,Jerry Goldsmith,Basic Instinct,False
+1992,1993,50,10,Al Pacino,Glengarry Glen Ross,False
+1982,1983,40,4,Meryl Streep,Sophie's Choice,True
+1982,1983,40,15,Kevin Kline,Sophie's Choice,False
+1986,1987,44,8,Harold Faltermeyer,Top Gun,False
+1986,1987,44,1,"Take My Breath Away, Giorgio Moroder, Tom Whitlock",Top Gun,True
+1981,1982,39,4,Katharine Hepburn,On Golden Pond,False
+1981,1982,39,3,Henry Fonda,On Golden Pond,True
+1981,1982,39,6,Jane Fonda,On Golden Pond,False
+1981,1982,39,5,Mark Rydell,On Golden Pond,False
+1981,1982,39,7,Ernest Thompson,On Golden Pond,True
+1980,1981,38,9,Goldie Hawn,Private Benjamin,False
+1992,1993,50,2,Tim Robbins,Bob Roberts,False
+1992,1993,50,9,Miranda Richardson,Enchanted April,True
+1992,1993,50,6,Joan Plowright,Enchanted April,True
+1991,1992,49,10,Ned Beatty,Hear My Song,False
+1989,1990,47,3,Daniel Day-Lewis,My Left Foot,False
+1989,1990,47,6,Brenda Fricker,My Left Foot,False
+1992,1993,50,4,Mary McDonnell,Passion Fish,False
+1992,1993,50,6,Alfre Woodard,Passion Fish,False
+1980,1981,38,8,John Williams,Star Wars: Episode V - The Empire Strikes Back,False
+1986,1987,44,4,Sigourney Weaver,Aliens,False
+1979,1980,37,10,Robert Duvall,Apocalypse Now,True
+1979,1980,37,5,Francis Ford Coppola,Apocalypse Now,True
+1979,1980,37,8,Carmine Coppola,Apocalypse Now,True
+1979,1980,37,8,Jerry Goldsmith,Alien,False
+1960,1961,18,6,Janet Leigh,Psycho,True
+1987,1988,45,10,R. Lee Ermey,Full Metal Jacket,False
+1984,1985,42,3,F. Murray Abraham,Amadeus,True
+1984,1985,42,3,Tom Hulce,Amadeus,False
+1984,1985,42,10,Jeffrey Jones,Amadeus,False
+1984,1985,42,5,Milos Forman,Amadeus,True
+1984,1985,42,7,Peter Shaffer,Amadeus,True
+1984,1985,42,5,Sergio Leone,Once Upon a Time in America,False
+1984,1985,42,8,Ennio Morricone,Once Upon a Time in America,False
+1980,1981,38,3,Robert De Niro,Raging Bull,True
+1980,1981,38,6,Cathy Moriarty,Raging Bull,False
+1980,1981,38,10,Joe Pesci,Raging Bull,False
+1980,1981,38,5,Martin Scorsese,Raging Bull,False
+1980,1981,38,7,Mardik Martin,Raging Bull,False
+1980,1981,38,14,Cathy Moriarty,Raging Bull,False
+1977,1978,35,9,Diane Keaton,Annie Hall,True
+1977,1978,35,2,Woody Allen,Annie Hall,False
+1977,1978,35,5,Woody Allen,Annie Hall,False
+1977,1978,35,7,Woody Allen,Annie Hall,False
+1971,1972,29,2,Bud Cort,Harold and Maude,False
+1971,1972,29,12,Ruth Gordon,Harold and Maude,False
+1989,1990,47,10,Denzel Washington,Glory,True
+1989,1990,47,5,Edward Zwick,Glory,False
+1989,1990,47,7,Kevin Jarre,Glory,False
+1989,1990,47,8,James Horner,Glory,False
+1989,1990,47,3,Robin Williams,Dead Poets Society,False
+1989,1990,47,5,Peter Weir,Dead Poets Society,False
+1989,1990,47,7,Tom Schulman,Dead Poets Society,False
+1974,1975,32,4,Faye Dunaway,Chinatown,False
+1974,1975,32,3,Jack Nicholson,Chinatown,True
+1974,1975,32,10,John Huston,Chinatown,False
+1974,1975,32,5,Roman Polanski,Chinatown,True
+1974,1975,32,7,Robert Towne,Chinatown,True
+1974,1975,32,8,Jerry Goldsmith,Chinatown,False
+1992,1993,50,10,Gene Hackman,Unforgiven,True
+1992,1993,50,5,Clint Eastwood,Unforgiven,True
+1992,1993,50,7,David Webb Peoples,Unforgiven,False
+1991,1992,49,9,Kathy Bates,Fried Green Tomatoes,False
+1991,1992,49,6,Jessica Tandy,Fried Green Tomatoes,False
+1970,1971,28,3,George C. Scott,Patton,True
+1970,1971,28,5,Franklin J. Schaffner,Patton,False
+1967,1968,25,3,Paul Newman,Cool Hand Luke,False
+1967,1968,25,10,George Kennedy,Cool Hand Luke,False
+1974,1975,32,9,Cloris Leachman,Young Frankenstein,False
+1974,1975,32,6,Madeline Kahn,Young Frankenstein,False
+1952,1953,10,3,Gary Cooper,High Noon,True
+1952,1953,10,6,Katy Jurado,High Noon,True
+1952,1953,10,7,Carl Foreman,High Noon,False
+1952,1953,10,8,Dimitri Tiomkin,High Noon,True
+1952,1953,10,14,Katy Jurado,High Noon,False
+1952,1953,10,16,Floyd Crosby,High Noon,True
+1980,1981,38,8,John Barry,Somewhere in Time,False
+1959,1960,17,3,Charlton Heston,Ben-Hur,False
+1959,1960,17,10,Stephen Boyd,Ben-Hur,True
+1959,1960,17,5,William Wyler,Ben-Hur,True
+1959,1960,17,11,Andrew Marton,Ben-Hur,False
+1979,1980,37,9,Shirley MacLaine,Being There,False
+1979,1980,37,2,Peter Sellers,Being There,True
+1979,1980,37,10,Melvyn Douglas,Being There,True
+1979,1980,37,5,Hal Ashby,Being There,False
+1979,1980,37,7,Robert C. Jones,Being There,False
+1982,1983,40,3,Ben Kingsley,Gandhi,True
+1982,1983,40,5,Richard Attenborough,Gandhi,True
+1982,1983,40,7,John Briley,Gandhi,True
+1982,1983,40,15,Ben Kingsley,Gandhi,True
+1991,1992,49,3,Robert De Niro,Cape Fear,False
+1991,1992,49,6,Juliette Lewis,Cape Fear,False
+1976,1977,34,6,Piper Laurie,Carrie,False
+1982,1983,40,8,Giorgio Moroder,Cat People,False
+1982,1983,40,1,"Putting Out the Fire (Theme From Cat People), Giorgio Moroder, David Bowie",Cat People,False
+1996,1997,54,4,Emily Watson,Breaking the Waves,False
+1996,1997,54,3,Geoffrey Rush,Shine,True
+1996,1997,54,5,Scott Hicks,Shine,False
+1996,1997,54,7,Jan Sardi,Shine,False
+1996,1997,54,8,David Hirschfelder,Shine,False
+1996,1997,54,9,Glenn Close,101 Dalmatians,False
+1979,1980,37,8,Jerry Goldsmith,Star Trek: The Motion Picture,False
+1990,1991,48,1,"Blaze of Glory, Jon Bon Jovi",Young Guns II,True
+1978,1979,36,9,Olivia Newton-John,Grease,False
+1978,1979,36,2,John Travolta,Grease,False
+1978,1979,36,1,"Grease, Barry Gibb",Grease,False
+1978,1979,36,1,"You're the One That I Want, John Farrar",Grease,False
+1975,1976,33,5,Steven Spielberg,Jaws,False
+1975,1976,33,7,Peter Benchley,Jaws,False
+1975,1976,33,8,John Williams,Jaws,True
+1996,1997,54,2,Tom Cruise,Jerry Maguire,True
+1996,1997,54,10,Cuba Gooding Jr.,Jerry Maguire,False
+1996,1997,54,4,Meryl Streep,Marvin's Room,False
+1996,1997,54,10,James Woods,Ghosts of Mississippi,False
+1996,1997,54,9,Debbie Reynolds,Mother,False
+1996,1997,54,9,Madonna,Evita,True
+1996,1997,54,2,Antonio Banderas,Evita,False
+1996,1997,54,5,Alan Parker,Evita,False
+1996,1997,54,1,"""You Must Love Me"", Andrew Lloyd Webber, Tim Rice",Evita,True
+1993,1994,51,2,Johnny Depp,Benny & Joon,False
+1997,1998,55,2,Jim Carrey,Liar Liar,False
+1997,1998,55,9,Jennifer Lopez,Selena,False
+1997,1998,55,1,"Go the Distance, Alan Menken, David Zippel",Hercules,False
+1997,1998,55,9,Julia Roberts,My Best Friend's Wedding,False
+1997,1998,55,10,Rupert Everett,My Best Friend's Wedding,False
+1997,1998,55,4,Jodie Foster,Contact,False
+1982,1983,40,14,Sandahl Bergman,Conan the Barbarian,True
+1997,1998,55,2,Kevin Kline,In & Out,False
+1997,1998,55,6,Joan Cusack,In & Out,False
+1997,1998,55,6,Kim Basinger,L.A. Confidential,True
+1997,1998,55,5,Curtis Hanson,L.A. Confidential,False
+1997,1998,55,7,Curtis Hanson,L.A. Confidential,False
+1997,1998,55,8,Jerry Goldsmith,L.A. Confidential,False
+1997,1998,55,8,John Williams,Seven Years in Tibet,False
+1997,1998,55,3,Peter Fonda,Ulee's Gold,True
+1997,1998,55,9,Joey Lauren Adams,Chasing Amy,False
+1997,1998,55,8,Michael Nyman,Gattaca,False
+1997,1998,55,6,Julianne Moore,Boogie Nights,False
+1997,1998,55,10,Burt Reynolds,Boogie Nights,True
+1985,1986,43,3,Harrison Ford,Witness,False
+1985,1986,43,6,Kelly McGillis,Witness,False
+1985,1986,43,5,Peter Weir,Witness,False
+1985,1986,43,7,William Kelley,Witness,False
+1985,1986,43,8,Maurice Jarre,Witness,False
+1997,1998,55,1,"""Journey to the Past"", Stephen Flaherty, Lynn Ahrens",Anastasia,False
+1997,1998,55,1,"""Once Upon a December"", Stephen Flaherty, Lynn Ahrens",Anastasia,False
+1997,1998,55,3,Djimon Hounsou,Amistad,False
+1997,1998,55,10,Anthony Hopkins,Amistad,False
+1997,1998,55,5,Steven Spielberg,Amistad,False
+1997,1998,55,3,Matt Damon,Good Will Hunting,False
+1997,1998,55,10,Robin Williams,Good Will Hunting,False
+1997,1998,55,7,"Ben Affleck, Matt Damon",Good Will Hunting,True
+1997,1998,55,4,Kate Winslet,Titanic,False
+1997,1998,55,3,Leonardo DiCaprio,Titanic,False
+1997,1998,55,6,Gloria Stuart,Titanic,False
+1997,1998,55,5,James Cameron,Titanic,True
+1997,1998,55,7,James Cameron,Titanic,False
+1997,1998,55,8,James Horner,Titanic,True
+1997,1998,55,1,"""My Heart Will Go On"", James Horner, Will Jennings",Titanic,True
+1997,1998,55,1,"""Tomorrow Never Dies"", Sheryl Crow, Mitchell Froom",Tomorrow Never Dies,False
+1997,1998,55,9,Pam Grier,Jackie Brown,False
+1997,1998,55,2,Samuel L. Jackson,Jackie Brown,False
+1997,1998,55,8,Philip Glass,Kundun,False
+1997,1998,55,2,Dustin Hoffman,Wag the Dog,False
+1997,1998,55,7,Hilary Henkin,Wag the Dog,False
+1997,1998,55,9,Helen Hunt,As Good as It Gets,True
+1997,1998,55,2,Jack Nicholson,As Good as It Gets,True
+1997,1998,55,10,Greg Kinnear,As Good as It Gets,False
+1997,1998,55,5,James L. Brooks,As Good as It Gets,False
+1997,1998,55,7,Mark Andrus,As Good as It Gets,False
+1998,1999,56,2,John Travolta,Primary Colors,False
+1998,1999,56,6,Kathy Bates,Primary Colors,False
+1998,1999,56,1,"""Uninvited"", Alanis Morissette",City of Angels,False
+1998,1999,56,2,Warren Beatty,Bulworth,False
+1998,1999,56,7,Warren Beatty,Bulworth,False
+1998,1999,56,8,Jerry Goldsmith,Mulan,False
+1998,1999,56,1,"Reflection, Matthew Wilder, David Zippel",Mulan,False
+1998,1999,56,9,Cameron Diaz,There's Something About Mary,False
+1944,1945,2,10,Barry Fitzgerald,Going My Way,True
+1944,1945,2,5,Leo McCarey,Going My Way,True
+1947,1948,5,6,Celeste Holm,Gentleman's Agreement,True
+1947,1948,5,5,Elia Kazan,Gentleman's Agreement,True
+1947,1948,5,17,Dean Stockwell,Gentleman's Agreement,True
+1953,1954,11,10,Frank Sinatra,From Here to Eternity,True
+1953,1954,11,5,Fred Zinnemann,From Here to Eternity,True
+1954,1955,12,3,Marlon Brando,On the Waterfront,True
+1954,1955,12,5,Elia Kazan,On the Waterfront,True
+1954,1955,12,16,Boris Kaufman,On the Waterfront,True
+1955,1956,13,3,Ernest Borgnine,Marty,True
+1961,1962,19,2,Richard Beymer,West Side Story,False
+1961,1962,19,6,Rita Moreno,West Side Story,True
+1961,1962,19,10,George Chakiris,West Side Story,True
+1961,1962,19,5,Robert Wise,West Side Story,False
+1961,1962,19,15,George Chakiris,West Side Story,False
+1961,1962,19,15,Richard Beymer,West Side Story,False
+1963,1964,21,2,Albert Finney,Tom Jones,False
+1963,1964,21,6,Joan Greenwood,Tom Jones,False
+1963,1964,21,10,Hugh Griffith,Tom Jones,False
+1963,1964,21,5,Tony Richardson,Tom Jones,False
+1963,1964,21,15,Albert Finney,Tom Jones,True
+1963,1964,21,18,United Kingdom,Tom Jones,False
+1967,1968,25,3,Rod Steiger,In the Heat of the Night,True
+1967,1968,25,3,Sidney Poitier,In the Heat of the Night,False
+1967,1968,25,6,Quentin Dean,In the Heat of the Night,False
+1967,1968,25,6,Lee Grant,In the Heat of the Night,False
+1967,1968,25,5,Norman Jewison,In the Heat of the Night,False
+1967,1968,25,7,Stirling Silliphant,In the Heat of the Night,True
+1968,1969,26,2,Ron Moody,Oliver!,True
+1968,1969,26,10,Hugh Griffith,Oliver!,False
+1968,1969,26,5,Carol Reed,Oliver!,False
+1968,1969,26,8,Lionel Bart,Oliver!,False
+1968,1969,26,15,Jack Wild,Oliver!,False
+1969,1970,27,3,Dustin Hoffman,Midnight Cowboy,False
+1969,1970,27,3,Jon Voight,Midnight Cowboy,False
+1969,1970,27,6,Brenda Vaccaro,Midnight Cowboy,False
+1969,1970,27,5,John Schlesinger,Midnight Cowboy,False
+1969,1970,27,7,Waldo Salt,Midnight Cowboy,False
+1969,1970,27,15,Jon Voight,Midnight Cowboy,True
+1976,1977,34,4,Talia Shire,Rocky,False
+1976,1977,34,3,Sylvester Stallone,Rocky,False
+1976,1977,34,5,John G. Avildsen,Rocky,False
+1976,1977,34,7,Sylvester Stallone,Rocky,False
+1976,1977,34,8,Bill Conti,Rocky,False
+1979,1980,37,3,Dustin Hoffman,Kramer vs. Kramer,True
+1979,1980,37,6,Meryl Streep,Kramer vs. Kramer,True
+1979,1980,37,6,Jane Alexander,Kramer vs. Kramer,False
+1979,1980,37,10,Justin Henry,Kramer vs. Kramer,False
+1979,1980,37,5,Robert Benton,Kramer vs. Kramer,False
+1979,1980,37,7,Robert Benton,Kramer vs. Kramer,True
+1979,1980,37,15,Justin Henry,Kramer vs. Kramer,False
+1980,1981,38,4,Mary Tyler Moore,Ordinary People,True
+1980,1981,38,3,Donald Sutherland,Ordinary People,False
+1980,1981,38,10,Timothy Hutton,Ordinary People,True
+1980,1981,38,10,Judd Hirsch,Ordinary People,False
+1980,1981,38,5,Robert Redford,Ordinary People,True
+1980,1981,38,7,Alvin Sargent,Ordinary People,False
+1980,1981,38,15,Timothy Hutton,Ordinary People,True
+1983,1984,41,4,Shirley MacLaine,Terms of Endearment,True
+1983,1984,41,4,Debra Winger,Terms of Endearment,False
+1983,1984,41,10,Jack Nicholson,Terms of Endearment,True
+1983,1984,41,5,James L. Brooks,Terms of Endearment,False
+1983,1984,41,7,James L. Brooks,Terms of Endearment,True
+1985,1986,43,4,Meryl Streep,Out of Africa,False
+1985,1986,43,10,Klaus Maria Brandauer,Out of Africa,True
+1985,1986,43,5,Sydney Pollack,Out of Africa,False
+1985,1986,43,7,Kurt Luedtke,Out of Africa,False
+1985,1986,43,8,John Barry,Out of Africa,True
+1988,1989,46,3,Dustin Hoffman,Rain Man,True
+1988,1989,46,5,Barry Levinson,Rain Man,False
+1988,1989,46,7,Ronald Bass,Rain Man,False
+1989,1990,47,9,Jessica Tandy,Driving Miss Daisy,True
+1989,1990,47,2,Morgan Freeman,Driving Miss Daisy,True
+1971,1972,29,4,Jane Fonda,Klute,True
+1971,1972,29,7,Andy Lewis,Klute,False
+1998,1999,56,3,Tom Hanks,Saving Private Ryan,False
+1998,1999,56,5,Steven Spielberg,Saving Private Ryan,True
+1998,1999,56,7,Robert Rodat,Saving Private Ryan,False
+1998,1999,56,8,John Williams,Saving Private Ryan,False
+1965,1966,23,3,Omar Sharif,Doctor Zhivago,True
+1965,1966,23,5,David Lean,Doctor Zhivago,True
+1965,1966,23,7,Robert Bolt,Doctor Zhivago,True
+1965,1966,23,8,Maurice Jarre,Doctor Zhivago,True
+1965,1966,23,14,Geraldine Chaplin,Doctor Zhivago,False
+1983,1984,41,3,Robert Duvall,Tender Mercies,True
+1983,1984,41,6,Tess Harper,Tender Mercies,False
+1983,1984,41,5,Bruce Beresford,Tender Mercies,False
+1983,1984,41,1,"Over You, Austin Roberts, Bobby Hart",Tender Mercies,False
+1993,1994,51,19,Matthew Modine,And the Band Played On,False
+1986,1987,44,10,Dennis Hopper,Blue Velvet,False
+1986,1987,44,7,David Lynch,Blue Velvet,False
+1982,1983,40,10,Jim Metzler,Tex,False
+1991,1992,49,7,Lawrence Kasdan,Grand Canyon,False
+1966,1967,24,4,Elizabeth Taylor,Who's Afraid of Virginia Woolf?,False
+1966,1967,24,3,Richard Burton,Who's Afraid of Virginia Woolf?,False
+1966,1967,24,6,Sandy Dennis,Who's Afraid of Virginia Woolf?,False
+1966,1967,24,10,George Segal,Who's Afraid of Virginia Woolf?,False
+1966,1967,24,5,Mike Nichols,Who's Afraid of Virginia Woolf?,False
+1966,1967,24,7,Ernest Lehman,Who's Afraid of Virginia Woolf?,False
+1967,1968,25,2,Rex Harrison,Doctor Dolittle,False
+1967,1968,25,10,Richard Attenborough,Doctor Dolittle,True
+1967,1968,25,8,Leslie Bricusse,Doctor Dolittle,False
+1967,1968,25,1,"Talk To The Animals, Leslie Bricusse",Doctor Dolittle,False
+1968,1969,26,4,Mia Farrow,Rosemary's Baby,False
+1968,1969,26,6,Ruth Gordon,Rosemary's Baby,True
+1968,1969,26,7,Roman Polanski,Rosemary's Baby,False
+1968,1969,26,8,Christopher Komeda,Rosemary's Baby,False
+1976,1977,34,9,Barbara Harris,Family Plot,False
+1972,1973,30,5,Alfred Hitchcock,Frenzy,False
+1972,1973,30,7,Anthony Shaffer,Frenzy,False
+1972,1973,30,8,Ron Goodwin,Frenzy,False
+1987,1988,45,9,Holly Hunter,Broadcast News,False
+1987,1988,45,2,William Hurt,Broadcast News,False
+1987,1988,45,5,James L. Brooks,Broadcast News,False
+1987,1988,45,7,James L. Brooks,Broadcast News,False
+1988,1989,46,9,Melanie Griffith,Working Girl,True
+1988,1989,46,6,Sigourney Weaver,Working Girl,True
+1988,1989,46,5,Mike Nichols,Working Girl,False
+1988,1989,46,7,Kevin Wade,Working Girl,False
+1988,1989,46,1,"Let the River Run, Carly Simon",Working Girl,True
+1988,1989,46,9,Michelle Pfeiffer,Married to the Mob,False
+1998,1999,56,4,Meryl Streep,One True Thing,False
+1990,1991,48,2,Johnny Depp,Edward Scissorhands,False
+1975,1976,33,6,Ronee Blakley,Nashville,False
+1975,1976,33,6,Geraldine Chaplin,Nashville,False
+1975,1976,33,6,Barbara Harris,Nashville,False
+1975,1976,33,6,Lily Tomlin,Nashville,False
+1975,1976,33,10,Henry Gibson,Nashville,False
+1975,1976,33,5,Robert Altman,Nashville,False
+1975,1976,33,7,Joan Tewkesbury,Nashville,False
+1975,1976,33,1,"I'm Easy, Keith Carradine",Nashville,True
+1975,1976,33,14,Ronee Blakley,Nashville,False
+1975,1976,33,14,Lily Tomlin,Nashville,False
+1986,1987,44,4,Marlee Matlin,Children of a Lesser God,True
+1986,1987,44,3,William Hurt,Children of a Lesser God,False
+1998,1999,56,7,Todd Solondz,Happiness,False
+1998,1999,56,3,Ian McKellen,Gods and Monsters,False
+1998,1999,56,6,Lynn Redgrave,Gods and Monsters,True
+1998,1999,56,4,Cate Blanchett,Elizabeth,True
+1998,1999,56,5,Shekhar Kapur,Elizabeth,False
+1985,1986,43,3,Jon Voight,Runaway Train,True
+1985,1986,43,10,Eric Roberts,Runaway Train,False
+1986,1987,44,3,Bob Hoskins,Mona Lisa,True
+1986,1987,44,6,Cathy Tyson,Mona Lisa,False
+1986,1987,44,7,Neil Jordan,Mona Lisa,False
+1985,1986,43,9,Rosanna Arquette,Desperately Seeking Susan,False
+1998,1999,56,9,Jane Horrocks,Little Voice,False
+1998,1999,56,2,Michael Caine,Little Voice,True
+1998,1999,56,6,Brenda Blethyn,Little Voice,False
+1998,1999,56,10,Bill Murray,Rushmore,False
+1998,1999,56,9,Gwyneth Paltrow,Shakespeare in Love,True
+1998,1999,56,6,Judi Dench,Shakespeare in Love,False
+1998,1999,56,10,Geoffrey Rush,Shakespeare in Love,False
+1998,1999,56,5,John Madden,Shakespeare in Love,False
+1998,1999,56,7,Marc Norman,Shakespeare in Love,True
+1984,1985,42,9,Kathleen Turner,Romancing the Stone,True
+1982,1983,40,1,"Eye of the Tiger, Survivor, Jim Peterik, Frankie Sullivan III",Rocky III,False
+1986,1987,44,4,Farrah Fawcett,Extremities,False
+1998,1999,56,9,Meg Ryan,You've Got Mail,False
+1998,1999,56,2,Robin Williams,Patch Adams,False
+1998,1999,56,4,Susan Sarandon,Stepmom,False
+1998,1999,56,4,Emily Watson,Hilary and Jackie,False
+1986,1987,44,1,"Sweet Freedom, Rod Temperton",Running Scared,False
+1986,1987,44,2,Danny DeVito,Ruthless People,False
+1986,1987,44,9,Kathleen Turner,Peggy Sue Got Married,False
+1986,1987,44,2,Paul Hogan,Crocodile Dundee,True
+1986,1987,44,6,Linda Kozlowski ,Crocodile Dundee,False
+1986,1987,44,1,"They Don't Make Them Like They Used To, Burt Bacharach, Carole Bayer Sager",Tough Guys,False
+1998,1999,56,1,"""The Flame Still Burns"", Mick Jones, Marti Frederiksen, Chris Difford",Still Crazy,False
+1982,1983,40,2,Henry Winkler,Night Shift,False
+1970,1971,28,6,Maureen Stapleton,Airport,True
+1970,1971,28,10,George Kennedy,Airport,False
+1970,1971,28,8,Alfred Newman,Airport,False
+1974,1975,32,14,Helen Reddy,Airport 1975,False
+1974,1975,32,8,John Williams,Earthquake,False
+1999,2000,57,2,Robert De Niro,Analyze This,False
+1999,2000,57,9,Reese Witherspoon,Election,False
+1990,1991,48,10,Al Pacino,Dick Tracy,False
+1990,1991,48,1,"Sooner or Later (I Always Get My Man), Stephen Sondheim",Dick Tracy,False
+1990,1991,48,1,"What Can You Lose?, Stephen Sondheim",Dick Tracy,False
+1978,1979,36,8,John Williams,Superman,False
+1999,2000,57,9,Julia Roberts,Notting Hill,False
+1999,2000,57,2,Hugh Grant,Notting Hill,False
+1999,2000,57,1,"""Beautiful Stranger"", Madonna, William Orbit",Austin Powers: The Spy Who Shagged Me,False
+1999,2000,57,1,"""You'll Be In My Heart"", Phil Collins",Tarzan,True
+1999,2000,57,8,Jocelyn Pook,Eyes Wide Shut,False
+1960,1961,18,3,Laurence Olivier,Spartacus,False
+1960,1961,18,10,Woody Strode,Spartacus,False
+1960,1961,18,10,Peter Ustinov,Spartacus,False
+1960,1961,18,5,Stanley Kubrick,Spartacus,False
+1960,1961,18,8,Alex North,Spartacus,False
+1962,1963,20,4,Shelley Winters,Lolita,False
+1962,1963,20,3,James Mason,Lolita,False
+1962,1963,20,10,Peter Sellers,Lolita,False
+1962,1963,20,5,Stanley Kubrick,Lolita,False
+1962,1963,20,14,Sue Lyon,Lolita,True
+1975,1976,33,5,Stanley Kubrick,Barry Lyndon,False
+1986,1987,44,9,Sissy Spacek,Crimes of the Heart,True
+1986,1987,44,8,Miles Goodman,Little Shop of Horrors,False
+1987,1988,45,9,Bette Midler,Outrageous Fortune,False
+1982,1983,40,4,Jessica Lange,Frances,False
+1982,1983,40,6,Kim Stanley,Frances,False
+1978,1979,36,2,Warren Beatty,Heaven Can Wait,True
+1978,1979,36,6,Dyan Cannon,Heaven Can Wait,True
+1988,1989,46,2,Tom Hanks,Big,True
+1999,2000,57,4,Annette Bening,American Beauty,False
+1999,2000,57,3,Kevin Spacey,American Beauty,False
+1999,2000,57,5,Sam Mendes,American Beauty,True
+1999,2000,57,7,Alan Ball,American Beauty,True
+1999,2000,57,8,Thomas Newman,American Beauty,False
+1972,1973,30,3,Jon Voight,Deliverance,False
+1972,1973,30,5,John Boorman,Deliverance,False
+1972,1973,30,7,James Dickey,Deliverance,False
+1972,1973,30,1,"Dueling Banjos, Arthur Smith, Eric Weissberg",Deliverance,False
+1975,1976,33,9,Ann-Margret,Tommy,True
+1975,1976,33,15,Roger Daltrey,Tommy,False
+1999,2000,57,4,Hilary Swank,Boys Don't Cry,True
+1999,2000,57,6,Chloë Sevigny,Boys Don't Cry,False
+1983,1984,41,2,Tom Cruise,Risky Business,False
+1981,1982,39,20,Kathleen Turner,Body Heat,False
+1986,1987,44,2,Matthew Broderick,Ferris Bueller's Day Off,False
+1981,1982,39,4,Diane Keaton,Reds,False
+1981,1982,39,3,Warren Beatty,Reds,False
+1981,1982,39,6,Maureen Stapleton,Reds,False
+1981,1982,39,10,Jack Nicholson,Reds,False
+1981,1982,39,5,Warren Beatty,Reds,True
+1981,1982,39,7,Warren Beatty,Reds,False
+1978,1979,36,5,Terrence Malick,Days of Heaven,False
+1958,1959,16,14,France Nuyen,South Pacific,False
+1958,1959,16,12,Mitzi Gaynor,South Pacific,False
+1983,1984,41,9,Jennifer Beals,Flashdance,False
+1983,1984,41,8,Giorgio Moroder,Flashdance,True
+1983,1984,41,1,"Flashdance… What a Feeling, Giorgio Moroder, Keith Forsey, Irene Cara",Flashdance,True
+1983,1984,41,1,"Maniac, Michael Sembello, Dennis Matkosky",Flashdance,False
+1979,1980,37,2,Roy Scheider,All That Jazz,False
+1980,1981,38,2,Paul Le Mat,Melvin and Howard,False
+1980,1981,38,6,Mary Steenburgen,Melvin and Howard,True
+1980,1981,38,10,Jason Robards Jr.,Melvin and Howard,False
+1981,1982,39,1,"For Your Eyes Only, Bill Conti, Mick Leeson, Sheena Easton",For Your Eyes Only,False
+1999,2000,57,4,Meryl Streep,Music of the Heart,False
+1999,2000,57,6,Cameron Diaz,Being John Malkovich,False
+1999,2000,57,6,Catherine Keener,Being John Malkovich,False
+1999,2000,57,7,Charlie Kaufman,Being John Malkovich,False
+1961,1962,19,21,Japan,Yojimbo,False
+1970,1971,28,10,Chief Dan George,Little Big Man,False
+1983,1984,41,2,Eddie Murphy,Trading Places,False
+1991,1992,49,8,Patrick Doyle,Dead Again,False
+1999,2000,57,6,Natalie Portman,Anywhere But Here,False
+1988,1989,46,3,Edward James Olmos,Stand and Deliver,False
+1988,1989,46,10,Lou Diamond Phillips,Stand and Deliver,False
+1987,1988,45,9,Cher,Moonstruck,True
+1987,1988,45,2,Nicolas Cage,Moonstruck,False
+1987,1988,45,6,Olympia Dukakis,Moonstruck,True
+1987,1988,45,7,John Patrick Shanley,Moonstruck,False
+1950,1951,8,3,James Stewart,Harvey,False
+1950,1951,8,6,Josephine Hull,Harvey,True
+1957,1958,15,2,David Niven,My Man Godfrey,False
+1975,1976,33,9,Julie Christie,Shampoo,False
+1975,1976,33,9,Goldie Hawn,Shampoo,False
+1975,1976,33,2,Warren Beatty,Shampoo,False
+1975,1976,33,6,Lee Grant,Shampoo,False
+1987,1988,45,4,Glenn Close,Fatal Attraction,False
+1987,1988,45,6,Anne Archer,Fatal Attraction,False
+1987,1988,45,5,Adrian Lyne,Fatal Attraction,False
+1988,1989,46,2,Robert De Niro,Midnight Run,False
+1990,1991,48,3,Robin Williams,Awakenings,False
+1984,1985,42,4,Sally Field,Places in the Heart,True
+1984,1985,42,7,Robert Benton,Places in the Heart,False
+1999,2000,57,1,"When She Loved Me, Randy Newman",Toy Story 2,False
+1999,2000,57,2,Sean Penn,Sweet and Lowdown,False
+1999,2000,57,6,Samantha Morton,Sweet and Lowdown,False
+1999,2000,57,8,George Fenton,Anna and the King,False
+1999,2000,57,1,"""How Can I Not Love You"", Kenneth 'Babyface' Edmonds, George Fenton, Robert Kraft",Anna and the King,False
+1999,2000,57,10,Tom Cruise,Magnolia,True
+1999,2000,57,1,"""Save Me"", Aimee Mann",Magnolia,False
+1971,1972,29,3,Jack Nicholson,Carnal Knowledge,False
+1971,1972,29,6,Ann-Margret,Carnal Knowledge,True
+1971,1972,29,10,Art Garfunkel,Carnal Knowledge,False
+1969,1970,27,10,Jack Nicholson,Easy Rider,False
+1999,2000,57,2,Jim Carrey,Man on the Moon,True
+1999,2000,57,8,John Williams,Angela's Ashes,False
+1973,1974,31,3,Steve McQueen,Papillon,False
+1970,1971,28,3,Jack Nicholson,Five Easy Pieces,False
+1970,1971,28,6,Karen Black,Five Easy Pieces,True
+1970,1971,28,5,Bob Rafelson,Five Easy Pieces,False
+1970,1971,28,7,Carole Eastman,Five Easy Pieces,False
+1984,1985,42,1,"Against All Odds (Take a Look At Me Now), Phil Collins",Against All Odds,False
+1992,1993,50,3,Denzel Washington,Malcolm X,False
+1992,1993,50,9,Whoopi Goldberg,Sister Act,False
+1985,1986,43,4,Anne Bancroft,Agnes of God,False
+1985,1986,43,6,Meg Tilly,Agnes of God,True
+1992,1993,50,3,Al Pacino,Scent of a Woman,True
+1992,1993,50,10,Chris O'Donnell,Scent of a Woman,False
+1992,1993,50,7,Bo Goldman,Scent of a Woman,True
+1992,1993,50,9,Meryl Streep,Death Becomes Her,False
+1992,1993,50,4,Emma Thompson,Howards End,True
+1992,1993,50,5,James Ivory,Howards End,False
+1992,1993,50,7,Ruth Prawer Jhabvala,Howards End,False
+2000,2001,58,3,Michael Douglas,Wonder Boys,False
+2000,2001,58,7,Steve Kloves,Wonder Boys,False
+2000,2001,58,1,"""Things Have Changed"", Bob Dylan",Wonder Boys,True
+1961,1962,19,4,Natalie Wood,Splendor in the Grass,False
+1961,1962,19,3,Warren Beatty,Splendor in the Grass,False
+1961,1962,19,15,Warren Beatty,Splendor in the Grass,True
+1950,1951,8,4,Judy Holliday,Born Yesterday,False
+1950,1951,8,5,George Cukor,Born Yesterday,False
+1950,1951,8,12,Judy Holliday,Born Yesterday,True
+1979,1980,37,5,Peter Yates,Breaking Away,False
+1979,1980,37,7,Steve Tesich,Breaking Away,False
+1979,1980,37,15,Dennis Christopher,Breaking Away,False
+1988,1989,46,9,Susan Sarandon,Bull Durham,False
+1988,1989,46,1,"A Woman Loves a Man, Dan Hartman, Charlie Midnight",Bull Durham,False
+1975,1976,33,3,Al Pacino,Dog Day Afternoon,False
+1975,1976,33,10,Charles Durning,Dog Day Afternoon,False
+1975,1976,33,10,John Cazale,Dog Day Afternoon,False
+1975,1976,33,5,Sidney Lumet,Dog Day Afternoon,False
+1975,1976,33,7,Frank Pierson,Dog Day Afternoon,False
+1975,1976,33,15,Chris Sarandon,Dog Day Afternoon,False
+1973,1974,31,2,Richard Dreyfuss,American Graffiti,False
+1973,1974,31,5,George Lucas,American Graffiti,False
+1973,1974,31,15,Paul Le Mat,American Graffiti,True
+1991,1992,49,3,Kevin Costner,JFK,False
+1991,1992,49,5,Oliver Stone,JFK,True
+1991,1992,49,7,"Oliver Stone, Zachary Sklar",JFK,False
+1989,1990,47,9,Meryl Streep,She-Devil,False
+2000,2001,58,4,Julia Roberts,Erin Brockovich,True
+2000,2001,58,10,Albert Finney,Erin Brockovich,False
+2000,2001,58,5,Steven Soderbergh,Erin Brockovich,False
+1991,1992,49,4,Geena Davis,Thelma & Louise,False
+1991,1992,49,4,Susan Sarandon,Thelma & Louise,False
+1991,1992,49,7,Callie Khouri,Thelma & Louise,True
+1963,1964,21,3,Paul Newman,Hud,False
+1963,1964,21,6,Patricia Neal,Hud,False
+1963,1964,21,10,Melvyn Douglas,Hud,False
+1963,1964,21,5,Martin Ritt,Hud,False
+1977,1978,35,5,Steven Spielberg,Close Encounters of the Third Kind,False
+1977,1978,35,7,Steven Spielberg,Close Encounters of the Third Kind,False
+1977,1978,35,8,John Williams,Close Encounters of the Third Kind,False
+2000,2001,58,2,John Cusack,High Fidelity,False
+1991,1992,49,2,Dustin Hoffman,Hook,False
+1969,1970,27,3,John Wayne,True Grit,True
+1969,1970,27,1,"True Grit, Elmer Bernstein, Don Black",True Grit,False
+1969,1970,27,15,Glen Campbell,True Grit,False
+1988,1989,46,4,Shirley MacLaine,Madame Sousatzka,True
+1988,1989,46,8,Gerald Gouriet,Madame Sousatzka,False
+1978,1979,36,3,Brad Davis,Midnight Express,False
+1978,1979,36,10,John Hurt,Midnight Express,True
+1978,1979,36,5,Alan Parker,Midnight Express,False
+1978,1979,36,7,Oliver Stone,Midnight Express,True
+1978,1979,36,8,Giorgio Moroder,Midnight Express,True
+1978,1979,36,14,Irene Miracle,Midnight Express,True
+1978,1979,36,15,Brad Davis,Midnight Express,True
+1990,1991,48,4,Kathy Bates,Misery,True
+1992,1993,50,2,Billy Crystal,Mr. Saturday Night,False
+1992,1993,50,10,David Paymer,Mr. Saturday Night,False
+1985,1986,43,9,Sally Field,Murphy's Romance,False
+1985,1986,43,2,James Garner,Murphy's Romance,False
+1976,1977,34,4,Faye Dunaway,Network,True
+1976,1977,34,3,Peter Finch,Network,True
+1976,1977,34,5,Sidney Lumet,Network,True
+1976,1977,34,7,Paddy Chayefsky,Network,True
+2000,2001,58,1,"""When You Come Back To Me Again"", Garth Brooks, Jenny Yates",Frequency,False
+1981,1982,39,9,Liza Minnelli,Arthur,False
+1981,1982,39,2,Dudley Moore,Arthur,True
+1981,1982,39,10,John Gielgud,Arthur,True
+1981,1982,39,1,"Arthur's Theme (Best That You Can Do), Carole Bayer Sager, Burt Bacharach, Peter Allen",Arthur,True
+1989,1990,47,2,Steve Martin,Parenthood,False
+1989,1990,47,6,Dianne Wiest,Parenthood,False
+1989,1990,47,1,"I Love To See You Smile, Randy Newman",Parenthood,False
+1972,1973,30,9,Liza Minnelli,Cabaret,True
+1972,1973,30,6,Marisa Berenson,Cabaret,False
+1972,1973,30,10,Joel Grey,Cabaret,True
+1972,1973,30,5,Bob Fosse,Cabaret,False
+1972,1973,30,7,Jay Presson Allen,Cabaret,False
+1972,1973,30,1,"Money, John Kander, Fred Ebb",Cabaret,False
+1972,1973,30,1,"Mein Herr, John Kander, Fred Ebb",Cabaret,False
+1972,1973,30,14,Marisa Berenson,Cabaret,False
+1958,1959,16,6,Peggy Cass,Auntie Mame,False
+1958,1959,16,14,Joanna Barnes,Auntie Mame,False
+1958,1959,16,12,Rosalind Russell,Auntie Mame,True
+1955,1956,13,12,Jean Simmons,Guys and Dolls,True
+1976,1977,34,3,Dustin Hoffman,Marathon Man,False
+1976,1977,34,6,Marthe Keller,Marathon Man,False
+1976,1977,34,10,Laurence Olivier,Marathon Man,True
+1976,1977,34,5,John Schlesinger,Marathon Man,False
+1976,1977,34,7,William Goldman,Marathon Man,False
+2000,2001,58,3,Russell Crowe,Gladiator,False
+2000,2001,58,10,Joaquin Phoenix,Gladiator,False
+2000,2001,58,5,Ridley Scott,Gladiator,False
+2000,2001,58,8,Lisa Gerrard,Gladiator,True
+2000,2001,58,8,Hans Zimmer,Gladiator,True
+1962,1963,20,2,Karl Malden,Gypsy,False
+1962,1963,20,5,Mervyn LeRoy,Gypsy,False
+1962,1963,20,15,Paul Wallace,Gypsy,False
+1962,1963,20,12,Rosalind Russell,Gypsy,True
+1962,1963,20,12,Natalie Wood,Gypsy,False
+2000,2001,58,9,Tracey Ullman,Small Time Crooks,False
+1969,1970,27,15,George Lazenby,On Her Majesty's Secret Service,False
+1980,1981,38,8,Giorgio Moroder,American Gigolo,False
+1980,1981,38,1,"Call Me, Giorgio Moroder, Debbie Harry, Blondie",American Gigolo,False
+1968,1969,26,5,Franco Zeffirelli,Romeo and Juliet,False
+1968,1969,26,8,Nino Rota,Romeo and Juliet,False
+1968,1969,26,14,Olivia Hussey,Romeo and Juliet,True
+1968,1969,26,15,Leonard Whiting,Romeo and Juliet,True
+1968,1969,26,18,"Italy, Franco Zeffirelli",Romeo and Juliet,True
+1974,1975,32,1,"Benji's Theme (I Feel Love), Euel Box, Betty Box",Benji,True
+1985,1986,43,9,Kathleen Turner,Prizzi's Honor,True
+1985,1986,43,2,Jack Nicholson,Prizzi's Honor,True
+1985,1986,43,6,Anjelica Huston,Prizzi's Honor,False
+1985,1986,43,5,John Huston,Prizzi's Honor,True
+1985,1986,43,7,Richard Condon,Prizzi's Honor,False
+1985,1986,43,1,"We Don't Need Another Hero (Thunderdome), Terry Britten, Graham Lyle",Mad Max Beyond Thunderdome,False
+1991,1992,49,2,Kevin Kline,Soapdish,False
+1988,1989,46,10,Neil Patrick Harris,Clara's Heart,False
+1978,1979,36,4,Jane Fonda,Coming Home,True
+1978,1979,36,3,Jon Voight,Coming Home,True
+1978,1979,36,10,Bruce Dern,Coming Home,False
+1978,1979,36,5,Hal Ashby,Coming Home,False
+1978,1979,36,7,Robert C. Jones,Coming Home,False
+1971,1972,29,8,Isaac Hayes,Shaft,True
+1971,1972,29,1,"Theme From Shaft, Isaac Hayes",Shaft,False
+1971,1972,29,15,Richard Roundtree,Shaft,False
+1973,1974,31,3,Al Pacino,Serpico,True
+1984,1985,42,1,"Footloose, Kenny Loggins, Dean Pitchford",Footloose,False
+1959,1960,17,4,Lee Remick,Anatomy of a Murder,False
+1959,1960,17,10,Joseph Welch,Anatomy of a Murder,False
+1959,1960,17,5,Otto Preminger,Anatomy of a Murder,False
+1978,1979,36,4,Geraldine Page,Interiors,False
+1978,1979,36,6,Maureen Stapleton,Interiors,False
+1978,1979,36,5,Woody Allen,Interiors,False
+1978,1979,36,7,Woody Allen,Interiors,False
+2000,2001,58,9,Brenda Blethyn,Saving Grace,False
+1989,1990,47,4,Sally Field,Steel Magnolias,False
+1989,1990,47,6,Julia Roberts,Steel Magnolias,True
+1965,1966,23,2,Lee Marvin,Cat Ballou,True
+1965,1966,23,1,"The Ballad Of Cat Ballou, Jerry Livingston, Mack David",Cat Ballou,False
+1965,1966,23,15,Tom Nardini,Cat Ballou,False
+1965,1966,23,12,Jane Fonda,Cat Ballou,False
+2000,2001,58,9,Renée Zellweger,Nurse Betty,True
+2000,2001,58,6,Kate Hudson,Almost Famous,True
+2000,2001,58,6,Frances McDormand,Almost Famous,False
+2000,2001,58,7,Cameron Crowe,Almost Famous,False
+1971,1972,29,14,Delores Taylor,Billy Jack,False
+2000,2001,58,6,Julie Walters,Billy Elliot,False
+2000,2001,58,8,Ennio Morricone,Malèna,False
+2000,2001,58,3,Geoffrey Rush,Quills,False
+2000,2001,58,7,Douglas Wright,Quills,False
+1987,1988,45,3,Michael Douglas,Wall Street,True
+1989,1990,47,3,Tom Cruise,Born on the Fourth of July,True
+1989,1990,47,5,Oliver Stone,Born on the Fourth of July,True
+1989,1990,47,7,"Oliver Stone, Ron Kovic",Born on the Fourth of July,True
+1989,1990,47,8,John Williams,Born on the Fourth of July,False
+2000,2001,58,9,Juliette Binoche,Chocolat,False
+2000,2001,58,6,Judi Dench,Chocolat,False
+2000,2001,58,8,Rachel Portman,Chocolat,False
+2000,2001,58,2,Mel Gibson,What Women Want,False
+2000,2001,58,3,Javier Bardem,Before Night Falls,False
+2000,2001,58,3,Tom Hanks,Cast Away,True
+2000,2001,58,9,Sandra Bullock,Miss Congeniality,False
+2000,2001,58,1,"""One In a Million"", Bosson",Miss Congeniality,False
+2000,2001,58,6,Catherine Zeta-Jones,Traffic,False
+2000,2001,58,10,Benicio del Toro,Traffic,True
+2000,2001,58,5,Steven Soderbergh,Traffic,False
+2000,2001,58,7,Stephen Gaghan,Traffic,True
+2000,2001,58,10,Willem Dafoe,Shadow of the Vampire,False
+1987,1988,45,7,David Mamet,House of Games,False
+1982,1983,40,9,Carol Burnett,Annie,False
+1982,1983,40,9,Aileen Quinn,Annie,False
+1982,1983,40,14,Aileen Quinn,Annie,False
+1956,1957,14,3,Gary Cooper,Friendly Persuasion,False
+1956,1957,14,6,Marjorie Main,Friendly Persuasion,False
+1956,1957,14,22,William Wyler,Friendly Persuasion,False
+1956,1957,14,15,Anthony Perkins,Friendly Persuasion,True
+1987,1988,45,9,Diane Keaton,Baby Boom,False
+1987,1988,45,4,Faye Dunaway,Barfly,False
+1987,1988,45,1,"Shakedown, Harold Faltermeyer, Keith Forsey, Bob Seger",Beverly Hills Cop II,False
+1984,1985,42,2,Eddie Murphy,Beverly Hills Cop,False
+1987,1988,45,8,John Williams,Empire of the Sun,False
+1987,1988,45,5,John Boorman,Hope and Glory,False
+1987,1988,45,7,John Boorman,Hope and Glory,False
+1987,1988,45,1,"Nothing's Gonna Stop Us Now, Donald Markowitz, John DeNicola, Franke Previte",Mannequin,False
+1990,1991,48,7,Barry Levinson,Avalon,False
+1990,1991,48,8,Randy Newman,Avalon,False
+1963,1964,21,3,Sidney Poitier,Lilies of the Field,True
+1963,1964,21,6,Lilia Skala,Lilies of the Field,False
+1963,1964,21,22,Ralph Nelson,Lilies of the Field,True
+1960,1961,18,4,Jean Simmons,Elmer Gantry,False
+1960,1961,18,3,Burt Lancaster,Elmer Gantry,True
+1960,1961,18,6,Shirley Jones,Elmer Gantry,False
+1960,1961,18,5,Richard Brooks,Elmer Gantry,False
+1990,1991,48,6,Winona Ryder,Mermaids,False
+1990,1991,48,3,Jeremy Irons,Reversal of Fortune,True
+1990,1991,48,5,Barbet Schroeder,Reversal of Fortune,False
+1990,1991,48,7,Nicholas Kazan,Reversal of Fortune,False
+2001,2002,59,9,Renée Zellweger,Bridget Jones's Diary,False
+1983,1984,41,3,Al Pacino,Scarface,False
+1983,1984,41,10,Steven Bauer,Scarface,False
+1983,1984,41,8,Giorgio Moroder,Scarface,False
+1962,1963,20,4,Lee Remick,Days of Wine and Roses,False
+1962,1963,20,3,Jack Lemmon,Days of Wine and Roses,False
+1962,1963,20,5,Blake Edwards,Days of Wine and Roses,False
+1969,1970,27,23,"Italy, Federico Fellini",Fellini Satyricon,False
+1979,1980,37,4,Sally Field,Norma Rae,True
+1979,1980,37,7,Harriet Frank Jr.,Norma Rae,False
+1970,1971,28,4,Ali MacGraw,Love Story,True
+1970,1971,28,3,Ryan O'Neal,Love Story,False
+1970,1971,28,10,John Marley,Love Story,False
+1970,1971,28,5,Arthur Hiller,Love Story,True
+1970,1971,28,7,Erich Segal,Love Story,True
+1970,1971,28,8,Francis Lai,Love Story,True
+2001,2002,59,8,Hans Zimmer,Pearl Harbor,False
+2001,2002,59,1,"""There You'll Be"", Diane Warren",Pearl Harbor,False
+1991,1992,49,2,Billy Crystal,City Slickers,False
+1991,1992,49,10,Jack Palance,City Slickers,True
+1988,1989,46,3,Gene Hackman,Mississippi Burning,False
+1988,1989,46,5,Alan Parker,Mississippi Burning,False
+1988,1989,46,7,Chris Gerolmo,Mississippi Burning,False
+1959,1960,17,14,Angie Dickinson,Rio Bravo,True
+1982,1983,40,2,Dustin Hoffman,Tootsie,True
+1982,1983,40,6,Jessica Lange,Tootsie,True
+1982,1983,40,5,Sydney Pollack,Tootsie,False
+1982,1983,40,7,Larry Gelbart,Tootsie,False
+1986,1987,44,9,Melanie Griffith,Something Wild,False
+1986,1987,44,2,Jeff Daniels,Something Wild,False
+1986,1987,44,10,Ray Liotta,Something Wild,False
+1956,1957,14,6,Dorothy Malone,Written on the Wind,False
+2001,2002,59,9,Reese Witherspoon,Legally Blonde,False
+1988,1989,46,1,"Kokomo, Mike Love, Terry Melcher, John Phillips, Scott McKenzie",Cocktail,False
+1988,1989,46,9,Amy Irving,Crossing Delancey,False
+1988,1989,46,2,Michael Caine,Dirty Rotten Scoundrels,False
+1988,1989,46,6,Sônia Braga,Moon Over Parador,False
+1988,1989,46,10,Raul Julia,Moon Over Parador,False
+1988,1989,46,4,Christine Lahti,Running on Empty,False
+1988,1989,46,10,River Phoenix,Running on Empty,False
+1988,1989,46,5,Sidney Lumet,Running on Empty,False
+1988,1989,46,7,Naomi Foner,Running on Empty,True
+1988,1989,46,10,Martin Landau,Tucker: The Man and His Dream,True
+1988,1989,46,1,"Twins, Skip Scarborough, Lorrin Bates",Twins,False
+1989,1990,47,8,Ennio Morricone,Casualties of War,False
+1989,1990,47,1,"After All, Tom Snow, Dean Pitchford",Chances Are,False
+1989,1990,47,3,Jack Lemmon,Dad,False
+2001,2002,59,9,Thora Birch,Ghost World,False
+2001,2002,59,10,Steve Buscemi,Ghost World,False
+1989,1990,47,3,Al Pacino,Sea of Love,False
+1969,1970,27,2,Lee Marvin,Paint Your Wagon,False
+1980,1981,38,15,William Hurt,Altered States,False
+2001,2002,59,3,Denzel Washington,Training Day,False
+1974,1975,32,8,Paul Williams,Phantom of the Paradise,False
+1958,1959,16,2,Cary Grant,Indiscreet,False
+1958,1959,16,12,Ingrid Bergman,Indiscreet,False
+1959,1960,17,2,Cary Grant,Operation Petticoat,False
+1971,1972,29,4,Jessica Walter,Play Misty for Me,False
+1961,1962,19,2,Glenn Ford,Pocketful of Miracles,True
+1961,1962,19,14,Ann-Margret,Pocketful of Miracles,True
+1961,1962,19,12,Bette Davis,Pocketful of Miracles,False
+1983,1984,41,4,Meryl Streep,Silkwood,False
+1983,1984,41,6,Cher,Silkwood,True
+1983,1984,41,10,Kurt Russell,Silkwood,False
+1983,1984,41,5,Mike Nichols,Silkwood,False
+1977,1978,35,4,Kathleen Quinlan,I Never Promised You a Rose Garden,False
+1980,1981,38,9,Sissy Spacek,Coal Miner's Daughter,True
+1980,1981,38,2,Tommy Lee Jones,Coal Miner's Daughter,False
+1980,1981,38,6,Beverly D'Angelo,Coal Miner's Daughter,False
+2001,2002,59,9,Cate Blanchett,Bandits,False
+2001,2002,59,2,Billy Bob Thornton,Bandits,False
+1971,1972,29,2, Topol,Fiddler on the Roof,True
+1971,1972,29,10,Paul Mann,Fiddler on the Roof,False
+1971,1972,29,5,Norman Jewison,Fiddler on the Roof,False
+2001,2002,59,10,Hayden Christensen,Life as a House,False
+2001,2002,59,4,Sissy Spacek,In the Bedroom,True
+2001,2002,59,6,Marisa Tomei,In the Bedroom,False
+1968,1969,26,5,William Wyler,Funny Girl,False
+1968,1969,26,1,"Funny Girl, Jule Styne, Bob Merrill",Funny Girl,False
+1968,1969,26,12,Barbra Streisand,Funny Girl,True
+1977,1978,35,3,Gregory Peck,MacArthur,False
+1980,1981,38,9,Irene Cara,Fame,False
+1980,1981,38,8,Michael Gore,Fame,False
+1980,1981,38,1,"Fame, Michael Gore, Dean Pitchford",Fame,True
+1984,1985,42,2,Robin Williams,Moscow on the Hudson,False
+2001,2002,59,6,Cameron Diaz,Vanilla Sky,False
+2001,2002,59,1,"""Vanilla Sky"", Paul McCartney",Vanilla Sky,False
+2001,2002,59,4,Judi Dench,Iris,False
+2001,2002,59,6,Kate Winslet,Iris,False
+2001,2002,59,10,Jim Broadbent,Iris,True
+2001,2002,59,2,Hugh Jackman,Kate & Leopold,False
+2001,2002,59,1,"""Until…"", Sting",Kate & Leopold,True
+1964,1965,22,2,Peter Ustinov,Topkapi,False
+1964,1965,22,12,Melina Mercouri,Topkapi,False
+1957,1958,15,4,Marlene Dietrich,Witness for the Prosecution,False
+1957,1958,15,3,Charles Laughton,Witness for the Prosecution,False
+1957,1958,15,6,Elsa Lanchester,Witness for the Prosecution,True
+1957,1958,15,5,Billy Wilder,Witness for the Prosecution,False
+2001,2002,59,3,Will Smith,Ali,False
+2001,2002,59,10,Jon Voight,Ali,False
+2001,2002,59,8,Pieter Bourke,Ali,False
+1983,1984,41,9,Barbra Streisand,Yentl,False
+1983,1984,41,2,Mandy Patinkin,Yentl,False
+1983,1984,41,5,Barbra Streisand,Yentl,True
+1983,1984,41,8,Michel Legrand,Yentl,False
+1983,1984,41,1,"The Way He Makes Me Feel, Michel Legrand, Alan Bergman, Marilyn Bergman",Yentl,False
+2001,2002,59,6,Helen Mirren,Gosford Park,False
+2001,2002,59,6,Maggie Smith,Gosford Park,False
+2001,2002,59,5,Robert Altman,Gosford Park,True
+2001,2002,59,7,Julian Fellowes,Gosford Park,False
+2001,2002,59,4,Halle Berry,Monster's Ball,False
+1976,1977,34,15,Truman Capote,Murder by Death,False
+1982,1983,40,15,Eddie Murphy,48 Hrs.,False
+1972,1973,30,3,Laurence Olivier,Sleuth,False
+1972,1973,30,3,Michael Caine,Sleuth,False
+1980,1981,38,2,Walter Matthau,Hopscotch,False
+1981,1982,39,3,Timothy Hutton,Taps,False
+2002,2003,60,9,Nia Vardalos,My Big Fat Greek Wedding,False
+1992,1993,50,6,Judy Davis,Husbands and Wives,False
+1974,1975,32,4,Valerie Perrine,Lenny,False
+1974,1975,32,3,Dustin Hoffman,Lenny,False
+1974,1975,32,5,Bob Fosse,Lenny,False
+1972,1973,30,9,Goldie Hawn,Butterflies Are Free,False
+1972,1973,30,2,Edward Albert,Butterflies Are Free,False
+1972,1973,30,1,"Carry Me, Bob Alcivar, Randy McNeill",Butterflies Are Free,False
+1972,1973,30,15,Edward Albert,Butterflies Are Free,True
+2002,2003,60,4,Diane Lane,Unfaithful,False
+2002,2003,60,2,Hugh Grant,About a Boy,False
+2002,2003,60,1,"""Here I Am"", Hans Zimmer, Bryan Adams, Gretchen Peters",Spirit: Stallion of the Cimarron,False
+1952,1953,10,12,Ginger Rogers,Monkey Business,False
+2002,2003,60,8,Peter Gabriel,Rabbit-Proof Fence,False
+2002,2003,60,10,Paul Newman,Road to Perdition,False
+1969,1970,27,23,"Algeria, Constantin Costa-Gavras",Z,True
+2002,2003,60,2,Kieran Culkin,Igby Goes Down,False
+2002,2003,60,6,Susan Sarandon,Igby Goes Down,False
+2002,2003,60,9,Maggie Gyllenhaal,Secretary,False
+2002,2003,60,2,Adam Sandler,Punch-Drunk Love,False
+1991,1992,49,6,Nicole Kidman,Billy Bathgate,False
+1977,1978,35,2,John Travolta,Saturday Night Fever,False
+1977,1978,35,8,Barry Gibb,Saturday Night Fever,False
+1977,1978,35,1,"How Deep Is Your Love?, Barry Gibb, Robin Gibb, Maurice Gibb, The Bee Gees",Saturday Night Fever,False
+1983,1984,41,1,"Far From Over, Frank Stallone, Vince DiCola",Staying Alive,False
+1980,1981,38,6,Debra Winger,Urban Cowboy,False
+1980,1981,38,14,Debra Winger,Urban Cowboy,False
+1981,1982,39,4,Sally Field,Absence of Malice,False
+1981,1982,39,7,Kurt Luedtke,Absence of Malice,False
+1981,1982,39,9,Blair Brown,Continental Divide,False
+1981,1982,39,9,Jill Clayburgh,First Monday in October,False
+1981,1982,39,2,Walter Matthau,First Monday in October,False
+2002,2003,60,4,Salma Hayek,Frida,False
+2002,2003,60,8,Elliot Goldenthal,Frida,True
+1960,1961,18,10,Sal Mineo,Exodus,True
+1960,1961,18,8,Ernest Gold,Exodus,False
+1960,1961,18,14,Jill Haworth,Exodus,False
+2002,2003,60,1,"""Lose Yourself"", Eminem, Jeffrey Bass, Luis Resto",8 Mile,False
+1958,1959,16,10,Harry Guardino,Houseboat,False
+1981,1982,39,6,Mary Steenburgen,Ragtime,False
+1981,1982,39,10,Howard E. Rollins Jr.,Ragtime,False
+1981,1982,39,5,Milos Forman,Ragtime,False
+1981,1982,39,1,"One More Hour, Randy Newman, Jennifer Warnes",Ragtime,False
+1981,1982,39,20,Elizabeth McGovern,Ragtime,False
+1981,1982,39,20,Howard E. Rollins Jr.,Ragtime,False
+2002,2003,60,1,"""Die Another Day"", Madonna, Mirwais Ahmadzaï",Die Another Day,False
+2002,2003,60,2,Nicolas Cage,Adaptation,False
+2002,2003,60,6,Meryl Streep,Adaptation,True
+2002,2003,60,10,Chris Cooper,Adaptation,True
+2002,2003,60,5,Spike Jonze,Adaptation,False
+2002,2003,60,7,Charlie Kaufman,Adaptation,False
+2002,2003,60,3,Jack Nicholson,About Schmidt,True
+2002,2003,60,6,Kathy Bates,About Schmidt,False
+2002,2003,60,5,Alexander Payne,About Schmidt,False
+2002,2003,60,7,"Alexander Payne, Jim Taylor",About Schmidt,True
+2002,2003,60,8,Terence Blanchard,25th Hour,False
+2002,2003,60,3,Daniel Day-Lewis,Gangs of New York,False
+2002,2003,60,6,Cameron Diaz,Gangs of New York,False
+2002,2003,60,5,Martin Scorsese,Gangs of New York,True
+2002,2003,60,1,"""The Hands That Built America"", U2",Gangs of New York,True
+1956,1957,14,4,Audrey Hepburn,War and Peace,False
+1956,1957,14,10,Oscar Homolka,War and Peace,False
+1956,1957,14,5,King Vidor,War and Peace,False
+1956,1957,14,23,"Italy, King Vidor",War and Peace,True
+2002,2003,60,3,Leonardo DiCaprio,Catch Me If You Can,False
+2002,2003,60,9,Renée Zellweger,Chicago,True
+2002,2003,60,9,Catherine Zeta-Jones,Chicago,False
+2002,2003,60,2,Richard Gere,Chicago,True
+2002,2003,60,6,Queen Latifah,Chicago,False
+2002,2003,60,10,John C. Reilly,Chicago,False
+2002,2003,60,5,Rob Marshall,Chicago,False
+2002,2003,60,7,Bill Condon,Chicago,False
+1959,1960,17,6,Susan Kohner,Imitation of Life,True
+1959,1960,17,6,Juanita Moore,Imitation of Life,False
+1982,1983,40,9,Sally Field,Kiss Me Goodbye,False
+1982,1983,40,4,Sissy Spacek,Missing,False
+1982,1983,40,3,Jack Lemmon,Missing,False
+1982,1983,40,5,Constantin Costa-Gavras,Missing,False
+1982,1983,40,7,Constantin Costa-Gavras,Missing,False
+1959,1960,17,10,Tony Randall,Pillow Talk,False
+1959,1960,17,12,Doris Day,Pillow Talk,False
+1966,1967,24,4,Virginia McKenna,Born Free,False
+1966,1967,24,1,"Born Free, John Barry, Don Black",Born Free,False
+1977,1978,35,3,Richard Burton,Equus,True
+1977,1978,35,10,Peter Firth,Equus,True
+1990,1991,48,9,Andie MacDowell,Green Card,False
+1990,1991,48,2,Gérard Depardieu,Green Card,True
+1969,1970,27,12,Shirley MacLaine,Sweet Charity,False
+1957,1958,15,12,Cyd Charisse,Silk Stockings,False
+1976,1977,34,1,"Car Wash, Norman Whitfield, Rose Royce",Car Wash,False
+1965,1966,23,14,Rosemary Forsyth,Shenandoah,False
+1991,1992,49,10,John Goodman,Barton Fink,False
+1989,1990,47,4,Jessica Lange,Music Box,False
+1967,1968,25,6,Carol Channing,Thoroughly Modern Millie,True
+1967,1968,25,8,Elmer Bernstein,Thoroughly Modern Millie,False
+1967,1968,25,1,"Thoroughly Modern Millie, Jimmy Van Heusen, Sammy Cahn",Thoroughly Modern Millie,False
+1967,1968,25,12,Julie Andrews,Thoroughly Modern Millie,False
+2003,2004,61,2,Johnny Depp,Pirates of the Caribbean: The Curse of the Black Pearl,False
+2003,2004,61,10,William H. Macy,Seabiscuit,False
+1972,1973,30,9,Juliet Mills,Avanti!,False
+1972,1973,30,2,Jack Lemmon,Avanti!,True
+1972,1973,30,10,Clive Revill,Avanti!,False
+1972,1973,30,5,Billy Wilder,Avanti!,False
+1972,1973,30,7,I. A. L. Diamond,Avanti!,False
+1985,1986,43,10,Joel Grey,Remo Williams: The Adventure Begins,False
+2003,2004,61,6,Hope Davis,American Splendor,False
+1967,1968,25,4,Audrey Hepburn,Wait Until Dark,False
+1967,1968,25,10,Efrem Zimbalist Jr.,Wait Until Dark,False
+1979,1980,37,9,Julie Andrews,10,False
+1979,1980,37,2,Dudley Moore,10,False
+1979,1980,37,8,Henry Mancini,10,False
+1979,1980,37,14,Bo Derek,10,False
+2003,2004,61,9,Scarlett Johansson,Lost in Translation,False
+2003,2004,61,2,Bill Murray,Lost in Translation,True
+2003,2004,61,5,Sofia Coppola,Lost in Translation,False
+2003,2004,61,7,Sofia Coppola,Lost in Translation,True
+1973,1974,31,9,Tatum O'Neal,Paper Moon,False
+1973,1974,31,2,Ryan O'Neal,Paper Moon,False
+1973,1974,31,6,Madeline Kahn,Paper Moon,False
+1973,1974,31,5,Peter Bogdanovich,Paper Moon,False
+1973,1974,31,14,Tatum O'Neal,Paper Moon,True
+1961,1962,19,3,Maximilian Schell,Judgment at Nuremberg,True
+1961,1962,19,6,Judy Garland,Judgment at Nuremberg,False
+1961,1962,19,10,Montgomery Clift,Judgment at Nuremberg,False
+1961,1962,19,5,Stanley Kramer,Judgment at Nuremberg,True
+1961,1962,19,22,Stanley Kramer,Judgment at Nuremberg,False
+1954,1955,12,15,Jeff Richards,Seven Brides for Seven Brothers,True
+1985,1986,43,3,William Hurt,Kiss of the Spider Woman,False
+1985,1986,43,3,Raul Julia,Kiss of the Spider Woman,False
+1985,1986,43,6,Sônia Braga,Kiss of the Spider Woman,False
+1993,1994,51,1,"The Day I Fall In Love, James Ingram, Carole Bayer Sager, Clif Magness",Beethoven's 2nd,False
+1991,1992,49,4,Annette Bening,Bugsy,False
+1991,1992,49,3,Warren Beatty,Bugsy,False
+1991,1992,49,10,Harvey Keitel,Bugsy,False
+1991,1992,49,10,Ben Kingsley,Bugsy,False
+1991,1992,49,5,Barry Levinson,Bugsy,False
+1991,1992,49,7,James Toback,Bugsy,False
+1991,1992,49,8,Ennio Morricone,Bugsy,False
+1976,1977,34,8,Paul Williams,Bugsy Malone,False
+1976,1977,34,1,"Bugsy Malone, Paul Williams",Bugsy Malone,False
+1970,1971,28,2,Albert Finney,Scrooge,True
+1970,1971,28,7,Leslie Bricusse,Scrooge,False
+1970,1971,28,8,Leslie Bricusse,Scrooge,False
+1970,1971,28,1,"Thank You Very Much, Leslie Bricusse",Scrooge,False
+2003,2004,61,3,Sean Penn,Mystic River,True
+2003,2004,61,10,Tim Robbins,Mystic River,True
+2003,2004,61,5,Clint Eastwood,Mystic River,False
+2003,2004,61,7,Brian Helgeland,Mystic River,False
+2003,2004,61,6,Patricia Clarkson,Pieces of April,False
+2003,2004,61,4,Cate Blanchett,Veronica Guerin,False
+2003,2004,61,10,Peter Sarsgaard,Shattered Glass,False
+2003,2004,61,7,Richard Curtis,Love Actually,False
+2003,2004,61,3,Russell Crowe,Master and Commander: The Far Side of the World,False
+2003,2004,61,5,Peter Weir,Master and Commander: The Far Side of the World,False
+2003,2004,61,2,Billy Bob Thornton,Bad Santa,False
+1983,1984,41,6,Joanna Pacula,Gorky Park,False
+1994,1995,52,9,Shirley MacLaine,Guarding Tess,False
+1986,1987,44,6,Dianne Wiest,Hannah and Her Sisters,False
+1986,1987,44,10,Michael Caine,Hannah and Her Sisters,False
+1986,1987,44,5,Woody Allen,Hannah and Her Sisters,False
+1986,1987,44,7,Woody Allen,Hannah and Her Sisters,False
+1992,1993,50,3,Jack Nicholson,Hoffa,False
+1992,1993,50,4,Susan Sarandon,Lorenzo's Oil,False
+1990,1991,48,6,Diane Ladd,Wild at Heart,False
+1985,1986,43,10,John Lone,Year of the Dragon,False
+1985,1986,43,8,David Mansfield,Year of the Dragon,False
+1973,1974,31,9,Yvonne Elliman,Jesus Christ Superstar,False
+1973,1974,31,2,Ted Neeley,Jesus Christ Superstar,False
+1973,1974,31,2,Carl Anderson,Jesus Christ Superstar,False
+1973,1974,31,15,Ted Neeley,Jesus Christ Superstar,False
+1973,1974,31,15,Carl Anderson,Jesus Christ Superstar,False
+1962,1963,20,3,Burt Lancaster,Birdman of Alcatraz,False
+1962,1963,20,10,Telly Savalas,Birdman of Alcatraz,False
+1962,1963,20,2,Cary Grant,That Touch of Mink,False
+1978,1979,36,9,Goldie Hawn,Foul Play,False
+1978,1979,36,2,Chevy Chase,Foul Play,False
+1978,1979,36,10,Dudley Moore,Foul Play,False
+1978,1979,36,7,Colin Higgins,Foul Play,False
+1978,1979,36,1,"Ready To Take a Chance Again, Charles Fox, Norman Gimbel",Foul Play,False
+1978,1979,36,15,Chevy Chase,Foul Play,False
+2003,2004,61,10,Albert Finney,Big Fish,False
+2003,2004,61,8,Danny Elfman,Big Fish,False
+2003,2004,61,1,"Man of the Hour, Eddie Vedder",Big Fish,False
+2003,2004,61,9,Diane Keaton,Something's Gotta Give,True
+2003,2004,61,2,Jack Nicholson,Something's Gotta Give,False
+2003,2004,61,1,"The Heart of Every Girl, Elton John, Bernie Taupin",Mona Lisa Smile,False
+2003,2004,61,9,Helen Mirren,Calendar Girls,False
+2003,2004,61,3,Ben Kingsley,House of Sand and Fog,False
+2003,2004,61,4,Charlize Theron,Monster,True
+2003,2004,61,4,Nicole Kidman,Cold Mountain,False
+2003,2004,61,3,Jude Law,Cold Mountain,False
+2003,2004,61,6,Renée Zellweger,Cold Mountain,True
+2003,2004,61,5,Anthony Minghella,Cold Mountain,False
+2003,2004,61,7,Anthony Minghella,Cold Mountain,False
+2003,2004,61,8,Gabriel Yared,Cold Mountain,False
+2003,2004,61,1,"""You Will Be My Ain True Love"", Sting",Cold Mountain,False
+1965,1966,23,4,Simone Signoret,Ship of Fools,False
+1965,1966,23,3,Oskar Werner,Ship of Fools,False
+1968,1969,26,8,"Richard M. Sherman, Robert B. Sherman",Chitty Chitty Bang Bang,False
+1968,1969,26,1,"Chitty Chitty Bang Bang, Richard M. Sherman, Robert B. Sherman",Chitty Chitty Bang Bang,False
+2003,2004,61,4,Evan Rachel Wood,Thirteen,False
+2003,2004,61,6,Holly Hunter,Thirteen,False
+1957,1958,15,6,Mildred Dunnock,Peyton Place,False
+1957,1958,15,6,Hope Lange,Peyton Place,False
+1957,1958,15,14,Diane Varsi,Peyton Place,True
+1965,1966,23,2,Alberto Sordi,Those Magnificent Men in Their Flying Machines,False
+1965,1966,23,15,James Fox,Those Magnificent Men in Their Flying Machines,False
+1985,1986,43,2,Griffin Dunne,After Hours,False
+2001,2002,59,24,Emma Thompson,Wit,False
+1983,1984,41,6,Barbara Carrera,Never Say Never Again,False
+1984,1985,42,6,Melanie Griffith,Body Double,False
+1992,1993,50,3,Robert Downey Jr.,Chaplin,False
+1992,1993,50,6,Geraldine Chaplin,Chaplin,False
+1992,1993,50,8,John Barry,Chaplin,False
+1952,1953,10,15,Aldo Ray,Pat and Mike,False
+1952,1953,10,12,Katharine Hepburn,Pat and Mike,False
+1967,1968,25,2,Richard Harris,Camelot,True
+1967,1968,25,8,Frederick Loewe,Camelot,True
+1967,1968,25,1,"If Ever I Would Leave You, Frederick Loewe, Alan Jay Lerner",Camelot,True
+1967,1968,25,15,Franco Nero,Camelot,False
+1967,1968,25,12,Vanessa Redgrave,Camelot,False
+1999,2000,57,19,Jack Lemmon,Tuesdays with Morrie,False
+1953,1954,11,6,Grace Kelly,Mogambo,True
+1983,1984,41,2,Woody Allen,Zelig,False
+1984,1985,42,9,Mia Farrow,Broadway Danny Rose,False
+1954,1955,12,25,Joseph Ruttenberg,Brigadoon,True
+1962,1963,20,4,Geraldine Page,Sweet Bird of Youth,True
+1962,1963,20,3,Paul Newman,Sweet Bird of Youth,False
+1962,1963,20,6,Shirley Knight,Sweet Bird of Youth,False
+1962,1963,20,10,Ed Begley,Sweet Bird of Youth,False
+1963,1964,21,15,Larry Tucker,Shock Corridor,False
+1968,1969,26,3,Cliff Robertson,Charly,False
+1968,1969,26,7,Stirling Silliphant,Charly,True
+1983,1984,41,9,Julie Walters,Educating Rita,True
+1983,1984,41,2,Michael Caine,Educating Rita,True
+1983,1984,41,7,Willy Russell,Educating Rita,False
+1969,1970,27,4,Geneviève Bujold,Anne of the Thousand Days,True
+1969,1970,27,3,Richard Burton,Anne of the Thousand Days,False
+1969,1970,27,10,Anthony Quayle,Anne of the Thousand Days,False
+1969,1970,27,5,Charles Jarrott,Anne of the Thousand Days,True
+1969,1970,27,7,Bridget Boland,Anne of the Thousand Days,True
+1969,1970,27,8,Georges Delerue,Anne of the Thousand Days,False
+1992,1993,50,9,Shirley MacLaine,Used People,False
+1992,1993,50,2,Marcello Mastroianni,Used People,False
+1947,1948,5,26,Jack Cardiff,Black Narcissus,True
+2004,2005,62,1,"""Accidentally In Love"", Adam Duritz, Dan Vickery, David Immerglück, Matthew Malley, David Bryson",Shrek 2,False
+1961,1962,19,10,Tony Randall,Lover Come Back,False
+1948,1949,6,13,Jane Wyman,Johnny Belinda,True
+1976,1977,34,2,Mel Brooks,Silent Movie,False
+1976,1977,34,6,Bernadette Peters,Silent Movie,False
+1976,1977,34,10,Marty Feldman,Silent Movie,False
+2004,2005,62,9,Ashley Judd,De-Lovely,False
+2004,2005,62,2,Kevin Kline,De-Lovely,False
+1969,1970,27,14,Dyan Cannon,Bob & Carol & Ted & Alice,False
+1969,1970,27,12,Dyan Cannon,Bob & Carol & Ted & Alice,False
+1984,1985,42,9,Lily Tomlin,All of Me,False
+1984,1985,42,2,Steve Martin,All of Me,False
+1960,1961,18,4,Elizabeth Taylor,Butterfield 8,False
+1987,1988,45,2,Steve Martin,Roxanne,False
+2004,2005,62,10,Jamie Foxx,Collateral,False
+1974,1975,32,4,Ellen Burstyn,Alice Doesn't Live Here Anymore,False
+1974,1975,32,6,Diane Ladd,Alice Doesn't Live Here Anymore,False
+1985,1986,43,4,Cher,Mask,False
+1985,1986,43,10,Eric Stoltz,Mask,False
+2004,2005,62,9,Annette Bening,Being Julia,True
+2004,2005,62,2,Paul Giamatti,Sideways,False
+2004,2005,62,6,Virginia Madsen,Sideways,False
+2004,2005,62,10,Thomas Haden Church,Sideways,False
+2004,2005,62,5,Alexander Payne,Sideways,False
+2004,2005,62,7,"Alexander Payne, Jim Taylor",Sideways,True
+2004,2005,62,8,Rolfe Kent,Sideways,False
+2004,2005,62,4,Imelda Staunton,Vera Drake,False
+2004,2005,62,2,Jamie Foxx,Ray,True
+2004,2005,62,4,Nicole Kidman,Birth,False
+2004,2005,62,3,Liam Neeson,Kinsey,False
+2004,2005,62,6,Laura Linney,Kinsey,False
+2004,2005,62,3,Johnny Depp,Finding Neverland,False
+2004,2005,62,5,Marc Forster,Finding Neverland,False
+2004,2005,62,7,David Magee,Finding Neverland,False
+2004,2005,62,8,Jan A.P. Kaczmarek,Finding Neverland,False
+2004,2005,62,6,Natalie Portman,Closer,True
+2004,2005,62,10,Clive Owen,Closer,True
+2004,2005,62,5,Mike Nichols,Closer,False
+2004,2005,62,7,Patrick Marber,Closer,False
+1950,1951,8,12,Betty Hutton,Annie Get Your Gun,False
+1950,1951,8,25,Robert L. Surtees,King Solomon's Mines,True
+1958,1959,16,2,Clark Gable,Teacher's Pet,False
+1958,1959,16,10,Gig Young,Teacher's Pet,False
+1962,1963,20,6,Tarita,Mutiny on the Bounty,False
+1962,1963,20,8,Bronislau Kaper,Mutiny on the Bounty,False
+1975,1976,33,3,Gene Hackman,French Connection II,False
+1976,1977,34,2,Gene Wilder,Silver Streak,False
+1977,1978,35,2,Mel Brooks,High Anxiety,False
+1979,1980,37,20,Treat Williams,Hair,False
+1979,1980,37,2,George Hamilton,Love at First Bite,False
+1985,1986,43,19,Dustin Hoffman,Death of a Salesman,True
+1985,1986,43,UNKNOWN,Kate Reid,Death of a Salesman,False
+1985,1986,43,UNKNOWN,John Malkovich,Death of a Salesman,False
+1985,1986,43,8,Michel Colombier,White Nights,False
+1985,1986,43,1,"Say You, Say Me, Lionel Richie",White Nights,True
+1986,1987,44,3,Dexter Gordon,'Round Midnight,False
+1986,1987,44,8,Herbie Hancock,'Round Midnight,False
+1989,1990,47,19,Robert Duvall,Lonesome Dove,True
+1989,1990,47,UNKNOWN,Anjelica Huston,Lonesome Dove,False
+1989,1990,47,UNKNOWN,Tommy Lee Jones,Lonesome Dove,False
+1993,1994,51,19,James Garner,Barbarians at the Gate,True
+1993,1994,51,UNKNOWN,Jonathan Pryce,Barbarians at the Gate,False
+1999,2000,57,19,Liev Schreiber,RKO 281,False
+1999,2000,57,UNKNOWN,Melanie Griffith,RKO 281,False
+1998,1999,56,24,Angelina Jolie,Gia,True
+1998,1999,56,UNKNOWN,Faye Dunaway,Gia,True
+1998,1999,56,24,Miranda Richardson,Merlin,False
+1998,1999,56,19,Sam Neill,Merlin,False
+1998,1999,56,UNKNOWN,Helena Bonham Carter,Merlin,False
+2000,2001,58,UNKNOWN,Vanessa Redgrave,If These Walls Could Talk 2,True
+2001,2002,59,19,Barry Pepper,61*,False
+2003,2004,61,19,Antonio Banderas,And Starring Pancho Villa as Himself,False
+2004,2005,62,8,Hans Zimmer,Spanglish,False
+2004,2005,62,4,Hilary Swank,Million Dollar Baby,True
+2004,2005,62,10,Morgan Freeman,Million Dollar Baby,False
+2004,2005,62,5,Clint Eastwood,Million Dollar Baby,True
+2004,2005,62,8,Clint Eastwood,Million Dollar Baby,False
+2004,2005,62,3,Don Cheadle,Hotel Rwanda,False
+2004,2005,62,1,"""Million Voices"", Wyclef Jean, Jerry 'Wonder' Duplessis, Andrea Guerra",Hotel Rwanda,False
+2005,2006,63,2,Johnny Depp,Charlie and the Chocolate Factory,False
+2004,2005,62,2,Kevin Spacey,Beyond the Sea,False
+1948,1949,6,6,Ellen Corby,I Remember Mama,True
+1961,1962,19,5,Anthony Mann,El Cid,False
+1961,1962,19,8,Miklos Rozsa,El Cid,False
+1961,1962,19,11,Samuel Bronston,El Cid,False
+1977,1978,35,4,Jane Fonda,Julia,True
+1977,1978,35,6,Vanessa Redgrave,Julia,True
+1977,1978,35,10,Maximilian Schell,Julia,False
+1977,1978,35,10,Jason Robards Jr.,Julia,False
+1977,1978,35,5,Fred Zinnemann,Julia,False
+1977,1978,35,7,Alvin Sargent,Julia,False
+2005,2006,63,3,Russell Crowe,Cinderella Man,False
+2005,2006,63,10,Paul Giamatti,Cinderella Man,False
+2005,2006,63,3,Terrence Howard,Hustle & Flow,False
+1966,1967,24,2,Alan Bates,Georgy Girl,False
+1966,1967,24,1,"Georgy Girl, Tom Springfield, Jim Dale",Georgy Girl,False
+1966,1967,24,14,Lynn Redgrave,Georgy Girl,False
+1966,1967,24,15,Alan Bates,Georgy Girl,False
+1966,1967,24,12,Lynn Redgrave,Georgy Girl,True
+1966,1967,24,18,"United Kingdom, Silvio Narizzano",Georgy Girl,False
+2005,2006,63,4,Gwyneth Paltrow,Proof,False
+2005,2006,63,3,Philip Seymour Hoffman,Capote,True
+2005,2006,63,6,Shirley MacLaine,In Her Shoes,False
+2005,2006,63,3,Heath Ledger,Brokeback Mountain,False
+2005,2006,63,6,Michelle Williams,Brokeback Mountain,False
+2005,2006,63,5,Ang Lee,Brokeback Mountain,True
+2005,2006,63,7,"Larry McMurtry, Diana Ossana",Brokeback Mountain,True
+2005,2006,63,8,Gustavo Santaolalla,Brokeback Mountain,False
+2005,2006,63,1,"""A Love That Will Never Grow Old"", Gustavo Santaolalla, Bernie Taupin",Brokeback Mountain,True
+2005,2006,63,4,Charlize Theron,North Country,False
+2005,2006,63,6,Frances McDormand,North Country,False
+2005,2006,63,10,George Clooney,Syriana,True
+2005,2006,63,8,Alexandre Desplat,Syriana,False
+2005,2006,63,9,Keira Knightley,Pride & Prejudice,False
+2005,2006,63,6,Scarlett Johansson,Match Point,False
+2005,2006,63,5,Woody Allen,Match Point,False
+2005,2006,63,7,Woody Allen,Match Point,False
+2005,2006,63,4,Ziyi Zhang,Memoirs of a Geisha,False
+2005,2006,63,8,John Williams,Memoirs of a Geisha,True
+2005,2006,63,5,Steven Spielberg,Munich,False
+2005,2006,63,7,Tony Kushner,Munich,False
+2005,2006,63,4,Felicity Huffman,Transamerica,True
+2005,2006,63,1,"Travelin' Thru, Dolly Parton",Transamerica,False
+2005,2006,63,9,Judi Dench,Mrs. Henderson Presents,False
+2005,2006,63,10,Bob Hoskins,Mrs. Henderson Presents,False
+2006,2007,64,4,Penélope Cruz,Volver,False
+2006,2007,64,2,Johnny Depp,Pirates of the Caribbean: Dead Man's Chest,False
+2006,2007,64,9,Toni Collette,Little Miss Sunshine,False
+2006,2007,64,6,Adriana Barraza,Babel,False
+2006,2007,64,6,Rinko Kikuchi,Babel,False
+2006,2007,64,10,Brad Pitt,Babel,False
+2006,2007,64,5,Alejandro González Iñárritu,Babel,False
+2006,2007,64,7,Guillermo Arriaga,Babel,False
+2006,2007,64,8,Gustavo Santaolalla,Babel,False
+2006,2007,64,10,Ben Affleck,Hollywoodland,False
+2006,2007,64,9,Annette Bening,Running With Scissors,False
+2006,2007,64,4,Kate Winslet,Little Children,False
+2006,2007,64,7,"Todd Field, Tom Perrotta",Little Children,False
+2006,2007,64,5,Clint Eastwood,Flags of Our Fathers,False
+2006,2007,64,1,"""The Song of the Heart"", Prince ",Happy Feet,True
+2006,2007,64,1,"""Never Gonna Break My Faith"", Bryan Adams, Eliot Kennedy, Andrea Remanda",Bobby,False
+2006,2007,64,3,Leonardo DiCaprio,Blood Diamond,False
+2006,2007,64,9,Beyoncé,Dreamgirls,False
+2006,2007,64,6,Jennifer Hudson,Dreamgirls,True
+2006,2007,64,10,Eddie Murphy,Dreamgirls,True
+2006,2007,64,1,"""Listen"", Beyoncé, Henry Krieger, Anne Preven, Scott Cutler",Dreamgirls,False
+2006,2007,64,5,Clint Eastwood,Letters from Iwo Jima,False
+2006,2007,64,9,Renée Zellweger,Miss Potter,False
+2006,2007,64,3,Peter O'Toole,Venus,False
+1997,1998,55,19,Armand Assante,The Odyssey,False
+1995,1996,53,UNKNOWN,Donald Sutherland,Citizen X,True
+2007,2008,65,9,Nikki Blonsky,Hairspray,False
+2007,2008,65,10,John Travolta,Hairspray,False
+1950,1951,8,22,Delmer Daves,Broken Arrow,True
+1950,1951,8,25,Ernest Palmer,Broken Arrow,False
+1996,1997,54,19,Armand Assante,Gotti,False
+1996,1997,54,UNKNOWN,Anthony Quinn,Gotti,False
+2007,2008,65,4,Keira Knightley,Atonement,False
+2007,2008,65,3,James McAvoy,Atonement,False
+2007,2008,65,6,Saoirse Ronan,Atonement,False
+2007,2008,65,5,Joe Wright,Atonement,False
+2007,2008,65,7,Christopher Hampton,Atonement,False
+2007,2008,65,8,Dario Marianelli,Atonement,True
+2007,2008,65,3,Viggo Mortensen,Eastern Promises,False
+2007,2008,65,8,Howard Shore,Eastern Promises,False
+2007,2008,65,3,George Clooney,Michael Clayton,False
+2007,2008,65,6,Tilda Swinton,Michael Clayton,False
+2007,2008,65,10,Tom Wilkinson,Michael Clayton,False
+2007,2008,65,2,Ryan Gosling,Lars and the Real Girl,False
+2007,2008,65,6,Amy Ryan,Gone Baby Gone,False
+2007,2008,65,3,Denzel Washington,American Gangster,False
+2007,2008,65,5,Ridley Scott,American Gangster,False
+2007,2008,65,10,Javier Bardem,No Country for Old Men,True
+2007,2008,65,5,"Ethan Coen, Joel Coen",No Country for Old Men,False
+2007,2008,65,7,"Joel Coen, Ethan Coen",No Country for Old Men,True
+2007,2008,65,9,Amy Adams,Enchanted,False
+2007,2008,65,1,"That's How You Know, Alan Menken, Stephen Schwartz",Enchanted,False
+2007,2008,65,6,Cate Blanchett,I'm Not There,True
+2007,2008,65,9,Ellen Page,Juno,False
+2007,2008,65,7,Diablo Cody,Juno,False
+2007,2008,65,9,Helena Bonham Carter,Sweeney Todd: The Demon Barber of Fleet Street,False
+2007,2008,65,2,Johnny Depp,Sweeney Todd: The Demon Barber of Fleet Street,True
+2007,2008,65,5,Tim Burton,Sweeney Todd: The Demon Barber of Fleet Street,False
+2007,2008,65,3,Daniel Day-Lewis,There Will Be Blood,True
+2007,2008,65,2,Tom Hanks,Charlie Wilson's War,False
+2007,2008,65,6,Julia Roberts,Charlie Wilson's War,False
+2007,2008,65,10,Philip Seymour Hoffman,Charlie Wilson's War,False
+2007,2008,65,7,Aaron Sorkin,Charlie Wilson's War,False
+2007,2008,65,2,John C. Reilly,Walk Hard: The Dewey Cox Story,False
+2007,2008,65,1,"""Walk Hard"", John C. Reilly, Jake Kasdan, Judd Apatow, Marshall Crenshaw",Walk Hard: The Dewey Cox Story,False
+2008,2009,66,2,Colin Farrell,In Bruges,True
+2008,2009,66,2,Brendan Gleeson,In Bruges,False
+2008,2009,66,9,Sally Hawkins,Happy-Go-Lucky,True
+2008,2009,66,19,Kevin Spacey,Recount,False
+2008,2009,66,19,Tom Wilkinson,Recount,False
+2008,2009,66,UNKNOWN,Laura Dern,Recount,True
+2008,2009,66,UNKNOWN,Denis Leary,Recount,False
+2008,2009,66,9,Meryl Streep,Mamma Mia!,False
+2008,2009,66,9,Rebecca Hall,Vicky Cristina Barcelona,False
+2008,2009,66,2,Javier Bardem,Vicky Cristina Barcelona,False
+2008,2009,66,6,Penélope Cruz,Vicky Cristina Barcelona,False
+2008,2009,66,2,James Franco,Pineapple Express,False
+2008,2009,66,10,Tom Cruise,Tropic Thunder,False
+2008,2009,66,10,Robert Downey Jr.,Tropic Thunder,False
+2008,2009,66,9,Frances McDormand,Burn After Reading,False
+2008,2009,66,24,Laura Linney,John Adams,True
+2008,2009,66,19,Paul Giamatti,John Adams,True
+2008,2009,66,UNKNOWN,Tom Wilkinson,John Adams,True
+2008,2009,66,4,Anne Hathaway,Rachel Getting Married,False
+2008,2009,66,4,Angelina Jolie,Changeling,False
+2008,2009,66,8,Clint Eastwood,Changeling,False
+2008,2009,66,5,Danny Boyle,Slumdog Millionaire,True
+2008,2009,66,7,Simon Beaufoy,Slumdog Millionaire,True
+2008,2009,66,8,A. R. Rahman,Slumdog Millionaire,True
+2008,2009,66,1,"""I Thought I Lost You"", Miley Cyrus, Jeffrey Steele",Bolt,False
+2008,2009,66,3,Sean Penn,Milk,False
+2008,2009,66,4,Meryl Streep,Doubt,False
+2008,2009,66,6,Viola Davis,Doubt,False
+2008,2009,66,6,Amy Adams,Doubt,False
+2008,2009,66,10,Philip Seymour Hoffman,Doubt,False
+2008,2009,66,7,John Patrick Shanley,Doubt,False
+2008,2009,66,1,"Gran Torino, Clint Eastwood, Jamie Cullum, Kyle Eastwood, Michael Stevens",Gran Torino,False
+2008,2009,66,3,Frank Langella,Frost/Nixon,False
+2008,2009,66,5,Ron Howard,Frost/Nixon,False
+2008,2009,66,7,Peter Morgan,Frost/Nixon,False
+2008,2009,66,8,Hans Zimmer,Frost/Nixon,False
+2008,2009,66,4,Kate Winslet,Revolutionary Road,True
+2008,2009,66,3,Leonardo DiCaprio,Revolutionary Road,False
+2008,2009,66,5,Sam Mendes,Revolutionary Road,False
+2008,2009,66,8,James Newton Howard,Defiance,False
+2000,2001,58,19,Alec Baldwin,Nuremberg,False
+2000,2001,58,19,Brian Cox,Nuremberg,False
+2009,2010,67,9,Julia Roberts,Duplicity,False
+2009,2010,67,10,Christoph Waltz,Inglourious Basterds,True
+2009,2010,67,5,Quentin Tarantino,Inglourious Basterds,False
+2009,2010,67,7,Quentin Tarantino,Inglourious Basterds,False
+2009,2010,67,8,Michael Giacchino,Up,True
+1977,1978,35,29,Leslie Uggams,Roots,False
+2009,2010,67,7,"Neill Blomkamp, Terri Tatchell",District 9,False
+2009,2010,67,9,Meryl Streep,Julie & Julia,True
+1996,1997,54,24,Demi Moore,If These Walls Could Talk,False
+1996,1997,54,UNKNOWN,Cher,If These Walls Could Talk,False
+2009,2010,67,3,Tobey Maguire,Brothers,False
+2009,2010,67,1,"""Winter"", U2",Brothers,False
+2009,2010,67,3,Morgan Freeman,Invictus,False
+2009,2010,67,10,Matt Damon,Invictus,False
+2009,2010,67,5,Clint Eastwood,Invictus,False
+2009,2010,67,5,James Cameron,Avatar,True
+2009,2010,67,8,James Horner,Avatar,False
+2009,2010,67,1,"I See You, James Horner, Simon Franglen, Kuk Harrell",Avatar,False
+2009,2010,67,9,Meryl Streep,It's Complicated,False
+2009,2010,67,7,Nancy Meyers,It's Complicated,False
+2009,2010,67,2,Robert Downey Jr.,Sherlock Holmes,True
+2009,2010,67,3,Jeff Bridges,Crazy Heart,True
+2009,2010,67,1,"""The Weary Kind (Theme From Crazy Heart)"", T Bone Burnett, Ryan Bingham",Crazy Heart,True
+2010,2011,68,24,Claire Danes,Temple Grandin,True
+2010,2011,68,UNKNOWN,David Strathairn,Temple Grandin,False
+2010,2011,68,2,Johnny Depp,Alice in Wonderland,False
+2010,2011,68,8,Danny Elfman,Alice in Wonderland,False
+2010,2011,68,4,Michelle Williams,Blue Valentine,False
+2010,2011,68,3,Ryan Gosling,Blue Valentine,False
+2010,2011,68,4,Jennifer Lawrence,Winter's Bone,False
+2009,2010,67,19,Chiwetel Ejiofor,Endgame,False
+2010,2011,68,5,Christopher Nolan,Inception,False
+2010,2011,68,7,Christopher Nolan,Inception,False
+2010,2011,68,8,Hans Zimmer,Inception,False
+2010,2011,68,9,Emma Stone,Easy A,False
+2010,2011,68,10,Michael Douglas,Wall Street: Money Never Sleeps,False
+2010,2011,68,3,James Franco,127 Hours,False
+2010,2011,68,7,"Danny Boyle, Simon Beaufoy",127 Hours,False
+2010,2011,68,8,A. R. Rahman,127 Hours,False
+2010,2011,68,4,Natalie Portman,Black Swan,True
+2010,2011,68,6,Mila Kunis,Black Swan,False
+2010,2011,68,5,Darren Aronofsky,Black Swan,False
+2010,2011,68,1,"I See The Light, Alan Menken, Glenn Slater",Tangled,False
+2010,2011,68,2,Kevin Spacey,Casino Jack,False
+2010,2011,68,2,Paul Giamatti,Barney's Version,True
+2010,2011,68,4,Nicole Kidman,Rabbit Hole,False
+2010,2011,68,1,"""You Haven't Seen The Last of Me"", Diane Warren",Burlesque,True
+2010,2011,68,1,"""Bound To You"", Sia, Christina Aguilera, Samuel Dixon",Burlesque,False
+2011,2012,69,1,"Hello Hello, Elton John, Lady Gaga, Bernie Taupin",Gnomeo & Juliet,False
+2011,2012,69,24,Kate Winslet,Mildred Pierce,True
+2011,2012,69,UNKNOWN,Evan Rachel Wood,Mildred Pierce,False
+2011,2012,69,UNKNOWN,Guy Pearce,Mildred Pierce,False
+2011,2012,69,9,Kristen Wiig,Bridesmaids,False
+2011,2012,69,10,Albert Brooks,Drive,False
+2011,2012,69,3,Brad Pitt,Moneyball,False
+2011,2012,69,10,Jonah Hill,Moneyball,False
+2011,2012,69,7,"Aaron Sorkin, Steve Zaillian, Stan Chervin",Moneyball,False
+2011,2012,69,2,Joseph Gordon-Levitt,50/50,False
+2011,2012,69,2,Jean Dujardin,The Artist,True
+2011,2012,69,6,Bérénice Bejo,The Artist,False
+2011,2012,69,5,Michel Hazanavicius,The Artist,False
+2011,2012,69,7,Michel Hazanavicius,The Artist,False
+2011,2012,69,8,Ludovic Bource,The Artist,True
+2011,2012,69,9,Jodie Foster,Carnage,False
+2011,2012,69,9,Kate Winslet,Carnage,False
+2011,2012,69,3,Michael Fassbender,Shame,False
+2011,2012,69,3,Leonardo DiCaprio,J. Edgar,False
+2011,2012,69,5,Martin Scorsese,Hugo,True
+2011,2012,69,8,Howard Shore,Hugo,False
+2011,2012,69,8,John Williams,War Horse,False
+2012,2013,70,1,"""Safe & Sound"", Taylor Swift, John Paul White, Joy Williams, T Bone Burnett",The Hunger Games,False
+2011,2012,69,9,Charlize Theron,Young Adult,False
+2012,2013,70,1,"""For You"", Keith Urban, Monty Powell",Act of Valor,False
+2012,2013,70,1,"""Skyfall"", Adele, Paul Epworth",Skyfall,True
+2012,2013,70,9,Meryl Streep,Hope Springs,False
+2012,2013,70,10,Alan Arkin,Argo,False
+2012,2013,70,5,Ben Affleck,Argo,True
+2012,2013,70,7,Chris Terrio,Argo,False
+2012,2013,70,8,Alexandre Desplat,Argo,False
+2012,2013,70,8,"Tom Tykwer, Johnny Klimek, Reinhold Heil",Cloud Atlas,False
+2012,2013,70,9,Jennifer Lawrence,Silver Linings Playbook,True
+2012,2013,70,2,Bradley Cooper,Silver Linings Playbook,False
+2012,2013,70,7,David O. Russell,Silver Linings Playbook,False
+2012,2013,70,3,Denzel Washington,Flight,False
+2012,2013,70,8,Dario Marianelli,Anna Karenina,False
+2012,2013,70,5,Ang Lee,Life of Pi,False
+2012,2013,70,8,Mychael Danna,Life of Pi,True
+2012,2013,70,3,Daniel Day-Lewis,Lincoln,True
+2012,2013,70,6,Sally Field,Lincoln,False
+2012,2013,70,10,Tommy Lee Jones,Lincoln,False
+2012,2013,70,5,Steven Spielberg,Lincoln,False
+2012,2013,70,7,Tony Kushner,Lincoln,False
+2012,2013,70,8,John Williams,Lincoln,False
+2012,2013,70,4,Helen Mirren,Hitchcock,False
+2012,2013,70,2,Bill Murray,Hyde Park on Hudson,False
+2012,2013,70,4,Jessica Chastain,Zero Dark Thirty 	,True
+2012,2013,70,5,Kathryn Bigelow,Zero Dark Thirty 	,False
+2012,2013,70,7,Mark Boal,Zero Dark Thirty 	,False
+2012,2013,70,10,Christoph Waltz,Django Unchained,True
+2012,2013,70,10,Leonardo DiCaprio,Django Unchained,False
+2012,2013,70,5,Quentin Tarantino,Django Unchained,False
+2012,2013,70,7,Quentin Tarantino,Django Unchained,True
+2012,2013,70,1,"""Not Running Anymore"", Jon Bon Jovi",Stand Up Guys,False
+2013,2014,71,9,Julie Delpy,Before Midnight,False
+2013,2014,71,24,Helen Mirren,Phil Spector,False
+2013,2014,71,19,Al Pacino,Phil Spector,False
+2013,2014,71,19,Michael Douglas,Behind the Candelabra,True
+2013,2014,71,19,Matt Damon,Behind the Candelabra,False
+2013,2014,71,UNKNOWN,Rob Lowe,Behind the Candelabra,False
+2013,2014,71,4,Cate Blanchett,Blue Jasmine,True
+2013,2014,71,6,Sally Hawkins,Blue Jasmine,False
+2013,2014,71,4,Sandra Bullock,Gravity,False
+2013,2014,71,5,Alfonso Cuarón,Gravity,True
+2013,2014,71,8,Steven Price,Gravity,False
+2013,2014,71,10,Daniel Brühl,Rush,False
+2013,2014,71,2,Bruce Dern,Nebraska,False
+2013,2014,71,6,June Squibb,Nebraska,False
+2013,2014,71,5,Alexander Payne,Nebraska,False
+2013,2014,71,7,Bob Nelson,Nebraska,False
+2013,2014,71,9,Julia Louis-Dreyfus,Enough Said,False
+2013,2014,71,3,Tom Hanks,Captain Phillips,False
+2013,2014,71,10,Barkhad Abdi,Captain Phillips,False
+2013,2014,71,5,Paul Greengrass,Captain Phillips,False
+2013,2014,71,3,Chiwetel Ejiofor,12 Years a Slave,False
+2013,2014,71,6,Lupita Nyong'o,12 Years a Slave,False
+2013,2014,71,10,Michael Fassbender,12 Years a Slave,False
+2013,2014,71,5,Steve McQueen,12 Years a Slave,False
+2013,2014,71,7,John Ridley,12 Years a Slave,False
+2013,2014,71,8,Hans Zimmer,12 Years a Slave,False
+2013,2014,71,3,Robert Redford,All Is Lost,False
+2013,2014,71,8,Alex Ebert,All Is Lost,True
+2013,2014,71,3,Matthew McConaughey,Dallas Buyers Club,True
+2013,2014,71,10,Jared Leto,Dallas Buyers Club,True
+2013,2014,71,4,Judi Dench,Philomena,False
+2013,2014,71,7,"Steve Coogan, Jeff Pope",Philomena,False
+2013,2014,71,1,"""Atlas"", Chris Martin, Guy Berryman, Jon Buckland, Will Champion",The Hunger Games: Catching Fire,False
+2013,2014,71,1,"""Let It Go"", Kristen Anderson Lopez, Robert Lopez",Frozen,False
+2013,2014,71,2,Oscar Isaac,Inside Llewyn Davis,False
+2013,2014,71,1,"""Please Mr. Kennedy"", Ed Rush, George Cromarty, T Bone Burnett, Justin Timberlake, Joel Coen, Ethan Coen",Inside Llewyn Davis,False
+2013,2014,71,3,Idris Elba,Mandela: Long Walk to Freedom,False
+2013,2014,71,8,Alex Heffes,Mandela: Long Walk to Freedom,False
+2013,2014,71,1,"""Ordinary Love"", U2, Danger Mouse, Bono",Mandela: Long Walk to Freedom,True
+2013,2014,71,9,Amy Adams,American Hustle,True
+2013,2014,71,2,Christian Bale,American Hustle,False
+2013,2014,71,6,Jennifer Lawrence,American Hustle,True
+2013,2014,71,10,Bradley Cooper,American Hustle,False
+2013,2014,71,5,David O. Russell,American Hustle,False
+2013,2014,71,7,"Eric Warren Singer , David O. Russell",American Hustle,False
+2013,2014,71,2,Joaquin Phoenix,Her,False
+2013,2014,71,7,Spike Jonze,Her,True
+2013,2014,71,4,Emma Thompson,Saving Mr. Banks,False
+2014,2015,72,8,Hans Zimmer,Interstellar,False
+2014,2015,72,1,"""Mercy Is"", Patti Smith, Lenny Kaye",Noah,False
+2014,2015,72,6,Patricia Arquette,Boyhood,True
+2014,2015,72,10,Ethan Hawke,Boyhood,False
+2014,2015,72,5,Richard Linklater,Boyhood,True
+2014,2015,72,7,Richard Linklater,Boyhood,False
+2014,2015,72,10,J.K. Simmons,Whiplash,True
+2014,2015,72,4,Rosamund Pike,Gone Girl,False
+2014,2015,72,5,David Fincher,Gone Girl,False
+2014,2015,72,7,Gillian Flynn,Gone Girl,False
+2014,2015,72,8,"Trent Reznor, Atticus Ross",Gone Girl,False
+2014,2015,72,2,Bill Murray,St. Vincent,False
+2014,2015,72,3,Jake Gyllenhaal,Nightcrawler,False
+2015,2016,73,6,Alicia Vikander,Ex Machina,False
+2014,2015,72,3,Benedict Cumberbatch,The Imitation Game,False
+2014,2015,72,6,Keira Knightley,The Imitation Game,False
+2014,2015,72,7,Graham Moore,The Imitation Game,False
+2014,2015,72,8,Alexandre Desplat,The Imitation Game,False
+2014,2015,72,2,Joaquin Phoenix,Inherent Vice,False
+2014,2015,72,1,"""Yellow Flicker Beat"", Lorde, Joel Little",The Hunger Games: Mockingjay - Part 1,False
+2014,2015,72,4,Felicity Jones,The Theory of Everything,False
+2014,2015,72,3,Eddie Redmayne,The Theory of Everything,True
+2014,2015,72,8,Jóhann Jóhannsson,The Theory of Everything,True
+2014,2015,72,4,Julianne Moore,Still Alice,True
+2014,2015,72,3,David Oyelowo,Selma,False
+2014,2015,72,5,Ava DuVernay,Selma,False
+2014,2015,72,1,"""Glory"", Common, John Legend",Selma,True
+2014,2015,72,4,Reese Witherspoon,Wild,False
+2014,2015,72,9,Amy Adams,Big Eyes,True
+2014,2015,72,2,Christoph Waltz,Big Eyes,False
+2014,2015,72,1,"""Big Eyes"", Lana Del Rey, Daniel Heath",Big Eyes,False
+2014,2015,72,9,Emily Blunt,Into the Woods,False
+2014,2015,72,6,Meryl Streep,Into the Woods,False
+2015,2016,73,5,George Miller,Mad Max: Fury Road,False
+2016,2017,74,2,Ryan Reynolds,Deadpool,False
+2014,2015,72,4,Jennifer Aniston,Cake,False
+2015,2016,73,1,"""Love Me Like You Do"", Tove Lo, Max Martin, Savan Kotecha, Ali Payami, Ilya Salmanzadeh",Fifty Shades of Grey,False
+2015,2016,73,4,Saoirse Ronan,Brooklyn,False
+2015,2016,73,6,Jennifer Jason Leigh,The Hateful Eight,False
+2015,2016,73,7,Quentin Tarantino,The Hateful Eight,False
+2015,2016,73,8,Ennio Morricone,The Hateful Eight,True
+2015,2016,73,1,"""See You Again"", DJ Frank E, Andrew Cedar, Charlie Puth, Wiz Khalifa",Furious 7,False
+2015,2016,73,2,Al Pacino,Danny Collins,False
+2015,2016,73,4,Cate Blanchett,Carol,False
+2015,2016,73,4,Rooney Mara,Carol,False
+2015,2016,73,5,Todd Haynes,Carol,False
+2015,2016,73,8,Carter Burwell,Carol,False
+2015,2016,73,2,Matt Damon,The Martian,True
+2015,2016,73,5,Ridley Scott,The Martian,False
+2015,2016,73,6,Jane Fonda,Youth,False
+2015,2016,73,1,"""Simple Song #3"", David Lang",Youth,False
+2015,2016,73,9,Melissa McCarthy,Spy,False
+2015,2016,73,9,Amy Schumer,Trainwreck,False
+2015,2016,73,1,"""Writing's On The Wall"", Sam Smith, Jimmy Napes",Spectre,True
+2015,2016,73,3,Michael Fassbender,Steve Jobs,False
+2015,2016,73,6,Kate Winslet,Steve Jobs,True
+2015,2016,73,7,Aaron Sorkin,Steve Jobs,True
+2015,2016,73,8,Daniel Pemberton,Steve Jobs,False
+2015,2016,73,3,Leonardo DiCaprio,The Revenant,True
+2015,2016,73,5,Alejandro González Iñárritu,The Revenant,True
+2015,2016,73,8,"Ryuichi Sakamoto, Alva Noto",The Revenant,False
+2015,2016,73,4,Brie Larson,Room,True
+2015,2016,73,7,Emma Donoghue,Room,False
+2015,2016,73,9,Jennifer Lawrence,Joy,True
+2015,2016,73,4,Alicia Vikander,The Danish Girl,False
+2015,2016,73,3,Eddie Redmayne,The Danish Girl,False
+2015,2016,73,8,Alexandre Desplat,The Danish Girl,False
+2015,2016,73,10,Idris Elba,Beasts of No Nation,False
+2015,2016,73,5,Tom McCarthy,Spotlight,False
+2015,2016,73,7,"Tom McCarthy, Josh Singer",Spotlight,False
+2015,2016,73,10,Mark Rylance,Bridge of Spies,False
+2015,2016,73,3,Bryan Cranston,Trumbo,False
+2015,2016,73,6,Helen Mirren,Trumbo,False
+2015,2016,73,3,Will Smith,Concussion,False
+2015,2016,73,10,Sylvester Stallone,Creed,True
+2016,2017,74,9,Meryl Streep,Florence Foster Jenkins,False
+2016,2017,74,2,Hugh Grant,Florence Foster Jenkins,False
+2016,2017,74,10,Simon Helberg,Florence Foster Jenkins,False
+2016,2017,74,3,Viggo Mortensen,Captain Fantastic,False
+2016,2017,74,2,Jonah Hill,War Dogs,False
+2016,2017,74,10,Jeff Bridges,Hell or High Water,False
+2016,2017,74,7,Taylor Sheridan,Hell or High Water,False
+2016,2017,74,9,Hailee Steinfeld,The Edge of Seventeen,False
+2016,2017,74,4,Isabelle Huppert,Elle,True
+2016,2017,74,3,Andrew Garfield,Hacksaw Ridge,False
+2016,2017,74,5,Mel Gibson,Hacksaw Ridge,False
+2016,2017,74,4,Amy Adams,Arrival,False
+2016,2017,74,8,Jóhann Jóhannsson,Arrival,False
+2016,2017,74,9,Emma Stone,La La Land,True
+2016,2017,74,2,Ryan Gosling,La La Land,True
+2016,2017,74,5,Damien Chazelle,La La Land,True
+2016,2017,74,7,Damien Chazelle,La La Land,True
+2016,2017,74,8,Justin Hurwitz,La La Land,True
+2016,2017,74,1,"""City of Stars"", Justin Hurwitz, Benj Pasek, Justin Paul",La La Land,True
+2016,2017,74,3,Casey Affleck,Manchester by the Sea,True
+2016,2017,74,6,Michelle Williams,Manchester by the Sea,False
+2016,2017,74,5,Kenneth Lonergan,Manchester by the Sea,False
+2016,2017,74,7,Kenneth Lonergan,Manchester by the Sea,False
+2016,2017,74,6,Nicole Kidman,Lion,False
+2016,2017,74,10,Dev Patel,Lion,False
+2016,2017,74,8,"Dustin O'Halloran, Hauschka",Lion,False
+2016,2017,74,1,"""How Far I'll Go"", Lin-Manuel Miranda",Moana,False
+2016,2017,74,4,Jessica Chastain,Miss Sloane,False
+2016,2017,74,6,Octavia Spencer,Hidden Figures,False
+2016,2017,74,8,"Hans Zimmer, Pharrell Williams, Benjamin Wallfisch",Hidden Figures,False
+2016,2017,74,3,Denzel Washington,Fences,False
+2016,2017,74,6,Viola Davis,Fences,True
+2016,2017,74,1,"""Faith"", Stevie Wonder, Ryan Tedder, Francis and the Lights",Sing,False
+2017,2018,75,2,Daniel Kaluuya,Get Out,False
+2017,2018,75,6,Mary J. Blige,Mudbound,False
+2017,2018,75,1,"""Mighty River"", Raphael Saadiq, Taura Stinson, Mary J. Blige",Mudbound,False
+2001,2002,59,19,Damian Lewis,Band of Brothers,False
+2001,2002,59,UNKNOWN,Ron Livingston,Band of Brothers,False
+2017,2018,75,2,Ansel Elgort,Baby Driver,False
+2017,2018,75,5,Christopher Nolan,Dunkirk,False
+2017,2018,75,8,Hans Zimmer,Dunkirk,False
+2017,2018,75,9,Saoirse Ronan,Lady Bird,True
+2017,2018,75,6,Laurie Metcalf,Lady Bird,False
+2017,2018,75,7,Greta Gerwig,Lady Bird,False
+2017,2018,75,1,"""Remember Me"", Kristen Anderson Lopez, Robert Lopez",Coco,False
+2017,2018,75,3,Gary Oldman,Darkest Hour,True
+2017,2018,75,4,Sally Hawkins,The Shape of Water,False
+2017,2018,75,6,Octavia Spencer,The Shape of Water,False
+2017,2018,75,10,Richard Jenkins,The Shape of Water,False
+2017,2018,75,5,Guillermo del Toro,The Shape of Water,True
+2017,2018,75,7,"Guillermo del Toro, Vanessa Taylor",The Shape of Water,False
+2017,2018,75,8,Alexandre Desplat,The Shape of Water,True
+2017,2018,75,4,Jessica Chastain,Molly's Game,False
+2017,2018,75,7,Aaron Sorkin,Molly's Game,False
+2017,2018,75,4,Meryl Streep,The Post,False
+2017,2018,75,3,Tom Hanks,The Post,False
+2017,2018,75,5,Steven Spielberg,The Post,False
+2017,2018,75,7,"Liz Hannah, Josh Singer",The Post,False
+2017,2018,75,8,John Williams,The Post,False
+2017,2018,75,2,Hugh Jackman,The Greatest Showman,False
+2017,2018,75,1,"""This Is Me"", Justin Paul, Benj Pasek",The Greatest Showman,True
+2017,2018,75,1,"""Home"", Nick Jonas, Justin Tranter, Nick Monson",Ferdinand,False
+2017,2018,75,3,Daniel Day-Lewis,Phantom Thread,False
+2017,2018,75,8,Jonny Greenwood,Phantom Thread,False
+1995,1996,53,24,Glenn Close,Serving in Silence: The Margarethe Cammermeyer Story,False
+1995,1996,53,UNKNOWN,Judy Davis,Serving in Silence: The Margarethe Cammermeyer Story,False
+2018,2019,76,8,Alexandre Desplat,Isle of Dogs,False
+2018,2019,76,3,John David Washington,BlacKkKlansman,False
+2018,2019,76,10,Adam Driver,BlacKkKlansman,False
+2018,2019,76,5,Spike Lee,BlacKkKlansman,False

@@ -1,0 +1,84 @@
+award_id,award_name
+1,MUSIC (Original Musical or Comedy Score)
+2,MUSIC (Original Song)
+3,WRITING (Screenplay Written Directly for the Screen)
+4,ACTOR IN A LEADING ROLE
+5,ACTRESS IN A SUPPORTING ROLE
+6,MUSIC (Original Dramatic Score)
+7,ACTRESS IN A LEADING ROLE
+8,CINEMATOGRAPHY
+9,COSTUME DESIGN
+10,BEST PICTURE
+11,WRITING (Screenplay Based on Material Previously Produced or Published)
+12,DIRECTING
+13,ACTOR IN A SUPPORTING ROLE
+14,ART DIRECTION
+15,FILM EDITING
+16,VISUAL EFFECTS
+17,MAKEUP
+18,SOUND
+19,SOUND EFFECTS EDITING
+20,MUSIC (Original Score)
+21,DOCUMENTARY (Feature)
+22,MUSIC (Scoring)
+23,MUSIC (Song)
+24,ACTOR
+25,WRITING (Screenplay--based on material from another medium)
+26,ACTRESS
+27,ART DIRECTION (Color)
+28,CINEMATOGRAPHY (Color)
+29,MUSIC (Music Score of a Dramatic or Comedy Picture)
+30,OUTSTANDING MOTION PICTURE
+31,MUSIC (Scoring of a Musical Picture)
+32,WRITING (Story and Screenplay--written directly for the screen)
+33,SOUND RECORDING
+34,WRITING (Screenplay)
+35,OUTSTANDING PRODUCTION
+36,WRITING (Adaptation)
+37,ART DIRECTION (Black-and-White)
+38,CINEMATOGRAPHY (Black-and-White)
+39,BEST MOTION PICTURE
+40,COSTUME DESIGN (Black-and-White)
+41,COSTUME DESIGN (Color)
+42,MUSIC (Scoring of Music--adaptation or treatment)
+43,WRITING (Motion Picture Story)
+44,SPECIAL EFFECTS
+45,MUSIC (Music Score of a Dramatic Picture)
+46,WRITING (Original Screenplay)
+47,SPECIAL VISUAL EFFECTS
+48,WRITING (Original Story)
+49,ASSISTANT DIRECTOR
+50,DANCE DIRECTION
+51,WRITING (Screenplay--Adapted)
+52,SHORT SUBJECT (Cartoon)
+53,MUSIC (Music Score--substantially original)
+54,MUSIC (Original Song Score and Its Adaptation or Adaptation Score)
+55,MUSIC (Scoring: Adaptation and Original Song Score)
+56,MUSIC (Song--Original for the Picture)
+57,MUSIC (Original Song Score and Its Adaptation -or- Adaptation Score)
+58,WRITING (Screenplay Based on Material from Another Medium)
+59,FOREIGN LANGUAGE FILM
+60,WRITING (Screenplay Written Directly for the Screen--based on factual material or on story material not previously published or produced)
+61,WRITING (Story and Screenplay--based on factual material or material not previously published or produced)
+62,MUSIC (Original Music Score)
+63,WRITING (Screenplay Adapted from Other Material)
+64,MUSIC (Original Score--for a motion picture [not a musical])
+65,WRITING (Story and Screenplay--based on material not previously published or produced)
+66,WRITING (Original Motion Picture Story)
+67,WRITING (Story and Screenplay)
+68,SOUND EFFECTS
+69,MUSIC (Score of a Musical Picture--original or adaptation)
+70,SPECIAL ACHIEVEMENT AWARD (Visual Effects)
+71,MUSIC (Scoring: Original Song Score and Adaptation -or- Scoring: Adaptation)
+72,SPECIAL ACHIEVEMENT AWARD (Sound Effects Editing)
+73,MUSIC (Original Song Score or Adaptation Score)
+74,SOUND EDITING
+75,ANIMATED FEATURE FILM
+76,SHORT FILM (Animated)
+77,DOCUMENTARY (Short Subject)
+78,WRITING (Adapted Screenplay)
+79,SOUND MIXING
+80,MUSIC (Original Song Score)
+81,PRODUCTION DESIGN
+82,MAKEUP AND HAIRSTYLING
+83,SHORT FILM (Live Action)
