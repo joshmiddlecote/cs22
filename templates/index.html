@@ -97,6 +97,12 @@
             font-weight: bold;
             color: #444;
         }
+        .movie-poster {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
 
         .pagination {
             margin-top: 30px;
@@ -134,33 +140,63 @@
             <label for="year_released">Year Released:</label>
             <select id="year_released" name="year_released">
                 <option value="">--Select Year--</option>
-                <option value="2022" {% if year_released == '2022' %}selected{% endif %}>2022</option>
-                <option value="2021" {% if year_released == '2021' %}selected{% endif %}>2021</option>
-                <option value="2020" {% if year_released == '2020' %}selected{% endif %}>2020</option>
-                <option value="2019" {% if year_released == '2019' %}selected{% endif %}>2019</option>
+                {% for year in range(2025, 1969, -1) %}
+                    <option value="{{ year }}" {% if year_released == year|string %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
             </select>
-            
+        
             <label for="rating">Rating:</label>
             <select id="rating" name="rating">
                 <option value="">--Select Rating--</option>
-                <option value="1" {% if rating == '1' %}selected{% endif %}>1 Star</option>
-                <option value="2" {% if rating == '2' %}selected{% endif %}>2 Stars</option>
-                <option value="3" {% if rating == '3' %}selected{% endif %}>3 Stars</option>
-                <option value="4" {% if rating == '4' %}selected{% endif %}>4 Stars</option>
-                <option value="5" {% if rating == '5' %}selected{% endif %}>5 Stars</option>
+                {% for i in range(1, 6) %}
+                    <option value="{{ i }}" {% if rating == i|string %}selected{% endif %}>{{ i }} Star{% if i > 1 %}s{% endif %}</option>
+                {% endfor %}
             </select>
 
+            <label for="genre_id">Genre:</label>
+            <select id="genre_id" name="genre_id">
+                <option value="">--Select Genre--</option>
+                {% for genre in genres %}
+                    <option value="{{ genre.id }}" {% if genre_id == genre.id|string %}selected{% endif %}>{{ genre.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="award_id">Award:</label>
+            <select id="award_id" name="award_id">
+                <option value="">--Select Award--</option>
+                {% for award in awards %}
+                    <option value="{{ award.id }}" {% if award_id == award.id|string %}selected{% endif %}>{{ award.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="actor_id">Actor:</label>
+            <select id="actor_id" name="actor_id">
+                <option value="">--Select Actor--</option>
+                {% for actor in actors %}
+                    <option value="{{ actor.id }}" {% if actor_id == actor.id|string %}selected{% endif %}>{{ actor.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="language_id">Language:</label>
+            <select id="language_id" name="language_id">
+                <option value="">--Select Language--</option>
+                {% for language in languages %}
+                    <option value="{{ language.id }}" {% if language_id == language.id|string %}selected{% endif %}>{{ language.name }}</option>
+                {% endfor %}
+            </select>
+        
             <input type="hidden" name="page" value="1">
             <input type="hidden" name="size" value="{{ size }}">
-
+        
             <button type="submit">Apply Filters</button>
-        </form>
+        </form>        
     </div>
 
     <div class="movie-list">
         {% for movie in movies %}
         <div class="movie-card">
             <a href="/movies/{{ movie.id }}">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
                 <h3>{{ movie.title }}</h3>
                 <p>{{ movie.tagline[:100] }}</p>
                 <p> Rating: {{ movie.rating }}/5.00</p>
@@ -173,13 +209,19 @@
     <div class="pagination">
         <a href="/movies?page={{ page - 1 }}&size={{ size }}
             {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
-            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
+            {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
+            {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
             Previous
         </a>
 
         <a href="/movies?page={{ page + 1 }}&size={{ size }}
             {% if year_released and year_released != '' %}&year_released={{ year_released }}{% endif %}
-            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}">
+            {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
+            {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
+            {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
             Next
         </a>
     </div>

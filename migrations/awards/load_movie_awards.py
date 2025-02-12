@@ -24,21 +24,21 @@ cursor = conn.cursor()
 
 # Step 2: Create the awards table (if it doesn't exist already)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS awards (
+    CREATE TABLE IF NOT EXISTS award_wins (
         year_film INT,
         year_ceremony INT,
         ceremony INT,
-        award_id VARCHAR(255),
+        award_id INT REFERENCES awards(id),
         nominee VARCHAR(255),
-        film VARCHAR(255),
+        movie_id INT REFERENCES movies(id),
         winner BOOLEAN,
-        PRIMARY KEY (award_id, nominee, film)
+        PRIMARY KEY (award_id, nominee, movie_id)
     );
 """)
 
 
 # Step 3: Open the CSV file and load data into the table
-with open('data/ml-latest-small/awards.csv', newline='', encoding='utf-8') as csvfile:
+with open('data/ml-latest-small/awards_final.csv', newline='', encoding='utf-8') as csvfile:
     csvreader = csv.DictReader(csvfile)  # Read the file as a dictionary
     for row in csvreader:
         year_film = row['year_film']
@@ -46,14 +46,20 @@ with open('data/ml-latest-small/awards.csv', newline='', encoding='utf-8') as cs
         ceremony = row['ceremony']
         award_id = row['award_id']
         nominee = row['nominee']
-        film = row['film']
-        winner = row['winner'] == 'True'  # Convert winner to boolean (True/False)
+        movie_id = row['movieId']
+        winner = row['winner'] == 'True'
+
+        if movie_id == 'N/A':
+            continue
+
+        if award_id == 'gUNKNOWN':
+            continue
 
         cursor.execute("""
-            INSERT INTO awards (year_film, year_ceremony, ceremony, award_id, nominee, film, winner)
+            INSERT INTO award_wins (year_film, year_ceremony, ceremony, award_id, nominee, movie_id, winner)
             VALUES (%s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (award_id, nominee, film) DO NOTHING;  -- Avoid duplicate entries
-        """, (year_film, year_ceremony, ceremony, award_id, nominee, film, winner))
+            ON CONFLICT (award_id, nominee, movie_id) DO NOTHING;
+        """, (year_film, year_ceremony, ceremony, award_id, nominee, movie_id, winner))
 
 
 # Step 4: Commit the changes

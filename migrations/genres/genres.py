@@ -16,7 +16,7 @@ def create_genres_table(cursor, conn):
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS genres(
             id INT PRIMARY KEY,
-            genre_name VARCHAR(255) NOT NULL, 
+            name VARCHAR(255) NOT NULL, 
             avg_rating FLOAT DEFAULT 0, 
             variance FLOAT DEFAULT 0, 
             total_ratings INT DEFAULT 0
@@ -27,7 +27,7 @@ def create_genres_table(cursor, conn):
 
 def create_genre_links_table(cursor, conn):
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS genre_links(
+        CREATE TABLE IF NOT EXISTS movie_genres(
             movie_id INT REFERENCES movies(id),
             genre_id INT REFERENCES genres(id),
             PRIMARY KEY (movie_id, genre_id)
@@ -48,7 +48,7 @@ def insert_genres(cursor, conn):
             total_ratings = row['total_ratings']
 
             cursor.execute("""
-                INSERT INTO genres (id, genre_name, avg_rating, variance, total_ratings)
+                INSERT INTO genres (id, name, avg_rating, variance, total_ratings)
                 VALUES (%s, %s, %s, %s, %s);
             """, (id, genre_name, avg_rating, variance, total_ratings)) 
 
@@ -62,7 +62,7 @@ def insert_genre_links(cursor, conn):
             genre_id = int(row['genre_id'])
 
             cursor.execute("""
-                INSERT INTO genre_links(movie_id, genre_id)
+                INSERT INTO movie_genres(movie_id, genre_id)
                 VALUES (%s, %s)
             """, (movie_id, genre_id))
 

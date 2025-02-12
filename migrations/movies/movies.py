@@ -4,6 +4,13 @@ import os
 import re
 from dotenv import load_dotenv
 
+def drop_tables(cursor, conn):
+    cursor.execute("""
+        DROP TABLE IF EXISTS movies CASCADE;
+    """)
+
+    conn.commit()
+
 def create_movies_table(cursor, conn):
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS movies (
@@ -19,7 +26,8 @@ def create_movies_table(cursor, conn):
             budget BIGINT DEFAULT 0,
             revenue BIGINT DEFAULT 0,
             overview VARCHAR(2000) DEFAULT NULL,
-            tagline VARCHAR(255) DEFAULT NULL
+            tagline VARCHAR(255) DEFAULT NULL,
+            poster VARCHAR(500) DEFAULT NULL
         );
     """)
     conn.commit()
@@ -38,27 +46,31 @@ def handle_missing_data(row3):
 def insert_movie_data(cursor, conn):
     with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, \
         open('data/ml-latest-small/movie_average_ratings.csv', newline='', encoding='utf-8') as ratings_csvfile, \
-        open('data/ml-latest-small/movie_extra_details.csv', newline='', encoding='utf-8') as extra_details_csvfile:
+        open('data/ml-latest-small/movie_extra_details.csv', newline='', encoding='utf-8') as extra_details_csvfile, \
+        open('data/ml-latest-small/movies_with_posters.csv', newline='', encoding='utf-8') as posters_csvfile:
 
         movie_csvreader = csv.reader(csvfile)
         ratings_csvreader = csv.reader(ratings_csvfile)
         extra_details_csvreader = csv.reader(extra_details_csvfile)
+        posters_csvreader = csv.reader(posters_csvfile)
         next(movie_csvreader)
         next(ratings_csvreader)
         next(extra_details_csvreader)
+        next(posters_csvreader)
         
-        for row1, row2, row3 in zip(movie_csvreader, ratings_csvreader, extra_details_csvreader):
+        for row1, row2, row3, row4 in zip(movie_csvreader, ratings_csvreader, extra_details_csvreader, posters_csvreader):
             movie_id, title, _ = row1
             _, average_rating, num_ratings, variance = row2
             (budget, revenue, language_id, overview, runtime, tagline) = handle_missing_data(row3)
+            _,_,_, poster_url = row4
             year = re.search(r'\((\d{4})\)', title).group(1)
             title = re.sub(r'\s*\(\d{4}\)', '', title)
 
             cursor.execute("""
-                INSERT INTO movies (id, title, year_released, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                INSERT INTO movies (id, title, year_released, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (id) DO NOTHING;
-            """, (movie_id, title, year, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline))
+            """, (movie_id, title, year, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster_url))
 
     conn.commit()
 
@@ -77,6 +89,7 @@ def main():
     )
     cursor = conn.cursor()
 
+    drop_tables(cursor, conn)
     create_movies_table(cursor, conn)
     insert_movie_data(cursor, conn)
 

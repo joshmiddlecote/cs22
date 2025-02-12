@@ -24,24 +24,24 @@ cursor = conn.cursor()
 
 # Step 2: Create the actor_mapping table (if it doesn't exist already)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS award_mapping (
-        awardId VARCHAR(255) PRIMARY KEY, 
-        awardName VARCHAR(255) NOT NULL
+    CREATE TABLE IF NOT EXISTS awards (
+        id INT PRIMARY KEY, 
+        name VARCHAR(255) NOT NULL
     );
 """)
 
 
 # Step 3: Open the CSV file and load data into the table
-with open('data/ml-latest-small/award_id.csv', newline='', encoding='utf-8') as csvfile:
+with open('data/ml-latest-small/award_id_final.csv', newline='', encoding='utf-8') as csvfile:
     csvreader = csv.reader(csvfile)
     next(csvreader)  # Skip the header row
     
     for row in csvreader:
         award_id, award_name = row
         cursor.execute("""
-            INSERT INTO award_mapping (awardId, awardName)
+            INSERT INTO awards (id, name)
             VALUES (%s, %s)
-            ON CONFLICT (awardId) DO NOTHING;  -- Avoid duplicate entries
+            ON CONFLICT (id) DO NOTHING;
         """, (award_id, award_name))
 
 

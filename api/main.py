@@ -2,6 +2,10 @@ from fastapi import FastAPI, Query, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 import movies.queries as movie_queries
+import genres.queries as genre_queries
+import awards.queries as award_queries
+import actors.queries as actor_queries
+import languages.queries as language_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="../templates")
@@ -15,16 +19,25 @@ async def root():
 @app.get("/movies")
 def read_root(
         request: Request, page: int = Query(1, ge=1), size: int = Query(10, le=100), 
-        year_released: int | None = Query(default=None), rating: float | None = Query(default=None)):
+        year_released: str | None = Query(default=None), rating: str | None = Query(default=None),
+        genre_id: str | None = Query(default=None), award_id: str | None = Query(default=None),
+        winner: str | None = Query(default=None), actor_id: str | None = Query(default=None), 
+        language_id: str | None = Query(default=None)):
     
-    print(year_released)
-    print(rating)
-    
-    start_index = (page - 1) * size
-    (movies, total_pages) = movie_queries.get_all_movies(size, start_index, year_released, rating)
+    offset = (page - 1) * size
+    movies = movie_queries.get_all_movies(size, offset, year_released, rating, genre_id, award_id, winner, actor_id, language_id)
+    genres = genre_queries.get_all_genres()
+    awards = award_queries.get_all_awards()
+    actors = actor_queries.get_all_actors()
+    languages = language_queries.get_all_languages()
+
     return templates.TemplateResponse("index.html", 
         {"request": request, "movies": movies, "page": page, 
-         "size": size, "total_pages": total_pages})
+         "size": size, "rating": rating, "year_released": year_released, 
+         "genre_id": genre_id, "genres": genres,
+         "award_id": award_id, "awards": awards,
+         "actor_id": actor_id, "actors": actors,
+         "language_id": language_id, "languages": languages})
 
 @app.get("/movies/{movie_id}")
 def read_movie(request: Request, movie_id: int):

@@ -24,9 +24,9 @@ cursor = conn.cursor()
 
 # Step 2: Create the actor_mapping table (if it doesn't exist already)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS actor_mapping (
-        actorId INT PRIMARY KEY, 
-        actorName VARCHAR(255) NOT NULL
+    CREATE TABLE IF NOT EXISTS actors (
+        id INT PRIMARY KEY, 
+        name VARCHAR(255) NOT NULL
     );
 """)
 
@@ -39,9 +39,9 @@ with open('data/ml-latest-small/actor_mapping.csv', newline='', encoding='utf-8'
     for row in csvreader:
         actor_id, actor_name = row
         cursor.execute("""
-            INSERT INTO actor_mapping (actorId, actorName)
+            INSERT INTO actors (id, name)
             VALUES (%s, %s)
-            ON CONFLICT (actorId) DO NOTHING;  -- Avoid duplicate entries
+            ON CONFLICT (id) DO NOTHING;
         """, (actor_id, actor_name))
 
 # Step 4: Commit the changes

@@ -20,11 +20,11 @@ def insert_languages_data(cursor, conn):
         next(languages_csvreader)
 
         for row in languages_csvreader:
-            code, id = row
+            id, code, name = row
             sql = """
-                INSERT INTO languages(id, code) VALUES(%s, %s)
+                INSERT INTO languages(id, code, name) VALUES(%s, %s, %s)
             """
-            cursor.execute(sql, (id, code))
+            cursor.execute(sql, (id, code, name))
     
     conn.commit()
 
