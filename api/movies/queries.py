@@ -52,13 +52,13 @@ def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_
     # need to process filters than need table joins first
 
     if genre_id != None and genre_id != "":
-        sql += "INNER JOIN genre_links gl ON gl.movie_id = m.id "
+        sql += "INNER JOIN movie_genres mg ON mg.movie_id = m.id "
 
     if award_id != None and award_id != "":
-        sql += "INNER JOIN awards a ON a.movie_id = m.id "
+        sql += "INNER JOIN award_wins a ON a.movie_id = m.id "
 
     if actor_id != None and actor_id != "":
-        sql += "INNER JOIN movie_actors ma ON ma.movieid = m.id "
+        sql += "INNER JOIN film_cast fc ON fc.movieid = m.id "
 
     # we can then add our where clauses based on the filters 
 
@@ -73,17 +73,17 @@ def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_
         params.append(float(rating))
 
     if genre_id != None and genre_id != "":
-        sql += "AND gl.genre_id = %s "
+        sql += "AND mg.genre_id = %s "
         params.append(int(genre_id))
     
     if award_id != None and award_id != "":
-        sql += "AND a.award_id = $s "
+        sql += "AND a.award_id = %s "
         params.append(int(award_id))
         if winner == "true":
             sql += "AND a.winner = true "
 
     if actor_id != None and actor_id != "":
-        sql += "AND ma.actorid = %s "
+        sql += "AND fc.actorid = %s "
         params.append(int(actor_id))
     
     sql += "LIMIT %s OFFSET %s ;"

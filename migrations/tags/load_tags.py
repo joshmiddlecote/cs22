@@ -25,10 +25,10 @@ cursor = conn.cursor()
 # Step 2: Create the movies_actors table (if it doesn't exist already)
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS tags (
-        movieId INT NOT NULL, 
+        movie_id INT NOT NULL, 
         tag VARCHAR(255) NOT NULL,
-        PRIMARY KEY (movieId, tag),
-        FOREIGN KEY (movieId) REFERENCES movies(id) ON DELETE CASCADE
+        PRIMARY KEY (movie_id, tag),
+        FOREIGN KEY (movie_id) REFERENCES movies(id)
     );
 """)
 
@@ -41,9 +41,9 @@ with open('data/ml-latest-small/tags.csv', newline='', encoding='utf-8') as csvf
     for row in csvreader:
         userId, movie_id, tag, timestamp = row
         cursor.execute("""
-            INSERT INTO tags (movieId, tag)
+            INSERT INTO tags (movie_id, tag)
             VALUES (%s, %s)
-            ON CONFLICT (movieId, tag) DO NOTHING;  -- Avoid duplicate entries if the movie already exists
+            ON CONFLICT (movie_id, tag) DO NOTHING;
         """, (movie_id, tag))
 
 

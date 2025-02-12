@@ -16,7 +16,7 @@ def create_users_table(cursor, conn):
 
 def create_movie_lists(cursor, conn):
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS movie_lists(
+        CREATE TABLE IF NOT EXISTS movie_planners(
             id SERIAL PRIMARY KEY,
             user_id INT REFERENCES users(id),
             name VARCHAR(255) NOT NULL
@@ -26,9 +26,9 @@ def create_movie_lists(cursor, conn):
 
 def create_movie_list_items(cursor, conn):
     cursor.execute("""
-        CREATE TABLE movie_list_items(
+        CREATE TABLE movie_planner_items(
             id SERIAL PRIMARY KEY,
-            movie_list_id INT REFERENCES movie_lists(id),
+            movie_list_id INT REFERENCES movie_planners(id),
             movie_id INT REFERENCES movies(id)
         );
     """)

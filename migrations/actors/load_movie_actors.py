@@ -24,12 +24,12 @@ cursor = conn.cursor()
 
 # Step 2: Create the movies_actors table (if it doesn't exist already)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS movie_actors (
-        movieId INT NOT NULL, 
-        actorId INT NOT NULL,
-        PRIMARY KEY (movieId, actorId),
-        FOREIGN KEY (movieId) REFERENCES movies(id) ON DELETE CASCADE,
-        FOREIGN KEY (actorId) REFERENCES actor_mapping(actorId) ON DELETE CASCADE
+    CREATE TABLE IF NOT EXISTS film_cast (
+        movie_id INT NOT NULL, 
+        actor_id INT NOT NULL,
+        PRIMARY KEY (movie_id, actor_id),
+        FOREIGN KEY (movie_id) REFERENCES movies(id),
+        FOREIGN KEY (actor_id) REFERENCES actors(id)
     );
 """)
 
@@ -42,9 +42,9 @@ with open('data/ml-latest-small/movie_actors_with_id.csv', newline='', encoding=
     for row in csvreader:
         movie_id, actor_id = row
         cursor.execute("""
-            INSERT INTO movie_actors (movieId, actorId)
+            INSERT INTO film_cast (movie_id, actor_id)
             VALUES (%s, %s)
-            ON CONFLICT (movieId, actorId) DO NOTHING;  -- Avoid duplicate entries if the movie already exists
+            ON CONFLICT (movie_id, actor_id) DO NOTHING;
         """, (movie_id, actor_id))
 
 

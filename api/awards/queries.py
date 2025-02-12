@@ -20,7 +20,7 @@ def get_db():
 def get_all_awards():
      with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT * from award_mapping;"
+            sql = "SELECT * from awards;"
             cursor.execute(sql)
             awards = cursor.fetchall()
             awards = [{'id': award[0], "name": award[1]} for award in awards]

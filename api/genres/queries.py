@@ -20,7 +20,7 @@ def get_db():
 def get_all_genres():
      with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT id, genre_name from genres where id != 16;" # we dont want to get id 16 as that is "(no genres listed)"
+            sql = "SELECT id, name from genres where id != 16;" # we dont want to get id 16 as that is "(no genres listed)"
             cursor.execute(sql)
             genres = cursor.fetchall()
             genres = [{'id': genre[0], "name": genre[1]} for genre in genres]

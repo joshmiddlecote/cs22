@@ -20,7 +20,7 @@ def get_db():
 def get_all_actors():
      with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT * from actor_mapping LIMIT 50;" # limit to 50 as there is over 11000 actors
+            sql = "SELECT * from actors LIMIT 50;" # limit to 50 as there is over 11000 actors
             cursor.execute(sql)
             actors = cursor.fetchall()
             actors = [{'id': actor[0], "name": actor[1]} for actor in actors]
