@@ -44,3 +44,12 @@ def read_movie(request: Request, movie_id: int):
     movie = movie_queries.get_movie_by_movie_id(movie_id)
     return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
 
+@app.get("/movies/name/{movie_name}")
+def read_movie_name(request: Request, movie_name: str):
+    print(movie_name)
+    movie = movie_queries.get_movie_by_movie_name(movie_name)
+
+    if movie is None:
+        return templates.TemplateResponse("no_movie_found.html", {"request": request})
+    
+    return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
