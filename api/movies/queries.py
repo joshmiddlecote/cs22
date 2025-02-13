@@ -49,6 +49,28 @@ def get_movie_by_movie_id(id):
                     'budget': movie[8], 'revenue': movie[9],
                     'overview': movie[10], 'tagline': movie[11], 'poster': movie[12]}
         
+def get_movie_by_movie_name(name):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            lower_case_name = str(name).lower()
+            cursor.execute("""
+            SELECT m.id, m.title, m.year_released, m.runtime, m.director, l.name, m.average_rating, m.num_ratings, 
+                    m.budget, m.revenue, m.overview, m.tagline, m.poster 
+            FROM movies m INNER JOIN languages l ON l.id = m.language_id 
+            WHERE LOWER(m.title) = %s ;
+            """, (lower_case_name, ))
+
+            movie = cursor.fetchone()
+
+            if movie is None:
+                return None
+            else:
+                return {'id': movie[0], 'title': movie[1], 'year_released': movie[2], 
+                    'runtime': movie[3], 'director': movie[4], 'language_name': movie[5], 
+                    'average_rating': movie[6], 'num_ratings': movie[7],
+                    'budget': movie[8], 'revenue': movie[9],
+                    'overview': movie[10], 'tagline': movie[11], 'poster': movie[12]}
+        
 def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_id, language_id, limit, offset):
     params = []
 

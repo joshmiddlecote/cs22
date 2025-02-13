@@ -128,12 +128,46 @@
             margin: 0 10px;
             font-weight: bold;
         }
+
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Movies</h1>
+
+    <div class="search-box" style="margin-bottom: 20px; text-align: center;">
+        <form method="GET" onsubmit="event.preventDefault(); window.location.href='/movies/name/' + document.getElementById('movie_name').value;"">
+            <label for="movie_name">Movie Name:</label>
+            <input type="text" id="movie_name" name="movie_name" placeholder="Enter movie name" value="{{ movie_name }}">
+            <button type="submit">Search</button>
+        </form>
+    </div>
 
     <div class="filter-box">
         <form method="GET" action="/movies">
