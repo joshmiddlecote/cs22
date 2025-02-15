@@ -154,12 +154,68 @@
         .search-box button:hover {
             background-color: #45a049;
         }
+
+        .planner-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+
+        .planner-button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-box input {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Movies</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Movies</h1>
+        <a href="/movie-planner" class="planner-button">My Movie Planner</a>
+
+        {% if user %}  
+            <div class="user-info">
+                <span>Welcome, {{ user.username }}</span>
+                <a href="/logout" class="logout-button">Logout</a>
+            </div>
+        {% else %}
+            <form action="/login" method="POST" class="login-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        {% endif %}
+    </div>
 
     <div class="search-box" style="margin-bottom: 20px; text-align: center;">
         <form method="GET" onsubmit="event.preventDefault(); window.location.href='/movies/name/' + document.getElementById('movie_name').value;"">
