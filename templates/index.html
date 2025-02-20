@@ -308,7 +308,7 @@
     {% if user %}
     <div class="sidebar" id="sidebar">
         <button class="toggle-sidebar-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
-        <a href="/movie-planner" class="planner-button">My Movie Planner</a>
+        <a href="/show-movie-planners/{% if user %}{{ user.id }}{% endif %}" class="planner-button">My Movie Planner</a>
     </div>
     {% endif %}
 
