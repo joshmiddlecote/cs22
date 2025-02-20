@@ -61,10 +61,6 @@ def read_movie_name(request: Request, movie_name: str):
     
     return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
 
-@app.get("/movie-planner")
-def get_movie_planner(request: Request):
-    return templates.TemplateResponse("movie_planner.html", {"request": request})
-
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
     user = user_queries.get_user_password(username)
@@ -92,12 +88,17 @@ def register(request: Request, username: str = Form(...), password: str = Form(.
 def register_user(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
 
-@app.post("/add-movie-to-planner/{planner_id}/{movie_id}")
+@app.get("/add-movie-to-planner/{planner_id}/{movie_id}")
 def add_movie_to_planner(request: Request, planner_id: int, movie_id: int, user_id: str | None = Query(default=None)):
     planner_queries.insert_new_movie_planner_item(planner_id, movie_id)
-    return movies(user_id=user_id)
+    return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
 
-@app.post("/add-planner/{user_id}/{name}")
+@app.get("/add-planner/{user_id}/{name}")
 def add_planner(request: Request, user_id: int, name: str):
     planner_queries.insert_new_movie_planner(user_id, name)
-    return movies(user_id=user_id)
+    return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
+
+@app.get("/show-movie-planners/{user_id}")
+def show_movie_planners(request: Request, user_id: int):
+    planners = planner_queries.get_movies_from_user_id(user_id)
+    return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners})

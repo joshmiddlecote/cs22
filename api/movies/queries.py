@@ -74,7 +74,7 @@ def get_movie_for_movie_planner(movie_id):
         with conn.cursor() as cursor:
             sql = "SELECT id, title, runtime, average_rating, tagline, poster FROM movies WHERE id = %s;"
 
-            cursor.execute(sql, tuple(movie_id))
+            cursor.execute(sql, (int(movie_id), ))
             movie = cursor.fetchone()
             
             return {'id': movie[0], 'title': movie[1], 'runtime': movie[2], 'rating': round(movie[3], 2), 'tagline': movie[4], "poster": movie[5]}

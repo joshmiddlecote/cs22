@@ -26,18 +26,17 @@ def get_user_movie_planners(user_id):
             movie_planners = cursor.fetchall()
             return [{"id": planner[0], "name": planner[2]} for planner in movie_planners]
         
-def get_movies_from_planners(planner_id):
+def get_movies_from_planners(planner_id, name):
     with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT * from movie_planner_items WHERE movie_planner_id = %s ;"
+            sql = "SELECT * from movie_planner_items WHERE movie_list_id = %s ;"
             cursor.execute(sql, (int(planner_id),))
             movies = cursor.fetchall()
-            return {"planner_id": planner_id, "movies": [{"id": movie[2],} for movie in movies]}
-        
+            return {"planner_id": planner_id, "name": name, "movies": [movie_queries.get_movie_for_movie_planner(movie_id=movie[2]) for movie in movies]}
 
 def get_movies_from_user_id(user_id):
     movie_planners = get_user_movie_planners(user_id)
-    return [get_user_movie_planners(planner.id) for planner in movie_planners]
+    return [get_movies_from_planners(planner["id"], planner["name"]) for planner in movie_planners]
 
 def insert_new_movie_planner(user_id, name):
     with get_db() as conn:
@@ -50,6 +49,6 @@ def insert_new_movie_planner(user_id, name):
 def insert_new_movie_planner_item(movie_planner_id, movie_id):
     with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "INSERT INTO movie_planner_items VALUES(%s, %s);"
+            sql = "INSERT INTO movie_planner_items(movie_list_id, movie_id) VALUES(%s, %s);"
             cursor.execute(sql, tuple([movie_planner_id, movie_id]))
             conn.commit()
