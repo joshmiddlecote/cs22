@@ -31,4 +31,15 @@ def get_user_password(username):
             sql = "SELECT id, password from users where username = %s;"
             cursor.execute(sql, (str(username),))
             user = cursor.fetchone()
+            if user is None:
+                return None
             return {"id": user[0], "username": user[1]}
+        
+def insert_user_details(username, password):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "INSERT INTO users(username, password) VALUES (%s, %s) RETURNING id;"
+            cursor.execute(sql, tuple([username, password]))
+            conn.commit()
+            return cursor.fetchone()[0]
+            

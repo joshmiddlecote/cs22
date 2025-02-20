@@ -18,7 +18,7 @@ async def root():
 # year, genre, rating, actor, director, tags, awards, language, runtime
 
 @app.get("/movies")
-def read_root(
+def movies(
         request: Request, page: int = Query(1, ge=1), size: int = Query(10, le=100), 
         year_released: str | None = Query(default=None), rating: str | None = Query(default=None),
         genre_id: str | None = Query(default=None), award_id: str | None = Query(default=None),
@@ -53,7 +53,6 @@ def read_movie(request: Request, movie_id: int):
 
 @app.get("/movies/name/{movie_name}")
 def read_movie_name(request: Request, movie_name: str):
-    print(movie_name)
     movie = movie_queries.get_movie_by_movie_name(movie_name)
 
     if movie is None:
@@ -68,7 +67,7 @@ def get_movie_planner(request: Request):
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
     user = user_queries.get_user_password(username)
-    if not user:
+    if user is None:
         return templates.TemplateResponse("invalid_login.html", {"request": request})
     
     movies = movie_queries.get_all_movies()
@@ -79,3 +78,15 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
 
     return templates.TemplateResponse("index.html", {"request": request, "page": 1, "size": 10, "movies": movies, "genres": genres, 
         "awards": awards, "actors": actors, "languages": languages, "user": user})
+
+@app.post("/register")
+def register(request: Request, username: str = Form(...), password: str = Form(...)):
+    user_id = user_queries.insert_user_details(username, password)
+    if not user_id:
+        return movies(user_id=user_id)
+    else:
+        return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
+    
+@app.get("/register-user")
+def register_user(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})

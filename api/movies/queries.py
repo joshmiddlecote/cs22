@@ -23,8 +23,6 @@ def get_all_movies(limit=10, offset=0, year=None, rating=None, genre_id=None, aw
             sql = "SELECT m.id, m.title, m.runtime, m.average_rating, m.tagline, m.poster FROM movies m "
             (sql, params) = maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_id, language_id, limit, offset)
 
-            print(sql)
-            print(params)
             cursor.execute(sql, tuple(params))
             movies = cursor.fetchall()
             
