@@ -239,14 +239,57 @@
         .apply-btn:hover {
             background-color: #218838;
         }
+        .content {
+            flex: 1;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            transition: left 0.3s;
+            padding: 20px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar .planner-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.3s;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .sidebar .planner-button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-sidebar-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .toggle-sidebar-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h1>Movies</h1>
-        <a href="/movie-planner" class="planner-button">My Movie Planner</a>
+        <h1>Movies For You</h1>
 
         {% if user %}  
             <div class="user-info">
@@ -262,6 +305,11 @@
         {% endif %}
     </div>
 
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-sidebar-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <a href="/movie-planner" class="planner-button">My Movie Planner</a>
+    </div>
+
     <div class="search-box" style="margin-bottom: 20px; text-align: center;">
         <form method="GET" onsubmit="event.preventDefault(); window.location.href='/movies/name/' + document.getElementById('movie_name').value;"">
             <label for="movie_name">Movie Name:</label>
@@ -270,7 +318,7 @@
         </form>
     </div>
 
-    <button class="toggle-btn" onclick="toggleFilters()">Toggle Filters <span>&#9660;</span></button>
+    <button class="toggle-btn" onclick="toggleFilters()">Filters <span>&#9660;</span></button>
     <div class="filter-box" id="filterBox" style="display: none;">
         <form method="GET" action="/movies">
             <label for="year_released">Year Released:</label>
@@ -390,6 +438,11 @@
             filterBox.style.display = "none";
             toggleBtn.innerHTML = "&#9660;";
         }
+    }
+
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
     }
 </script>
 
