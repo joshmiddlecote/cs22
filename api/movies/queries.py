@@ -68,6 +68,16 @@ def get_movie_by_movie_name(name):
                     'average_rating': movie[6], 'num_ratings': movie[7],
                     'budget': movie[8], 'revenue': movie[9],
                     'overview': movie[10], 'tagline': movie[11], 'poster': movie[12]}
+            
+def get_movie_for_movie_planner(movie_id):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "SELECT id, title, runtime, average_rating, tagline, poster FROM movies WHERE id = %s;"
+
+            cursor.execute(sql, tuple(movie_id))
+            movie = cursor.fetchone()
+            
+            return {'id': movie[0], 'title': movie[1], 'runtime': movie[2], 'rating': round(movie[3], 2), 'tagline': movie[4], "poster": movie[5]}
         
 def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_id, language_id, limit, offset):
     params = []

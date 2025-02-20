@@ -7,6 +7,7 @@ import awards.queries as award_queries
 import actors.queries as actor_queries
 import languages.queries as language_queries
 import users.queries as user_queries
+import movie_planners.queries as planner_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="../templates")
@@ -90,3 +91,13 @@ def register(request: Request, username: str = Form(...), password: str = Form(.
 @app.get("/register-user")
 def register_user(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
+
+@app.post("/add-movie-to-planner/{planner_id}/{movie_id}")
+def add_movie_to_planner(request: Request, planner_id: int, movie_id: int, user_id: str | None = Query(default=None)):
+    planner_queries.insert_new_movie_planner_item(planner_id, movie_id)
+    return movies(user_id=user_id)
+
+@app.post("/add-planner/{user_id}/{name}")
+def add_planner(request: Request, user_id: int, name: str):
+    planner_queries.insert_new_movie_planner(user_id, name)
+    return movies(user_id=user_id)
