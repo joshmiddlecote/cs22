@@ -372,6 +372,7 @@
         
             <input type="hidden" name="page" value="1">
             <input type="hidden" name="size" value="{{ size }}">
+            <input type="hidden" name="user_id" value="{{ user.user_id }}"
         
             <button type="submit">Apply Filters</button>
         </form>        
@@ -397,7 +398,8 @@
             {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
             {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
             {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
-            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}
+            {% if user %}&user_id={{ user.id }}{% endif %}">
             Previous
         </a>
 
@@ -406,7 +408,8 @@
             {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
             {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
             {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
-            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}
+            {% if user %}&user_id={{ user.id }}{% endif %}">
             Next
         </a>
     </div>
