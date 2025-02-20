@@ -194,6 +194,51 @@
         .login-box button:hover {
             background-color: #218838;
         }
+
+        .toggle-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+        .filter-box {
+            padding: 15px;
+            display: none;
+        }
+        select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        .apply-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .apply-btn:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -225,7 +270,8 @@
         </form>
     </div>
 
-    <div class="filter-box">
+    <button class="toggle-btn" onclick="toggleFilters()">Toggle Filters <span>&#9660;</span></button>
+    <div class="filter-box" id="filterBox" style="display: none;">
         <form method="GET" action="/movies">
             <label for="year_released">Year Released:</label>
             <select id="year_released" name="year_released">
@@ -332,6 +378,20 @@
     </div>
 
 </div>
+
+<script>
+    function toggleFilters() {
+        var filterBox = document.getElementById("filterBox");
+        var toggleBtn = document.querySelector(".toggle-btn span");
+        if (filterBox.style.display === "none" || filterBox.style.display === "") {
+            filterBox.style.display = "block";
+            toggleBtn.innerHTML = "&#9650;";
+        } else {
+            filterBox.style.display = "none";
+            toggleBtn.innerHTML = "&#9660;";
+        }
+    }
+</script>
 
 </body>
 </html>
