@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audience Reports</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .category-buttons {
+            margin: 10px;
+        }
+        .category-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px; /* Makes the buttons rounded */
+            background-color: lightblue; /* light blue color */
+            color: black; 
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .category-buttons button:hover {
+              background-color: cornflowerblue; /* Darker blue on hover */
+          }
+    </style>
+</head>
+<body>
+    <h1>Audience Report</h1>
+
+    <div class="category-buttons">
+      <a href="/audience-report/popular"><button>Most Popular</button></a>
+      <a href="/audience-report/polarizing"><button>Most Polarizing</button></a>
+    </div>
+    
+      <h2  id="genre-heading"> Most Popular Genres </h2>
+        <h5 id="description"> Genres that consistently receive high ratings from audience </h3>
+        <ol>
+          {% for genre in genres %}
+          <li> 
+            <span style="font-weight: bold; font-size: 18px;">{{ genre.genre_name }}</span> 
+            - 
+            {{ genre.avg_rating }}
+            <span style="font-size: 16px; font-weight: normal;">⭐</span> 
+            <span style="font-size: 16px; font-style: italic;"> ({{ genre.total_ratings }}) </span> 
+          </li>
+          {% endfor %}
+
+        </ol>
+
+        <script>
+          // Function to get the category from the URL path
+          function getCategoryFromURL() {
+              const path = window.location.pathname; // Example: "/genre-report/polarizing"
+              const parts = path.split("/"); // Split by "/"
+              return parts[parts.length - 1]; // Get last part ("popular", "polarizing", etc.)
+          }
+  
+          // Function to update heading and highlight correct button
+          function updateUI() {
+              const category = getCategoryFromURL(); // Get category from URL
+              const heading = document.getElementById("genre-heading");
+  
+              // Define category names
+              const categoryNames = {
+                  "popular": "Most Popular Genres",
+                  "polarizing": "Most Polarizing Genres"
+              };
+  
+              // Update heading if the category is recognized
+              if (categoryNames[category]) {
+                  heading.textContent = categoryNames[category];
+              }
+          }
+  
+          // Run the function on page load
+          updateUI();
+      </script>
+</body>
+</html>
