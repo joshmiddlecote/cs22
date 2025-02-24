@@ -82,6 +82,19 @@
             object-fit: cover;
             border-radius: 10px 10px 0 0;
         }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -100,10 +113,30 @@
                         <p>{{ movie.runtime }} minutes</p>
                     </a>
                 </div>
+
+                <form action="/delete-movie-from-planner" method="GET" style="display:inline;">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="movie_id" value="{{ movie.id }}">
+                    <input type="hidden" name="planner_id" value="{{ planner.planner_id }}">
+                    <button type="submit" class="delete-button">Delete Movie</button>
+                </form>
                 {% endfor %}
             </div>
         </div>
+        <form action="/delete-planner" method="GET" style="display:inline;">
+            <input type="hidden" name="user_id" value="{{ user_id }}">
+            <input type="hidden" name="planner_id" value="{{ planner.planner_id }}">
+            <button type="submit" class="delete-button">Delete Planner</button>
+        </form>
     {% endfor %}
-
+    <form action="/add-planner" method="GET">
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+    
+        <label for="planner_name">Planner Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter planner name" required>
+    
+        <button type="submit">Add Planner</button>
+    </form>
+    <a href="/movies?user_id={{ user_id }}" class="back-button">Back to Homepage</a>
 </body>
 </html>

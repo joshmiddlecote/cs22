@@ -33,7 +33,7 @@ def get_user_password(username):
             user = cursor.fetchone()
             if user is None:
                 return None
-            return {"id": user[0], "username": user[1]}
+            return {"id": user[0], "password": user[1]}
         
 def insert_user_details(username, password):
     with get_db() as conn:

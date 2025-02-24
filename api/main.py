@@ -36,8 +36,10 @@ def movies(
     if user_id:
         username = user_queries.get_user_details(user_id)
         user = {"username": username, "id": user_id}
+        planners = planner_queries.get_user_movie_planners(user_id)
     else:
         user = None
+        planners = None
 
     return templates.TemplateResponse("index.html", 
         {"request": request, "movies": movies, "page": page, 
@@ -45,7 +47,7 @@ def movies(
          "genre_id": genre_id, "genres": genres,
          "award_id": award_id, "awards": awards,
          "actor_id": actor_id, "actors": actors,
-         "language_id": language_id, "languages": languages, "user": user})
+         "language_id": language_id, "languages": languages, "user": user, "planners": planners})
 
 @app.get("/movies/{movie_id}")
 def read_movie(request: Request, movie_id: int):
@@ -64,7 +66,7 @@ def read_movie_name(request: Request, movie_name: str):
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
     user = user_queries.get_user_password(username)
-    if user is None:
+    if user is None or user["password"] != password:
         return templates.TemplateResponse("invalid_login.html", {"request": request})
     
     movies = movie_queries.get_all_movies()
@@ -72,9 +74,10 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
     awards = award_queries.get_all_awards()
     actors = actor_queries.get_all_actors()
     languages = language_queries.get_all_languages()
+    planners = planner_queries.get_user_movie_planners(user["id"])
 
     return templates.TemplateResponse("index.html", {"request": request, "page": 1, "size": 10, "movies": movies, "genres": genres, 
-        "awards": awards, "actors": actors, "languages": languages, "user": user})
+        "awards": awards, "actors": actors, "languages": languages, "user": user, "planners": planners})
 
 @app.post("/register")
 def register(request: Request, username: str = Form(...), password: str = Form(...)):
@@ -88,17 +91,29 @@ def register(request: Request, username: str = Form(...), password: str = Form(.
 def register_user(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
 
-@app.get("/add-movie-to-planner/{planner_id}/{movie_id}")
-def add_movie_to_planner(request: Request, planner_id: int, movie_id: int, user_id: str | None = Query(default=None)):
-    planner_queries.insert_new_movie_planner_item(planner_id, movie_id)
+@app.get("/add-movie-to-planner")
+def add_movie_to_planner(request: Request, planner_id: str | None = Query(default=None), movie_id: str | None = Query(default=None), user_id: str | None = Query(default=None)):
+    planner_queries.insert_new_movie_planner_item(int(planner_id), int(movie_id))
     return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
 
-@app.get("/add-planner/{user_id}/{name}")
-def add_planner(request: Request, user_id: int, name: str):
-    planner_queries.insert_new_movie_planner(user_id, name)
-    return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
+@app.get("/add-planner")
+def add_planner(request: Request, user_id: str | None = Query(default=None), name: str | None = Query(default=None)):
+    planner_queries.insert_new_movie_planner(int(user_id), name)
+    return RedirectResponse(url=f"/show-movie-planners/{user_id}", status_code=303)
 
 @app.get("/show-movie-planners/{user_id}")
 def show_movie_planners(request: Request, user_id: int):
     planners = planner_queries.get_movies_from_user_id(user_id)
-    return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners})
+    return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})
+
+@app.get("/delete-movie-from-planner")
+def delete_movie_from_planner(request: Request, planner_id: str | None = Query(default=None), movie_id: str | None = Query(default=None), user_id: str | None = Query(default=None)):
+    planner_queries.delete_movie_from_planner(int(movie_id), int(planner_id))
+    planners = planner_queries.get_movies_from_user_id(user_id)
+    return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})
+
+@app.get("/delete-planner")
+def delete_planner(request: Request, planner_id: str | None = Query(default=None), user_id: str | None = Query(default=None)):
+    planner_queries.delete_movie_planner(planner_id)
+    planners = planner_queries.get_movies_from_user_id(user_id)
+    return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})

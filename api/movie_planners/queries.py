@@ -52,3 +52,20 @@ def insert_new_movie_planner_item(movie_planner_id, movie_id):
             sql = "INSERT INTO movie_planner_items(movie_list_id, movie_id) VALUES(%s, %s);"
             cursor.execute(sql, tuple([movie_planner_id, movie_id]))
             conn.commit()
+
+def delete_movie_from_planner(movie_id, movie_planner_id):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "DELETE FROM movie_planner_items WHERE movie_list_id = %s AND movie_id = %s ;"
+            cursor.execute(sql, tuple([movie_planner_id, movie_id]))
+            conn.commit()
+
+def delete_movie_planner(movie_planner_id):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "DELETE FROM movie_planner_items WHERE movie_list_id = %s"
+            cursor.execute(sql, tuple([movie_planner_id]))
+            conn.commit()
+            sql = "DELETE FROM movie_planners WHERE id = %s"
+            cursor.execute(sql, tuple([movie_planner_id]))
+            conn.commit()
