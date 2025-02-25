@@ -10,5 +10,7 @@ python3 migrations/actors/load_actor_actorid.py
 python3 migrations/actors/load_movie_actors.py
 python3 migrations/audience/users_ratings.py
 python3 migrations/users/users.py
+python3 migrations/personality/personality_data.py
+python3 migrations/personality/ratings.py
 
 echo "Migrations finished"
