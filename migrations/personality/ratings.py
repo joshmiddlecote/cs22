@@ -21,9 +21,9 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 
-# Step 2: Create the actor_mapping table (if it doesn't exist already)
+# Step 2: Create the ratings table (if it doesn't exist already)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS user_ratings (
+    CREATE TABLE IF NOT EXISTS personality_user_ratings (
         userid VARCHAR(255) NOT NULL, 
         movie_id INT NOT NULL,
         rating FLOAT NOT NULL,
@@ -41,7 +41,7 @@ with open('data/personality-isf2018/ratings.csv', newline='', encoding='utf-8') 
     for row in csvreader:
         userid, movie_id, rating, time_stamp = row
         cursor.execute("""
-            INSERT INTO user_ratings (userid, movie_id, rating, time_stamp)
+            INSERT INTO personality_user_ratings (userid, movie_id, rating, time_stamp)
             VALUES (%s, %s, %s, %s)
             ON CONFLICT (userid, movie_id)
             DO UPDATE SET 
