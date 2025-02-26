@@ -47,7 +47,7 @@ with open('data/personality-isf2018/ratings.csv', newline='', encoding='utf-8') 
             DO UPDATE SET 
                 rating = EXCLUDED.rating,
                 time_stamp = EXCLUDED.time_stamp
-            WHERE user_ratings.time_stamp < EXCLUDED.time_stamp;
+            WHERE personality_user_ratings.time_stamp < EXCLUDED.time_stamp;
         """, (userid, movie_id, rating, time_stamp)) # update only if there is a newer rating
 
 
