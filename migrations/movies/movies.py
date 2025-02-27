@@ -47,30 +47,35 @@ def insert_movie_data(cursor, conn):
     with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, \
         open('data/ml-latest-small/movie_average_ratings.csv', newline='', encoding='utf-8') as ratings_csvfile, \
         open('data/ml-latest-small/movie_extra_details.csv', newline='', encoding='utf-8') as extra_details_csvfile, \
-        open('data/ml-latest-small/movies_with_posters.csv', newline='', encoding='utf-8') as posters_csvfile:
+        open('data/ml-latest-small/movies_with_posters.csv', newline='', encoding='utf-8') as posters_csvfile, \
+        open('data/ml-latest-small/movie_directors.csv', newline='', encoding='utf-8') as directors_csvfile:
 
         movie_csvreader = csv.reader(csvfile)
         ratings_csvreader = csv.reader(ratings_csvfile)
         extra_details_csvreader = csv.reader(extra_details_csvfile)
         posters_csvreader = csv.reader(posters_csvfile)
+        directors_csvfile = csv.reader(directors_csvfile)
         next(movie_csvreader)
         next(ratings_csvreader)
         next(extra_details_csvreader)
         next(posters_csvreader)
+        next(directors_csvfile)
         
-        for row1, row2, row3, row4 in zip(movie_csvreader, ratings_csvreader, extra_details_csvreader, posters_csvreader):
+        for row1, row2, row3, row4, row5 in zip(movie_csvreader, ratings_csvreader, extra_details_csvreader, posters_csvreader, directors_csvfile):
             movie_id, title, _ = row1
             _, average_rating, num_ratings, variance = row2
             (budget, revenue, language_id, overview, runtime, tagline) = handle_missing_data(row3)
             _,_,_, poster_url = row4
+            _, director = row5
+
             year = re.search(r'\((\d{4})\)', title).group(1)
             title = re.sub(r'\s*\(\d{4}\)', '', title)
 
             cursor.execute("""
-                INSERT INTO movies (id, title, year_released, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                INSERT INTO movies (id, title, year_released, runtime, director, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (id) DO NOTHING;
-            """, (movie_id, title, year, runtime, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster_url))
+            """, (movie_id, title, year, runtime, director, language_id, average_rating, num_ratings, variance, budget, revenue, overview, tagline, poster_url))
 
     conn.commit()
 
