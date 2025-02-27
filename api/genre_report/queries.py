@@ -20,7 +20,7 @@ def get_db():
         conn.close()
 
 # Function to fetch most popular genres with their stats
-def get_popular_genres():
+def get_cult_classic_genres():
     with get_db() as conn:  # Open a database connection
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
@@ -34,10 +34,16 @@ def get_popular_genres():
             genres = cursor.fetchall()
 
             popularity_scores = []
-            Constant = 5000  # 75th percentile of total number of ratings per genre 
+            W = 1000  # Adjust to fine-tune weighting of avg rating vs. total number of ratings
+            popularity_scores = []
+
             for genre in genres:
-                popularity_scores.append((5 * Constant + float(genre[1]) * float(genre[3])) / Constant + genre[3])
-            
+                avg_rating = float(genre[1])
+                total_ratings = genre[3]
+
+                popularity_score = (avg_rating * W) + (total_ratings / W)
+                popularity_scores.append(popularity_score)
+
             # Format the results as a list of dictionaries
             genres_formatted = [
                 {
@@ -55,7 +61,7 @@ def get_popular_genres():
             return genres_formatted_sorted
         
 
-def get_polarizing_genres():
+def get_genres():
     with get_db() as conn:  # Open a database connection
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
@@ -83,3 +89,33 @@ def get_polarizing_genres():
             return genres_formatted_sorted
         
 
+
+def get_niche_interest_genres():
+    with get_db() as conn:  # Open a database connection
+        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
+            # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
+            cursor.execute("""
+                SELECT genre_name, avg_rating, variance, total_ratings
+                FROM genres;
+            """)
+            
+            # Fetch all rows returned by the query
+            genres = cursor.fetchall()
+            
+            # Format the results as a list of dictionaries
+            genres_formatted = [
+                {
+                    'genre_name': genres[i][0],
+                    'avg_rating': round(genres[i][1], 2), 
+                    'variance': round(genres[i][2], 2), 
+                    'total_ratings': genres[i][3],
+                }
+                for i in range(len(genres))
+                if genres[i][3] < 8000 and genres[i][1] > 3.5  # Apply filtering conditions
+
+            ]
+
+            genres_formatted_sorted = sorted(genres_formatted, key=lambda x: x['avg_rating'], reverse=True)
+            
+            return genres_formatted_sorted
+        

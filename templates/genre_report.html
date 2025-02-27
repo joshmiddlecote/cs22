@@ -41,25 +41,61 @@
         .category-buttons button:hover {
               background-color: cornflowerblue; /* Darker blue on hover */
           }
+        ol li {
+              margin-bottom: 10px; /* Adds space between list items */
+              font-weight: bold;
+          }
+          .genre-name {
+            display: block; /* Forces line break below genre name */
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px; /* Adds space below genre name */
+        }
+
+        .avg-rating {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .star {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .total-ratings {
+            font-size: 14px; /* Smaller font size */
+            color: gray; /* Lighter color */
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <h1>Genre Report</h1>
 
     <div class="category-buttons">
-      <a href="/genre-report/popular"><button>Most Popular</button></a>
+      <a href="/genre-report/most-watched"> <button> Most Watched </button></a>
+      <a href="/genre-report/most-liked"> <button> Most Liked </button></a>
       <a href="/genre-report/polarizing"><button>Most Polarizing</button></a>
+      <a href="/genre-report/cult-classics"><button>Cult Classics</button></a>
+      <a href="/genre-report/niche-interests"><button>Niche Interests</button></a>
+
     </div>
     
-      <h2  id="genre-heading"> Most Popular Genres </h2>
+      <h2  id="genre-heading"> Most Watched </h2>
+        
+        <p id="genre-description"></p>
+
         <ol>
           {% for genre in genres %}
           <li> 
-            <span style="font-weight: bold; font-size: 18px;">{{ genre.genre_name }}</span> 
-            - 
-            {{ genre.avg_rating }}
-            <span style="font-size: 16px; font-weight: normal;">⭐</span> 
-            <span style="font-size: 16px; font-style: italic;"> ({{ genre.total_ratings }} ratings) </span> 
+            <span class="genre-name">{{ genre.genre_name }}</span> 
+
+            <span class="avg-rating">{{ genre.avg_rating }}</span> 
+            <span class="star">★</span> 
+
+            <span class="total-ratings">{{ genre.total_ratings }} ratings</span>
           </li>
           {% endfor %}
 
@@ -77,16 +113,29 @@
           function updateUI() {
               const category = getCategoryFromURL(); // Get category from URL
               const heading = document.getElementById("genre-heading");
+              const description = document.getElementById("genre-description");
   
               // Define category names
               const categoryNames = {
-                  "popular": "Most Popular Genres",
-                  "polarizing": "Most Polarizing Genres"
+                  "most-watched": "Most Watched",
+                  "most-liked": "Most Liked",
+                  "polarizing": "Most Polarizing",
+                  "cult-classics": "Cult Classics", 
+                  "niche-interests": "Niche Interests"
               };
+
+              const descriptions = {
+                  "most-watched": "Movies from these genres have the highest number of viewers",
+                  "most-liked": "Movies from these genres averaged the highest ratings",
+                  "polarizing": "Movies from these genres had the highest variation in their ratings--audiences tended to either really like or really dislike movies from these genres",
+                  "cult-classics": "Movies from these genres tend have both high average ratings and large numbers of viewers, suggesting that they are beloved by a wide audience", 
+                  "niche-interests": "Although movies from these genres have a smaller audience, they tend to receive high ratings"
+              }
   
               // Update heading if the category is recognized
               if (categoryNames[category]) {
                   heading.textContent = categoryNames[category];
+                  description.textContent = descriptions[category];
               }
           }
   

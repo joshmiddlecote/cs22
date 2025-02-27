@@ -45,12 +45,34 @@ def read_genres(request: Request):
     genres = genre_report_queries.get_popular_genres()
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
 
-@app.get("/genre-report/popular")
-def get_most_popular_genres(request: Request):
-    genres = genre_report_queries.get_popular_genres()  # Query sorted by popularity score
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
 
 @app.get("/genre-report/polarizing")
 def get_most_polarizing_genres(request: Request):
-    genres = genre_report_queries.get_polarizing_genres()  # Query sorted by variance
+    genres = genre_report_queries.get_genres()  
+    genres_sorted = sorted(genres, key=lambda x: x['variance'], reverse=True) # sorted by variance
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+
+@app.get("/genre-report/most-watched")
+def get_most_polarizing_genres(request: Request):
+    genres = genre_report_queries.get_genres()  # Query sorted by variance
+    genres_sorted = sorted(genres, key=lambda x: x['total_ratings'], reverse=True) # sorted by total no. of ratings
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+
+@app.get("/genre-report/most-liked")
+def get_most_polarizing_genres(request: Request):
+    genres = genre_report_queries.get_genres()  # Query sorted by variance
+    genres_sorted = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+
+@app.get("/genre-report/cult-classics")
+def get_cult_classic_genres(request: Request):
+    genres = genre_report_queries.get_cult_classic_genres()  # Query sorted by popularity score
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+
+@app.get("/genre-report/niche-interests")
+def get_niche_interest_genres(request: Request):
+    genres = genre_report_queries.get_niche_interest_genres() 
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
