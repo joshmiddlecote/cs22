@@ -65,6 +65,20 @@
         .movie-info .budget-revenue div span {
             font-weight: bold;
         }
+        .analyse-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .analyse-button:hover {
+            background-color: #0056b3;
+        }
         footer {
             text-align: center;
             margin-top: 50px;
@@ -127,6 +141,8 @@
             </div>
         </div>
     </div>
+
+    <a href="/movies/{{ movie.id }}/audience-analysis" class="analyse-button">Analyse Audience Ratings</a>
 
     <a href="/" class="back-button">Back to Homepage</a>
 
