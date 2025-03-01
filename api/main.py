@@ -8,6 +8,7 @@ import actors.queries as actor_queries
 import languages.queries as language_queries
 import users.queries as user_queries
 import movie_planners.queries as planner_queries
+import audience.queries as audience_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="../templates")
@@ -62,6 +63,12 @@ def read_movie_name(request: Request, movie_name: str):
         return templates.TemplateResponse("no_movie_found.html", {"request": request})
     
     return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
+
+@app.get("/movies/{movie_id}/audience-analysis")
+def analyse_ratings(request: Request, movie_id: int):
+    rating_data = audience_queries.get_audience_ratings(movie_id)
+
+    return templates.TemplateResponse("audience_analysis.html", {"request": request, "movie": rating_data})
 
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):

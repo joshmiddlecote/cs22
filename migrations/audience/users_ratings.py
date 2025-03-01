@@ -4,11 +4,25 @@ import os
 import re
 from dotenv import load_dotenv
 
+
 def drop_tables(cursor, conn):
     cursor.execute("""
-        DROP TABLE IF EXISTS user_ratings_all_movies, user_ratings_by_genre CASCADE;
+        DROP TABLE IF EXISTS ratings, user_ratings_all_movies, user_ratings_by_genre CASCADE;
     """)
     conn.commit()
+
+
+def create_ratings_table(cursor, conn):
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ratings(
+            userId INT NOT NULL,
+            movieId INT NOT NULL,
+            rating FLOAT NOT NULL,
+            timestamp INT NOT NULL,
+            PRIMARY KEY (userId, movieId),
+            FOREIGN KEY (movieId) REFERENCES movies(id)
+        );
+    """)
 
 
 def create_user_ratings_all_movies_table(cursor, conn):
@@ -35,6 +49,28 @@ def create_user_ratings_by_genre_table(cursor, conn):
         );
     """)
     conn.commit()
+
+
+def insert_ratings_table(cursor, conn):
+    with open('data/ml-latest-small/ratings.csv', 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            userId = int(row['userId'])
+            movieId = int(row['movieId'])
+            rating = float(row['rating'])
+            timestamp = int(row['timestamp'])
+
+            cursor.execute("""
+                INSERT INTO ratings(userId, movieId, rating, timestamp)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (userId, movieId)
+                DO UPDATE SET 
+                    rating = EXCLUDED.rating,
+                    timestamp = EXCLUDED.timestamp
+                WHERE ratings.timestamp < EXCLUDED.timestamp;
+            """, (userId, movieId, rating, timestamp))
+
+        conn.commit()
 
 
 def insert_user_ratings_all_movies_table(cursor, conn):
@@ -96,11 +132,14 @@ def main():
         drop_tables(cursor, conn)
 
         # create tables
+        create_ratings_table(cursor, conn)
         create_user_ratings_all_movies_table(cursor, conn)
         create_user_ratings_by_genre_table(cursor, conn)
         print('Finished creating all tables')
 
         # insert data
+        insert_ratings_table(cursor, conn)
+        print('Finished inserting user ratings.')
         insert_user_ratings_all_movies_table(cursor, conn)
         print('Finished inserting user ratings for all movies data.')
         insert_user_ratings_by_genre_table(cursor, conn)
