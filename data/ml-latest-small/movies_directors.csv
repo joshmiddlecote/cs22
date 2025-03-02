@@ -1,4 +1,4 @@
-movie_id,director
+movieId,director
 1,John Lasseter
 2,Joe Johnston
 3,Howard Deutch
@@ -27,7 +27,7 @@ movie_id,director
 26,Oliver Parker
 27,Lesli Linka Glatter
 28,Roger Michell
-29,"Marc Caro, Jean-Pierre Jeunet"
+29,"Jean-Pierre Jeunet, Marc Caro"
 30,Zhang Yimou
 31,John N. Smith
 32,Terry Gilliam
@@ -128,7 +128,7 @@ movie_id,director
 153,Joel Schumacher
 154,Luis Buñuel
 155,John Boorman
-156,"Paul Auster, Wayne Wang"
+156,"Wayne Wang, Paul Auster"
 157,Michael Moore
 158,Brad Silberling
 159,Spike Lee
@@ -281,7 +281,7 @@ movie_id,director
 320,"Scott McGehee, David Siegel"
 321,"Tomás Gutiérrez Alea, Juan Carlos Tabío"
 322,George Huang
-324,"Kevin Dowling, Geoff Burton"
+324,"Geoff Burton, Kevin Dowling"
 325,Kelly Makin
 326,Zhang Yimou
 327,Rachel Talalay
@@ -344,7 +344,7 @@ movie_id,director
 385,Suri Krishnamma
 386,Jefery Levy
 387,Keenen Ivory Wayans
-388,"Brian Sloan, Raoul O'Connell, Robert Lee King"
+388,"Raoul O'Connell, Brian Sloan, Robert Lee King"
 389,Yves Angelo
 390,Russ Meyer
 391,Doug McHenry
@@ -429,7 +429,7 @@ movie_id,director
 490,Harold Becker
 491,Mel Gibson
 492,Woody Allen
-493,"Albert Hughes, Allen Hughes"
+493,"Allen Hughes, Albert Hughes"
 494,Stuart Baird
 495,Nagisa Ōshima
 496,Tom Noonan
@@ -486,7 +486,7 @@ movie_id,director
 552,Stephen Herek
 553,George P. Cosmatos
 555,Tony Scott
-556,"D. A. Pennebaker, Chris Hegedus"
+556,"Chris Hegedus, D. A. Pennebaker"
 558,"Pixote Hunt, Joe Johnston"
 562,Todd Solondz
 563,Claude Berri
@@ -505,7 +505,7 @@ movie_id,director
 585,Betty Thomas
 586,Chris Columbus
 587,Jerry Zucker
-588,"John Musker, Ron Clements"
+588,"Ron Clements, John Musker"
 589,James Cameron
 590,Kevin Costner
 592,Tim Burton
@@ -611,18 +611,19 @@ movie_id,director
 765,Francis Ford Coppola
 766,Mary Harron
 773,Djibril Diop Mambéty
-775,"Federico Fellini, Roger Vadim, Louis Malle"
+775,"Federico Fellini, Louis Malle, Roger Vadim"
 778,Danny Boyle
 779,Scott Winant
 780,Roland Emmerich
 781,Bernardo Bertolucci
 782,Tony Scott
-783,"Kirk Wise, Gary Trousdale"
+783,"Gary Trousdale, Kirk Wise"
 784,Ben Stiller
 785,"Bobby Farrelly, Peter Farrelly"
 786,Chuck Russell
 788,Tom Shadyac
 790,Lucian Pintilie
+791,N/A
 795,Alexandre Rockwell
 798,Rob Cohen
 799,Peter Jackson
@@ -639,7 +640,7 @@ movie_id,director
 813,Howard Franklin
 818,Arlene Sanford
 823,Éric Rohmer
-824,"Gernot Roll, Peter Sehr"
+824,"Peter Sehr, Gernot Roll"
 828,Steve Barron
 829,John Payson
 830,Hugh Wilson
@@ -659,7 +660,7 @@ movie_id,director
 852,Ron Shelton
 858,Francis Ford Coppola
 861,Stanley Tong Gwai-Lai
-866,"Lana Wachowski, Lilly Wachowski"
+866,"Lilly Wachowski, Lana Wachowski"
 867,Arthur Hiller
 869,Robert Altman
 870,Christopher Cain
@@ -718,7 +719,7 @@ movie_id,director
 936,Ernst Lubitsch
 937,Billy Wilder
 938,Vincente Minnelli
-940,"Michael Curtiz, William Keighley"
+940,"William Keighley, Michael Curtiz"
 941,Rouben Mamoulian
 942,Otto Preminger
 943,Joseph L. Mankiewicz
@@ -755,7 +756,7 @@ movie_id,director
 990,Ringo Lam Ling-Tung
 991,Neil Jordan
 993,Matthew Broderick
-994,"Campbell Scott, Stanley Tucci"
+994,"Stanley Tucci, Campbell Scott"
 996,Walter Hill
 998,F. Gary Gray
 999,John Herzfeld
@@ -780,11 +781,11 @@ movie_id,director
 1021,William Dear
 1022,"Clyde Geronimi, Wilfred Jackson, Hamilton Luske"
 1023,Wolfgang Reitherman
-1024,"Norman Ferguson, Jack Kinney, Bill Roberts, Clyde Geronimi, Harold Young"
+1024,"Norman Ferguson, Jack Kinney, Clyde Geronimi, Bill Roberts, Harold Young"
 1025,Wolfgang Reitherman
 1027,Kevin Reynolds
 1028,Robert Stevenson
-1029,"Ben Sharpsteen, Jack Kinney, Bill Roberts, Wilfred Jackson, Samuel Armstrong, Norman Ferguson"
+1029,"Ben Sharpsteen, Norman Ferguson, Bill Roberts, Jack Kinney, Wilfred Jackson, Samuel Armstrong"
 1030,Don Chaffey
 1031,Robert Stevenson
 1032,"Clyde Geronimi, Wilfred Jackson, Hamilton Luske"
@@ -841,6 +842,7 @@ movie_id,director
 1103,Nicholas Ray
 1104,Elia Kazan
 1105,Greg Spence
+1107,N/A
 1111,"Claude Nuridsany, Marie Pérennou"
 1112,Alan Taylor
 1114,Abel Ferrara
@@ -978,7 +980,7 @@ movie_id,director
 1279,Jim Jarmusch
 1280,Zhang Yimou
 1281,Charlie Chaplin
-1282,"Bill Roberts, Paul Satterfield, Wilfred Jackson, Ben Sharpsteen, James Algar, T. Hee, Hamilton Luske, Samuel Armstrong, Jim Handley, Norman Ferguson, David Hand, Ford Beebe Jr."
+1282,"Samuel Armstrong, James Algar, Bill Roberts, Paul Satterfield, Hamilton Luske, Jim Handley, T. Hee, Wilfred Jackson, Ben Sharpsteen, Norman Ferguson"
 1283,Fred Zinnemann
 1284,Howard Hawks
 1285,Michael Lehmann
@@ -1045,7 +1047,7 @@ movie_id,director
 1357,Scott Hicks
 1358,Billy Bob Thornton
 1359,Brian Levant
-1361,"Joe Berlinger, Bruce Sinofsky"
+1361,"Bruce Sinofsky, Joe Berlinger"
 1363,Penny Marshall
 1365,Patrice Leconte
 1366,Nicholas Hytner
@@ -1174,7 +1176,7 @@ movie_id,director
 1562,Joel Schumacher
 1564,Paul Weiland
 1565,Jim Wilson
-1566,"John Musker, Ron Clements"
+1566,"Ron Clements, John Musker"
 1569,P.J. Hogan
 1571,Cédric Klapisch
 1572,Jean-Luc Godard
@@ -1325,7 +1327,7 @@ movie_id,director
 1792,Stuart Baird
 1793,Stephan Elliott
 1794,Richard Kwietniowski
-1797,"David Breashears, Stephen Judson, Greg MacGillivray"
+1797,"Greg MacGillivray, David Breashears, Stephen Judson"
 1798,Jonathan Darby
 1799,Peter O'Fallon
 1801,Randall Wallace
@@ -1381,7 +1383,7 @@ movie_id,director
 1892,Andrew Davis
 1893,Caroline Link
 1894,Ivan Reitman
-1895,"Deborah Kaplan, Harry Elfont"
+1895,"Harry Elfont, Deborah Kaplan"
 1897,Lisa Cholodenko
 1900,Majid Majidi
 1902,Tiffanie DeBartolo
@@ -1401,7 +1403,7 @@ movie_id,director
 1920,Joe Dante
 1921,Darren Aronofsky
 1922,Susan Skoog
-1923,"Bobby Farrelly, Peter Farrelly"
+1923,"Peter Farrelly, Bobby Farrelly"
 1924,Edward D. Wood Jr.
 1926,Harry Beaumont
 1927,Lewis Milestone
@@ -1489,7 +1491,7 @@ movie_id,director
 2014,Gary Nelson
 2015,Robert Stevenson
 2016,Vincent McEveety
-2017,"Austen Jewell, Jack Donohue"
+2017,"Jack Donohue, Austen Jewell"
 2018,David Hand
 2019,Akira Kurosawa
 2020,Stephen Frears
@@ -1514,7 +1516,7 @@ movie_id,director
 2043,Robert Stevenson
 2044,Steven Hilliard Stern
 2046,Randal Kleiser
-2048,"Ron Clements, John Musker, Burny Mattinson, David Michener"
+2048,"Ron Clements, Burny Mattinson, David Michener, John Musker"
 2050,Vincent McEveety
 2051,Vincent McEveety
 2052,Kenny Ortega
@@ -1541,16 +1543,16 @@ movie_id,director
 2076,David Lynch
 2077,Jeremy Kagan
 2078,Wolfgang Reitherman
-2080,"Hamilton Luske, Clyde Geronimi, Wilfred Jackson"
+2080,"Hamilton Luske, Wilfred Jackson, Clyde Geronimi"
 2081,"John Musker, Ron Clements"
 2082,Stephen Herek
 2083,Brian Henson
 2084,Kenny Ortega
-2085,"Wolfgang Reitherman, Clyde Geronimi, Hamilton Luske"
+2085,"Clyde Geronimi, Hamilton Luske, Wolfgang Reitherman"
 2087,"Clyde Geronimi, Wilfred Jackson, Hamilton Luske"
 2088,Robert Altman
 2089,"Hendel Butoy, Mike Gabriel"
-2090,"Art Stevens, John Lounsbery, Wolfgang Reitherman"
+2090,"Art Stevens, Wolfgang Reitherman, John Lounsbery"
 2091,John Hough
 2092,"Tad Stones, Toby Shelton, Alan Zaslove"
 2093,Walter Murch
@@ -1753,7 +1755,7 @@ movie_id,director
 2351,Federico Fellini
 2352,Lawrence Kasdan
 2353,Tony Scott
-2354,"Norton Virgien, Igor Kovalyov"
+2354,"Igor Kovalyov, Norton Virgien"
 2355,John Lasseter
 2356,Woody Allen
 2357,Walter Salles
@@ -1763,7 +1765,7 @@ movie_id,director
 2361,John Waters
 2362,Edward D. Wood Jr.
 2363,Ishirō Honda
-2364,"Koji Hashimoto, R.J. Kizer"
+2364,"R.J. Kizer, Koji Hashimoto"
 2365,Ishirō Honda
 2366,"Merian C. Cooper, Ernest B. Schoedsack"
 2367,John Guillermin
@@ -1792,7 +1794,7 @@ movie_id,director
 2391,Sam Raimi
 2392,Troy Miller
 2393,Jonathan Frakes
-2394,"Simon Wells, Brenda Chapman, Steve Hickner"
+2394,"Steve Hickner, Brenda Chapman, Simon Wells"
 2395,Wes Anderson
 2396,John Madden
 2398,George Seaton
@@ -1850,7 +1852,7 @@ movie_id,director
 2459,Tobe Hooper
 2460,Tobe Hooper
 2462,Kim Henkel
-2463,"Jim Abrahams, David Zucker, Jerry Zucker"
+2463,"David Zucker, Jerry Zucker, Jim Abrahams"
 2465,Wes Craven
 2467,Jean-Jacques Annaud
 2468,Penny Marshall
@@ -1869,7 +1871,7 @@ movie_id,director
 2483,Álex de la Iglesia
 2485,Robert Iscove
 2488,Michael Powell
-2490,Brian Helgeland
+2490,Paul Abascal
 2491,Mark Tarlov
 2492,Myles Berkowitz
 2493,Joseph Vilsmaier
@@ -2094,7 +2096,7 @@ movie_id,director
 2788,Ian MacNaughton
 2789,Don Taylor
 2790,Graham Baker
-2791,"Jerry Zucker, David Zucker, Jim Abrahams"
+2791,"Jim Abrahams, Jerry Zucker, David Zucker"
 2792,Ken Finkleman
 2793,Anthony Waller
 2794,Amy Heckerling
@@ -2122,7 +2124,7 @@ movie_id,director
 2819,Sydney Pollack
 2820,"Bill Colleran, John Gielgud"
 2822,John McTiernan
-2824,"Nanette Burstein, Brett Morgen"
+2824,"Brett Morgen, Nanette Burstein"
 2826,John McTiernan
 2827,Rand Ravich
 2828,Hugh Wilson
@@ -2138,6 +2140,7 @@ movie_id,director
 2846,Masanori Hata
 2847,Howard Hawks
 2848,Orson Welles
+2851,N/A
 2852,Norman Jewison
 2856,William Castle
 2857,George Dunning
@@ -2156,7 +2159,7 @@ movie_id,director
 2872,John Boorman
 2874,"George Abbott, Stanley Donen"
 2875,Jon Amiel
-2876,"Don Bluth, Gary Goldman"
+2876,"Gary Goldman, Don Bluth"
 2877,Ken Russell
 2878,Tom DeSimone
 2879,Jackie Chan
@@ -2264,7 +2267,7 @@ movie_id,director
 3006,Michael Mann
 3007,Chris Smith
 3008,Don McKellar
-3010,"Jean-Pierre Dardenne, Luc Dardenne"
+3010,"Luc Dardenne, Jean-Pierre Dardenne"
 3011,Sydney Pollack
 3013,Brian Yuzna
 3014,"Oz Scott, Michael Schultz"
@@ -2309,7 +2312,7 @@ movie_id,director
 3062,"Ken Annakin, Bernhard Wicki, Andrew Marton"
 3063,Katt Shea
 3064,Kurt Voss
-3066,"Richard Fleischer, Kinji Fukasaku, Toshio Masuda"
+3066,"Toshio Masuda, Kinji Fukasaku, Richard Fleischer"
 3067,Pedro Almodóvar
 3068,Sidney Lumet
 3070,W.D. Richter
@@ -2325,7 +2328,7 @@ movie_id,director
 3081,Tim Burton
 3082,Michael Apted
 3083,Pedro Almodóvar
-3086,"Gus Meins, Charley Rogers"
+3086,"Charley Rogers, Gus Meins"
 3087,Richard Donner
 3088,Henry Koster
 3089,Vittorio De Sica
@@ -2377,7 +2380,7 @@ movie_id,director
 3156,Chris Columbus
 3157,Rob Minkoff
 3158,Chen Kaige
-3159,"James Algar, Gaëtan Brizzi, Pixote Hunt, Eric Goldberg, Hendel Butoy, Don Hahn, Paul Brizzi, Francis Glebas"
+3159,"James Algar, Gaëtan Brizzi, Pixote Hunt, Eric Goldberg, Paul Brizzi, Hendel Butoy, Don Hahn, Francis Glebas"
 3160,Paul Thomas Anderson
 3161,Martha Fiennes
 3162,Matthew Warchus
@@ -2449,7 +2452,7 @@ movie_id,director
 3263,Ron Shelton
 3264,Fran Rubel Kuzui
 3265,John Woo
-3266,"Rémy Belvaux, André Bonzel, Benoît Poelvoorde"
+3266,"Rémy Belvaux, Benoît Poelvoorde, André Bonzel"
 3267,Robert Rodriguez
 3268,Roger Spottiswoode
 3269,Steve Miner
@@ -2535,7 +2538,7 @@ movie_id,director
 3396,James Frawley
 3397,Jim Henson
 3398,Frank Oz
-3400,"Phil Nibbelink, Simon Wells, Dick Zondag, Ralph Zondag"
+3400,"Ralph Zondag, Simon Wells, Phil Nibbelink, Dick Zondag"
 3401,Bill L. Norton
 3402,John Irvin
 3403,Jerry Jameson
@@ -2676,7 +2679,7 @@ movie_id,director
 3584,Jim McBride
 3586,Taylor Hackford
 3587,Dario Argento
-3590,"Martin Davidson, Stephen Verona"
+3590,"Stephen Verona, Martin Davidson"
 3591,Stan Dragoti
 3592,René Laloux
 3593,Roger Christian
@@ -2686,7 +2689,7 @@ movie_id,director
 3598,Michael Almereyda
 3599,George Sidney
 3604,Mervyn LeRoy
-3606,"Gene Kelly, Stanley Donen"
+3606,"Stanley Donen, Gene Kelly"
 3608,Tim Burton
 3609,Barbara Sonneborn
 3614,Andrew Bergman
@@ -2752,7 +2755,7 @@ movie_id,director
 3691,Noel Black
 3692,"Lloyd Kaufman, Richard W. Haines"
 3693,"Lloyd Kaufman, Michael Herz"
-3694,"Michael Herz, Lloyd Kaufman"
+3694,"Lloyd Kaufman, Michael Herz"
 3695,"Michael Herz, Lloyd Kaufman"
 3696,Fred Dekker
 3697,Stephen Hopkins
@@ -2802,7 +2805,7 @@ movie_id,director
 3745,"Don Bluth, Gary Goldman"
 3746,José Luis Cuerda
 3747,Alison Maclean
-3751,"Nick Park, Peter Lord"
+3751,"Peter Lord, Nick Park"
 3752,"Peter Farrelly, Bobby Farrelly"
 3753,Roland Emmerich
 3754,Des McAnuff
@@ -2952,7 +2955,7 @@ movie_id,director
 3959,George Pal
 3962,Albert Band
 3963,Charles Walters
-3964,"James Algar, Clyde Geronimi, Jack Kinney"
+3964,"Clyde Geronimi, James Algar, Jack Kinney"
 3965,Lewis Milestone
 3966,Edgar G. Ulmer
 3967,Stephen Daldry
@@ -3023,6 +3026,7 @@ movie_id,director
 4043,James Foley
 4046,William Wyler
 4047,Ronald F. Maxwell
+4051,N/A
 4052,Peter Howitt
 4053,George Gallo
 4054,Thomas Carter
@@ -3040,7 +3044,7 @@ movie_id,director
 4074,Volker Schlöndorff
 4077,Dominik Moll
 4078,Mike Newell
-4079,"Joe Dante, Carl Gottlieb, Peter Horton, John Landis, Robert K. Weiss"
+4079,"Peter Horton, Carl Gottlieb, John Landis, Joe Dante, Robert K. Weiss"
 4080,Charles Shyer
 4081,Lyndall Hobbs
 4082,Barbet Schroeder
@@ -3113,7 +3117,7 @@ movie_id,director
 4190,Richard Brooks
 4191,Lewis Gilbert
 4193,Michael Ritchie
-4194,"Emeric Pressburger, Michael Powell"
+4194,"Michael Powell, Emeric Pressburger"
 4195,Robert Fuest
 4197,Albert Brooks
 4198,Jimmy T. Murakami
@@ -3122,6 +3126,7 @@ movie_id,director
 4203,Simon Wincer
 4204,Curtis Hanson
 4205,Richard Benjamin
+4207,N/A
 4210,Michael Mann
 4211,Barbet Schroeder
 4212,John Guillermin
@@ -3212,10 +3217,10 @@ movie_id,director
 4342,Thomas Bezucha
 4343,Ivan Reitman
 4344,Dominic Sena
-4345,"Alan Cumming, Jennifer Jason Leigh"
+4345,"Jennifer Jason Leigh, Alan Cumming"
 4347,Jan Hřebejk
 4349,Mike Nichols
-4350,"Peter Jackson, Costa Botes"
+4350,"Costa Botes, Peter Jackson"
 4351,Kathryn Bigelow
 4353,Ted Kotcheff
 4354,Jonathan Kaplan
@@ -3242,7 +3247,7 @@ movie_id,director
 4387,Chris Nahon
 4388,Keenen Ivory Wayans
 4389,Léa Pool
-4390,"Virginie Despentes, Coralie Trinh Thi"
+4390,"Coralie Trinh Thi, Virginie Despentes"
 4392,Woody Allen
 4393,Woody Allen
 4394,William Asher
@@ -3287,7 +3292,7 @@ movie_id,director
 4450,Larry Clark
 4451,Joel Hopkins
 4452,Jon Favreau
-4453,"Don Kempf, James D. Stern"
+4453,"James D. Stern, Don Kempf"
 4454,Mark Osborne
 4458,George Casey
 4459,George Casey
@@ -3356,6 +3361,7 @@ movie_id,director
 4563,Yahoo Serious
 4564,Steven Spielberg
 4565,Sam Firstenberg
+4568,N/A
 4571,Stephen Herek
 4572,Ridley Scott
 4573,Ron Shelton
@@ -3453,11 +3459,11 @@ movie_id,director
 4715,Mike Newell
 4717,Robert Clouse
 4718,J.B. Rogers
-4719,"Bobby Farrelly, Peter Farrelly"
+4719,"Peter Farrelly, Bobby Farrelly"
 4720,Alejandro Amenábar
 4721,Les Mayfield
 4722,Julie Davis
-4723,"Scott McGehee, David Siegel"
+4723,"David Siegel, Scott McGehee"
 4725,Brad Anderson
 4727,John Madden
 4728,Jerry Zucker
@@ -3647,7 +3653,7 @@ movie_id,director
 5015,Marc Forster
 5016,Lasse Hallström
 5021,Robert Moore
-5023,"Neal Jimenez, Michael Steinberg"
+5023,"Michael Steinberg, Neal Jimenez"
 5025,Jake Kasdan
 5026,Christophe Gans
 5027,Walter Hill
@@ -3673,6 +3679,7 @@ movie_id,director
 5065,Mark Pellington
 5066,Adam Shankman
 5068,Wang Xiaoshuai
+5069,N/A
 5071,Denis Villeneuve
 5072,Rintaro
 5073,Nanni Moretti
@@ -3733,6 +3740,7 @@ movie_id,director
 5198,John Mackenzie
 5202,Alain Resnais
 5205,Kevin Connor
+5209,N/A
 5212,Eric Karson
 5213,Gilbert Cates
 5214,Carl Reiner
@@ -3741,7 +3749,7 @@ movie_id,director
 5220,Tom Dey
 5221,Élie Chouraqui
 5222,Charles Herman-Wurmfeld
-5224,"Carlos Bolado, B.Z. Goldberg, Justine Shapiro"
+5224,"Carlos Bolado, Justine Shapiro, B.Z. Goldberg"
 5225,Alfonso Cuarón
 5226,Michael Chapman
 5231,David Butler
@@ -3822,7 +3830,7 @@ movie_id,director
 5372,David Butler
 5373,Mikhail Kalatozov
 5375,George Sidney
-5377,"Paul Weitz, Chris Weitz"
+5377,"Chris Weitz, Paul Weitz"
 5378,George Lucas
 5379,Henry Bean
 5380,Oliver Parker
@@ -3863,14 +3871,14 @@ movie_id,director
 5440,John Ford
 5442,Jeff Kanew
 5443,Jesse Vaughan
-5444,"Chris Sanders, Dean DeBlois"
+5444,"Dean DeBlois, Chris Sanders"
 5445,Steven Spielberg
 5446,Phillip Noyce
 5447,John Sayles
 5448,Tuck Tucker
 5449,Steven Brill
 5450,Nicole Holofcener
-5451,"Adam Larson Broder, Anthony Abrams"
+5451,"Anthony Abrams, Adam Larson Broder"
 5452,Tom Ropelewski
 5454,Peter MacDonald
 5455,Michael Lindsay-Hogg
@@ -3895,7 +3903,7 @@ movie_id,director
 5479,Kathryn Bigelow
 5480,Rob Minkoff
 5481,Jay Roach
-5483,"Brett Morgen, Nanette Burstein"
+5483,"Nanette Burstein, Brett Morgen"
 5485,Gary Winick
 5486,Chris Ver Wiel
 5489,Werner Herzog
@@ -3904,7 +3912,7 @@ movie_id,director
 5497,Daniel Mann
 5498,Akira Kurosawa
 5499,Richard Lester
-5500,"Jim Abrahams, David Zucker, Jerry Zucker"
+5500,"Jim Abrahams, Jerry Zucker, David Zucker"
 5501,Perry Andelin Blake
 5502,M. Night Shyamalan
 5503,Gabriele Muccino
@@ -3981,7 +3989,7 @@ movie_id,director
 5621,Kevin Donovan
 5625,Brad Silberling
 5628,Gérard Krawczyk
-5629,"Mike Nawrocki, Phil Vischer"
+5629,"Phil Vischer, Mike Nawrocki"
 5630,Brett Ratner
 5632,Paul Greengrass
 5633,Tom Tykwer
@@ -3999,7 +4007,7 @@ movie_id,director
 5657,Franco Amurri
 5663,David Twohy
 5664,Rick Famuyiwa
-5665,"Brian Koppelman, David Levien"
+5665,"David Levien, Brian Koppelman"
 5666,Roger Avary
 5667,Jay Russell
 5668,Peter Kosminsky
@@ -4057,7 +4065,7 @@ movie_id,director
 5788,Mike Leigh
 5791,Julie Taymor
 5792,Dylan Kidd
-5796,"Robert Parrish, Val Guest, Ken Hughes, John Huston, Joseph McGrath"
+5796,"Joseph McGrath, Robert Parrish, Ken Hughes, John Huston, Val Guest"
 5797,Neil Jordan
 5799,Otto Preminger
 5801,Norman Jewison
@@ -4096,7 +4104,7 @@ movie_id,director
 5879,Seth Kearsley
 5880,Christian Duguay
 5881,Steven Soderbergh
-5882,"John Musker, Ron Clements"
+5882,"Ron Clements, John Musker"
 5883,Robert Harmon
 5884,Dan Hoskins
 5888,Aleksey Balabanov
@@ -4114,7 +4122,7 @@ movie_id,director
 5912,Juliusz Machulski
 5915,John Huston
 5919,Aaron Lipstadt
-5922,"Pipolo, Franco Castellano"
+5922,"Franco Castellano, Pipolo"
 5925,Philippe Mora
 5927,Colin Higgins
 5929,Claude Pinoteau
@@ -4143,7 +4151,7 @@ movie_id,director
 5969,Howard Zieff
 5970,Howard Zieff
 5971,Hayao Miyazaki
-5974,"Ludwig Berger, Michael Powell, Tim Whelan"
+5974,"Michael Powell, Tim Whelan, Ludwig Berger"
 5975,King Vidor
 5979,Roger Corman
 5980,Bob Clark
@@ -4157,7 +4165,7 @@ movie_id,director
 5993,Menno Meyjes
 5994,Douglas McGrath
 5995,Roman Polanski
-5999,"Michael Coldewey, Michel Lemire"
+5999,"Michel Lemire, Michael Coldewey"
 6001,Martin Scorsese
 6002,Todd Louiso
 6003,George Clooney
@@ -4191,7 +4199,7 @@ movie_id,director
 6058,David R. Ellis
 6059,Roger Donaldson
 6060,Daisy von Scherler Mayer
-6062,"Louis Pepe, Keith Fulton"
+6062,"Keith Fulton, Louis Pepe"
 6063,Lucky McKee
 6064,Mark Robson
 6067,Thaddeus O'Sullivan
@@ -4203,8 +4211,8 @@ movie_id,director
 6095,Jackie Chan
 6100,Woody Allen
 6101,Costa-Gavras
-6104,"Ian MacNaughton, Terry Hughes"
-6107,"Paolo Taviani, Vittorio Taviani"
+6104,"Terry Hughes, Ian MacNaughton"
+6107,"Vittorio Taviani, Paolo Taviani"
 6111,Stuart Gillard
 6116,Ken Annakin
 6119,Jean-Marie Poiré
@@ -4342,9 +4350,9 @@ movie_id,director
 6350,Hayao Miyazaki
 6357,Charles Walters
 6358,George Sidney
-6365,"Lana Wachowski, Lilly Wachowski"
+6365,"Lilly Wachowski, Lana Wachowski"
 6367,Peyton Reed
-6368,"Angela Christlieb, Stephen Kijak"
+6368,"Stephen Kijak, Angela Christlieb"
 6370,Cédric Klapisch
 6371,Kunihiko Yuyama
 6373,Tom Shadyac
@@ -4401,7 +4409,7 @@ movie_id,director
 6493,Rob Reiner
 6502,Danny Boyle
 6503,McG
-6506,"Wai Ka-Fai, Johnnie To"
+6506,"Johnnie To, Wai Ka-Fai"
 6509,Rainer Werner Fassbinder
 6510,Michael Steinberg
 6514,Clark L. Paylow
@@ -4466,14 +4474,14 @@ movie_id,director
 6604,Pier Paolo Pasolini
 6609,Pier Paolo Pasolini
 6611,Vittorio De Sica
-6612,"Bruce Sinofsky, Joe Berlinger"
+6612,"Joe Berlinger, Bruce Sinofsky"
 6614,Lawrence Kasdan
 6615,Ronny Yu
 6616,Casey La Scala
 6617,Kevin Costner
 6618,Stephen Chow Sing-Chi
 6619,Boaz Yakin
-6620,"Shari Springer Berman, Robert Pulcini"
+6620,"Robert Pulcini, Shari Springer Berman"
 6624,Harald Zwart
 6625,Jonathan Prince
 6628,Peter Markle
@@ -4630,7 +4638,7 @@ movie_id,director
 6920,Jean-Pierre Melville
 6927,Robert Benton
 6932,Billy Ray
-6934,"Lilly Wachowski, Lana Wachowski"
+6934,"Lana Wachowski, Lilly Wachowski"
 6935,"Kim Bartley, Donnacha O'Briain"
 6936,Jon Favreau
 6938,Philip Boston
@@ -4653,7 +4661,7 @@ movie_id,director
 6961,Louis Malle
 6962,Scott Hamilton Kennedy
 6963,Lucy Walker
-6965,"Aaron Lubarsky, Alexandra Pelosi"
+6965,"Alexandra Pelosi, Aaron Lubarsky"
 6966,Sam Raimi
 6967,"Charles Crichton, Basil Dearden, Alberto Cavalcanti, Robert Hamer"
 6969,Luc Besson
@@ -4741,7 +4749,7 @@ movie_id,director
 7071,John Cassavetes
 7072,John Ford
 7073,Blake Edwards
-7074,"Donald Crisp, Buster Keaton"
+7074,"Buster Keaton, Donald Crisp"
 7075,"Melvin Frank, Norman Panama"
 7076,Peter Yates
 7078,William Wyler
@@ -4804,7 +4812,7 @@ movie_id,director
 7165,Robert Altman
 7167,Sue Brooks
 7169,Andy Cadiff
-7171,"Joan Churchill, Nick Broomfield"
+7171,"Nick Broomfield, Joan Churchill"
 7173,John Hamburg
 7175,Joseph Kahn
 7176,Jafar Panahi
@@ -4972,10 +4980,12 @@ movie_id,director
 7620,Nick Broomfield
 7624,Robert Mandel
 7636,Brian De Palma
+7646,N/A
 7647,Peter Bogdanovich
 7649,Michael Vejar
 7650,Michael Reeves
 7657,Ryûhei Kitamura
+7669,N/A
 7698,James Bridges
 7700,Henri-Georges Clouzot
 7701,Amy Heckerling
@@ -5000,6 +5010,7 @@ movie_id,director
 7753,Mick Jackson
 7756,"Sergei Eisenstein, Dmitriy Vasilev"
 7757,Don Chaffey
+7762,N/A
 7766,Akira Kurosawa
 7767,Marco Tullio Giordana
 7772,Vincente Minnelli
@@ -5007,7 +5018,7 @@ movie_id,director
 7781,Michael Almereyda
 7782,Luis Llosa
 7786,Roko Belic
-7789,"Ken Loach, Idrissa Ouedraogo, Samira Makhmalbaf, Alejandro González Iñárritu, Amos Gitai, Shōhei Imamura, Sean Penn, Mira Nair, Danis Tanović, Youssef Chahine, Claude Lelouch"
+7789,"Amos Gitai, Alejandro González Iñárritu, Shōhei Imamura, Ken Loach, Samira Makhmalbaf, Mira Nair, Idrissa Ouedraogo, Sean Penn, Danis Tanović, Youssef Chahine"
 7792,Alan J. Pakula
 7802,Walter Hill
 7810,Michael Vejar
@@ -5024,6 +5035,8 @@ movie_id,director
 7835,Edward Buzzell
 7839,Jack Conway
 7840,George Stevens
+7841,N/A
+7842,N/A
 7843,Christian Zübert
 7844,Corey Yuen Kwai
 7845,S.S. Wilson
@@ -5143,10 +5156,10 @@ movie_id,director
 8335,Leo McCarey
 8336,Billy Wilder
 8337,Edward Dmytryk
-8338,"Michael Powell, Emeric Pressburger"
+8338,"Emeric Pressburger, Michael Powell"
 8340,Don Siegel
 8341,David Lean
-8360,"Conrad Vernon, Kelly Asbury, Andrew Adamson"
+8360,"Andrew Adamson, Kelly Asbury, Conrad Vernon"
 8361,Roland Emmerich
 8362,Garry Marshall
 8363,Jessy Terrero
@@ -5183,7 +5196,7 @@ movie_id,director
 8456,Elio Petri
 8458,Mitchell Leisen
 8459,William Wyler
-8461,"Jack Conway, Harold S. Bucquet"
+8461,"Harold S. Bucquet, Jack Conway"
 8462,Robert Wise
 8463,Jean Negulesco
 8464,Morgan Spurlock
@@ -5221,10 +5234,10 @@ movie_id,director
 8574,Will Vinton
 8575,Laurent Firode
 8577,Oliver Stone
-8578,"Peter Spierig, Michael Spierig"
+8578,"Michael Spierig, Peter Spierig"
 8580,James Lapine
 8581,Martyn Burke
-8582,"Peter Wintonick, Mark Achbar"
+8582,"Mark Achbar, Peter Wintonick"
 8587,George Hickenlooper
 8588,Chen Kaige
 8591,Stewart Raffill
@@ -5328,7 +5341,7 @@ movie_id,director
 8894,Michael Anderson
 8905,Ridley Scott
 8906,Ruggero Deodato
-8907,"Vicky Jenson, Bibo Bergeron, Rob Letterman"
+8907,"Bibo Bergeron, Rob Letterman, Vicky Jenson"
 8908,Jay Russell
 8910,David O. Russell
 8911,Sean McNamara
@@ -5389,7 +5402,7 @@ movie_id,director
 9018,Jehane Noujaim
 25746,Wallace Worsley
 25750,Buster Keaton
-25752,"Fred C. Newmeyer, Sam Taylor"
+25752,"Sam Taylor, Fred C. Newmeyer"
 25753,Erich von Stroheim
 25757,Alan Crosland
 25769,"Charles Reisner, Buster Keaton"
@@ -5419,6 +5432,7 @@ movie_id,director
 25923,David Lean
 25927,Orson Welles
 25937,Charles Walters
+25940,N/A
 25946,George Sidney
 25947,Preston Sturges
 25952,Joseph L. Mankiewicz
@@ -5494,6 +5508,7 @@ movie_id,director
 26422,Miloš Forman
 26429,Stan Dragoti
 26444,Alan J.W. Bell
+26453,N/A
 26464,John Badham
 26467,Nicholas Meyer
 26471,Bruce Gowers
@@ -5507,7 +5522,7 @@ movie_id,director
 26527,Pedro Almodóvar
 26528,Kevin Sullivan
 26539,Volker Schlöndorff
-26542,"Jim Wheat, Ken Wheat"
+26542,"Ken Wheat, Jim Wheat"
 26547,Jackie Chan
 26554,Geoff Murphy
 26555,John Landis
@@ -5516,22 +5531,26 @@ movie_id,director
 26567,Harold Ramis
 26578,Andrei Tarkovsky
 26585,John Woo
+26587,N/A
 26590,Don Jurwich
 26593,"Donald G. Jackson, R.J. Kizer"
 26599,Pedro Almodóvar
 26603,John Carpenter
 26606,Tony Ching Siu-Tung
 26612,John Woo
+26614,N/A
 26622,Robert M. Young
 26629,Stephen Chiodo
 26630,"Colin Chilvers, Will Vinton, Jerry Kramer"
 26631,Jan Švankmajer
 26645,Étienne Chatiliez
+26649,N/A
 26662,Hayao Miyazaki
 26676,John Cornell
 26680,John Waters
 26681,John Woo
 26686,Sidney Poitier
+26693,N/A
 26694,Zhang Yimou
 26695,Peter Medak
 26696,Sheldon Lettich
@@ -5549,6 +5568,7 @@ movie_id,director
 26743,Isao Takahata
 26745,Norman Jewison
 26750,Simon Wincer
+26761,N/A
 26764,Albert Pyun
 26765,Wong Jing
 26776,Hayao Miyazaki
@@ -5565,12 +5585,14 @@ movie_id,director
 26828,Michael Gottlieb
 26838,Stephen Frears
 26840,Takeshi Kitano
+26849,N/A
 26854,Bradford May
 26861,"Alex Winter, Tom Stern"
 26865,Gordon Chan
 26870,David S. Ward
 26871,Steve Miner
 26875,Giuseppe Tornatore
+26887,N/A
 26900,Markku Pölönen
 26901,Tab Murphy
 26903,Yoshifumi Kondo
@@ -5583,13 +5605,15 @@ movie_id,director
 26974,Harmony Korine
 26985,Gabriele Salvatores
 26999,Darrell Rooney
+27002,N/A
 27003,Graham Baker
 27006,Benjamin Ross
 27008,Scott Spiegel
 27020,Michael Cristofer
 27022,Skip Woods
 27032,"Jackie Chan, Benny Chan Muk-Sing"
-27074,"Larry Williams, Leslie Libman"
+27036,N/A
+27074,"Leslie Libman, Larry Williams"
 27075,Dave Payne
 27105,Uli Edel
 27124,Nicolas Winding Refn
@@ -5601,7 +5625,8 @@ movie_id,director
 27178,Fatih Akin
 27186,Michel Ocelot
 27193,Gérard Krawczyk
-27246,"Jane Anderson, Martha Coolidge, Anne Heche"
+27246,"Martha Coolidge, Jane Anderson, Anne Heche"
+27251,N/A
 27255,Abbas Kiarostami
 27266,Wong Kar-wai
 27306,Jonathan Parker
@@ -5638,11 +5663,12 @@ movie_id,director
 27592,Park Chan-wook
 27595,Lee Demarbre
 27604,Sion Sono
+27611,N/A
 27618,Peter Hyams
 27619,Bradley Raymond
 27627,Lee Chang-dong
 27644,Gabriele Muccino
-27660,"Yoshiaki Kawajiri, Mahiro Maeda, Shinichiro Watanabe, Takeshi Koike, Peter Chung, Koji Morimoto, Andrew R. Jones"
+27660,"Peter Chung, Yoshiaki Kawajiri, Takeshi Koike, Mahiro Maeda, Koji Morimoto, Shinichiro Watanabe, Andrew R. Jones"
 27664,Vincent Gallo
 27667,Takashi Shimizu
 27674,Greg Marcks
@@ -5654,6 +5680,7 @@ movie_id,director
 27704,"Kenta Fukasaku, Kinji Fukasaku"
 27705,Ringo Lam Ling-Tung
 27706,Brad Silberling
+27708,N/A
 27716,Anders Thomas Jensen
 27721,Jean-Pierre Jeunet
 27722,Pen-Ek Ratanaruang
@@ -5662,6 +5689,7 @@ movie_id,director
 27741,Yoji Yamada
 27744,Ferzan Özpetek
 27746,Brett Sullivan
+27751,N/A
 27762,Mark Hamill
 27768,Patrice Leconte
 27769,Debra Granik
@@ -5691,11 +5719,11 @@ movie_id,director
 27838,Jacob Aaron Estes
 27839,Hideo Nakata
 27846,"Mark Achbar, Jennifer Abbott"
-27850,"Sarah Price, Chris Smith, Dan Ollman"
+27850,"Dan Ollman, Sarah Price, Chris Smith"
 27865,Ryûhei Kitamura
 27866,Brad McGann
 27869,Kang Je-kyu
-27873,"Joe Berlinger, Bruce Sinofsky"
+27873,"Bruce Sinofsky, Joe Berlinger"
 27878,"Zana Briski, Ross Kauffman"
 27879,Ondi Timoner
 27882,Stacy Peralta
@@ -5737,6 +5765,7 @@ movie_id,director
 31150,Ralph Bakshi
 31162,Stephen Hopkins
 31184,Shinji Aramaki
+31193,N/A
 31221,Rob Bowman
 31223,Frederik Du Chau
 31225,Thomas Carter
@@ -5787,7 +5816,7 @@ movie_id,director
 32011,Wes Craven
 32017,Adam Shankman
 32019,F. Gary Gray
-32022,"Michael Tucker, Petra Epperlein"
+32022,"Petra Epperlein, Michael Tucker"
 32029,Florent-Emilio Siri
 32031,Chris Wedge
 32058,Michael Apted
@@ -5824,6 +5853,7 @@ movie_id,director
 32589,Bille Woodruff
 32596,Breck Eisner
 32598,"Bobby Farrelly, Peter Farrelly"
+32600,N/A
 32620,Alain Resnais
 32632,James William Guercio
 32649,Ettore Scola
@@ -5906,7 +5936,7 @@ movie_id,director
 34143,Walter Salles
 34148,Jacques Audiard
 34150,Tim Story
-34153,"Henry Alex Rubin, Dana Adam Shapiro"
+34153,"Dana Adam Shapiro, Henry Alex Rubin"
 34162,David Dobkin
 34164,Don Roos
 34271,Craig Brewer
@@ -5989,6 +6019,7 @@ movie_id,director
 38095,Kim Jee-woon
 38159,Krzysztof Kieślowski
 38164,Anatole Litvak
+38198,N/A
 38294,Sturla Gunnarsson
 38304,Martin Scorsese
 38388,Danny Cannon
@@ -6027,6 +6058,7 @@ movie_id,director
 40614,Mikael Håfström
 40617,Christopher Smith
 40629,Joe Wright
+40697,N/A
 40723,Greg McLean
 40732,Neil Marshall
 40815,Mike Newell
@@ -6070,7 +6102,7 @@ movie_id,director
 42422,Makoto Shinkai
 42556,George Pal
 42559,Kihachi Okamoto
-42602,"Heidi Ewing, Rachel Grady"
+42602,"Rachel Grady, Heidi Ewing"
 42632,Park Chan-wook
 42638,David Caffrey
 42718,Pierre Morel
@@ -6089,7 +6121,7 @@ movie_id,director
 43333,Deepa Mehta
 43376,Marc Rothemund
 43396,Roger Donaldson
-43419,"Joachim Rønning, Espen Sandberg"
+43419,"Espen Sandberg, Joachim Rønning"
 43460,Michael Winterbottom
 43549,John Gray
 43556,Justin Lin
@@ -6156,7 +6188,7 @@ movie_id,director
 44929,Neil Armfield
 44931,G.W. Pabst
 44937,"Luc Dardenne, Jean-Pierre Dardenne"
-44943,"James Hanlon, Gédéon Naudet, Jules Naudet"
+44943,"Jules Naudet, Gédéon Naudet, James Hanlon"
 44972,David Zucker
 44974,David Slade
 45028,Robert Altman
@@ -6203,7 +6235,7 @@ movie_id,director
 46322,Ronny Yu
 46335,Justin Lin
 46337,Tim Hill
-46347,"Sam Dunn, Scot McFadyen, Jessica Joy Wise"
+46347,"Jessica Joy Wise, Scot McFadyen, Sam Dunn"
 46367,Howard Franklin
 46530,Bryan Singer
 46559,"Mat Whitecross, Michael Winterbottom"
@@ -6261,7 +6293,7 @@ movie_id,director
 47970,Tony Goldwyn
 47978,Laurie Collyer
 47997,Mike Judge
-47999,"Rachel Grady, Heidi Ewing"
+47999,"Heidi Ewing, Rachel Grady"
 48001,Kim Ki-duk
 48032,Roberto Benigni
 48043,Darren Aronofsky
@@ -6280,7 +6312,7 @@ movie_id,director
 48385,Larry Charles
 48394,Guillermo del Toro
 48412,Andrew Davis
-48414,"Jill Culton, Roger Allers"
+48414,"Roger Allers, Jill Culton"
 48416,Todd Phillips
 48516,Martin Scorsese
 48518,Jonathan Liebesman
@@ -6295,7 +6327,7 @@ movie_id,director
 48696,Todd Field
 48698,Amy J. Berg
 48738,Kevin Macdonald
-48741,"John Scheinfeld, David Leaf"
+48741,"David Leaf, John Scheinfeld"
 48744,John Cameron Mitchell
 48774,Alfonso Cuarón
 48780,Christopher Nolan
@@ -6337,6 +6369,7 @@ movie_id,director
 49822,Robert De Niro
 49824,Bill Condon
 49910,Richard LaGravenese
+49917,N/A
 49932,David Lynch
 49957,Nicholas Hytner
 49961,Richard Eyre
@@ -6365,18 +6398,19 @@ movie_id,director
 50794,Joe Carnahan
 50796,Katja von Garnier
 50798,"Jason Friedberg, Aaron Seltzer"
-50800,"Danny Pang Fat, Oxide Pang Shun"
+50800,"Oxide Pang Shun, Danny Pang Fat"
 50802,Michael Lehmann
 50804,Peter Webber
 50806,Brian Robbins
 50842,Lars von Trier
 50851,Billy Corben
 50872,Brad Bird
-50912,"Olivier Assayas, Frédéric Auburtin, Gurinder Chadha, Sylvain Chomet, Isabel Coixet, Wes Craven, Alfonso Cuarón, Gérard Depardieu, Christopher Doyle, Richard LaGravenese, Vincenzo Natali, Alexander Payne, Walter Salles, Oliver Schmitz, Nobuhiro Suwa, Daniela Thomas, Tom Tykwer, Gus Van Sant, Joel Coen, Ethan Coen, Bruno Podalydès"
+50912,"Olivier Assayas, Frédéric Auburtin, Gurinder Chadha, Sylvain Chomet, Isabel Coixet, Wes Craven, Alfonso Cuarón, Gérard Depardieu, Christopher Doyle, Richard LaGravenese"
 50923,Michael Polish
 50942,Adam McKay
 50954,Nick Hurran
 50999,"Michael Hegner, Karsten Kiilerich"
+51024,N/A
 51037,Simón Brand
 51077,Mark Steven Johnson
 51080,Billy Ray
@@ -6418,6 +6452,7 @@ movie_id,director
 52241,Scott Frank
 52245,"Will Speck, Josh Gordon"
 52279,Steve Carr
+52281,N/A
 52283,Stephen Hopkins
 52287,Stephen J. Anderson
 52299,Paul Rachman
@@ -6462,13 +6497,13 @@ movie_id,director
 53280,Nicholas Mastandrea
 53318,Sean Ellis
 53322,Steven Soderbergh
-53326,"David Moreau, Xavier Palud"
+53326,"Xavier Palud, David Moreau"
 53355,Leander Haußmann
 53435,Eli Roth
 53447,Gus Van Sant
 53450,Henning Schellerup
 53453,Luigi Cozzi
-53460,"Ash Brannon, Chris Buck"
+53460,"Chris Buck, Ash Brannon"
 53464,Tim Story
 53466,Andrew Fleming
 53468,Andrew Currie
@@ -6477,6 +6512,7 @@ movie_id,director
 53574,Jake Kasdan
 53578,Francis Veber
 53808,Steve Rash
+53883,N/A
 53894,Michael Moore
 53921,Michael Winterbottom
 53953,Mikael Håfström
@@ -6525,7 +6561,7 @@ movie_id,director
 55020,David Wain
 55036,Robert Harmon
 55052,Joe Wright
-55061,"Thomas Bangalter, Guy-Manuel de Homem-Christo"
+55061,"Guy-Manuel de Homem-Christo, Thomas Bangalter"
 55067,Hans-Christian Schmid
 55069,Cristian Mungiu
 55071,Charles Ferguson
@@ -6535,10 +6571,11 @@ movie_id,director
 55112,"David Ren, Kip Konwiser"
 55116,Richard Shepard
 55118,David Cronenberg
-55156,"Henriette Mantel, Steve Skrovan"
+55156,"Steve Skrovan, Henriette Mantel"
 55167,Michael Arias
 55190,Alek Keshishian
 55205,Steve Buscemi
+55207,N/A
 55232,Russell Mulcahy
 55241,Craig Gillespie
 55245,Mark Helfrich
@@ -6572,7 +6609,7 @@ movie_id,director
 55721,José Padilha
 55729,Mike Cahill
 55765,Ridley Scott
-55768,"Simon J. Smith, Steve Hickner"
+55768,"Steve Hickner, Simon J. Smith"
 55805,Sidney Lumet
 55814,Julian Schnabel
 55820,"Joel Coen, Ethan Coen"
@@ -6636,9 +6673,10 @@ movie_id,director
 57528,Sylvester Stallone
 57532,"Jason Friedberg, Aaron Seltzer"
 57536,Fred Wolf
-57637,"David Bruckner, Dan Bush, Jacob Gentry"
+57637,"Jacob Gentry, David Bruckner, Dan Bush"
 57640,Guillermo del Toro
 57669,Martin McDonagh
+57772,N/A
 57843,Julian Gilbey
 57910,Mitchell Lichtenstein
 57951,Andy Tennant
@@ -6661,7 +6699,7 @@ movie_id,director
 58301,Michael Haneke
 58303,Stefan Ruzowitzky
 58306,Sergei Bodrov
-58309,"Andrea Nix, Sean Fine"
+58309,"Sean Fine, Andrea Nix"
 58315,Marco Schnabel
 58332,George A. Romero
 58347,Mark Palansky
@@ -6690,7 +6728,7 @@ movie_id,director
 59014,Craig Mazin
 59016,David Ayer
 59018,Tom McCarthy
-59022,"Hayden Schlossberg, Jon Hurwitz"
+59022,"Jon Hurwitz, Hayden Schlossberg"
 59026,Jan Kounen
 59037,"Lana Wachowski, Lilly Wachowski"
 59103,Rob Minkoff
@@ -6738,7 +6776,7 @@ movie_id,director
 60074,Peter Berg
 60126,Peter Segal
 60128,Martin Gero
-60141,"Oliver Parker, Barnaby Thompson"
+60141,"Barnaby Thompson, Oliver Parker"
 60161,Peter Avanzino
 60289,Patricia Rozema
 60291,Alex Gibney
@@ -6776,7 +6814,7 @@ movie_id,director
 60941,Ryûhei Kitamura
 60943,Courtney Hunt
 60950,Woody Allen
-60979,"Futoshi Higashide, Yasuhiro Aoki, Jong-Sik Nam, Hiroshi Morioka, Shoujirou Nishimi, Toshiyuki Kubooka, Yoshiaki Kawajiri"
+60979,"Yasuhiro Aoki, Futoshi Higashide, Toshiyuki Kubooka, Hiroshi Morioka, Jong-Sik Nam, Shoujirou Nishimi, Yoshiaki Kawajiri"
 61011,Paul Schrader
 61024,David Gordon Green
 61026,John Woo
@@ -6798,12 +6836,13 @@ movie_id,director
 61289,Takashi Miike
 61319,Shane Meadows
 61323,"Ethan Coen, Joel Coen"
-61348,"Jason Friedberg, Aaron Seltzer"
+61348,"Aaron Seltzer, Jason Friedberg"
 61350,Mathieu Kassovitz
 61352,Jeffrey Nachmanoff
 61394,"Mike Maguire, Tom Kuntz"
 61401,Frank Miller
-61465,"Oxide Pang Shun, Danny Pang Fat"
+61406,N/A
+61465,"Danny Pang Fat, Oxide Pang Shun"
 61628,Zhang Yang
 61692,Eduardo Sánchez
 61697,Jon Avnet
@@ -6819,6 +6858,7 @@ movie_id,director
 62250,Matteo Garrone
 62293,Saul Dibb
 62299,"Michael Roesch, Peter Scheerer"
+62336,N/A
 62344,Jonathan Demme
 62374,Ridley Scott
 62376,Gil Kenan
@@ -6836,22 +6876,24 @@ movie_id,director
 62792,Gavin O'Connor
 62799,Gary Fleder
 62834,Michael Vejar
-62836,"J. Michael Straczynski, Sara Barnes"
+62836,"Sara Barnes, J. Michael Straczynski"
 62849,Guy Ritchie
 62956,Dwayne Carey-Hill
-62999,"Tom McGrath, Eric Darnell"
+62970,N/A
+62999,"Eric Darnell, Tom McGrath"
 63033,Fernando Meirelles
 63062,Clint Eastwood
 63072,John Hillcoat
 63082,Danny Boyle
 63113,Marc Forster
 63131,David Wain
-63179,"Bong Joon Ho, Leos Carax, Michel Gondry"
+63179,"Leos Carax, Bong Joon Ho, Michel Gondry"
 63222,Mabrouk El Mechri
 63239,Robert Iscove
 63276,Takashi Miike
 63312,Marco Kreuzpaintner
 63393,Matthew Diamond
+63433,N/A
 63436,David Hackl
 63479,Sean Anders
 63515,Pavel Lungin
@@ -6869,6 +6911,7 @@ movie_id,director
 64034,Mark Herman
 64114,Alex Kendrick
 64116,Tony Leondis
+64167,N/A
 64197,Steve McQueen
 64231,Lexi Alexander
 64249,Gary Trousdale
@@ -6894,6 +6937,7 @@ movie_id,director
 65126,Clark Gregg
 65130,Sam Mendes
 65133,Paul Weiland
+65135,N/A
 65188,Kurt Kuenne
 65193,Nick Moore
 65216,Edward Zwick
@@ -6901,6 +6945,7 @@ movie_id,director
 65230,David Frankel
 65261,Hayao Miyazaki
 65350,Lewis Milestone
+65359,N/A
 65514,Wilson Yip
 65577,"Robert Stevenhagen, Sam Fell"
 65585,Gary Winick
@@ -6926,18 +6971,20 @@ movie_id,director
 66240,Stephen Herek
 66297,Peter Avanzino
 66310,Xavier Gens
-66320,"Leila Conners, Nadia Conners"
+66320,"Nadia Conners, Leila Conners"
 66335,Fuminori Kizaki
 66371,Yojiro Takita
 66427,Bruce Campbell
 66509,Judd Apatow
 66511,Hannes Stöhr
+66544,N/A
 66665,Sam Mendes
 66744,Paolo Sorrentino
 66783,Marcus Nispel
 66785,Kim Jee-woon
 66798,Harald Zwart
 66915,Don Bluth
+66934,N/A
 66943,Paul Andrew Williams
 67087,John Hamburg
 67168,Gregg Bishop
@@ -6948,7 +6995,7 @@ movie_id,director
 67267,Christine Jeffs
 67295,Raman Hui
 67361,Greg Marcks
-67408,"Rob Letterman, Conrad Vernon"
+67408,"Conrad Vernon, Rob Letterman"
 67508,Uli Edel
 67534,Rob Schneider
 67618,Joel Viertel
@@ -6989,7 +7036,7 @@ movie_id,director
 68872,Roberto Rossellini
 68886,Eric Lartigau
 68932,Joe Wright
-68945,"Hideaki Anno, Masayuki, Kazuya Tsurumaki, Ken Ando, Naoyasu Habu, Hiroyuki Ishido, Tsuyoshi Kaga, Shoichi Masuo, Seiji Mizushima, Tensai Okamura, Akira Takamura, Tetsuya Watanabe, Minoru Ohara, Masahiko Otsuka, Keiichi Sugiyama"
+68945,"Hideaki Anno, Kazuya Tsurumaki, Masayuki, Seiji Mizushima, Masahiko Otsuka, Hiroyuki Ishido, Shoichi Masuo, Naoyasu Habu, Tetsuya Watanabe, Minoru Ohara"
 68952,Sam Raimi
 68954,Pete Docter
 68959,Seiji Mizushima
@@ -7015,13 +7062,14 @@ movie_id,director
 69481,Kathryn Bigelow
 69495,Laurie Lynd
 69516,Jim Jarmusch
+69524,N/A
 69526,Michael Bay
 69529,Yann Arthus-Bertrand
 69604,Woody Allen
 69606,Mark Waters
 69640,Michael Mann
 69644,Carlos Saldanha
-69654,"Kevin Hooks, Brad Turner"
+69654,"Brad Turner, Kevin Hooks"
 69685,Karen Disher
 69712,Nick Cassavetes
 69720,Stacy Title
@@ -7030,6 +7078,7 @@ movie_id,director
 69784,Larry Charles
 69805,Jonathan Frakes
 69844,David Yates
+69849,N/A
 69860,Robert Young
 69904,Hans Horn
 69951,Terry Gilliam
@@ -7049,12 +7098,13 @@ movie_id,director
 70361,Renny Harlin
 70451,"Espen Sandberg, Joachim Rønning"
 70492,Mack V. Wright
+70521,N/A
 70533,"Kazuya Tsurumaki, Masayuki, Hideaki Anno"
 70545,Gil Cates Jr.
 70565,Neal Brennan
 70599,Robert Schwentke
 70637,Shamim Sarif
-70641,"Trevor Moore, Zach Cregger"
+70641,"Zach Cregger, Trevor Moore"
 70663,Chris Columbus
 70687,Nicholas Jasenovec
 70697,Hoyt Yeatman
@@ -7065,7 +7115,7 @@ movie_id,director
 70932,Donald Petrie
 70946,Claudio Fragasso
 70984,Ang Lee
-70990,"Cher, Nancy Savoca"
+70990,"Nancy Savoca, Cher"
 70994,Rob Zombie
 71033,Juan José Campanella
 71057,Shane Acker
@@ -7076,6 +7126,7 @@ movie_id,director
 71135,Christian Alvart
 71147,Juan Antonio Bardem
 71156,Grant Heslov
+71160,N/A
 71205,Karyn Kusama
 71211,Steven Soderbergh
 71248,Mike Judge
@@ -7111,7 +7162,7 @@ movie_id,director
 71732,Glenn McQuaid
 71745,Spike Jonze
 71810,Peter MacDonald
-71823,"Yvan Attal, Brett Ratner, Randall Balsmeyer, Allen Hughes, Jiang Wen, Joshua Marston, Shekhar Kapur, Fatih Akin, Mira Nair, Shunji Iwai, Natalie Portman"
+71823,"Allen Hughes, Shekhar Kapur, Yvan Attal, Brett Ratner, Natalie Portman, Mira Nair, Shunji Iwai, Fatih Akin, Jiang Wen, Randall Balsmeyer"
 71838,F. Gary Gray
 71867,Felix van Groeningen
 71899,Adam Elliot
@@ -7147,7 +7198,7 @@ movie_id,director
 72605,Jim Sheridan
 72624,Lenny Abrahamson
 72641,John Lee Hancock
-72692,"Bill Speers, Toby Shelton, Jun Falkenstein, Alex Mann, Bradley Raymond"
+72692,"Bill Speers, Toby Shelton, Bradley Raymond, Jun Falkenstein, Alex Mann"
 72694,Jonas Pate
 72696,Walt Becker
 72701,Jorge Blanco
@@ -7159,6 +7210,7 @@ movie_id,director
 72874,Frédéric Forestier
 72919,Marc Lawrence
 72921,J. Searle Dawley
+72982,N/A
 72998,James Cameron
 73015,Nancy Meyers
 73017,Guy Ritchie
@@ -7171,7 +7223,7 @@ movie_id,director
 73268,"Michael Spierig, Peter Spierig"
 73290,Lasse Hallström
 73319,Anand Tucker
-73321,"Allen Hughes, Albert Hughes"
+73321,"Albert Hughes, Allen Hughes"
 73323,Daniel Alfredson
 73344,Jacques Audiard
 73386,James DeMonaco
@@ -7260,6 +7312,7 @@ movie_id,director
 76743,Javier Fesser
 76751,Kevin Booth
 76763,Floria Sigismondi
+77177,N/A
 77191,Neil LaBute
 77201,Nicolas Winding Refn
 77206,Thor Freudenthal
@@ -7267,7 +7320,7 @@ movie_id,director
 77266,Steve Jacobs
 77364,Sylvain White
 77414,Julie Anne Robinson
-77421,"Jay Duplass, Mark Duplass"
+77421,"Mark Duplass, Jay Duplass"
 77427,Tom Six
 77455,Banksy
 77561,Jon Favreau
@@ -7328,6 +7381,7 @@ movie_id,director
 79259,"Lisa Barros D'Sa, Glenn Leyburn"
 79274,Brandon Vietti
 79293,Phillip Noyce
+79299,N/A
 79333,Eldar Ryazanov
 79357,Jaco Van Dormael
 79428,Jay Roach
@@ -7337,7 +7391,7 @@ movie_id,director
 79572,Elizabeth Allen Rosenbaum
 79590,Bart Freundlich
 79592,Adam McKay
-79677,"Michael Zimbalist, Jeff Zimbalist"
+79677,"Jeff Zimbalist, Michael Zimbalist"
 79684,"Kieran Mulroney, Michele Mulroney"
 79695,Sylvester Stallone
 79702,Edgar Wright
@@ -7363,7 +7417,7 @@ movie_id,director
 80489,Ben Affleck
 80549,Will Gluck
 80551,Ryan Murphy
-80553,"Jeffrey Friedman, Rob Epstein"
+80553,"Rob Epstein, Jeffrey Friedman"
 80572,Casey Affleck
 80584,Ella Lemhagen
 80586,Rob Reiner
@@ -7481,6 +7535,7 @@ movie_id,director
 84772,Greg Mottola
 84799,Peter Newbrook
 84844,Aleksey Balabanov
+84847,N/A
 84942,Patrick Lussier
 84944,Gore Verbinski
 84950,Michael Dowse
@@ -7512,6 +7567,7 @@ movie_id,director
 85565,Phil Traill
 85736,Angus MacLane
 85774,Asif Kapadia
+85780,N/A
 85788,James Wan
 85796,Jason Eisener
 85881,Tom McCarthy
@@ -7524,8 +7580,9 @@ movie_id,director
 86068,Paco Plaza
 86142,Takashi Miike
 86190,Joe Wright
+86237,N/A
 86279,Michael Madsen
-86286,"Chuck Jones, Greg Ford, Terry Lennon, Robert McKimson, Friz Freleng"
+86286,"Terry Lennon, Chuck Jones, Robert McKimson, Greg Ford, Friz Freleng"
 86290,"Matt Harlock, Paul Thomas"
 86293,Jason Winer
 86295,Wes Craven
@@ -7536,6 +7593,7 @@ movie_id,director
 86347,"Louis C.K., Shannon Hartman"
 86355,Paul Johansson
 86377,Steven J. Santos
+86487,N/A
 86504,Michael Mayhew
 86548,Francis Lawrence
 86593,"Keith Scholey, Alastair Fothergill"
@@ -7591,7 +7649,7 @@ movie_id,director
 88163,"Glenn Ficarra, John Requa"
 88179,Lone Scherfig
 88235,John Michael McDonagh
-88267,"Stephen J. Anderson, Don Hall"
+88267,"Don Hall, Stephen J. Anderson"
 88272,Lucky McKee
 88327,Chang Cheh
 88345,"Pete Docter, Roger Gould"
@@ -7664,7 +7722,7 @@ movie_id,director
 90428,Kenneth Lonergan
 90430,Roman Polanski
 90439,J.C. Chandor
-90469,"Ariel Schulman, Henry Joost"
+90469,"Henry Joost, Ariel Schulman"
 90471,"Adam Kassen, Mark Kassen"
 90522,Oliver Parker
 90524,John Singleton
@@ -7674,16 +7732,19 @@ movie_id,director
 90600,Morten Tyldum
 90603,"Sam Liu, Lauren Montgomery"
 90630,Jennifer Siebel Newsom
+90647,N/A
 90717,Brett Ratner
 90719,Clint Eastwood
 90738,Michael Brandt
 90746,Steven Spielberg
 90769,Chris Atkins
 90809,Céline Sciamma
+90863,N/A
 90866,Martin Scorsese
 90888,Tarsem Singh
 90890,Dennis Dugan
 90943,Werner Herzog
+90945,N/A
 91077,Alexander Payne
 91079,Drake Doremus
 91094,James Bobin
@@ -7698,7 +7759,7 @@ movie_id,director
 91325,Stephen Daldry
 91337,Marc Fienberg
 91353,Gerhard Hahn
-91355,"Stefan Fjeldmark, Jesper Møller"
+91355,"Jesper Møller, Stefan Fjeldmark"
 91386,George Miller
 91414,Sarah Smith
 91470,Geoffrey Fletcher
@@ -7740,7 +7801,7 @@ movie_id,director
 92198,Roger Donaldson
 92234,Anthony Hemingway
 92243,Zhang Yimou
-92259,"Olivier Nakache, Éric Toledano"
+92259,"Éric Toledano, Olivier Nakache"
 92264,Julie Anne Robinson
 92309,Ti West
 92348,Kimio Yabuki
@@ -7749,6 +7810,7 @@ movie_id,director
 92422,James Watkins
 92427,Detlev Buck
 92439,Gavin Wiesen
+92475,N/A
 92494,Michael Matheson
 92507,Daniel Espinosa
 92509,Michael Sucsy
@@ -7766,7 +7828,8 @@ movie_id,director
 93006,Matt Lang
 93008,Matt Lang
 93022,Tim Cox
-93114,"Jean-Luc Godard, Pier Paolo Pasolini, Ugo Gregoretti, Roberto Rossellini"
+93040,N/A
+93114,"Roberto Rossellini, Jean-Luc Godard, Pier Paolo Pasolini, Ugo Gregoretti"
 93134,Philippe Le Guay
 93139,Christopher Ray
 93193,Patrick Hughes
@@ -7799,6 +7862,7 @@ movie_id,director
 93855,Bobcat Goldthwait
 93980,"Bobby Farrelly, Peter Farrelly"
 93982,James McTeigue
+93988,N/A
 94011,Tony Krantz
 94015,Tarsem Singh
 94018,Peter Berg
@@ -7806,7 +7870,7 @@ movie_id,director
 94122,Morgan Spurlock
 94130,Lee Hirsch
 94150,Tanya Wexler
-94160,"Lee Seung-Gyu, Victor Cook, Jong-Sik Nam, Mike Disa, Yasuomi Umetsu, Shuko Murase, Sangjin Kim"
+94160,"Mike Disa, Victor Cook, Jong-Sik Nam, Lee Seung-Gyu, Yasuomi Umetsu, Shuko Murase, Sangjin Kim"
 94262,Spencer Gordon Bennet
 94266,Nicholas Stoller
 94323,Tim Story
@@ -7817,7 +7881,7 @@ movie_id,director
 94503,Sheree Folkson
 94661,Shimit Amin
 94677,Larry Charles
-94735,"Tim Haines, Chloë Leland"
+94735,"Chloë Leland, Tim Haines"
 94777,Barry Sonnenfeld
 94780,Rupert Sanders
 94799,Zal Batmanglij
@@ -7834,7 +7898,7 @@ movie_id,director
 95004,"Lauren Montgomery, Bruce Timm, Brandon Vietti"
 95067,Brian Robbins
 95088,Colin Trevorrow
-95105,"Eric Darnell, Conrad Vernon, Tom McGrath"
+95105,"Eric Darnell, Tom McGrath, Conrad Vernon"
 95135,Lynn Shelton
 95145,Daisuke Nishio
 95147,Daisuke Nishio
@@ -7871,7 +7935,9 @@ movie_id,director
 95633,Kerry Beyer
 95654,Jan Pinkava
 95690,Jack Perez
+95717,N/A
 95720,Akiva Schaffer
+95738,N/A
 95744,Julie Delpy
 95761,William Friedkin
 95771,Shigeyasu Yamauchi
@@ -7902,10 +7968,13 @@ movie_id,director
 96430,Peter Hedges
 96432,John Hillcoat
 96448,John Gulager
+96471,N/A
 96488,Malik Bendjelloul
+96518,N/A
+96520,N/A
 96530,Josh Stolberg
 96563,"Bruce Sinofsky, Joe Berlinger"
-96567,"Lee Sternthal, Brian Klugman"
+96567,"Brian Klugman, Lee Sternthal"
 96588,Jason Moore
 96606,Ron Fricke
 96608,Chris Bailey
@@ -7917,7 +7986,7 @@ movie_id,director
 96728,Paul Thomas Anderson
 96737,Pete Travis
 96811,David Ayer
-96815,"Matt Bettinelli-Olpin, David Bruckner, Tyler Gillett, Justin Martinez, Glenn McQuaid, Joe Swanberg, Chad Villella, Ti West, Adam Wingard"
+96815,"David Bruckner, Chad Villella, Adam Wingard, Tyler Gillett, Glenn McQuaid, Justin Martinez, Joe Swanberg, Ti West, Matt Bettinelli-Olpin"
 96821,Stephen Chbosky
 96829,Thomas Vinterberg
 96832,Leos Carax
@@ -7943,7 +8012,7 @@ movie_id,director
 97665,Laurent Tirard
 97701,"Henry Joost, Ariel Schulman"
 97742,Rob Cohen
-97752,"Lilly Wachowski, Lana Wachowski, Tom Tykwer"
+97752,"Lana Wachowski, Lilly Wachowski, Tom Tykwer"
 97757,Javier Soto
 97785,M.J. Bassett
 97836,Frank Coraci
@@ -7982,7 +8051,7 @@ movie_id,director
 98623,Sammo Hung Kam-Bo
 98633,Sammo Hung Kam-Bo
 98697,Claude Lelouch
-98799,"Jeff Simpson, Ben Timlett, Bill Jones"
+98799,"Ben Timlett, Jeff Simpson, Bill Jones"
 98809,Peter Jackson
 98836,Roger Michell
 98908,Scott Culver
@@ -7999,28 +8068,31 @@ movie_id,director
 99130,Norman Apstein
 99145,J.A. Bayona
 99149,Tom Hooper
-99191,"Martin Kunert, David Semel, Matt Cooper"
+99191,"Matt Cooper, Martin Kunert, David Semel"
 99415,Andy Fickman
 99437,Don Coscarelli
+99532,N/A
 99574,Gus Van Sant
 99636,Gauri Shinde
 99638,Yoshihiro Nakamura
 99721,John Luessenhop
 99728,Ruben Fleischer
 99750,Ariel Vromen
+99764,N/A
 99813,Jay Oliva
 99846,Stevan Riley
 99853,Madeleine Olnek
 99910,Kim Jee-woon
 99917,Shane Carruth
 99992,James Marsh
+100044,N/A
 100068,Daniel Cohen
-100083,"Steve Carr, Elizabeth Banks, Patrik Forsberg, James Duffy, Peter Farrelly, Brett Ratner, Griffin Dunne, Steven Brill, James Gunn, Will Graham, Jonathan van Tulleken, Rusty Cundieff, Bob Odenkirk"
+100083,"Steve Carr, Elizabeth Banks, Patrik Forsberg, James Duffy, Peter Farrelly, Brett Ratner, Griffin Dunne, Steven Brill, James Gunn, Will Graham"
 100106,Sophie Fiennes
 100159,Ben Wheatley
 100163,Tommy Wirkola
 100194,Jaime Eliezer Karas
-100226,"Phil Dorling, Ron Nyswaner"
+100226,"Ron Nyswaner, Phil Dorling"
 100277,Miguel Gomes
 100302,Juan Diego Solanas
 100304,Craig Viveiros
@@ -8028,11 +8100,12 @@ movie_id,director
 100326,Fisher Stevens
 100383,Steven Soderbergh
 100390,Seth Gordon
-100397,"Xavier Gens, Andrew Traucki, Nacho Vigalondo, Ernesto Díaz Espinoza, Bruno Forzani, Jason Eisener, Adrián García Bogliano, Marcel Sarmiento, Lee Hardcastle, Yoshihiro Nishimura, Ben Wheatley, Jon Schnepp, Jorge Michel Grau, Timo Tjahjanto, Noboru Iguchi, Srđan Spasojević, Adam Wingard, Angela Bettis, Banjong Pisanthanakun, Simon Rumley, Jake West, Thomas Cappelen Malling, Yudai Yamaguchi, Hélène Cattet, Ti West, Anders Morgenthaler, Kaare Andrews"
+100397,"Hélène Cattet, Jorge Michel Grau, Angela Bettis, Thomas Cappelen Malling, Banjong Pisanthanakun, Bruno Forzani, Andrew Traucki, Jason Eisener, Jon Schnepp, Adrián García Bogliano"
 100487,Richard LaGravenese
 100498,John Moore
 100507,"Jon Lucas, Scott Moore"
 100527,Lasse Hallström
+100553,N/A
 100556,Joshua Oppenheimer
 100579,John Hyams
 100611,Cal Brunker
@@ -8045,11 +8118,11 @@ movie_id,director
 101025,Bryan Singer
 101070,Haifaa al-Mansour
 101072,Andreas Prochaska
-101074,"Jack Kinney, Clyde Geronimi"
+101074,"Clyde Geronimi, Jack Kinney"
 101076,Jon M. Chu
 101088,Park Chan-wook
 101112,Sam Raimi
-101142,"Chris Sanders, Kirk DeMicco"
+101142,"Kirk DeMicco, Chris Sanders"
 101283,Don Scardino
 101360,Brad Anderson
 101362,Antoine Fuqua
@@ -8076,7 +8149,7 @@ movie_id,director
 102070,Jon Wright
 102084,Lauren Montgomery
 102088,Wong Kar-wai
-102123,"Seth Rogen, Evan Goldberg"
+102123,"Evan Goldberg, Seth Rogen"
 102125,Shane Black
 102165,Craig Zisk
 102194,Jeff Nichols
@@ -8103,7 +8176,7 @@ movie_id,director
 102802,Rob Zombie
 102819,Steven Soderbergh
 102823,Jonas Mekas
-102852,"Nikki Frakes, Terry Dougas, Will Hess"
+102852,"Will Hess, Nikki Frakes, Terry Dougas"
 102880,M. Night Shyamalan
 102903,Louis Leterrier
 102984,Daniel Krige
@@ -8116,7 +8189,7 @@ movie_id,director
 103107,Morgan Neville
 103137,Sofia Coppola
 103141,Dan Scanlon
-103171,"Matthias Schweighöfer, Torsten Künstler"
+103171,"Torsten Künstler, Matthias Schweighöfer"
 103210,Kazuya Murata
 103219,Franck Khalfoun
 103221,Peter Templeman
@@ -8126,14 +8199,14 @@ movie_id,director
 103245,Jeff Kanew
 103249,Marc Forster
 103253,Neill Blomkamp
-103335,"Pierre Coffin, Chris Renaud"
+103335,"Chris Renaud, Pierre Coffin"
 103339,Roland Emmerich
 103341,Edgar Wright
 103366,Steven Knight
 103372,Paul Feig
 103384,Gore Verbinski
 103449,Brian De Palma
-103483,"Adam Wingard, Gregg Hale, Eduardo Sánchez, Simon Barrett, Timo Tjahjanto, Jason Eisener, Gareth Evans"
+103483,"Eduardo Sánchez, Timo Tjahjanto, Gareth Evans, Gregg Hale, Simon Barrett, Jason Eisener, Adam Wingard"
 103502,Jesse Lawrence
 103539,James Ponsoldt
 103543,Liz W. Garcia
@@ -8160,7 +8233,7 @@ movie_id,director
 104076,Raja Gosnell
 104078,Declan Lowney
 104129,Keanu Reeves
-104141,"Tim Maltby, Curt Geda, Jennifer Graves"
+104141,"Curt Geda, Tim Maltby, Jennifer Graves"
 104211,Rawson Marshall Thurber
 104218,Dennis Dugan
 104241,Jeff Wadlow
@@ -8172,7 +8245,7 @@ movie_id,director
 104337,Lee Daniels
 104339,Lake Bell
 104374,Richard Curtis
-104419,"Lauren Montgomery, Sam Liu"
+104419,"Sam Liu, Lauren Montgomery"
 104457,Adam Wingard
 104644,Jordan Brady
 104760,Courtney Solomon
@@ -8194,6 +8267,7 @@ movie_id,director
 105211,Nicole Holofcener
 105213,Joseph Gordon-Levitt
 105246,Michel Gondry
+105250,N/A
 105254,Sebastián Silva
 105325,Jacob Vaughan
 105351,Brad Furman
@@ -8226,13 +8300,14 @@ movie_id,director
 106540,Ken Scott
 106542,Fredrik Bond
 106594,Alex Karpovsky
+106642,N/A
 106648,Sion Sono
-106696,"Jennifer Lee, Chris Buck"
+106696,"Chris Buck, Jennifer Lee"
 106766,"Joel Coen, Ethan Coen"
 106782,Martin Scorsese
 106785,Gary Fleder
 106839,Justin Chadwick
-106873,"Hideaki Anno, Kazuya Tsurumaki, Masayuki, Mahiro Maeda"
+106873,"Hideaki Anno, Kazuya Tsurumaki, Mahiro Maeda, Masayuki"
 106883,Phil Morrison
 106889,Teller
 106916,David O. Russell
@@ -8259,6 +8334,7 @@ movie_id,director
 107702,Peter Segal
 107723,Yoshiaki Kawajiri
 107771,Jim Jarmusch
+107780,N/A
 107846,Charles Correll
 107945,Suri Krishnamma
 107951,Reshef Levi
@@ -8276,6 +8352,7 @@ movie_id,director
 108601,"Morgan O'Neill, Ben Nott"
 108689,Stuart Beattie
 108715,"Geoff Moore, David Posamentier"
+108727,N/A
 108729,Denis Villeneuve
 108795,Lauren Montgomery
 108928,George Clooney
@@ -8320,10 +8397,11 @@ movie_id,director
 110102,"Joe Russo, Anthony Russo"
 110127,Darren Aronofsky
 110130,Peter Lepeniotis
-110281,"Lee Lik-Chi, Stephen Chow Sing-Chi"
+110281,"Stephen Chow Sing-Chi, Lee Lik-Chi"
 110286,Daniel Stamm
 110297,James Bobin
 110330,Bernardo Bertolucci
+110350,N/A
 110387,Errol Morris
 110501,Gareth Evans
 110541,Albert Pyun
@@ -8410,7 +8488,7 @@ movie_id,director
 113278,"Ethan Spaulding, Jay Oliva"
 113280,Quentin Lee
 113313,Zachary Donohue
-113345,"Lilly Wachowski, Lana Wachowski"
+113345,"Lana Wachowski, Lilly Wachowski"
 113348,Jonathan Liebesman
 113350,Richie Mehta
 113374,Sylvain Chomet
@@ -8454,10 +8532,10 @@ movie_id,director
 114818,Joe Carnahan
 114847,Gabe Ibáñez
 114925,Atom Egoyan
-114935,"Peter Spierig, Michael Spierig"
+114935,"Michael Spierig, Peter Spierig"
 115065,Manuel Sicilia
 115111,Peter Cornwell
-115122,"Jemaine Clement, Taika Waititi"
+115122,"Taika Waititi, Jemaine Clement"
 115149,Chad Stahelski
 115151,Julian Gilbey
 115170,David Dobkin
@@ -8467,7 +8545,7 @@ movie_id,director
 115231,Theodore Melfi
 115502,Marc Lawrence
 115569,Dan Gilroy
-115617,"Chris Williams, Don Hall"
+115617,"Don Hall, Chris Williams"
 115664,Jorge R. Gutierrez
 115667,Christian Ditter
 115680,Bradley King
@@ -8476,6 +8554,7 @@ movie_id,director
 115819,"Laurent Witz, Alexandre Espigares"
 115828,Mark Raso
 115877,David Silverman
+115969,N/A
 116044,Arnold Schwarzenegger
 116138,Andrey Zvyagintsev
 116169,Su Chaobin
@@ -8496,7 +8575,7 @@ movie_id,director
 116849,Isaac Feder
 116887,Ridley Scott
 116897,Damián Szifron
-116941,"William Hanna, Joseph Barbera"
+116941,"Joseph Barbera, William Hanna"
 116963,Damian Lee
 116977,"Bobby Farrelly, Peter Farrelly"
 116985,Peter Glanz
@@ -8511,7 +8590,7 @@ movie_id,director
 117466,Ron Howard
 117511,Stephen Merchant
 117529,Colin Trevorrow
-117531,"Jennifer Baichwal, Edward Burtynsky"
+117531,"Edward Burtynsky, Jennifer Baichwal"
 117533,Laura Poitras
 117545,"Alexandre Astier, Louis Clichy"
 117572,Ricky Blitt
@@ -8541,7 +8620,7 @@ movie_id,director
 118700,Ava DuVernay
 118702,Angelina Jolie
 118706,Kevin Macdonald
-118784,"Andreas Johnsen, Ralf Christensen, Henrik Moltke"
+118784,"Andreas Johnsen, Henrik Moltke, Ralf Christensen"
 118814,Justin Reardon
 118834,Mort Nathan
 118862,Nae Caranfil
@@ -8555,7 +8634,7 @@ movie_id,director
 118985,Tim Burton
 118997,Rob Marshall
 119068,Jason Reitman
-119141,"Seth Rogen, Evan Goldberg"
+119141,"Evan Goldberg, Seth Rogen"
 119145,Matthew Vaughn
 119153,Jaime Eliezer Karas
 119155,Shawn Levy
@@ -8580,6 +8659,7 @@ movie_id,director
 120827,Brian Mills
 120919,Jang Jin
 121007,Robert Vince
+121035,N/A
 121097,Jeff Franklin
 121099,"Jim Kammerud, Brian Smith"
 121129,Josh Stolberg
@@ -8596,6 +8676,7 @@ movie_id,director
 121781,Audu Paden
 122092,Saul Metzstein
 122246,Alex Zamm
+122260,N/A
 122433,Freddie Francis
 122490,Mark Young
 122627,Sam Irvin
@@ -8617,6 +8698,7 @@ movie_id,director
 122920,"Joe Russo, Anthony Russo"
 122922,Scott Derrickson
 122924,Bryan Singer
+122926,N/A
 122932,Michael Radford
 123200,John Moffitt
 123310,Noel Nosseck
@@ -8629,7 +8711,7 @@ movie_id,director
 124851,Rodrigo García
 124853,Saul Bass
 124859,Rupert Wyatt
-125221,"Edward Nassour, Ismael Rodríguez"
+125221,"Ismael Rodríguez, Edward Nassour"
 125914,David Koepp
 125916,Sam Taylor-Johnson
 125970,Duwayne Dunham
@@ -8639,6 +8721,7 @@ movie_id,director
 126142,Lamberto Bava
 126420,Sarik Andreasyan
 126426,"Lidiya Ishimbaeva, Boris Nirenburg"
+126430,N/A
 126482,Gary Rydstrom
 126548,Ari Sandel
 126577,"Joan Espinach, Ricardo Ramón"
@@ -8657,6 +8740,7 @@ movie_id,director
 127152,Alex Gibney
 127164,Liz Garbus
 127172,Mark Cousins
+127180,N/A
 127184,Mia Hansen-Løve
 127194,"Andrew Mogel, Jarrad Paul"
 127198,Rick Famuyiwa
@@ -8666,6 +8750,7 @@ movie_id,director
 127298,Roy Andersson
 127319,Erik Van Looy
 127323,Brian A. Miller
+127390,N/A
 128087,Mario Siciliano
 128089,Shannon Hartman
 128097,Shannon Hartman
@@ -8699,14 +8784,14 @@ movie_id,director
 129250,"Jason Friedberg, Aaron Seltzer"
 129313,Quentin Dupieux
 129333,Matthew A. Brown
-129354,"John Requa, Glenn Ficarra"
+129354,"Glenn Ficarra, John Requa"
 129397,Louis D'Esposito
 129428,John Madden
 129514,Rocco Urbisci
 129657,Daniel Benmayor
 129659,Niki Caro
 129737,Ken Scott
-129779,"Kazuchika Kise, Masahiko Murata"
+129779,"Masahiko Murata, Kazuchika Kise"
 129937,Jaume Collet-Serra
 130050,Adam Green
 130052,Jon Watts
@@ -8725,13 +8810,14 @@ movie_id,director
 130578,Pierre Morel
 130634,James Wan
 130686,Todd Strauss-Schulson
-130840,"Justin Benson, Aaron Moorhead"
+130840,"Aaron Moorhead, Justin Benson"
+130842,N/A
 130970,Rocco Urbisci
 130976,Nikolay Lebedev
 130978,Vladimir Menshov
 131013,Etan Cohen
 131023,Damon Gameau
-131098,"Aaron Seelman, Leon Joosen"
+131098,"Leon Joosen, Aaron Seelman"
 131104,Gérard Oury
 131130,"Spike Brandt, Tony Cervone"
 131237,Dmitriy Dyachenko
@@ -8741,6 +8827,7 @@ movie_id,director
 131610,Paul Schneider
 131656,"Mark Burton, Richard Starzak"
 131714,Kazuaki Kiriya
+131724,N/A
 131739,Jay Oliva
 131749,Benjamin Guedj
 131796,Simon Curtis
@@ -8846,7 +8933,7 @@ movie_id,director
 136297,Joseph Francis
 136305,Anthony C. Ferrante
 136341,Christopher Berkeley
-136353,"Scott Jeralds, Joe Sichta"
+136353,"Joe Sichta, Scott Jeralds"
 136355,Heather A. Maxwell
 136359,Ray Patterson
 136443,Manny Rodriguez
@@ -8884,6 +8971,7 @@ movie_id,director
 137517,Al Adamson
 137595,Gregory Jacobs
 137857,Jon Favreau
+137859,N/A
 137863,Tadayoshi Yamamuro
 138036,Guy Ritchie
 138186,Millie Loredo
@@ -8899,6 +8987,7 @@ movie_id,director
 138835,Davyd Cherkaskyi
 138966,Kitaro Kosaka
 139052,Gilles Paquet-Brenner
+139130,N/A
 139157,Venkat Prabhu
 139385,Alejandro González Iñárritu
 139415,Woody Allen
@@ -8927,13 +9016,16 @@ movie_id,director
 140289,Anders Thomas Jensen
 140301,Will Slocombe
 140359,Graeme Harper
+140481,N/A
 140523,M. Night Shyamalan
 140525,Billy Ray
 140541,Segundo de Chomón
+140561,N/A
 140627,Sergey Mokritsky
 140711,Nima Nourizadeh
 140715,F. Gary Gray
 140725,Jon Watts
+140737,N/A
 140816,Sean Baker
 140850,Amy J. Berg
 140852,Shozin Fukui
@@ -8953,6 +9045,7 @@ movie_id,director
 141749,Tom Hooper
 141799,"Cary Murnion, Jonathan Milott"
 141810,Georgiy Daneliya
+141816,N/A
 141818,Mark Zakharov
 141820,Eldar Ryazanov
 141830,Eldar Ryazanov
@@ -8966,6 +9059,7 @@ movie_id,director
 142020,Édouard Molinaro
 142056,"Leo Riley, Eric Radomski"
 142074,Eli Roth
+142115,N/A
 142196,Daniel Maze
 142222,Jean-Marc Vallée
 142366,John Carpenter
@@ -8981,7 +9075,7 @@ movie_id,director
 142509,Ilya Naishuller
 142536,John Wells
 142550,Takeshi Kitano
-142558,"Gérard Bitton, Michel Munz"
+142558,"Michel Munz, Gérard Bitton"
 142598,Anthony DiBlasi
 142602,Bora Dağtekin
 142831,Priyadarshan
@@ -9035,18 +9129,21 @@ movie_id,director
 146309,Mamoru Hosoda
 146656,Ryan Coogler
 146662,Tom Owens
-146682,"Ryan Miyamoto, Samantha Futerman"
+146682,"Samantha Futerman, Ryan Miyamoto"
 146684,Mike Thurmeier
 146688,Afonso Poyart
 146730,Trey Nelson
 146986,Claude Berri
 147002,"Michelangelo Antonioni, Steven Soderbergh, Wong Kar-wai"
-147142,"Éric Toledano, Olivier Nakache"
+147142,"Olivier Nakache, Éric Toledano"
 147196,Yuri Chulyukin
+147250,N/A
 147282,Dmitriy Dyachenko
 147286,Igor Maslennikov
 147300,Igor Maslennikov
 147326,Igor Maslennikov
+147328,N/A
+147330,N/A
 147372,Paul Wilmshurst
 147374,Farren Blackburn
 147376,Toby Haynes
@@ -9069,6 +9166,7 @@ movie_id,director
 148652,Frank Coraci
 148667,Rhys Thomas
 148671,James Wan
+148675,N/A
 148709,William Monahan
 148775,Lev L. Spiro
 148881,Don Hertzfeldt
@@ -9094,10 +9192,11 @@ movie_id,director
 149902,Mamoru Oshii
 150254,Sean Byrne
 150401,Isaac Florentine
+150548,N/A
 150554,Peyton Reed
 150596,Douglas Mackinnon
 150604,Antoine Bardou-Jacquet
-150696,"Cyril Dion, Mélanie Laurent"
+150696,"Mélanie Laurent, Cyril Dion"
 150993,Javier Ruiz Caldera
 151311,Todd Solondz
 151315,Tim Story
@@ -9113,6 +9212,7 @@ movie_id,director
 151739,Dan Mazer
 151745,"Poul Bang, Sidney W. Pink"
 151759,"Kelly Nyks, Jared P. Scott, Peter D. Hutchison"
+151763,N/A
 151769,Vladimir Popov
 151777,Craig Gillespie
 151781,Kenji Kamiyama
@@ -9129,6 +9229,7 @@ movie_id,director
 152105,Norman Cohen
 152173,John Landis
 152270,Piero Messina
+152284,N/A
 152372,"Roxanne Benjamin, David Bruckner, Patrick Horvath, Chad Villella, Matt Bettinelli-Olpin, Tyler Gillett, Justin Martinez"
 152591,Wilson Yip
 152658,Gil Junger
@@ -9165,7 +9266,7 @@ movie_id,director
 156726,Mike Flanagan
 156781,Tristram Shapeero
 156783,Paul Wheeler
-157108,"Ralf Huettner, Helge Schneider"
+157108,"Helge Schneider, Ralf Huettner"
 157110,"Helge Schneider, Christoph Schlingensief"
 157122,Matt Brown
 157130,Shamim Sarif
@@ -9213,10 +9314,11 @@ movie_id,director
 159510,Joe D'Amato
 159690,Dave Green
 159717,Rob Burnett
-159755,"Akiva Schaffer, Jorma Taccone"
+159755,"Jorma Taccone, Akiva Schaffer"
 159779,David Kerr
 159811,Inessa Kovalevskaya
-159849,"Bo Burnham, Christopher Storer"
+159817,N/A
+159849,"Christopher Storer, Bo Burnham"
 159858,James Wan
 159976,"Jeff Zimbalist, Michael Zimbalist"
 160080,Paul Feig
@@ -9257,7 +9359,7 @@ movie_id,director
 161582,David Mackenzie
 161594,Takeshi Nozue
 161634,Fede Álvarez
-161830,"Robert Olsen, Dan Berk"
+161830,"Dan Berk, Robert Olsen"
 161918,Anthony C. Ferrante
 161922,Kelly Fremon Craig
 161966,Paul Verhoeven
@@ -9279,12 +9381,13 @@ movie_id,director
 163072,Fyodor Khitruk
 163112,Fyodor Khitruk
 163134,Makoto Shinkai
-163386,"Gennadiy Sokolskiy, Fyodor Khitruk"
+163386,"Fyodor Khitruk, Gennadiy Sokolskiy"
 163527,Joel Gallen
 163639,Cecilia Aranovich
 163645,Mel Gibson
 163653,Alex Coletti
-163925,"Aleksandr Tatarskiy, Igor Kovalyov"
+163809,N/A
+163925,"Igor Kovalyov, Aleksandr Tatarskiy"
 163937,Adam Wingard
 163981,Rob Zombie
 163985,Tony Elliott
@@ -9294,7 +9397,7 @@ movie_id,director
 164280,Alejandro Jodorowsky
 164367,Colm McCarthy
 164375,Ella Lemhagen
-164540,"Rod Blackhurst, Brian McGinn"
+164540,"Brian McGinn, Rod Blackhurst"
 164647,Andrew Bush
 164655,Jim Jarmusch
 164707,Francine McDougall
@@ -9344,6 +9447,7 @@ movie_id,director
 167370,Justin Kurzel
 167380,Lasse Hallström
 167538,Wayne Berwick
+167570,N/A
 167634,Richie Keen
 167706,Hank Rogerson
 167732,Roger Spottiswoode
@@ -9373,7 +9477,7 @@ movie_id,director
 168632,Jaime Eliezer Karas
 168712,James Foley
 168846,Neal Brennan
-169034,"Beyoncé, Kahlil Joseph, Dikayl Rimmasch, Mark Romanek, Jonas Åkerlund, Melina Matsoukas, Todd Tourso"
+169034,"Beyoncé, Kahlil Joseph, Melina Matsoukas, Dikayl Rimmasch, Todd Tourso, Mark Romanek, Jonas Åkerlund"
 169180,Anne Hamilton
 169670,"Jeremy Gillespie, Steven Kostanski"
 169904,Steve Wang
@@ -9392,6 +9496,7 @@ movie_id,director
 170551,Kim Jee-woon
 170597,Aleksandr Tatarskiy
 170697,Marc Webb
+170705,N/A
 170777,Eduard Nazarov
 170813,Seth Gordon
 170817,Jonathan Levine
@@ -9405,11 +9510,14 @@ movie_id,director
 170945,Trey Edward Shults
 170957,Brian Fee
 170993,Nick Guthe
+171011,N/A
 171023,Brett Haley
 171251,Brian Knappenberger
+171495,N/A
 171631,Jessica Yu
 171695,Marty Callner
 171701,Albert Serra
+171749,N/A
 171751,Rajkumar Hirani
 171759,Sofia Coppola
 171763,Edgar Wright
@@ -9423,7 +9531,9 @@ movie_id,director
 172229,Martha Coolidge
 172233,Gregory Mosher
 172253,Thom Eberhardt
-172461,"Daniel DiMauro, Dylan Bank, Morgan Pehme"
+172321,N/A
+172461,"Daniel DiMauro, Morgan Pehme, Dylan Bank"
+172497,N/A
 172547,"Kyle Balda, Pierre Coffin"
 172577,Aleksandr Tatarskiy
 172583,"Igor Kovalyov, Aleksandr Tatarskiy"
@@ -9438,6 +9548,7 @@ movie_id,director
 172875,Shinichiro Watanabe
 172881,Andrew R. Jones
 172887,Shinichiro Watanabe
+172909,N/A
 173145,Matt Reeves
 173197,Ruben Östlund
 173205,Noah Baumbach
@@ -9450,18 +9561,22 @@ movie_id,director
 173317,Johan Grimonprez
 173351,Robert Sahakyants
 173355,Eduard Nazarov
+173535,N/A
 173619,Francis Veber
 173751,Simon Dixon
+173873,N/A
 173925,Tommy Wirkola
 173941,David Leitch
 173963,Jan Svěrák
 174045,Jay Baruchel
+174053,N/A
 174055,Christopher Nolan
 174141,Eiichi Yamamoto
+174403,N/A
 174479,"Alan Resnick, Ben O'Brien"
 174551,Leonid Gaidai
 174681,Michael John Warren
-174727,"Josh Safdie, Benny Safdie"
+174727,"Benny Safdie, Josh Safdie"
 174737,Luigi Comencini
 174815,Andrew J. Cohen
 174909,Steven Soderbergh
@@ -9480,12 +9595,14 @@ movie_id,director
 175577,Scott Moran
 175585,Ric Roman Waugh
 175661,Patrick Hughes
+175693,N/A
 175705,Claude Faraldo
-175707,"Christian Krönes, Olaf Müller, Roland Schrotthofer, Florian Weigensamer"
+175707,"Florian Weigensamer, Roland Schrotthofer, Olaf Müller, Christian Krönes"
 175743,Julian Radlmaier
 175781,Erich Neuberg
 176051,Todd Grimes
 176101,Matthew Vaughn
+176329,N/A
 176371,Denis Villeneuve
 176389,Cal Brunker
 176413,Doris Dörrie
@@ -9516,11 +9633,12 @@ movie_id,director
 179073,Édouard Molinaro
 179119,Armando Iannucci
 179133,"Hugh Welchman, DK Welchman"
+179135,N/A
 179211,Jaime Eliezer Karas
 179401,Jake Kasdan
 179427,Dane Cook
 179491,Joe Lynch
-179511,"Felix Fuchssteiner, Katharina Schöde"
+179511,"Katharina Schöde, Felix Fuchssteiner"
 179709,Woody Allen
 179749,Patrick Brice
 179813,Rob Reiner
@@ -9532,6 +9650,7 @@ movie_id,director
 180045,Aaron Sorkin
 180095,Stephen Chbosky
 180231,Sean Anders
+180263,N/A
 180265,Chris Smith
 180297,James Franco
 180497,Steven Spielberg
@@ -9570,6 +9689,7 @@ movie_id,director
 184053,Greg Aronowitz
 184245,Johan van der Keuken
 184253,Julius Onah
+184257,N/A
 184349,Marcos Carnevale
 184471,Roar Uthaug
 184641,Fumihiko Sori
@@ -9581,6 +9701,7 @@ movie_id,director
 185029,John Krasinski
 185031,Albert Hughes
 185033,Anders Walter
+185135,N/A
 185435,Kyle Newacheck
 185473,Kay Cannon
 185585,Steven S. DeKnight
@@ -9604,7 +9725,7 @@ movie_id,director
 189713,Spike Lee
 190183,Jennifer Yuh Nelson
 190207,Viktor Chouchkov
-190209,"Stuart Miller, Jeff Ross"
+190209,"Jeff Ross, Stuart Miller"
 190213,João Nicolau
 190215,Carolina Jabor
 190219,Chris Wedge
@@ -9614,6 +9735,7 @@ movie_id,director
 193567,Tatsuyuki Nagai
 193571,Keisuke Yoshida
 193573,Takahiko Kyougoku
+193579,N/A
 193581,Noriyuki Abe
 193583,Atsuko Ishizuka
 193585,Bruce Beresford
