@@ -103,6 +103,27 @@
             object-fit: cover;
             border-radius: 10px 10px 0 0;
         }
+        .movie-actions {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label, form input, form button {
+            width: 50%;
+        }
+
+        form select {
+            width: auto;
+            margin-bottom: 10px;
+        }
 
         .pagination {
             margin-top: 30px;
@@ -128,14 +149,215 @@
             margin: 0 10px;
             font-weight: bold;
         }
+
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #45a049;
+        }
+
+        .planner-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+
+        .planner-button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-box input {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-box button {
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #218838;
+        }
+
+        .toggle-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+        .filter-box {
+            padding: 15px;
+            display: none;
+        }
+        select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        .apply-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+        .content {
+            flex: 1;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            transition: left 0.3s;
+            padding: 20px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar .planner-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.3s;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .sidebar .planner-button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-sidebar-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .toggle-sidebar-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .add-to-planner {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-to-planner:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Movies</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Movies For You</h1>
 
-    <div class="filter-box">
+        {% if user %}  
+            <div class="user-info">
+                <span>Welcome, {{ user.username }}</span>
+                <a href="/">Logout</a>
+            </div>
+        {% else %}
+            <form action="/login" method="POST" class="login-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <a href="/register-user" class="register-link">Don't have an account? Register here</a>
+        {% endif %}
+    </div>
+
+    {% if user %}
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-sidebar-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <a href="/show-movie-planners/{{ user.id }}" class="planner-button">My Movie Planner</a>
+    </div>
+    {% endif %}
+
+    <div class="search-box" style="margin-bottom: 20px; text-align: center;">
+        <form method="GET" onsubmit="event.preventDefault(); window.location.href='/movies/name/' + document.getElementById('movie_name').value;"">
+            <label for="movie_name">Movie Name:</label>
+            <input type="text" id="movie_name" name="movie_name" placeholder="Enter movie name" value="{{ movie_name }}">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleFilters()">Filters <span>&#9660;</span></button>
+    <div class="filter-box" id="filterBox" style="display: none;">
         <form method="GET" action="/movies">
             <label for="year_released">Year Released:</label>
             <select id="year_released" name="year_released">
@@ -187,6 +409,9 @@
         
             <input type="hidden" name="page" value="1">
             <input type="hidden" name="size" value="{{ size }}">
+            {% if user %}
+            <input type="hidden" name="user_id" value="{{ user.id }}">
+            {% endif %}
         
             <button type="submit">Apply Filters</button>
         </form>        
@@ -203,6 +428,25 @@
                 <p class="runtime">{{ movie.runtime }} minutes</p>
             </a>
         </div>
+        {% if user %}
+        <div class="movie-actions">
+            <form action="/add-movie-to-planner/" method="GET">
+                <label for="planner_id_{{ movie.id }}">Select Planner:</label>
+                <select id="planner_id_{{ movie.id }}" name="planner_id">
+                    {% for planner in planners %}
+                    <option value="{{ planner.id }}" {% if planner_id == planner.id|string %}selected{% endif %}>
+                        {{ planner.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+
+                <input type="hidden" name="movie_id" value="{{ movie.id }}">
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+
+                <button type="submit">Add to Planner</button>
+            </form>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
 
@@ -212,7 +456,8 @@
             {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
             {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
             {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
-            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}
+            {% if user %}&user_id={{ user.id }}{% endif %}">
             Previous
         </a>
 
@@ -221,7 +466,8 @@
             {% if rating and rating != '' %}&rating={{ rating }}{% endif %}
             {% if genre_id and genre_id != '' %}&genre_id={{ genre_id }}{% endif %}
             {% if award_id and award_id != '' %}&award_id={{ award_id }}{% endif %}
-            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}">
+            {% if actor_id and actor_id != '' %}&actor_id={{ actor_id }}{% endif %}
+            {% if user %}&user_id={{ user.id }}{% endif %}">
             Next
         </a>
     </div>
@@ -242,6 +488,40 @@
     </div>
 
 </div>
+
+<script>
+    function toggleFilters() {
+        var filterBox = document.getElementById("filterBox");
+        var toggleBtn = document.querySelector(".toggle-btn span");
+        if (filterBox.style.display === "none" || filterBox.style.display === "") {
+            filterBox.style.display = "block";
+            toggleBtn.innerHTML = "&#9650;";
+        } else {
+            filterBox.style.display = "none";
+            toggleBtn.innerHTML = "&#9660;";
+        }
+    }
+
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+    }
+
+    function addMovieToPlanner(plannerId, movieId) {
+        fetch(`/add-movie-to-planner/${plannerId}/${movieId}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert("Movie added to planner!");
+            } else {
+                alert("Failed to add movie.");
+            }
+        }).catch(error => console.error("Error:", error));
+    }
+</script>
 
 </body>
 </html>

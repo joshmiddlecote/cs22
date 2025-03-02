@@ -23,8 +23,6 @@ def get_all_movies(limit=10, offset=0, year=None, rating=None, genre_id=None, aw
             sql = "SELECT m.id, m.title, m.runtime, m.average_rating, m.tagline, m.poster FROM movies m "
             (sql, params) = maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_id, language_id, limit, offset)
 
-            print(sql)
-            print(params)
             cursor.execute(sql, tuple(params))
             movies = cursor.fetchall()
             
@@ -48,6 +46,38 @@ def get_movie_by_movie_id(id):
                     'average_rating': movie[6], 'num_ratings': movie[7],
                     'budget': movie[8], 'revenue': movie[9],
                     'overview': movie[10], 'tagline': movie[11], 'poster': movie[12]}
+        
+def get_movie_by_movie_name(name):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            lower_case_name = str(name).lower()
+            cursor.execute("""
+            SELECT m.id, m.title, m.year_released, m.runtime, m.director, l.name, m.average_rating, m.num_ratings, 
+                    m.budget, m.revenue, m.overview, m.tagline, m.poster 
+            FROM movies m INNER JOIN languages l ON l.id = m.language_id 
+            WHERE LOWER(m.title) = %s ;
+            """, (lower_case_name, ))
+
+            movie = cursor.fetchone()
+
+            if movie is None:
+                return None
+            else:
+                return {'id': movie[0], 'title': movie[1], 'year_released': movie[2], 
+                    'runtime': movie[3], 'director': movie[4], 'language_name': movie[5], 
+                    'average_rating': movie[6], 'num_ratings': movie[7],
+                    'budget': movie[8], 'revenue': movie[9],
+                    'overview': movie[10], 'tagline': movie[11], 'poster': movie[12]}
+            
+def get_movie_for_movie_planner(movie_id):
+    with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "SELECT id, title, runtime, average_rating, tagline, poster FROM movies WHERE id = %s;"
+
+            cursor.execute(sql, (int(movie_id), ))
+            movie = cursor.fetchone()
+            
+            return {'id': movie[0], 'title': movie[1], 'runtime': movie[2], 'rating': round(movie[3], 2), 'tagline': movie[4], "poster": movie[5]}
         
 def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_id, language_id, limit, offset):
     params = []

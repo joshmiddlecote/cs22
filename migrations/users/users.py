@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 def create_users_table(cursor, conn):
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users(
-            id INT PRIMARY KEY,
+            id SERIAL PRIMARY KEY,
             username VARCHAR(255) NOT NULL,
             password VARCHAR(255) NOT NULL
         );
