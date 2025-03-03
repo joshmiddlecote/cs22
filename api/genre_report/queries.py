@@ -25,9 +25,9 @@ def get_cult_classic_genres():
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
             cursor.execute("""
-                SELECT genre_name, avg_rating, variance, total_ratings
+                SELECT name, avg_rating, variance, total_ratings
                 FROM genres
-                ORDER BY genre_name;
+                ORDER BY name;
             """)
             
             # Fetch all rows returned by the query
@@ -66,7 +66,7 @@ def get_genres():
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
             cursor.execute("""
-                SELECT genre_name, avg_rating, variance, total_ratings
+                SELECT name, avg_rating, variance, total_ratings
                 FROM genres;
             """)
             
@@ -95,7 +95,7 @@ def get_niche_interest_genres():
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
             cursor.execute("""
-                SELECT genre_name, avg_rating, variance, total_ratings
+                SELECT name, avg_rating, variance, total_ratings
                 FROM genres;
             """)
             

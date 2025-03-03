@@ -2,7 +2,7 @@ from contextlib import contextmanager
 import os
 import psycopg2
 from dotenv import load_dotenv
-from movies import queries as movie_queries
+from api.movies import queries as movie_queries
 
 load_dotenv()
 db_username = os.getenv("DB_USER")
