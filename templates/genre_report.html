@@ -90,7 +90,9 @@
         <ol>
           {% for genre in genres %}
           <li> 
-            <span class="genre-name">{{ genre.genre_name }}</span> 
+            <a href="/genre-report/{{ genre.genre_name }}">
+              <span class="genre-name">{{ genre.genre_name }}</span>
+            </a> 
 
             <span class="avg-rating">{{ genre.avg_rating }}</span> 
             <span class="star">★</span> 

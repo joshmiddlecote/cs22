@@ -119,3 +119,40 @@ def get_niche_interest_genres():
             
             return genres_formatted_sorted
         
+
+def get_genre_data_by_name(genre_name):
+     with get_db() as conn:  # Open a database connection
+        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
+          cursor.execute("""
+              SELECT 
+                    COALESCE(SUM(m.rating_1), 0) AS rating_1,
+                    COALESCE(SUM(m.rating_2), 0) AS rating_2,
+                    COALESCE(SUM(m.rating_3), 0) AS rating_3,
+                    COALESCE(SUM(m.rating_4), 0) AS rating_4,
+                    COALESCE(SUM(m.rating_5), 0) AS rating_5,
+                    g.name AS genre_name,
+                    COALESCE(SUM(m.num_ratings), 0) AS total_ratings
+              FROM movies m
+              JOIN movie_genres mg ON m.id = mg.movie_id
+              JOIN genres g ON mg.genre_id = g.id
+              WHERE g.name = %s
+              GROUP BY g.name;
+          """, (genre_name, ))
+
+          genre_data = cursor.fetchall()
+
+          genres_formatted = [
+                {
+                    "rating_1": row[0],
+                    "rating_2": row[1],
+                    "rating_3": row[2],
+                    "rating_4": row[3],
+                    "rating_5": row[4],
+                    "genre_name": row[5],
+                    "total_ratings": row[6],
+                }
+                for row in genre_data  # Iterate over the fetched data
+            ]
+
+          return genres_formatted
+

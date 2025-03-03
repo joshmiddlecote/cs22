@@ -63,6 +63,10 @@ def get_niche_interest_genres(request: Request):
     genres = genre_report_queries.get_niche_interest_genres() 
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
 
+@app.get("/genre-report/{genre_name}")
+def read_movie(request: Request, genre_name: str):
+    genre_data = genre_report_queries.get_genre_data_by_name(genre_name)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data})
 
 # replaced all instances of bitwize OR | operator with Optional from the typing module 
 

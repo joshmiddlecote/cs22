@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Import Chart.js -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 16px;
+        }
+        .chart-container {
+            width: 60%;
+            margin: auto;
+        }
+        h1, p {
+            text-align: center;
+        }
+        .ratings-labels {
+            display: flex;
+            justify-content: space-around;
+            font-size: 40px; /* ✅ Make labels larger */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Genre: {{ genre_data[0]["genre_name"] }}</h1>
+    <p>{{ genre_data[0]["total_ratings"] }} total ratings</p>
+
+    <div class="chart-container">
+        <canvas id="ratingsChart"></canvas>
+    </div>
+
+    <script>
+        // Get data from Jinja2 template
+        const ratingsData = {
+            labels: ["★", "★★", "★★★", "★★★★", "★★★★★"],
+            datasets: [{
+                data: [
+                    {{ genre_data[0]["rating_1"] }},
+                    {{ genre_data[0]["rating_2"] }},
+                    {{ genre_data[0]["rating_3"] }},
+                    {{ genre_data[0]["rating_4"] }},
+                    {{ genre_data[0]["rating_5"] }}
+                ],
+                backgroundColor: [
+                    "red", "orange", "yellow", "lightgreen", "green"
+                ],
+                borderColor: "black",
+                borderWidth: 1
+            }]
+        };
+
+        // Create bar chart
+        const ctx = document.getElementById("ratingsChart").getContext("2d");
+        new Chart(ctx, {
+            type: "bar",
+            data: ratingsData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false } // Hide "Number of Ratings" label
+                },
+                scales: {
+                    x: {
+                      ticks: {
+                                font: { size: 22 },
+                                color: "#b8860b" // ✅ Change label color
+                            }
+                    },
+                    y: {
+                        display: false // ✅ Hide y-axis numbers
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
