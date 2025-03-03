@@ -41,6 +41,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .movie-info h2 {
             font-size: 1.6em;
@@ -63,6 +64,20 @@
         }
         .movie-info .budget-revenue div span {
             font-weight: bold;
+        }
+        .analyse-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .analyse-button:hover {
+            background-color: #0056b3;
         }
         footer {
             text-align: center;
@@ -94,6 +109,10 @@
     </header>
 
     <div class="movie-info">
+        <div class="poster">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }} Poster">
+        </div>
+        
         <div class="details">
             <h2>Overview</h2>
             <p>{{ movie.overview or 'No overview available' }}</p>
@@ -105,7 +124,7 @@
             <p>{{ movie.runtime or 'N/A'}} minutes</p>
 
             <h2>Language</h2>
-            <p>{{ movie.language_id or 'N/A' }}</p>
+            <p>{{ movie.language_name or 'N/A' }}</p>
 
             <h2>Tagline</h2>
             <p>{{ movie.tagline or 'No tagline available' }}</p>
@@ -122,6 +141,8 @@
             </div>
         </div>
     </div>
+
+    <a href="/movies/{{ movie.id }}/audience-analysis" class="analyse-button">Analyse Audience Ratings</a>
 
     <a href="/" class="back-button">Back to Homepage</a>
 

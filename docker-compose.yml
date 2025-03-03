@@ -4,6 +4,8 @@ services:
   db:
     image: postgres
     container_name: postgres_db
+    env_file:
+      - .env
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
@@ -12,6 +14,7 @@ services:
       - "5432:5432"                   
     networks:
       - app-network
+      
 
 networks:
   app-network:
