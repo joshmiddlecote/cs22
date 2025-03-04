@@ -10,61 +10,98 @@
             margin: 0;
             background-color: #f4f4f9;
             color: #333;
+            text-align: center;
         }
         .container {
             width: 80%;
             margin: 20px auto;
             padding: 20px;
             text-align: center;
+            min-height: 500px;
+        }
+        .container-2 {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            min-height: 500px;
+            position: relative;
+            top: -100px;
+            left: 140px;
         }
         h1 {
             font-size: 2.5em;
         }
+        .movie-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            gap: 30px;
+            min-height: 500px;
+            min-width: 1400px;
+        }
         .poster {
+            flex: 1; 
             text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            left: -40px;
         }
         .poster img {
-            max-width: 300px;
+            max-width: 200px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .rating {
+            flex: 2;
             font-size: 1.5em;
-            text-align: center;
-            margin: 10px 0;
+        }
+        .rating p {
+            position: relative;
+            top: -20px;
+            font-size: 20px;
+        }
+        .rating-info {
+            flex: 2;
+            font-size: 1.1em;
+            color: #555;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: -25px;
+            left: -120px
         }
         .stars {
             display: flex;
             justify-content: center;
         }
-
         .star {
             font-size: 2em;
             display: inline-block;
             position: relative;
-            color: #ccc; /* Default color for empty stars */
+            color: #ccc;
         }
-
         .star.full {
-            color: #FFD700; /* Gold for full stars */
+            color: #FFD700;
         }
-
         .star.half {
             position: relative;
             display: inline-block;
-            color: #ccc; /* Default empty star color */
+            color: #ccc;
         }
-
         .star.half::before {
-            content: "★"; /* Full star */
+            content: "★";
             position: absolute;
             left: 0;
-            width: 50%; /* Ensures only half the star is filled */
+            width: 50%;
             overflow: hidden;
-            color: #FFD700; /* Gold for half-star */
+            color: #FFD700;
         }
-
         .back-button {
             display: inline-block;
             padding: 10px 20px;
@@ -78,38 +115,234 @@
         .back-button:hover {
             background-color: #45a049;
         }
+        #ratingsPieChart {
+            max-width: 250px;
+            max-height: 250px;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            top: -20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+            min-height: 350px;
+            max-height: 350px;
+        }
+        .gallery img {
+            width: 150px;
+            max-width: 150px;
+            height: 225px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        select {
+            padding: 10px;
+            font-size: 1.1em;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            left: 160px;
+        }
+        .movie-item {
+            text-align: center;
+            max-width: 180px;
+        }
+        .movie-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .movie-item img:hover {
+            transform: scale(1.1);
+        }
+        .movie-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Audience Ratings Analysis</h1>
+    <h1>Analysing Audience Ratings of {{ movie.title }}</h1>
 
-    {% if movie.poster %}
+    <div class="movie-details">
         <div class="poster">
+        {% if movie.poster %}
             <img src="{{ movie.poster }}" alt="Movie Poster">
+        {% endif %}
+            <div class="rating">
+                <span class="stars">
+                    {% for i in range(1, 6) %}
+                        {% if movie.average_rating >= i %}
+                            <span class="star full">★</span>
+                        {% elif movie.average_rating >= i - 0.5 %}
+                            <span class="star half">★</span>
+                        {% else %}
+                            <span class="star empty">★</span>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+                <p>{{ movie.average_rating }} / 5  ({{ movie.num_ratings }} ratings) </p>
+            </div>
+            <canvas id="ratingsPieChart"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
         </div>
-    {% endif %}
 
-    <div class="rating">
-        <span class="stars">
-            {% for i in range(1, 6) %}
-                {% if movie.average_rating >= i %}
-                    <span class="star full">★</span>
-                {% elif movie.average_rating >= i - 0.5 %}
-                    <span class="star half">★</span>
-                {% else %}
-                    <span class="star empty">★</span>
-                {% endif %}
-            {% endfor %}
-        </span>
-        <p>{{ movie.average_rating }} / 5</p>
-        <p>Number of Ratings: {{ movie.num_ratings }}</p>
+        <div class="rating-info">
+            {% if movie.average_rating >= 4 %}
+                <p>{{ movie.title}} was well liked by most viewers, with {{ (((ratings_count.rating_4 + ratings_count.rating_5) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 4-5 star rating.</p>
+            {% elif movie.average_rating >= 3 %}
+                <p>{{ movie.title}} was liked by most viewers, with {{ (((ratings_count.rating_3 + ratings_count.rating_4) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 3-4 star rating.</p>
+            {% else %}
+                <p>{{ movie.title}} was disliked by most viewers, with {{ (((ratings_count.rating_1 + ratings_count.rating_2) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 1-2 star rating.</p>
+            {% endif %}
+            <p>We found that viewers that liked {{ movie.title }}, which belongs to the {{ movie_genre.genre_name }} genre/s, also enjoyed watching movies in the <b>{{ highly_rated_genres.genre_name }}</b> genre/s, but tended to avoid movies in the <b>{{ lowly_rated_genres.genre_name }}</b> genre/s.</p>
+
+            Want to show this movie at your upcoming film festival? Here's some other movies you should look into and some others you should probably avoid!
+            <hr>
+            <select id="galleryDropdown" onchange="updateGallery()">
+                <option value="">-- Film Festival Recommendations --</option>
+                <option value="high_same_genre">Viewers that liked this movie also liked (same genre)</option>
+                <option value="high_diff_genre">Viewers that liked this movie also liked (different genre)</option>
+                <option value="low_same_genre">Viewers that disliked this movie also disliked (same genre)</option>
+                <option value="low_diff_genre">Viewers that disliked this movie also disliked (different genre)</option>
+            </select>
+        
+            <div class="gallery" id="galleryContainer"></div>
+        </div>
     </div>
+</div>
 
+<div class="container-2">
     <a href="/movies/{{ movie.id }}" class="back-button">Back to Movie</a>
     <a href="/" class="back-button">Back to Homepage</a>
 </div>
+
+<script>
+    const ratingsData = {
+        rating1: {{ ((ratings_count.rating_1 / movie.num_ratings) * 100) | round(1) }},
+        rating2: {{ ((ratings_count.rating_2 / movie.num_ratings) * 100) | round(1) }},
+        rating3: {{ ((ratings_count.rating_3 / movie.num_ratings) * 100) | round(1) }},
+        rating4: {{ ((ratings_count.rating_4 / movie.num_ratings) * 100) | round(1) }},
+        rating5: {{ ((ratings_count.rating_5 / movie.num_ratings) * 100) | round(1) }}
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const ctx = document.getElementById('ratingsPieChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars'],
+                datasets: [{
+                    label: '%',
+                    data: [
+                        ratingsData.rating1,
+                        ratingsData.rating2,
+                        ratingsData.rating3,
+                        ratingsData.rating4,
+                        ratingsData.rating5
+                    ],
+                    backgroundColor: [
+                        'red',
+                        'orange',
+                        'yellow',
+                        'lightgreen',
+                        'green'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    const galleryImages = {
+        high_same_genre: [
+            { poster: "{{ highly_rated_movies_same_genre[0].poster }}", title: "{{ highly_rated_movies_same_genre[0].title }}", rating: "{{ highly_rated_movies_same_genre[0].average_rating }}", genre: "{{ highly_rated_movies_same_genre[0].genre }}" },
+            { poster: "{{ highly_rated_movies_same_genre[1].poster }}", title: "{{ highly_rated_movies_same_genre[1].title }}", rating: "{{ highly_rated_movies_same_genre[1].average_rating }}", genre: "{{ highly_rated_movies_same_genre[1].genre }}" },
+            { poster: "{{ highly_rated_movies_same_genre[2].poster }}", title: "{{ highly_rated_movies_same_genre[2].title }}", rating: "{{ highly_rated_movies_same_genre[2].average_rating }}", genre: "{{ highly_rated_movies_same_genre[2].genre }}" },
+            { poster: "{{ highly_rated_movies_same_genre[3].poster }}", title: "{{ highly_rated_movies_same_genre[3].title }}", rating: "{{ highly_rated_movies_same_genre[3].average_rating }}", genre: "{{ highly_rated_movies_same_genre[3].genre }}" },
+            { poster: "{{ highly_rated_movies_same_genre[4].poster }}", title: "{{ highly_rated_movies_same_genre[4].title }}", rating: "{{ highly_rated_movies_same_genre[4].average_rating }}", genre: "{{ highly_rated_movies_same_genre[4].genre }}" }
+        ],
+        high_diff_genre: [
+            { poster: "{{ highly_rated_movies_diff_genre[0].poster }}", title: "{{ highly_rated_movies_diff_genre[0].title }}", rating: "{{ highly_rated_movies_diff_genre[0].average_rating }}", genre: "{{ highly_rated_movies_diff_genre[0].genre }}" },
+            { poster: "{{ highly_rated_movies_diff_genre[1].poster }}", title: "{{ highly_rated_movies_diff_genre[1].title }}", rating: "{{ highly_rated_movies_diff_genre[1].average_rating }}", genre: "{{ highly_rated_movies_diff_genre[1].genre }}" },
+            { poster: "{{ highly_rated_movies_diff_genre[2].poster }}", title: "{{ highly_rated_movies_diff_genre[2].title }}", rating: "{{ highly_rated_movies_diff_genre[2].average_rating }}", genre: "{{ highly_rated_movies_diff_genre[2].genre }}" },
+            { poster: "{{ highly_rated_movies_diff_genre[3].poster }}", title: "{{ highly_rated_movies_diff_genre[3].title }}", rating: "{{ highly_rated_movies_diff_genre[3].average_rating }}", genre: "{{ highly_rated_movies_diff_genre[3].genre }}" },
+            { poster: "{{ highly_rated_movies_diff_genre[4].poster }}", title: "{{ highly_rated_movies_diff_genre[4].title }}", rating: "{{ highly_rated_movies_diff_genre[4].average_rating }}", genre: "{{ highly_rated_movies_diff_genre[4].genre }}" }
+        ],
+        low_same_genre: [
+            { poster: "{{ lowly_rated_movies_same_genre[0].poster }}", title: "{{ lowly_rated_movies_same_genre[0].title }}", rating: "{{ lowly_rated_movies_same_genre[0].average_rating }}", genre: "{{ lowly_rated_movies_same_genre[0].genre }}" },
+            { poster: "{{ lowly_rated_movies_same_genre[1].poster }}", title: "{{ lowly_rated_movies_same_genre[1].title }}", rating: "{{ lowly_rated_movies_same_genre[1].average_rating }}", genre: "{{ lowly_rated_movies_same_genre[1].genre }}" },
+            { poster: "{{ lowly_rated_movies_same_genre[2].poster }}", title: "{{ lowly_rated_movies_same_genre[2].title }}", rating: "{{ lowly_rated_movies_same_genre[2].average_rating }}", genre: "{{ lowly_rated_movies_same_genre[2].genre }}" },
+            { poster: "{{ lowly_rated_movies_same_genre[3].poster }}", title: "{{ lowly_rated_movies_same_genre[3].title }}", rating: "{{ lowly_rated_movies_same_genre[3].average_rating }}", genre: "{{ lowly_rated_movies_same_genre[3].genre }}" },
+            { poster: "{{ lowly_rated_movies_same_genre[4].poster }}", title: "{{ lowly_rated_movies_same_genre[4].title }}", rating: "{{ lowly_rated_movies_same_genre[4].average_rating }}", genre: "{{ lowly_rated_movies_same_genre[4].genre }}" }
+        ],
+        low_diff_genre: [
+            { poster: "{{ lowly_rated_movies_diff_genre[0].poster }}", title: "{{ lowly_rated_movies_diff_genre[0].title }}", rating: "{{ lowly_rated_movies_diff_genre[0].average_rating }}", genre: "{{ lowly_rated_movies_diff_genre[0].genre }}" },
+            { poster: "{{ lowly_rated_movies_diff_genre[1].poster }}", title: "{{ lowly_rated_movies_diff_genre[1].title }}", rating: "{{ lowly_rated_movies_diff_genre[1].average_rating }}", genre: "{{ lowly_rated_movies_diff_genre[1].genre }}" },
+            { poster: "{{ lowly_rated_movies_diff_genre[2].poster }}", title: "{{ lowly_rated_movies_diff_genre[2].title }}", rating: "{{ lowly_rated_movies_diff_genre[2].average_rating }}", genre: "{{ lowly_rated_movies_diff_genre[2].genre }}" },
+            { poster: "{{ lowly_rated_movies_diff_genre[3].poster }}", title: "{{ lowly_rated_movies_diff_genre[3].title }}", rating: "{{ lowly_rated_movies_diff_genre[3].average_rating }}", genre: "{{ lowly_rated_movies_diff_genre[3].genre }}" },
+            { poster: "{{ lowly_rated_movies_diff_genre[4].poster }}", title: "{{ lowly_rated_movies_diff_genre[4].title }}", rating: "{{ lowly_rated_movies_diff_genre[4].average_rating }}", genre: "{{ lowly_rated_movies_diff_genre[4].genre }}" }
+        ]
+    };
+
+    function updateGallery() {
+        const selectedCategory = document.getElementById("galleryDropdown").value;
+        const galleryContainer = document.getElementById("galleryContainer");
+
+        galleryContainer.innerHTML = "";
+
+        if (selectedCategory in galleryImages) {
+            galleryImages[selectedCategory].forEach(movie => {
+                const movieDiv = document.createElement("div");
+                movieDiv.classList.add("movie-item");
+
+                const imgElement = document.createElement("img");
+                imgElement.src = movie.poster;
+                imgElement.alt = movie.title;
+
+                const titleElement = document.createElement("p");
+                titleElement.innerHTML = `<strong>${movie.title}</strong>`;
+
+                const ratingElement = document.createElement("p");
+                ratingElement.innerHTML = `⭐ ${movie.rating} / 5`;
+
+                const genreElement = document.createElement("p");
+                genreElement.innerHTML = `<em>Genre: ${movie.genre}</em>`;
+
+                movieDiv.appendChild(imgElement);
+                movieDiv.appendChild(titleElement);
+                movieDiv.appendChild(ratingElement);
+                movieDiv.appendChild(genreElement);
+
+                galleryContainer.appendChild(movieDiv);
+            });
+        }
+    }
+</script>
 
 </body>
 </html>
