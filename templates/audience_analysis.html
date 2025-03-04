@@ -200,17 +200,18 @@
         </div>
 
         <div class="rating-info">
-            {% if movie.average_rating >= 4 %}
-                <p>{{ movie.title}} was well liked by most viewers, with {{ (((ratings_count.rating_4 + ratings_count.rating_5) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 4-5 star rating.</p>
-            {% elif movie.average_rating >= 3 %}
-                <p>{{ movie.title}} was liked by most viewers, with {{ (((ratings_count.rating_3 + ratings_count.rating_4) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 3-4 star rating.</p>
-            {% else %}
-                <p>{{ movie.title}} was disliked by most viewers, with {{ (((ratings_count.rating_1 + ratings_count.rating_2) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 1-2 star rating.</p>
+            {% if ratings_count %}
+                {% if movie.average_rating >= 4 %}
+                    <p>{{ movie.title}} was well liked by most viewers, with {{ (((ratings_count.rating_4 + ratings_count.rating_5) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 4-5 star rating.</p>
+                {% elif movie.average_rating >= 3 %}
+                    <p>{{ movie.title}} was liked by most viewers, with {{ (((ratings_count.rating_3 + ratings_count.rating_4) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 3-4 star rating.</p>
+                {% else %}
+                    <p>{{ movie.title}} was disliked by most viewers, with {{ (((ratings_count.rating_1 + ratings_count.rating_2) / movie.num_ratings) * 100) | round(1) }}% of viewers giving this a 1-2 star rating.</p>
+                {% endif %}
+                <p>We found that viewers that liked {{ movie.title }}, which belongs to the {{ movie_genre.genre_name }} genre/s{% if highly_rated_genres.genre_name %}, also enjoyed watching movies in the <b>{{ highly_rated_genres.genre_name }}</b> genre/s{% if lowly_rated_genres.genre_name %}, but tended to avoid movies in the <b>{{ lowly_rated_genres.genre_name }}</b> genre/s{% endif %}{% endif %}.</p>
             {% endif %}
-            <p>We found that viewers that liked {{ movie.title }}, which belongs to the {{ movie_genre.genre_name }} genre/s{% if highly_rated_genres.genre_name %}, also enjoyed watching movies in the <b>{{ highly_rated_genres.genre_name }}</b> genre/s{% if lowly_rated_genres.genre_name %}, but tended to avoid movies in the <b>{{ lowly_rated_genres.genre_name }}</b> genre/s{% endif %}{% endif %}.</p>
-
-            Want to show this movie at your upcoming film festival? Here's some other movies you should look into and some others you should probably avoid!
-            <hr>
+                Want to show this movie at your upcoming film festival? Here's some other movies you should look into and some others you should probably avoid!
+                <hr>
             <select id="galleryDropdown" onchange="updateGallery()">
                 <option value="">-- Film Festival Recommendations --</option>
                 <option value="high_same_genre">Viewers that liked this movie also liked (same genre)</option>

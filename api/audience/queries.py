@@ -53,21 +53,21 @@ def get_movie_genre(id):
     
             return {'genre_name': genres_string}
         
-def get_similar_highly_rated_movies_same_genre(id):
+def get_similar_highly_rated_movies_same_genre(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH high_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating >= 4
+                WHERE movieId = %s AND rating >= %s
             ),
 
             other_high_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN high_raters hr ON r.userId = hr.userId
-                WHERE r.movieId != %s AND rating >= 4
+                WHERE r.movieId != %s AND rating >= %s
                 GROUP BY r.movieId
             ),
                            
@@ -82,7 +82,7 @@ def get_similar_highly_rated_movies_same_genre(id):
             WHERE mg.genre_id IN (SELECT genre_id FROM input_movie_genre)
             ORDER BY ohrm.avg_rating DESC, ohrm.rating_count DESC
             LIMIT 5;
-            """, (str(id), str(id), str(id),))
+            """, (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             similar_movies_same_genre_high = cursor.fetchall()
 
@@ -93,21 +93,21 @@ def get_similar_highly_rated_movies_same_genre(id):
 
             return similar_movies_same_genre_high
 
-def get_similar_lowly_rated_movies_same_genre(id):
+def get_similar_lowly_rated_movies_same_genre(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH low_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating <= 3
+                WHERE movieId = %s AND rating <= %s
             ),
 
             other_low_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN low_raters lr ON r.userId = lr.userId
-                WHERE r.movieId != %s AND rating <= 3
+                WHERE r.movieId != %s AND rating <= %s
                 GROUP BY r.movieId
             ),
                            
@@ -122,7 +122,7 @@ def get_similar_lowly_rated_movies_same_genre(id):
             WHERE mg.genre_id IN (SELECT genre_id FROM input_movie_genre)
             ORDER BY olrm.avg_rating ASC, olrm.rating_count ASC
             LIMIT 5;
-            """, (str(id), str(id), str(id),))
+            """, (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             similar_movies_same_genre_low = cursor.fetchall()
 
@@ -133,21 +133,21 @@ def get_similar_lowly_rated_movies_same_genre(id):
 
             return similar_movies_same_genre_low
 
-def get_similar_highly_rated_movies_different_genre(id):
+def get_similar_highly_rated_movies_different_genre(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH high_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating >= 4
+                WHERE movieId = %s AND rating >= %s
             ),
 
             other_high_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN high_raters hr ON r.userId = hr.userId
-                WHERE r.movieId != %s AND rating >= 4
+                WHERE r.movieId != %s AND rating >= %s
                 GROUP BY r.movieId
             ),
                            
@@ -166,7 +166,7 @@ def get_similar_highly_rated_movies_different_genre(id):
             )
             ORDER BY ohrm.avg_rating DESC, ohrm.rating_count DESC
             LIMIT 5;
-            """, (str(id), str(id), str(id),))
+            """, (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             similar_movies_diff_genre_high = cursor.fetchall()
 
@@ -177,21 +177,21 @@ def get_similar_highly_rated_movies_different_genre(id):
 
             return similar_movies_diff_genre_high
 
-def get_similar_lowly_rated_movies_different_genre(id):
+def get_similar_lowly_rated_movies_different_genre(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH low_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating <= 3
+                WHERE movieId = %s AND rating <= %s
             ),
 
             other_low_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN low_raters lr ON r.userId = lr.userId
-                WHERE r.movieId != %s AND rating <= 3
+                WHERE r.movieId != %s AND rating <= %s
                 GROUP BY r.movieId
             ),
                            
@@ -210,7 +210,7 @@ def get_similar_lowly_rated_movies_different_genre(id):
             )
             ORDER BY olrm.avg_rating ASC, olrm.rating_count ASC
             LIMIT 5;
-            """, (str(id), str(id), str(id),))
+            """, (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             similar_movies_diff_genre_low = cursor.fetchall()
 
@@ -222,21 +222,21 @@ def get_similar_lowly_rated_movies_different_genre(id):
             return similar_movies_diff_genre_low
         
 
-def get_other_highly_rated_genres(id):
+def get_other_highly_rated_genres(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH high_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating >= 4
+                WHERE movieId = %s AND rating >= %s
             ),
 
             other_high_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN high_raters hr ON r.userId = hr.userId
-                WHERE r.movieId != %s AND r.rating >= 4
+                WHERE r.movieId != %s AND r.rating >= %s
                 GROUP BY r.movieId
             ),
 
@@ -257,7 +257,7 @@ def get_other_highly_rated_genres(id):
             FROM genre_high_ratings
             ORDER BY high_rating_count DESC
             LIMIT 1;
-            """ , (str(id), str(id), str(id),))
+            """ , (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             genre_high = cursor.fetchall()
 
@@ -268,21 +268,21 @@ def get_other_highly_rated_genres(id):
     
             return {'genre_name': genre_high_string}
 
-def get_other_lowly_rated_genres(id):
+def get_other_lowly_rated_genres(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
             WITH low_raters AS (
                 SELECT userId
                 FROM ratings
-                WHERE movieId = %s AND rating >= 5
+                WHERE movieId = %s AND rating >= %s
             ),
 
             other_low_rated_movies AS (
                 SELECT r.movieId, AVG(r.rating) AS avg_rating, COUNT(r.rating) AS rating_count
                 FROM ratings r
                 JOIN low_raters lr ON r.userId = lr.userId
-                WHERE r.movieId != %s AND r.rating <= 1
+                WHERE r.movieId != %s AND r.rating <= %s
                 GROUP BY r.movieId
             ),
 
@@ -303,7 +303,7 @@ def get_other_lowly_rated_genres(id):
             FROM genre_low_ratings
             ORDER BY low_rating_count DESC
             LIMIT 1;
-            """ , (str(id), str(id), str(id),))
+            """ , (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
 
             genre_low = cursor.fetchall()
 

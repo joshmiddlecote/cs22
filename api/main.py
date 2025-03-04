@@ -69,12 +69,12 @@ def analyse_ratings(request: Request, movie_id: int):
     movie_rating_data = audience_queries.get_audience_ratings(movie_id)
     ratings_count = audience_queries.get_ratings_distribution(movie_id)
     movie_genre = audience_queries.get_movie_genre(movie_id)
-    highly_rated_genres = audience_queries.get_other_highly_rated_genres(movie_id)
-    lowly_rated_genres = audience_queries.get_other_lowly_rated_genres(movie_id)
-    highly_rated_movies_same_genre = audience_queries.get_similar_highly_rated_movies_same_genre(movie_id)
-    highly_rated_movies_diff_genre = audience_queries.get_similar_highly_rated_movies_different_genre(movie_id)
-    lowly_rated_movies_same_genre = audience_queries.get_similar_lowly_rated_movies_same_genre(movie_id)
-    lowly_rated_movies_diff_genre = audience_queries.get_similar_lowly_rated_movies_different_genre(movie_id)
+    highly_rated_genres = audience_queries.get_other_highly_rated_genres(movie_id, movie_rating_data['average_rating'])
+    lowly_rated_genres = audience_queries.get_other_lowly_rated_genres(movie_id, movie_rating_data['average_rating'])
+    highly_rated_movies_same_genre = audience_queries.get_similar_highly_rated_movies_same_genre(movie_id, movie_rating_data['average_rating'])
+    highly_rated_movies_diff_genre = audience_queries.get_similar_highly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
+    lowly_rated_movies_same_genre = audience_queries.get_similar_lowly_rated_movies_same_genre(movie_id, movie_rating_data['average_rating'])
+    lowly_rated_movies_diff_genre = audience_queries.get_similar_lowly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
 
     return templates.TemplateResponse("audience_analysis.html", {"request": request, "movie": movie_rating_data, "ratings_count": ratings_count,
         "movie_genre": movie_genre, "highly_rated_genres": highly_rated_genres, "lowly_rated_genres": lowly_rated_genres,
