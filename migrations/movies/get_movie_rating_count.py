@@ -27,7 +27,6 @@ with open("data/ml-latest-small/ratings.csv", mode="r", newline="", encoding="ut
         else:
             print(f"'{movie_id}' not in ratings count")
 
-        ratings_count[movie_id][rating] += 1
 
 with open("data/ml-latest-small/movie_ratings_count.csv", mode="w", newline="", encoding="utf-8") as csvfilewriter:
     writer = csv.writer(csvfilewriter)
