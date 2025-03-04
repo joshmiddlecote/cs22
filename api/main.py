@@ -1,6 +1,10 @@
 from fastapi import FastAPI, Query, Request, Form, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
+from jose import jwt, JWTError
+from datetime import datetime, timedelta
+from passlib.context import CryptContext
+import os
 import movies.queries as movie_queries
 import genres.queries as genre_queries
 import awards.queries as award_queries
@@ -12,6 +16,10 @@ import audience.queries as audience_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="../templates")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 @app.get("/")
 async def root():
@@ -25,7 +33,8 @@ def movies(
         year_released: str | None = Query(default=None), rating: str | None = Query(default=None),
         genre_id: str | None = Query(default=None), award_id: str | None = Query(default=None),
         winner: str | None = Query(default=None), actor_id: str | None = Query(default=None), 
-        language_id: str | None = Query(default=None), user_id: str | None = Query(default=None)):
+        language_id: str | None = Query(default=None), user_id: str | None = Query(default=None),
+        token: str | None = Query(default=None)):
     
     offset = (page - 1) * size
     movies = movie_queries.get_all_movies(size, offset, year_released, rating, genre_id, award_id, winner, actor_id, language_id)
@@ -92,7 +101,9 @@ def register(request: Request, username: str = Form(...), password: str = Form(.
     if not user_id:
         return movies(user_id=user_id)
     else:
-        return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
+        token = create_jwt_token(user_id)
+        print(token)
+        return templates.TemplateResponse("registration_successful.html", {"request": request, "token": token})
     
 @app.get("/register-user")
 def register_user(request: Request):
@@ -124,3 +135,10 @@ def delete_planner(request: Request, planner_id: str | None = Query(default=None
     planner_queries.delete_movie_planner(planner_id)
     planners = planner_queries.get_movies_from_user_id(user_id)
     return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})
+
+def create_jwt_token(user_id):
+    payload = {
+        "sub": str(user_id),
+        "exp": datetime.now() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    }
+    return jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)

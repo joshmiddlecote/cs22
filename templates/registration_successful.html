@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        .success { color: green; font-size: 20px; margin-bottom: 10px; }
+        .hidden { display: none; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="success">Registration Successful!</h2>
+        <p>Your account has been created.</p>
+        <button onclick="goToDashboard()">Go to Dashboard</button>
+        <p id="error" class="hidden"></p>
+    </div>
+
+    <script>
+
+        const token = "{{ token }}"
+
+        if (token) {
+            sessionStorage.setItem("jwt", token);  // Store token securely
+        } else {
+            document.getElementById("error").innerText = "Error: No token received.";
+            document.getElementById("error").classList.remove("hidden");
+        }
+
+        function goToDashboard() {
+            window.location.href = "/"; // Redirect to dashboard
+        }
+    </script>
+
+</body>
+</html>

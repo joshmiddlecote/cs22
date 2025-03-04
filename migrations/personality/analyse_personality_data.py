@@ -7,7 +7,7 @@ from scipy import stats
 # Read the personality dataset
 def load_and_prepare_data():
     personality_df = pd.read_csv('data/personality-isf2018/personality-data.csv')
-    movies_df = pd.read_csv('data/ml-latest-small/genre_links.csv')  # Assuming you have a movies.csv with genre information
+    movies_df = pd.read_csv('data/ml-latest-small/genre_links.csv')
     
     # Convert column names to lowercase and strip whitespace
     personality_df.columns = personality_df.columns.str.lower().str.strip()
