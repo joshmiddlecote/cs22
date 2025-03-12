@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Movie Rating Prediction Parameters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Predicted Rating</h1>
+        
+        {%if movie_id %}
+        <p>{{ movie_name }} <strong>has already been released</strong>, provide more information to help calculate its rating and then see the actual rating it received!</p>
+        {% else %}
+        <p>Provide other information about <strong>{{ movie_name }}</strong> to help calculate its rating!</p>
+        {% endif %}
+        
+        <div class="search-box" style="margin-bottom: 20px; text-align: center;">
+            <form onsubmit="event.preventDefault();" style="display: inline-block; width: 50%;">
+
+                <label for="genre" style="display: block; font-weight: bold; margin-top: 15px;">Select Genre(s):</label>
+                <p style="font-size: small; margin-top: 1%;">(Press ctrl to select multiple)</p>
+                <select id="genre" name="genre" multiple style="width: 100%; padding: 10px; font-size: 16px;">
+                    <option value="Action">Action</option>
+                    <option value="Western">Western</option>
+                    <option value="Children">Children</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Documentary">Documentary</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="IMAX">IMAX</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Film-Noir">Film-Noir</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="War">War</option>
+                    <option value="Horror">Horror</option>
+                </select>
+        
+                <label style="display: block; font-weight: bold; margin-top: 15px;">Actors:</label>
+                <div id="actors-container">
+                    <input type="text" name="actors[]" placeholder="Enter actor name" 
+                        style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 5px;">
+                </div>
+                <button type="button" onclick="addActor()" style="margin-bottom: 10px;">+ Add Actor</button>
+        
+                <label style="display: block; font-weight: bold; margin-top: 15px;">Directors:</label>
+                <div id="directors-container">
+                    <input type="text" name="directors[]" placeholder="Enter director name" 
+                        style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 5px;">
+                </div>
+                <button type="button" onclick="addDirector()" style="margin-bottom: 10px;">+ Add Director</button>
+        
+                <label for="budget" style="display: block; font-weight: bold; margin-top: 15px;">Budget ($):</label>
+                <input type="number" id="budget" name="budget" placeholder="Enter budget" 
+                    style="width: 100%; padding: 10px; font-size: 16px;">
+        
+                <button type="submit" onclick="submitForm()" 
+                    style="width: 100%; background-color: blue; color: white; padding: 12px; border: none; font-size: 16px; cursor: pointer; margin-top: 15px; border-radius: 5px;">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <a href="/" style="text-decoration: none; color: white;">
+            <button style="background-color: green; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px;">
+                Go Back
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function addActor() {
+            let container = document.getElementById('actors-container');
+            let input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'actors[]';
+            input.placeholder = 'Enter actor name';
+            input.style = 'width: 100%; padding: 10px; font-size: 16px; margin-bottom: 5px;';
+            container.appendChild(input);
+        }
+    
+        function addDirector() {
+            let container = document.getElementById('directors-container');
+            let input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'directors[]';
+            input.placeholder = 'Enter director name';
+            input.style = 'width: 100%; padding: 10px; font-size: 16px; margin-bottom: 5px;';
+            container.appendChild(input);
+        }
+    
+        function submitForm() {
+            let genres = Array.from(document.getElementById('genre').selectedOptions).map(option => option.value);
+            let actors = Array.from(document.getElementsByName('actors[]')).map(input => input.value).filter(value => value !== '');
+            let directors = Array.from(document.getElementsByName('directors[]')).map(input => input.value).filter(value => value !== '');
+            let budget = document.getElementById('budget').value;
+
+            if (genres.length === 0) {
+                alert("Please select at least one genre.");
+                return;
+            }
+            if (actors.length === 0) {
+                alert("Please enter at least one actor.");
+                return;
+            }
+            if (directors.length === 0) {
+                alert("Please enter at least one director.");
+                return;
+            }
+            if (budget === "" || isNaN(budget) || budget <= 0) {
+                alert("Please enter a valid budget.");
+                return;
+            }
+    
+            let formData = {
+                movie_name: "{{ movie_name }}",
+                movie_id: "{{ movie_id }}",
+                genre: genres,
+                actor: actors,
+                director: directors,
+                budget: budget
+            };
+    
+            console.log("Submitting Form Data:", formData);
+
+            fetch('/movies/predict-ratings/', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(html => {
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
