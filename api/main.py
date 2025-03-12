@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query, Request, Form, Depends
+from fastapi import FastAPI, Query, Request, Form, Depends, Body
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 import movies.queries as movie_queries
@@ -9,6 +9,7 @@ import languages.queries as language_queries
 import users.queries as user_queries
 import movie_planners.queries as planner_queries
 import audience.queries as audience_queries
+import predictions.queries as predictions_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="../templates")
@@ -135,3 +136,27 @@ def delete_planner(request: Request, planner_id: str | None = Query(default=None
     planner_queries.delete_movie_planner(planner_id)
     planners = planner_queries.get_movies_from_user_id(user_id)
     return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})
+
+@app.get("/movies/get-prediction-parameters/{movie_name}")
+def predict_ratings(request: Request, movie_name: str):
+    movie = movie_queries.get_movie_by_movie_name(movie_name)
+    if movie:
+        movie_id = movie_queries.get_movie_by_movie_name(movie_name)["id"]
+    else:
+        movie_id = None
+    return templates.TemplateResponse("prediction_parameters.html", {"request": request, "movie_name": movie_name, "movie_id": movie_id})
+
+@app.post("/movies/predict-ratings")
+def predict_ratings(request: Request, formData: dict = Body(...)):
+    predicted_rating = predictions_queries.calculate_rating(formData)
+    movie_id = formData["movie_id"]
+    if movie_id == "None":
+        movie_id = None
+
+    if movie_id is not None:
+        actual_rating = predictions_queries.get_movie_rating(formData["movie_id"])
+        movie_poster = movie_queries.get_movie_by_movie_id(movie_id)["poster"]
+    else:
+        actual_rating = None
+        movie_poster = "https://www.shutterstock.com/image-illustration/movie-poster-mockup-light-bulb-600nw-2383346723.jpg"
+    return templates.TemplateResponse("rating_prediction.html", {"request": request, "movie_name": formData["movie_name"], "movie_poster": movie_poster, "predicted_rating": predicted_rating, "actual_rating": actual_rating})

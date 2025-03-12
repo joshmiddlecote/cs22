@@ -348,11 +348,23 @@
     </div>
     {% endif %}
 
+    <br>
+    
     <div class="search-box" style="margin-bottom: 20px; text-align: center;">
-        <form method="GET" onsubmit="event.preventDefault(); window.location.href='/movies/name/' + document.getElementById('movie_name').value;"">
-            <label for="movie_name">Movie Name:</label>
-            <input type="text" id="movie_name" name="movie_name" placeholder="Enter movie name" value="{{ movie_name }}">
-            <button type="submit">Search</button>
+        <form onsubmit="event.preventDefault();" style="display: inline-block; width: 50%;">
+            <label for="movie_name" style="display: block; font-weight: bold; margin-left: 27%; margin-bottom: 5px;">
+                Movie Name:
+            </label>
+            <input type="text" id="movie_name" name="movie_name" placeholder="Enter movie name" value="{{ movie_name }}" style="width: 100%; padding: 12px; font-size: 16px; display: block; margin: 0 auto;">
+            
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px; width: 104%;">
+                <button type="button" onclick="searchMovie()" style="width: 50%; background-color: blue; color: white; padding: 12px; border: none; font-size: 16px; cursor: pointer;">
+                    Search
+                </button>
+                <button type="button" onclick="predictRatings()" style="width: 50%; background-color: green; color: white; padding: 12px; border: none; font-size: 16px; cursor: pointer;">
+                    Predict Ratings
+                </button>
+            </div>
         </form>
     </div>
 
@@ -520,6 +532,27 @@
                 alert("Failed to add movie.");
             }
         }).catch(error => console.error("Error:", error));
+    }
+
+    function predictRatings() {
+        const movieName = document.getElementById('movie_name').value;
+        if (movieName) {
+            window.location.href = '/movies/get-prediction-parameters?movie_name=' + encodeURIComponent(movieName);
+        }
+    }
+
+    function searchMovie() {
+        const movieName = document.getElementById('movie_name').value;
+        if (movieName) {
+            window.location.href = '/movies/name/' + encodeURIComponent(movieName);
+        }
+    }
+
+    function predictRatings() {
+        const movieName = document.getElementById('movie_name').value;
+        if (movieName) {
+            window.location.href = '/movies/get-prediction-parameters/' + encodeURIComponent(movieName);
+        }
     }
 </script>
 

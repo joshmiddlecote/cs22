@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            min-height: 500px;
+            position: relative;
+            top: -50px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .poster {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
+
+        .poster img {
+            max-width: 300px;
+            width: 100%;
+            max-height: 450px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        .rating-container {
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+            margin-top: 50px;
+        }
+
+        .rating-box {
+            text-align: center;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .star {
+            font-size: 3.5em;
+            display: inline-block;
+            position: relative;
+            color: #ccc;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .star.full {
+            color: #FFD700;
+        }
+
+        .star.half {
+            position: relative;
+            display: inline-block;
+            color: #ccc;
+        }
+
+        .star.half::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            width: 50%;
+            overflow: hidden;
+            color: #FFD700;
+        }
+
+        .label {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .animate {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Predicted ratings for <strong>{{ movie_name }}</strong></h2>
+
+    <div class="poster">
+        {% if movie_poster %}
+            <img src="{{ movie_poster }}" alt="Movie Poster">
+        {% endif %}
+    </div>
+
+    <div class="rating-container">
+        {% if actual_rating %}
+        <div class="rating-box">
+            <p class="label">Actual Rating</p>
+            <div class="rating">
+                <span class="stars" id="actual-stars">
+                    {% for i in range(1, 6) %}
+                        {% if actual_rating >= i %}
+                            <span class="star full">★</span>
+                        {% elif actual_rating >= i - 0.5 %}
+                            <span class="star half">★</span>
+                        {% else %}
+                            <span class="star empty">★</span>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+                <p>{{ (actual_rating) | round(2) }} / 5</p>
+            </div>
+        </div>
+        {% endif %}
+        <div class="rating-box">
+            <p class="label">Predicted Rating</p>
+            <div class="rating">
+                <span class="stars" id="predicted-stars">
+                    {% for i in range(1, 6) %}
+                        {% if predicted_rating >= i %}
+                            <span class="star full">★</span>
+                        {% elif predicted_rating >= i - 0.5 %}
+                            <span class="star half">★</span>
+                        {% else %}
+                            <span class="star empty">★</span>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+                <p>{{ (predicted_rating) | round(2) }} / 5</p>
+            </div>
+        </div>
+    </div>
+
+    {% if actual_rating %}
+        {% set rating_diff = (actual_rating - predicted_rating) | round(2) %}
+
+        {% if rating_diff <= 0.5 and rating_diff >= -0.5 %}
+        <h2>Pretty accurate!</h4>
+        {% elif rating_diff <= 1.0 and rating_diff >= -1.0 %}
+        <h2>Not too far off!</h4>
+        {% else %}
+        <h2>Not too accurate but a good try!</h4>
+        {% endif %}
+    {% else %}
+        <h2>Here are our predictions!</h4>
+    {% endif %}
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function animateStars(starContainerId) {
+                let stars = document.querySelectorAll(`#${starContainerId} .star`);
+                stars.forEach((star, index) => {
+                    setTimeout(() => {
+                        star.classList.add('animate');
+                    }, index * 400);
+                });
+            }
+
+            animateStars("actual-stars");
+            animateStars("predicted-stars");
+        });
+    </script>
+
+    <br>
+    <div class="container">
+        <a href="/" class="back-button">Back to Homepage</a>
+    </div>
+
+</body>
+</html>
