@@ -27,6 +27,7 @@ def get_cult_classic_genres():
             cursor.execute("""
                 SELECT name, avg_rating, variance, total_ratings
                 FROM genres
+                WHERE name <> '(no genres listed)'
                 ORDER BY name;
             """)
             
@@ -67,7 +68,8 @@ def get_genres():
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
             cursor.execute("""
                 SELECT name, avg_rating, variance, total_ratings
-                FROM genres;
+                FROM genres
+                WHERE name <> '(no genres listed)';
             """)
             
             # Fetch all rows returned by the query
@@ -96,7 +98,8 @@ def get_niche_interest_genres():
             # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
             cursor.execute("""
                 SELECT name, avg_rating, variance, total_ratings
-                FROM genres;
+                FROM genres
+                WHERE name <> '(no genres listed)';
             """)
             
             # Fetch all rows returned by the query
@@ -156,3 +159,29 @@ def get_genre_data_by_name(genre_name):
 
           return genres_formatted
 
+def get_top_movies_by_genre_name(genre_name):
+     with get_db() as conn:  # Open a database connection
+        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
+          cursor.execute("""
+              SELECT m.title, m.average_rating, m.num_ratings, m.poster
+              FROM movies m
+              JOIN movie_genres mg ON m.id = mg.movie_id
+              JOIN genres g ON mg.genre_id = g.id
+              WHERE g.name = %s
+              ORDER BY m.num_ratings DESC
+              LIMIT 10;
+          """, (genre_name, ))
+
+          top_movies = cursor.fetchall()
+
+          top_movies_formatted = [
+              {
+                  "title": movie[0],
+                  "avg_rating": round(movie[1], 2),
+                  "total_ratings": movie[2],
+                  "poster": movie[3]
+              }
+              for movie in top_movies
+          ]
+
+          return top_movies_formatted

@@ -13,6 +13,7 @@ import api.languages.queries as language_queries
 import api.users.queries as user_queries
 import api.movie_planners.queries as planner_queries
 import api.audience.queries as audience_queries
+import api.existing_movie_predictions.queries as existing_movie_prediction_queries
 
 app = FastAPI()
 # templates = Jinja2Templates(directory="../templates")
@@ -66,7 +67,8 @@ def get_niche_interest_genres(request: Request):
 @app.get("/genre-report/{genre_name}")
 def read_movie(request: Request, genre_name: str):
     genre_data = genre_report_queries.get_genre_data_by_name(genre_name)
-    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data})
+    top_movies = genre_report_queries.get_top_movies_by_genre_name(genre_name)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies})
 
 # replaced all instances of bitwize OR | operator with Optional from the typing module 
 
