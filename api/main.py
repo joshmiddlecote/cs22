@@ -15,6 +15,15 @@ import api.movie_planners.queries as planner_queries
 import api.audience.queries as audience_queries
 import api.existing_movie_predictions.queries as existing_movie_prediction_queries
 
+from argon2 import PasswordHasher # used for hashing passwords
+ph = PasswordHasher()
+
+def check_password(stored_hash, password):
+    try:
+        return ph.verify(stored_hash, password)  # returns True if password matches the stored hash
+    except Exception:
+        return False  
+
 app = FastAPI()
 # templates = Jinja2Templates(directory="../templates")
 templates_dir = str(Path(__file__).parent.parent / "templates")
@@ -168,7 +177,9 @@ def analyse_ratings(request: Request, movie_id: int):
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
     user = user_queries.get_user_password(username)
-    if user is None or user["password"] != password:
+    print('stored hash', user["password"])
+    print('entered pw', password)
+    if user is None or not check_password(user["password"], password):
         return templates.TemplateResponse("invalid_login.html", {"request": request})
     
     movies = movie_queries.get_all_movies()

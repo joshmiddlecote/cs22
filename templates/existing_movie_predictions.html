@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ predicted_ratings.title }} - Predicted Rating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+        .ratings {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .ratings span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="{{ predicted_ratings.poster_url }}" alt="{{ predicted_ratings.movie_title }} Poster">
+    <h2>{{ predicted_ratings.movie_title }}</h2>
+    <div class="ratings">
+        <p><span>Predicted Rating:</span> {{ predicted_ratings.predicted_rating }}</p>
+        <p><span>Actual Rating:</span> {{ predicted_ratings.actual_rating }}</p>
+    </div>
+</div>
+
+</body>
+</html>
