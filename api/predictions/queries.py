@@ -7,7 +7,7 @@ load_dotenv()
 db_username = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
 db_name = os.getenv("DB_NAME")
-DATABASE_URL = f"postgresql://{db_username}:{db_password}@localhost/{db_name}"
+DATABASE_URL = f"postgresql://{db_username}:{db_password}@postgres_db/{db_name}"
 
 @contextmanager
 def get_db():

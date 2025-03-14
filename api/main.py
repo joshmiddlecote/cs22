@@ -12,13 +12,11 @@ import audience.queries as audience_queries
 import predictions.queries as predictions_queries
 
 app = FastAPI()
-templates = Jinja2Templates(directory="../templates")
+templates = Jinja2Templates(directory="templates/")
 
 @app.get("/")
 async def root():
     return RedirectResponse(url="/movies")
-
-# year, genre, rating, actor, director, tags, awards, language, runtime
 
 @app.get("/movies")
 def movies(
