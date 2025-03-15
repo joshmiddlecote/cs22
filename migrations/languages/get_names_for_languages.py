@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-languages_file = 'data/ml-latest-small/languages.csv'
+languages_file = '../data/ml-latest-small/languages.csv'
 
 api_url = "https://api.themoviedb.org/3/configuration/languages"
 tmdb_api_key = os.getenv("TMDB_API_KEY")
@@ -28,7 +28,7 @@ with open(languages_file, newline='', encoding='utf-8') as csvfile:
             if language['iso_639_1'] == code:
                 data.append({'id': id, 'code': code, 'name': language['english_name']})
 
-with open('data/ml-latest-small/new_languages.csv', mode='w', newline='') as file:
+with open('../data/ml-latest-small/new_languages.csv', mode='w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=['id', 'code', 'name'])
     writer.writeheader()
     writer.writerows(data)

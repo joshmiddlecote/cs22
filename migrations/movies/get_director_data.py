@@ -9,8 +9,8 @@ load_dotenv()
 TMDB_API_URL = "https://api.themoviedb.org/3/movie/{tmdb_id}/credits"
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
-LINKS_FILE = "data/ml-latest-small/links.csv"
-OUTPUT_FILE = "data/ml-latest-small/movies_directors.csv"
+LINKS_FILE = "../data/ml-latest-small/links.csv"
+OUTPUT_FILE = "../data/ml-latest-small/movies_directors.csv"
 
 def get_director(tmdb_id):
     try:

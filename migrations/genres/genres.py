@@ -37,7 +37,7 @@ def create_genre_links_table(cursor, conn):
 
 
 def insert_genres(cursor, conn):
-    with open('data/ml-latest-small/genres.csv', 'r') as file:
+    with open('../data/ml-latest-small/genres.csv', 'r') as file:
         reader = csv.DictReader(file)
         
         for row in reader:
@@ -55,7 +55,7 @@ def insert_genres(cursor, conn):
     conn.commit()
 
 def insert_genre_links(cursor, conn):
-    with open('data/ml-latest-small/genre_links.csv', 'r') as file:
+    with open('../data/ml-latest-small/genre_links.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             movie_id = int(row['movie_id'])
@@ -71,7 +71,7 @@ def insert_genre_links(cursor, conn):
 
 def main():
     load_dotenv()
-    host = "localhost"
+    host = "postgres_db"
     dbname = os.getenv("DB_NAME")
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")

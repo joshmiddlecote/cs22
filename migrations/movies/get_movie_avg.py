@@ -29,14 +29,14 @@ def get_ratings_by_movie_id(file_path, target_id):
     variance = total_x / num_ratings
     return (average_rating, num_ratings, variance)
 
-with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as movie_csvfile:
+with open('../data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as movie_csvfile:
     movie_csvreader = csv.reader(movie_csvfile)
     next(movie_csvreader)
     row_number = 1
     
     for row in movie_csvreader:
         movie_id, title, genres = row
-        (average_rating, num_ratings, variance) = get_ratings_by_movie_id('data/ml-latest-small/ratings.csv', movie_id)
+        (average_rating, num_ratings, variance) = get_ratings_by_movie_id('../data/ml-latest-small/ratings.csv', movie_id)
         data.append({'movie_id': movie_id, 'average_rating': average_rating, 'num_ratings': num_ratings, 'variance': variance})
         print(row_number)
         row_number +=1

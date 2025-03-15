@@ -16,9 +16,7 @@ services:
       - app-network
 
   fastapi:
-    build:
-      context: ./api
-      dockerfile: Dockerfile
+    image: fastapi_app
     container_name: fastapi_app
     ports:
       - "8000:8000"
@@ -38,6 +36,18 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - app-network
+
+  migrations:
+    image: migrations-runner
+    container_name: migrations
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
     networks:
       - app-network
 

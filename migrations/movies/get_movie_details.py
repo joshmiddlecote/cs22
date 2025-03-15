@@ -13,7 +13,7 @@ headers = {
 }
 
 data = []
-file_path = 'data/ml-latest-small/movie_extra_details.csv'
+file_path = '../data/ml-latest-small/movie_extra_details.csv'
 
 max_retries = 5
 backoff_factor = 1.5
@@ -41,7 +41,7 @@ def get_tmdb_api_response(api_url):
     return "error"
 
 
-with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, open('data/ml-latest-small/links.csv', newline='', encoding='utf-8') as links_csvfile:
+with open('../data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, open('../data/ml-latest-small/links.csv', newline='', encoding='utf-8') as links_csvfile:
     movie_csvreader = csv.reader(csvfile)
     links_csvreader = csv.reader(links_csvfile)
     next(movie_csvreader)

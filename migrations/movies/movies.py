@@ -49,12 +49,12 @@ def handle_missing_data(row3):
     return (budget, revenue, language_id, overview, runtime, tagline)
 
 def insert_movie_data(cursor, conn):
-    with open('data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, \
-        open('data/ml-latest-small/movie_average_ratings.csv', newline='', encoding='utf-8') as ratings_csvfile, \
-        open('data/ml-latest-small/movie_extra_details.csv', newline='', encoding='utf-8') as extra_details_csvfile, \
-        open('data/ml-latest-small/movies_with_posters.csv', newline='', encoding='utf-8') as posters_csvfile, \
-        open('data/ml-latest-small/movie_directors.csv', newline='', encoding='utf-8') as directors_csvfile, \
-        open('data/ml-latest-small/movie_ratings_count.csv', newline='', encoding='utf-8') as ratings_count_csvfile:
+    with open('../data/ml-latest-small/movies.csv', newline='', encoding='utf-8') as csvfile, \
+        open('../data/ml-latest-small/movie_average_ratings.csv', newline='', encoding='utf-8') as ratings_csvfile, \
+        open('../data/ml-latest-small/movie_extra_details.csv', newline='', encoding='utf-8') as extra_details_csvfile, \
+        open('../data/ml-latest-small/movies_with_posters.csv', newline='', encoding='utf-8') as posters_csvfile, \
+        open('../data/ml-latest-small/movie_directors.csv', newline='', encoding='utf-8') as directors_csvfile, \
+        open('../data/ml-latest-small/movie_ratings_count.csv', newline='', encoding='utf-8') as ratings_count_csvfile:
 
         movie_csvreader = csv.reader(csvfile)
         ratings_csvreader = csv.reader(ratings_csvfile)
@@ -90,7 +90,7 @@ def insert_movie_data(cursor, conn):
 
 def main():
     load_dotenv()
-    host = "localhost"
+    host = "postgres_db"
     dbname = os.getenv("DB_NAME")
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")

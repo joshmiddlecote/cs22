@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 # Database connection details
-host = "localhost"
+host = "postgres_db"
 dbname = os.getenv("DB_NAME")
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
@@ -35,7 +35,7 @@ cursor.execute("""
 
 
 # Step 3: Open the CSV file and load data into the table
-with open('data/ml-latest-small/movie_actors_with_id.csv', newline='', encoding='utf-8') as csvfile:
+with open('../data/ml-latest-small/movie_actors_with_id.csv', newline='', encoding='utf-8') as csvfile:
     csvreader = csv.reader(csvfile)
     next(csvreader)  # Skip the header row
     

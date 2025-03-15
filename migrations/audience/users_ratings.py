@@ -52,7 +52,7 @@ def create_user_ratings_by_genre_table(cursor, conn):
 
 
 def insert_ratings_table(cursor, conn):
-    with open('data/ml-latest-small/ratings.csv', 'r') as file:
+    with open('../data/ml-latest-small/ratings.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             userId = int(row['userId'])
@@ -74,7 +74,7 @@ def insert_ratings_table(cursor, conn):
 
 
 def insert_user_ratings_all_movies_table(cursor, conn):
-    with open('data/ml-latest-small/user_ratings_all_movies.csv', 'r') as file:
+    with open('../data/ml-latest-small/user_ratings_all_movies.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             id = int(row['id'])
@@ -91,7 +91,7 @@ def insert_user_ratings_all_movies_table(cursor, conn):
 
 
 def insert_user_ratings_by_genre_table(cursor, conn):
-    with open('data/ml-latest-small/user_ratings_by_genre.csv', 'r') as file:
+    with open('../data/ml-latest-small/user_ratings_by_genre.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             user_id = int(row['id'])
@@ -110,7 +110,7 @@ def insert_user_ratings_by_genre_table(cursor, conn):
 
 def main():
     load_dotenv()
-    host = "localhost"
+    host = "postgres_db"
     dbname = os.getenv("DB_NAME")
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
