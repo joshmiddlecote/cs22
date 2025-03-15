@@ -4,7 +4,7 @@ import statistics
 
 def get_movie_genre_links():
    movie_genre_links = {}
-   with open('data/ml-latest-small/genre_links.csv', 'r') as file:
+   with open('../data/ml-latest-small/genre_links.csv', 'r') as file:
       reader = csv.DictReader(file)
       for row in reader:
         movie_id = row['movie_id']
@@ -15,7 +15,7 @@ def get_movie_genre_links():
 
 
 def get_user_data(movie_genre_links):
-   with open('data/ml-latest-small/ratings.csv', 'r') as file:
+   with open('../data/ml-latest-small/ratings.csv', 'r') as file:
       reader = csv.DictReader(file)
       user_data = defaultdict(dict)
 
@@ -36,7 +36,7 @@ def get_user_data(movie_genre_links):
 
 def write_user_data_by_genre(user_data):
   user_data_all_movies = defaultdict(list)
-  with open('data/ml-latest-small/user_ratings_by_genre.csv', 'w', newline='') as file:
+  with open('../data/ml-latest-small/user_ratings_by_genre.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['id', 'genre_id', 'avg_rating', 'variance', 'total_ratings'])
     for user_id, all_ratings in user_data.items():
@@ -56,7 +56,7 @@ def write_user_data_by_genre(user_data):
 
 
 def write_user_data_all_movies(user_data):
-   with open('data/ml-latest-small/user_ratings_all_movies.csv', 'w', newline='') as file:
+   with open('../data/ml-latest-small/user_ratings_all_movies.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['id', 'avg_rating', 'variance', 'total_ratings'])
     for user_id, ratings in user_data.items():

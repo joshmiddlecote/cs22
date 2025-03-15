@@ -5,7 +5,7 @@ import statistics
 
 def get_unique_genres():
   unique_genres = set()
-  with open('data/ml-latest-small/movies.csv', 'r') as file:
+  with open('../data/ml-latest-small/movies.csv', 'r') as file:
       reader = csv.DictReader(file)
         
       for row in reader:
@@ -17,7 +17,7 @@ def get_unique_genres():
 
 def get_genre_links(genre_ids):
   genre_links = []
-  with open('data/ml-latest-small/movies.csv', 'r') as file:
+  with open('../data/ml-latest-small/movies.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             movie_id = int(row['movieId'])
@@ -31,7 +31,7 @@ def get_genre_links(genre_ids):
 
 
 def write_genre_links(genre_links):
-   with open('data/ml-latest-small/genre_links.csv', 'w', newline='') as file:
+   with open('../data/ml-latest-small/genre_links.csv', 'w', newline='') as file:
       writer = csv.DictWriter(file, fieldnames=['movie_id', 'genre_id'])
       writer.writeheader()
       writer.writerows(genre_links)
@@ -39,7 +39,7 @@ def write_genre_links(genre_links):
 
 def get_genre_ratings(genre_ids, genre_links):
    rating_data = defaultdict(list)
-   with open('data/ml-latest-small/ratings.csv', 'r') as file:
+   with open('../data/ml-latest-small/ratings.csv', 'r') as file:
       reader = csv.DictReader(file)
       for row in reader:
             movie_id = int(row['movieId'])
@@ -62,7 +62,7 @@ def get_genre_ratings(genre_ids, genre_links):
 
 
 def write_genres(unique_genres, rating_stats):
-   with open('data/ml-latest-small/genres.csv', 'w', newline='') as file:
+   with open('../data/ml-latest-small/genres.csv', 'w', newline='') as file:
       writer = csv.writer(file)
       writer.writerow(['id', 'genre_name', 'avg_rating', 'variance', 'total_ratings'])
       for i, genre in enumerate(unique_genres):

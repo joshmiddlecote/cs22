@@ -3,8 +3,8 @@ import math
 
 ratings_count = {}
 
-with open("data/ml-latest-small/ratings.csv", mode="r", newline="", encoding="utf-8") as csvfilereader, \
-    open("data/ml-latest-small/movies.csv", mode="r", newline="", encoding="utf-8") as moviesfilereader:
+with open("../data/ml-latest-small/ratings.csv", mode="r", newline="", encoding="utf-8") as csvfilereader, \
+    open("../data/ml-latest-small/movies.csv", mode="r", newline="", encoding="utf-8") as moviesfilereader:
     ratingreader = csv.reader(csvfilereader)
     moviereader = csv.reader(moviesfilereader)
     next(ratingreader)
@@ -28,7 +28,7 @@ with open("data/ml-latest-small/ratings.csv", mode="r", newline="", encoding="ut
             print(f"'{movie_id}' not in ratings count")
 
 
-with open("data/ml-latest-small/movie_ratings_count.csv", mode="w", newline="", encoding="utf-8") as csvfilewriter:
+with open("../data/ml-latest-small/movie_ratings_count.csv", mode="w", newline="", encoding="utf-8") as csvfilewriter:
     writer = csv.writer(csvfilewriter)
     writer.writerow(["movieId", "count1", "count2", "count3", "count4", "count5"])
 

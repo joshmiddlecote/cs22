@@ -36,7 +36,7 @@ def create_movie_list_items(cursor, conn):
 
 def main():
     load_dotenv()
-    host = "localhost"
+    host = "postgres_db"
     dbname = os.getenv("DB_NAME")
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")

@@ -15,7 +15,7 @@ def create_languages_table(cursor, conn):
     conn.commit()
 
 def insert_languages_data(cursor, conn):
-    with open('data/ml-latest-small/languages.csv', newline='', encoding='utf-8') as csvfile:
+    with open('../data/ml-latest-small/languages.csv', newline='', encoding='utf-8') as csvfile:
         languages_csvreader = csv.reader(csvfile)
         next(languages_csvreader)
 
@@ -30,7 +30,7 @@ def insert_languages_data(cursor, conn):
 
 def main():
     load_dotenv()
-    host = "localhost"
+    host = "postgres_db"
     dbname = os.getenv("DB_NAME")
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")

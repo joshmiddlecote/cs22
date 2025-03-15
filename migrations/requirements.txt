@@ -1,0 +1,5 @@
+psycopg2
+python-dotenv
+jinja2
+python-multipart
+requests

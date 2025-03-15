@@ -1,8 +1,8 @@
 import csv
 
-languages_file = 'data/ml-latest-small/languages.csv'
-input_file = 'data/ml-latest-small/movie_extra_details.csv'
-output_file = 'data/ml-latest-small/updated_movie_extra_details.csv'
+languages_file = '../data/ml-latest-small/languages.csv'
+input_file = '../data/ml-latest-small/movie_extra_details.csv'
+output_file = '../data/ml-latest-small/updated_movie_extra_details.csv'
 
 language_to_id = {}
 with open(languages_file, mode='r', newline='', encoding='utf-8') as lang_file:
