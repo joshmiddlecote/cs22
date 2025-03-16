@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Reports</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            padding-left: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .category-buttons {
+            margin: 10px;
+        }
+        .category-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px; /* Makes the buttons rounded */
+            background-color: lightblue; /* light blue color */
+            color: black; 
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .category-buttons button:hover {
+              background-color: cornflowerblue; /* Darker blue on hover */
+          }
+        ol li {
+              margin-bottom: 10px; /* Adds space between list items */
+              font-weight: bold;
+          }
+          .genre-name {
+            display: block; /* Forces line break below genre name */
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px; /* Adds space below genre name */
+        }
+
+        .avg-rating {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .star {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .total-ratings {
+            font-size: 14px; /* Smaller font size */
+            color: gray; /* Lighter color */
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Genre Report</h1>
+
+    <div class="category-buttons">
+      <a href="/genre-report/most-watched"> <button> Most Watched </button></a>
+      <a href="/genre-report/most-liked"> <button> Most Liked </button></a>
+      <a href="/genre-report/polarizing"><button>Most Polarizing</button></a>
+      <a href="/genre-report/cult-classics"><button>Cult Classics</button></a>
+      <a href="/genre-report/niche-interests"><button>Niche Interests</button></a>
+
+    </div>
+    
+      <h2  id="genre-heading"> Most Watched </h2>
+        
+        <p id="genre-description"></p>
+
+        <ol>
+          {% for genre in genres %}
+          <li> 
+            <a href="/genre-report/{{ genre.genre_name }}">
+              <span class="genre-name">{{ genre.genre_name }}</span>
+            </a> 
+
+            <span class="avg-rating">{{ genre.avg_rating }}</span> 
+            <span class="star">★</span> 
+
+            <span class="total-ratings">{{ genre.total_ratings }} ratings</span>
+          </li>
+          {% endfor %}
+
+        </ol>
+
+        <script>
+          // Function to get the category from the URL path
+          function getCategoryFromURL() {
+              const path = window.location.pathname; // Example: "/genre-report/polarizing"
+              const parts = path.split("/"); // Split by "/"
+              return parts[parts.length - 1]; // Get last part ("popular", "polarizing", etc.)
+          }
+  
+          // Function to update heading and highlight correct button
+          function updateUI() {
+              const category = getCategoryFromURL(); // Get category from URL
+              const heading = document.getElementById("genre-heading");
+              const description = document.getElementById("genre-description");
+  
+              // Define category names
+              const categoryNames = {
+                  "most-watched": "Most Watched",
+                  "most-liked": "Most Liked",
+                  "polarizing": "Most Polarizing",
+                  "cult-classics": "Cult Classics", 
+                  "niche-interests": "Niche Interests"
+              };
+
+              const descriptions = {
+                  "most-watched": "Movies from these genres have the highest number of viewers",
+                  "most-liked": "Movies from these genres averaged the highest ratings",
+                  "polarizing": "Movies from these genres had the highest variation in their ratings--audiences tended to either really like or really dislike movies from these genres",
+                  "cult-classics": "Movies from these genres tend have both high average ratings and large numbers of viewers, suggesting that they are beloved by a wide audience", 
+                  "niche-interests": "Although movies from these genres have a smaller audience, they tend to receive high ratings"
+              }
+  
+              // Update heading if the category is recognized
+              if (categoryNames[category]) {
+                  heading.textContent = categoryNames[category];
+                  description.textContent = descriptions[category];
+              }
+          }
+  
+          // Run the function on page load
+          updateUI();
+      </script>
+</body>
+</html>

@@ -264,10 +264,3 @@ def movie_exists(movie_name):
                 return int(movie_id[0])
             else:
                 return None
-
-new_movie = {
-    "genre": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"],
-    "director": ["John Lasseter"],
-    "actor": ["Tom Hanks", "Tim Allen", "Don Rickles"],
-    "budget": 30000000
-}

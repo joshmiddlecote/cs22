@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Import Chart.js -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 16px;
+        }
+        h1 {
+          color: grey;
+        }
+        .chart-container {
+            width: 40%;
+            margin: auto;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        .ratings-labels {
+            display: flex;
+            justify-content: space-around;
+            font-size: 40px; /* ✅ Make labels larger */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .avg-rating {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .star {
+            font-size: 20px; /* Slightly larger */
+            font-weight: bold;
+            color: #b8860b; /* Gold color */
+        }
+
+        .total-ratings {
+            font-size: 14px; /* Smaller font size */
+            color: gray; /* Lighter color */
+            font-style: italic;
+        }
+
+        .movies-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Ensures smooth snap scrolling */
+            gap: 20px;
+            padding: 10px;
+            white-space: nowrap; /* Prevents wrapping */
+        }
+
+        .card {
+            flex: 0 0 auto; /* Ensures cards don't shrink */
+            width: 200px; /* Adjust size */
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            scroll-snap-align: start; /* Snap effect for smooth scrolling */
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Movie title */
+        .card h2 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Rating styling */
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Genre: {{ genre_data[0]["genre_name"] }}</h1>
+    <h2> Ratings Distribution </h2>
+
+    <div class="chart-container">
+        <canvas id="ratingsChart"></canvas>
+    </div>
+
+    <script>
+        // Get data from Jinja2 template
+        const ratingsData = {
+            labels: ["★", "★★", "★★★", "★★★★", "★★★★★"],
+            datasets: [{
+                data: [
+                    {{ genre_data[0]["rating_1"] }},
+                    {{ genre_data[0]["rating_2"] }},
+                    {{ genre_data[0]["rating_3"] }},
+                    {{ genre_data[0]["rating_4"] }},
+                    {{ genre_data[0]["rating_5"] }}
+                ],
+                backgroundColor: [
+                    "red", "orange", "yellow", "lightgreen", "green"
+                ],
+                borderColor: "black",
+                borderWidth: 1
+            }]
+        };
+
+        // Create bar chart
+        const ctx = document.getElementById("ratingsChart").getContext("2d");
+        new Chart(ctx, {
+            type: "bar",
+            data: ratingsData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false } // Hide "Number of Ratings" label
+                },
+                scales: {
+                    x: {
+                      ticks: {
+                                font: { size: 16 },
+                                color: "#b8860b" // ✅ Change label color
+                            }
+                    },
+                    y: {
+                        display: false // ✅ Hide y-axis numbers
+                    }
+                }
+            }
+        });
+    </script>
+
+    <p>{{ genre_data[0]["total_ratings"] }} total ratings</p>
+
+    <h2> Most Watched Movies </h2>
+    <div class="movies-container">
+    {% for movie in top_movies %}
+      <div class="card">
+        <img src="{{ movie.poster }}" alt="{{ movie.title }} Poster">
+        <h2>{{ movie.title }}</h2>
+          <span class="avg-rating">{{ movie.avg_rating }}</span> 
+          <span class="star">★</span> 
+          <span class="total-ratings">{{ movie.total_ratings }} ratings</span>
+      </div>
+  {% endfor %}
+</div>
+  
+
+</body>
+</html>

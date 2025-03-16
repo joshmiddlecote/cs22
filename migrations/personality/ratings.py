@@ -4,14 +4,12 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-# Database connection details
 host = "postgres_db"
 dbname = os.getenv("DB_NAME")
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
 
 
-# Step 1: Connect to PostgreSQL database
 conn = psycopg2.connect(
     host=host, 
     database=dbname, 
@@ -20,8 +18,6 @@ conn = psycopg2.connect(
 )
 cursor = conn.cursor()
 
-
-# Step 2: Create the ratings table (if it doesn't exist already)
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS personality_user_ratings (
         userid VARCHAR(255) NOT NULL, 
@@ -32,11 +28,9 @@ cursor.execute("""
     );
 """)
 
-
-# Step 3: Open the CSV file and load data into the table
 with open('../data/personality-isf2018/ratings.csv', newline='', encoding='utf-8') as csvfile:
     csvreader = csv.reader(csvfile)
-    next(csvreader)  # Skip the header row
+    next(csvreader)
     
     for row in csvreader:
         userid, movie_id, rating, time_stamp = row
@@ -50,11 +44,8 @@ with open('../data/personality-isf2018/ratings.csv', newline='', encoding='utf-8
             WHERE personality_user_ratings.time_stamp < EXCLUDED.time_stamp;
         """, (userid, movie_id, rating, time_stamp)) # update only if there is a newer rating
 
-
-# Step 4: Commit the changes
 conn.commit()
 
-# Step 5: Close the connection and cursor
 cursor.close()
 conn.close()
 

@@ -221,7 +221,6 @@ def get_similar_lowly_rated_movies_different_genre(id, avg_rating):
 
             return similar_movies_diff_genre_low
         
-
 def get_other_highly_rated_genres(id, avg_rating):
     with get_db() as conn:
         with conn.cursor() as cursor:
@@ -268,7 +267,7 @@ def get_other_highly_rated_genres(id, avg_rating):
     
             return {'genre_name': genre_high_string}
 
-def get_other_lowly_rated_genres(id, avg_rating):
+def get_other_lowly_rated_genres(id, avg_rating, highly_rated_genres):
     with get_db() as conn:
         with conn.cursor() as cursor:
             cursor.execute("""
@@ -296,6 +295,7 @@ def get_other_lowly_rated_genres(id, avg_rating):
                 JOIN movie_genres mg ON lrm.movieId = mg.movie_id
                 JOIN genres g ON mg.genre_id = g.id
                 WHERE mg.genre_id NOT IN (SELECT genre_id FROM input_movie_genre)
+                    AND g.name NOT IN (SELECT UNNEST(STRING_TO_ARRAY(%s, ', ')))
                 GROUP BY g.name
             )
 
@@ -303,7 +303,7 @@ def get_other_lowly_rated_genres(id, avg_rating):
             FROM genre_low_ratings
             ORDER BY low_rating_count DESC
             LIMIT 1;
-            """ , (str(id), str(avg_rating), str(id), str(avg_rating), str(id),))
+            """ , (str(id), str(avg_rating), str(id), str(avg_rating), str(id), highly_rated_genres["genre_name"],))
 
             genre_low = cursor.fetchall()
 
