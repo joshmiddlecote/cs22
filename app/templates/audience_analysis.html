@@ -210,6 +210,9 @@
                 {% endif %}
                 <p>We found that viewers that liked {{ movie.title }}, which belongs to the {{ movie_genre.genre_name }} genre/s{% if highly_rated_genres.genre_name %}, also enjoyed watching movies in the <b>{{ highly_rated_genres.genre_name }}</b> genre/s{% if lowly_rated_genres.genre_name %}, but tended to avoid movies in the <b>{{ lowly_rated_genres.genre_name }}</b> genre/s{% endif %}{% endif %}.</p>
             {% endif %}
+            {% if personality %}
+                <p>After analysing viewers personality traits we found that people who liked {{ movie.title }} <b>{{ personality.max }}</b> We also found that people rated {{ movie.title }} lower <b>{{ personality.min }}</b></p>
+            {% endif %}
                 Want to show this movie at your upcoming film festival? Here's some other movies you should look into and some others you should probably avoid!
                 <hr>
             <select id="galleryDropdown" onchange="updateGallery()">

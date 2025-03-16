@@ -2,6 +2,7 @@ from contextlib import contextmanager
 import os
 import psycopg2
 from dotenv import load_dotenv
+import numpy as np
 
 load_dotenv()
 db_username = os.getenv("DB_USER")
@@ -61,36 +62,23 @@ def get_personality_correlation_movies(movie_id):
             FROM
                 personality_genre pg
             INNER JOIN movie_genres mg ON mg.genre_id = pg.genre_id
-            WHERE mg.movie_id = 1
+            WHERE mg.movie_id = %s
             GROUP BY
                 pg.genre_id, pg.name;"""
             
             cursor.execute(sql, (movie_id,))
             corr = cursor.fetchall()
 
-            openness = 0
-            agree = 0
-            extraversion = 0
-            emotstab = 0
-            cons = 0
+            numeric_data = np.array([row[2:] for row in corr])
 
-            for row in corr:
-                openness += row[2]
-                agree += row[3]
-                extraversion += row[4]
-                emotstab += row[5]
-                cons += row[6]
+            column_averages = np.mean(numeric_data, axis=0)
+            min_avg_index = np.argmin(column_averages)
+            max_avg_index = np.argmax(column_averages)
 
-            num_rows = len(corr)
-            average_openness = openness / num_rows
-            average_agree = agree / num_rows
-            average_extraversion = extraversion / num_rows
-            average_emotstab = emotstab / num_rows
-            average_cons = cons / num_rows
+            min_text = get_personality_index_min(min_avg_index)
+            max_text = get_personality_index_max(max_avg_index)
 
-            max, min = max(average_openness, average_openness, average_agree, average_extraversion, average_emotstab, average_cons), min(average_openness, average_openness, average_agree, average_extraversion, average_emotstab, average_cons)
-
-            return [{"id": row[0], "name": row[1], "max": max} for row in corr]
+            return {"max": max_text, "min": min_text}
         
 def get_genre_personality_correlation(genre_id):
     with get_db() as conn:
@@ -141,6 +129,39 @@ def get_genre_personality_correlation(genre_id):
             
             cursor.execute(sql, (genre_id,))
             corr = cursor.fetchall()
-            return [{"id": row[0], "name": row[1], "openness": row[2], "agreeableness": row[3], "extraversion": row[4], "emotional_stability": row[5], "conscientiousness": row[6]} for row in corr]
+            numeric_data = np.array([row[2:] for row in corr])
 
-                    
+            column_averages = np.mean(numeric_data, axis=0)
+            min_avg_index = np.argmin(column_averages)
+            max_avg_index = np.argmax(column_averages)
+
+            min_text = get_personality_index_min(min_avg_index)
+            max_text = get_personality_index_max(max_avg_index)
+
+            return {"max": max_text, "min": min_text}
+
+def get_personality_index_max(index):
+    match index:
+        case 0:
+            return "are more likely to be open people."
+        case 1:
+            return "are more likely to be agreeable."
+        case 2:
+            return "are more likely to be extraverted."
+        case 3:
+            return "are more likely to be emotionally stable."
+        case 4:
+            return "are more likely to be conscientious."
+        
+def get_personality_index_min(index):
+    match index:
+        case 0:
+            return "are less likely to be open people."
+        case 1:
+            return "are less likely to be agreeable."
+        case 2:
+            return "are less likely to be extraverted."
+        case 3:
+            return "are less likely to be emotionally stable."
+        case 4:
+            return "are less likely to be conscientious."
