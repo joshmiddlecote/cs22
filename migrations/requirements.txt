@@ -3,3 +3,4 @@ python-dotenv
 jinja2
 python-multipart
 requests
+argon2-cffi

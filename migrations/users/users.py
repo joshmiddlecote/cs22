@@ -1,7 +1,5 @@
 import psycopg2
-import csv
 import os 
-import re
 from dotenv import load_dotenv
 
 def create_users_table(cursor, conn):

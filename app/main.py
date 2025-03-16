@@ -10,6 +10,16 @@ import users.queries as user_queries
 import movie_planners.queries as planner_queries
 import audience.queries as audience_queries
 import predictions.queries as predictions_queries
+import genre_report.queries as genre_report_queries
+
+from argon2 import PasswordHasher # used for hashing passwords
+ph = PasswordHasher()
+
+def check_password(stored_hash, password):
+    try:
+        return ph.verify(stored_hash, password)  # returns True if password matches the stored hash
+    except Exception:
+        return False 
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates/")
@@ -83,7 +93,7 @@ def analyse_ratings(request: Request, movie_id: int):
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
     user = user_queries.get_user_password(username)
-    if user is None or user["password"] != password:
+    if user is None or not check_password(user["password"], password):
         return templates.TemplateResponse("invalid_login.html", {"request": request})
     
     movies = movie_queries.get_all_movies()
@@ -158,3 +168,44 @@ def predict_ratings(request: Request, formData: dict = Body(...)):
         actual_rating = None
         movie_poster = "https://www.shutterstock.com/image-illustration/movie-poster-mockup-light-bulb-600nw-2383346723.jpg"
     return templates.TemplateResponse("rating_prediction.html", {"request": request, "movie_name": formData["movie_name"], "movie_poster": movie_poster, "predicted_rating": predicted_rating, "actual_rating": actual_rating})
+
+@app.get("/genre-report")
+def read_genres(request: Request):
+    # Fetch all genres, default to displaying genres in order of descending average rating
+    genres = genre_report_queries.get_genres()
+    genres = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+
+@app.get("/genre-report/polarizing")
+def get_most_polarizing_genres(request: Request):
+    genres = genre_report_queries.get_genres()  
+    genres_sorted = sorted(genres, key=lambda x: x['variance'], reverse=True) # sorted by variance
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+@app.get("/genre-report/most-watched")
+def get_most_polarizing_genres(request: Request):
+    genres = genre_report_queries.get_genres()  # Query sorted by variance
+    genres_sorted = sorted(genres, key=lambda x: x['total_ratings'], reverse=True) # sorted by total no. of ratings
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+@app.get("/genre-report/most-liked")
+def get_most_polarizing_genres(request: Request):
+    genres = genre_report_queries.get_genres()  # Query sorted by variance
+    genres_sorted = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+
+@app.get("/genre-report/cult-classics")
+def get_cult_classic_genres(request: Request):
+    genres = genre_report_queries.get_cult_classic_genres()  # Query sorted by popularity score
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+
+@app.get("/genre-report/niche-interests")
+def get_niche_interest_genres(request: Request):
+    genres = genre_report_queries.get_niche_interest_genres() 
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+
+@app.get("/genre-report/{genre_name}")
+def read_movie(request: Request, genre_name: str):
+    genre_data = genre_report_queries.get_genre_data_by_name(genre_name)
+    top_movies = genre_report_queries.get_top_movies_by_genre_name(genre_name)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies})
