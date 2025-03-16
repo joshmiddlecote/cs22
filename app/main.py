@@ -124,8 +124,8 @@ def add_movie_to_planner(request: Request, planner_id: str | None = Query(defaul
     return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
 
 @app.get("/add-planner")
-def add_planner(request: Request, user_id: str | None = Query(default=None), name: str | None = Query(default=None)):
-    planner_queries.insert_new_movie_planner(int(user_id), name)
+def add_planner(request: Request, user_id: str | None = Query(default=None), name: str | None = Query(default=None), description: str | None = Query(default=None)):
+    planner_queries.insert_new_movie_planner(int(user_id), name, description)
     return RedirectResponse(url=f"/show-movie-planners/{user_id}", status_code=303)
 
 @app.get("/show-movie-planners/{user_id}")

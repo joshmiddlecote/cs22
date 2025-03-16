@@ -141,6 +141,8 @@
         <div class="planner">
             <h2>{{ planner.name }}</h2>
 
+            <p class="planner-description">{{ planner.description }}</p>
+
             <div class="movie-list">
                 {% for movie in planner.movies %}
                 <div class="movie-card">
@@ -163,6 +165,10 @@
             <form action="/delete-planner" method="GET">
                 <input type="hidden" name="user_id" value="{{ user_id }}">
                 <input type="hidden" name="planner_id" value="{{ planner.planner_id }}">
+
+                <label for="planner_description">Description (optional):</label>
+                <input type="text" id="description" name="description" placeholder="Enter description (optional)">
+
                 <button type="submit" class="button delete-button">Delete Planner</button>
             </form>
         </div>
