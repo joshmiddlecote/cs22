@@ -4,14 +4,12 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-# Database connection details
 host = "postgres_db"
 dbname = os.getenv("DB_NAME")
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
 
 
-# Step 1: Connect to PostgreSQL database
 conn = psycopg2.connect(
     host=host, 
     database=dbname, 
@@ -20,8 +18,6 @@ conn = psycopg2.connect(
 )
 cursor = conn.cursor()
 
-
-# Step 2: Create the personality data table (if it doesn't exist already)
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS personality_data (
         userid VARCHAR(255) PRIMARY KEY, 
@@ -61,11 +57,9 @@ cursor.execute("""
     );
 """)
 
-
-# Step 3: Open the CSV file and load data into the table
 with open('../data/personality-isf2018/personality-data.csv', newline='', encoding='utf-8') as csvfile:
     csvreader = csv.reader(csvfile)
-    next(csvreader)  # Skip the header row
+    next(csvreader)
     
     for row in csvreader:
         userid, openness, agreeableness, emotional_stability, conscentiousness, extraversion, assigned_metric, assigned_condition, movie_1, rating_1, movie_2, rating_2, movie_3, rating_3, movie_4, rating_4, movie_5, rating_5, movie_6, rating_6, movie_7, rating_7, movie_8, rating_8, movie_9, rating_9, movie_10, rating_10, movie_11, rating_11, movie_12, rating_12, is_personalised, enjoy_watching = row
@@ -75,11 +69,8 @@ with open('../data/personality-isf2018/personality-data.csv', newline='', encodi
             ON CONFLICT (userid) DO NOTHING;
         """, (userid, openness, agreeableness, emotional_stability, conscentiousness, extraversion, assigned_metric, assigned_condition, movie_1, rating_1, movie_2, rating_2, movie_3, rating_3, movie_4, rating_4, movie_5, rating_5, movie_6, rating_6, movie_7, rating_7, movie_8, rating_8, movie_9, rating_9, movie_10, rating_10, movie_11, rating_11, movie_12, rating_12, is_personalised, enjoy_watching))
 
-
-# Step 4: Commit the changes
 conn.commit()
 
-# Step 5: Close the connection and cursor
 cursor.close()
 conn.close()
 

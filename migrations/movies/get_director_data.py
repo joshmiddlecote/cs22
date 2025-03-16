@@ -17,7 +17,10 @@ def get_director(tmdb_id):
         response = requests.get(TMDB_API_URL.format(tmdb_id=tmdb_id), params={"api_key": TMDB_API_KEY})
         response.raise_for_status()
         data = response.json()
-        directors = [crew['name'] for crew in data.get('crew', []) if crew['job'] == "Director"]
+        directors = []
+        for crew in data.get('crew', []):
+            if crew['job'] == "director":
+                directors.append(crew['name'])
         return directors
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data for tmdbID {tmdb_id}: {e}")
