@@ -10,6 +10,7 @@ import users.queries as user_queries
 import movie_planners.queries as planner_queries
 import audience.queries as audience_queries
 import predictions.queries as predictions_queries
+import personality.queries as personality_queries
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates/")
@@ -74,6 +75,7 @@ def analyse_ratings(request: Request, movie_id: int):
     highly_rated_movies_diff_genre = audience_queries.get_similar_highly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
     lowly_rated_movies_same_genre = audience_queries.get_similar_lowly_rated_movies_same_genre(movie_id, movie_rating_data['average_rating'])
     lowly_rated_movies_diff_genre = audience_queries.get_similar_lowly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
+    
 
     return templates.TemplateResponse("audience_analysis.html", {"request": request, "movie": movie_rating_data, "ratings_count": ratings_count,
         "movie_genre": movie_genre, "highly_rated_genres": highly_rated_genres, "lowly_rated_genres": lowly_rated_genres,
