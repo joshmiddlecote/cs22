@@ -18,31 +18,35 @@ def get_db():
     finally:
         conn.close()
 
+# CHANGED
 def get_user_movie_planners(user_id):
     with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "SELECT * FROM movie_planners WHERE user_id = %s ;"
+            sql = "SELECT id, name, description FROM movie_planners WHERE user_id = %s ;"
             cursor.execute(sql, (int(user_id),))
             movie_planners = cursor.fetchall()
-            return [{"id": planner[0], "name": planner[2]} for planner in movie_planners]
+            return [{"id": planner[0], "name": planner[1], "description": planner[2]} for planner in movie_planners]
         
-def get_movies_from_planners(planner_id, name):
+# CHANGED
+def get_movies_from_planners(planner_id, name, description):
     with get_db() as conn:
         with conn.cursor() as cursor:
             sql = "SELECT * from movie_planner_items WHERE movie_list_id = %s ;"
             cursor.execute(sql, (int(planner_id),))
             movies = cursor.fetchall()
-            return {"planner_id": planner_id, "name": name, "movies": [movie_queries.get_movie_for_movie_planner(movie_id=movie[2]) for movie in movies]}
+            return {"planner_id": planner_id, "name": name, "description": description, "movies": [movie_queries.get_movie_for_movie_planner(movie_id=movie[2]) for movie in movies]}
 
+# CHANGED
 def get_movies_from_user_id(user_id):
     movie_planners = get_user_movie_planners(user_id)
-    return [get_movies_from_planners(planner["id"], planner["name"]) for planner in movie_planners]
+    return [get_movies_from_planners(planner["id"], planner["name"], planner["description"]) for planner in movie_planners]
 
-def insert_new_movie_planner(user_id, name):
+# CHANGED
+def insert_new_movie_planner(user_id, name, description):
     with get_db() as conn:
         with conn.cursor() as cursor:
-            sql = "INSERT INTO movie_planners(user_id, name) VALUES(%s, %s) RETURNING id;"
-            cursor.execute(sql, tuple([user_id, name]))
+            sql = "INSERT INTO movie_planners(user_id, name, description) VALUES(%s, %s, %s) RETURNING id;"
+            cursor.execute(sql, tuple([user_id, name, description]))
             conn.commit()
             return cursor.fetchone()[0]
         

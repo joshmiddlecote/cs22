@@ -222,10 +222,11 @@ def add_movie_to_planner(
 def add_planner(
     request: Request, 
     user_id: Optional[str] = Query(default=None), 
-    name: Optional[str] = Query(default=None)
+    name: Optional[str] = Query(default=None),
+    description: Optional[str] = Query(default=None)
 ):
     if user_id is not None and name is not None:
-        planner_queries.insert_new_movie_planner(int(user_id), name)
+        planner_queries.insert_new_movie_planner(int(user_id), name, description)
     
     return RedirectResponse(url=f"/show-movie-planners/{user_id}", status_code=303)
 
