@@ -167,10 +167,9 @@
     <nav class="navbar">
         <a href=# class="logo"> Movies </a>
         <ul class="nav-links">
-            <li><a href="/movies"> Home </a></li>
-            <li> <a href="/genre-report"> Genre Reports </a></li>
-            
             {% if user %}
+            <li><a href="/movies?user_id={{ user.id }}"> Home </a></li>
+            <li> <a href="/genre-report?user_id={{ user.id }}"> Genre Reports </a></li>
             <!-- Dropdown Menu -->
             <li class="dropdown">
                 <a href="#" class="dropbtn"> My Profile ▼</a>
@@ -178,6 +177,9 @@
                     <a href="/show-movie-planners/{{ user.id }}"> My Movie Planners </a>
                 </div>
             </li>
+            {% else %}
+            <li><a href="/movies"> Home </a></li>
+            <li> <a href="/genre-report"> Genre Reports </a></li>
             {% endif %}
         </ul>
     </nav>
@@ -202,8 +204,8 @@
         <ol>
           {% for genre in genres %}
           <li> 
-            <a href="/genre-report/{{ genre.genre_name }}">
-              <span class="genre-name">{{ genre.genre_name }}</span>
+            <a href="{% if user %}/genre-report/{{ genre.id }}?user_id={{ user.id }}{% else %}/genre-report/{{ genre.id }}{% endif %}">
+                <span class="genre-name">{{ genre.genre_name }}</span>
             </a> 
 
             <span class="avg-rating">{{ genre.avg_rating }}</span> 

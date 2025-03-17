@@ -87,10 +87,123 @@
             color: #555;
         }
 
+                 /* Persistent Navbar */
+    .navbar {
+        position: fixed; /* Sticks to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        padding-bottom: 15px;
+    }
+
+    /* Logo */
+    .logo {
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        padding: 10px;
+        transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropbtn {
+        cursor: pointer;
+    }
+
+    /* Hidden dropdown content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 150px;
+        top: 100%;
+        left: 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    /* Dropdown Links */
+    .dropdown-content a {
+        color: black;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        margin-top: 65px;
+    }
 
     </style>
 </head>
+<nav class="navbar">
+    <a href=# class="logo"> Movies </a>
+    <ul class="nav-links">
+        {% if user %}
+        <li><a href="/movies?user_id={{ user.id }}"> Home </a></li>
+        <li> <a href="/genre-report?user_id={{ user.id }}"> Genre Reports </a></li>
+        <!-- Dropdown Menu -->
+        <li class="dropdown">
+            <a href="#" class="dropbtn"> My Profile ▼</a>
+            <div class="dropdown-content">
+                <a href="/show-movie-planners/{{ user.id }}"> My Movie Planners </a>
+            </div>
+        </li>
+        {% else %}
+        <li><a href="/movies"> Home </a></li>
+        <li> <a href="/genre-report"> Genre Reports </a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+
 <body>
+    <div class="content">
+
     <h1>Genre: {{ genre_data[0]["genre_name"] }}</h1>
     <h2> Ratings Distribution </h2>
 
@@ -160,6 +273,6 @@
   {% endfor %}
 </div>
   
-
+</div>
 </body>
 </html>

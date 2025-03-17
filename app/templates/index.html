@@ -537,10 +537,9 @@
     <nav class="navbar">
         <a href=# class="logo"> Movies </a>
         <ul class="nav-links">
-            <li><a href="/movies"> Home </a></li>
-            <li> <a href="/genre-report"> Genre Reports </a></li>
-            
             {% if user %}
+            <li><a href="/movies?user_id={{ user.id }}"> Home </a></li>
+            <li> <a href="/genre-report?user_id={{ user.id }}"> Genre Reports </a></li>
             <!-- Dropdown Menu -->
             <li class="dropdown">
                 <a href="#" class="dropbtn"> My Profile ▼</a>
@@ -548,6 +547,9 @@
                     <a href="/show-movie-planners/{{ user.id }}"> My Movie Planners </a>
                 </div>
             </li>
+            {% else %}
+            <li><a href="/movies"> Home </a></li>
+            <li> <a href="/genre-report"> Genre Reports </a></li>
             {% endif %}
         </ul>
     </nav>
@@ -660,7 +662,7 @@
         {% for movie in movies %}
         <div class="movie-card-wrapper">
             <div class="movie-card">
-                <a href="/movies/{{ movie.id }}">
+                <a href="/movies/{{ movie.id }}{% if user %}?user_id={{  user.id }}{%endif%}">
                     <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
                     <h3>{{ movie.title }}</h3>
                     <p>{{ movie.tagline[:100] }}</p>
@@ -763,24 +765,28 @@
         }).catch(error => console.error("Error:", error));
     }
 
-    function predictRatings() {
-        const movieName = document.getElementById('movie_name').value;
-        if (movieName) {
-            window.location.href = '/movies/get-prediction-parameters?movie_name=' + encodeURIComponent(movieName);
-        }
-    }
-
     function searchMovie() {
         const movieName = document.getElementById('movie_name').value;
+        {% if user %}
+        var user_id = "?user_id={{ user.id }}"
+        {% else %}
+        var user_id = ""
+        {% endif %}
+
         if (movieName) {
-            window.location.href = '/movies/name/' + encodeURIComponent(movieName);
+            window.location.href = '/movies/name/' + encodeURIComponent(movieName) + user_id;
         }
     }
 
     function predictRatings() {
         const movieName = document.getElementById('movie_name').value;
+        {% if user %}
+        var user_id = "?user_id={{ user.id }}"
+        {% else %}
+        var user_id = ""
+        {% endif %}
         if (movieName) {
-            window.location.href = '/movies/get-prediction-parameters/' + encodeURIComponent(movieName);
+            window.location.href = '/movies/get-prediction-parameters/' + encodeURIComponent(movieName) + user_id;
         }
     }
 </script>
