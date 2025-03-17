@@ -4,4 +4,5 @@ psycopg2
 python-dotenv
 jinja2
 python-multipart
+numpy
 argon2-cffi

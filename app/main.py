@@ -10,14 +10,15 @@ import users.queries as user_queries
 import movie_planners.queries as planner_queries
 import audience.queries as audience_queries
 import predictions.queries as predictions_queries
+import personality.queries as personality_queries
 import genre_report.queries as genre_report_queries
 
-from argon2 import PasswordHasher # used for hashing passwords
+from argon2 import PasswordHasher
 ph = PasswordHasher()
 
 def check_password(stored_hash, password):
     try:
-        return ph.verify(stored_hash, password)  # returns True if password matches the stored hash
+        return ph.verify(stored_hash, password) 
     except Exception:
         return False 
 
@@ -84,11 +85,13 @@ def analyse_ratings(request: Request, movie_id: int):
     highly_rated_movies_diff_genre = audience_queries.get_similar_highly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
     lowly_rated_movies_same_genre = audience_queries.get_similar_lowly_rated_movies_same_genre(movie_id, movie_rating_data['average_rating'])
     lowly_rated_movies_diff_genre = audience_queries.get_similar_lowly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
+    personality = personality_queries.get_personality_correlation_movies(movie_id)
 
     return templates.TemplateResponse("audience_analysis.html", {"request": request, "movie": movie_rating_data, "ratings_count": ratings_count,
         "movie_genre": movie_genre, "highly_rated_genres": highly_rated_genres, "lowly_rated_genres": lowly_rated_genres,
         "highly_rated_movies_same_genre": highly_rated_movies_same_genre, "highly_rated_movies_diff_genre": highly_rated_movies_diff_genre,
-        "lowly_rated_movies_same_genre": lowly_rated_movies_same_genre, "lowly_rated_movies_diff_genre": lowly_rated_movies_diff_genre})
+        "lowly_rated_movies_same_genre": lowly_rated_movies_same_genre, "lowly_rated_movies_diff_genre": lowly_rated_movies_diff_genre,
+        "personality": personality})
 
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
@@ -204,8 +207,10 @@ def get_niche_interest_genres(request: Request):
     genres = genre_report_queries.get_niche_interest_genres() 
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
 
-@app.get("/genre-report/{genre_name}")
-def read_movie(request: Request, genre_name: str):
-    genre_data = genre_report_queries.get_genre_data_by_name(genre_name)
-    top_movies = genre_report_queries.get_top_movies_by_genre_name(genre_name)
-    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies})
+@app.get("/genre-report/{genre_id}")
+def read_movie(request: Request, genre_id: int):
+    genre_data = genre_report_queries.get_genre_data_by_id(genre_id)
+    top_movies = genre_report_queries.get_top_movies_by_genre_id(genre_id)
+    personality = personality_queries.get_genre_personality_correlation(genre_id)
+    print(personality)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies, "personality": personality})

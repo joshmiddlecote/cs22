@@ -145,6 +145,8 @@
 
     <p>{{ genre_data[0]["total_ratings"] }} total ratings</p>
 
+    <p>After analysing viewers personality traits we found that people who liked {{ genre_data[0]["genre_name"] }} <b>{{ personality.max }}</b> We also found that people rated {{ genre_data[0]["genre_name"] }} lower <b>{{ personality.min }}</b></p>
+
     <h2> Most Watched Movies </h2>
     <div class="movies-container">
     {% for movie in top_movies %}
