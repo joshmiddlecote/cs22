@@ -2,6 +2,20 @@ import psycopg2
 import os 
 from dotenv import load_dotenv
 
+def drop_movie_planners_table(cursor, conn):
+    cursor.execute("""
+        DROP TABLE IF EXISTS movie_planners CASCADE;
+    """)
+
+    conn.commit()
+
+def drop_movie_planner_items_table(cursor, conn):
+    cursor.execute("""
+        DROP TABLE IF EXISTS movie_planner_items CASCADE;
+    """)
+
+    conn.commit()
+
 def create_users_table(cursor, conn):
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users(
@@ -17,7 +31,8 @@ def create_movie_lists(cursor, conn):
         CREATE TABLE IF NOT EXISTS movie_planners(
             id SERIAL PRIMARY KEY,
             user_id INT REFERENCES users(id),
-            name VARCHAR(255) NOT NULL
+            name VARCHAR(255) NOT NULL,
+            description VARCHAR(255)
         );
     """)
     conn.commit()

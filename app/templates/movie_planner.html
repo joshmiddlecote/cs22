@@ -124,15 +124,29 @@
             background: #27ae60;
         }
         input[type="text"] {
-            padding: 8px;
+            width: 50%;
+            padding: 10px;
             font-size: 1em;
-            border: 1px solid #ccc;
+            margin-bottom: 15px;
             border-radius: 5px;
-            width: 250px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]#description {
+            height: 100px; /* Larger height for description box */
         }
         form {
             margin-top: 20px;
         }
+
+        label {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block; /* Ensures labels are block-level and stack vertically */
+            margin-bottom: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -140,6 +154,8 @@
     {% for planner in planners %}
         <div class="planner">
             <h2>{{ planner.name }}</h2>
+
+            <p class="planner-description">{{ planner.description }}</p>
 
             <div class="movie-list">
                 {% for movie in planner.movies %}
@@ -163,6 +179,7 @@
             <form action="/delete-planner" method="GET">
                 <input type="hidden" name="user_id" value="{{ user_id }}">
                 <input type="hidden" name="planner_id" value="{{ planner.planner_id }}">
+
                 <button type="submit" class="button delete-button">Delete Planner</button>
             </form>
         </div>
@@ -172,6 +189,10 @@
         <input type="hidden" name="user_id" value="{{ user_id }}">
         <label for="planner_name">Planner Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter planner name" required>
+
+        <label for="planner_description">Description:</label>
+        <input type="text" id="description" name="description" placeholder="Enter description (optional)" maxlength="255">
+
         <button type="submit" class="button add-button">Add Planner</button>
     </form>
 
