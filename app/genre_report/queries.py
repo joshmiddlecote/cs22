@@ -123,7 +123,7 @@ def get_niche_interest_genres():
             return genres_formatted_sorted
         
 
-def get_genre_data_by_name(genre_name):
+def get_genre_data_by_id(genre_id):
      with get_db() as conn:  # Open a database connection
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
           cursor.execute("""
@@ -138,9 +138,9 @@ def get_genre_data_by_name(genre_name):
               FROM movies m
               JOIN movie_genres mg ON m.id = mg.movie_id
               JOIN genres g ON mg.genre_id = g.id
-              WHERE g.name = %s
+              WHERE g.id = %s
               GROUP BY g.name;
-          """, (genre_name, ))
+          """, (genre_id, ))
 
           genre_data = cursor.fetchall()
 
@@ -159,7 +159,7 @@ def get_genre_data_by_name(genre_name):
 
           return genres_formatted
 
-def get_top_movies_by_genre_name(genre_name):
+def get_top_movies_by_genre_id(genre_id):
      with get_db() as conn:  # Open a database connection
         with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
           cursor.execute("""
@@ -167,10 +167,10 @@ def get_top_movies_by_genre_name(genre_name):
               FROM movies m
               JOIN movie_genres mg ON m.id = mg.movie_id
               JOIN genres g ON mg.genre_id = g.id
-              WHERE g.name = %s
+              WHERE g.id = %s
               ORDER BY m.num_ratings DESC
               LIMIT 10;
-          """, (genre_name, ))
+          """, (genre_id, ))
 
           top_movies = cursor.fetchall()
 

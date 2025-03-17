@@ -13,12 +13,12 @@ import predictions.queries as predictions_queries
 import personality.queries as personality_queries
 import genre_report.queries as genre_report_queries
 
-from argon2 import PasswordHasher # used for hashing passwords
+from argon2 import PasswordHasher
 ph = PasswordHasher()
 
 def check_password(stored_hash, password):
     try:
-        return ph.verify(stored_hash, password)  # returns True if password matches the stored hash
+        return ph.verify(stored_hash, password) 
     except Exception:
         return False 
 
@@ -207,8 +207,10 @@ def get_niche_interest_genres(request: Request):
     genres = genre_report_queries.get_niche_interest_genres() 
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
 
-@app.get("/genre-report/{genre_name}")
-def read_movie(request: Request, genre_name: str):
-    genre_data = genre_report_queries.get_genre_data_by_name(genre_name)
-    top_movies = genre_report_queries.get_top_movies_by_genre_name(genre_name)
-    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies})
+@app.get("/genre-report/{genre_id}")
+def read_movie(request: Request, genre_id: int):
+    genre_data = genre_report_queries.get_genre_data_by_id(genre_id)
+    top_movies = genre_report_queries.get_top_movies_by_genre_id(genre_id)
+    personality = personality_queries.get_genre_personality_correlation(genre_id)
+    print(personality)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies, "personality": personality})
