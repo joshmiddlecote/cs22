@@ -440,9 +440,8 @@
             background-color: darkred;
         }
 
-        /* Persistent Navbar */
     .navbar {
-        position: fixed; /* Sticks to the top */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -455,7 +454,6 @@
         padding-bottom: 15px;
     }
 
-    /* Logo */
     .logo {
         color: white;
         font-size: 1.5em;
@@ -463,7 +461,6 @@
         font-weight: bold;
     }
 
-    /* Navigation Links */
     .nav-links {
         list-style: none;
         padding: 0;
@@ -488,7 +485,6 @@
         border-radius: 5px;
     }
 
-    /* Dropdown Menu */
     .dropdown {
         position: relative;
     }
@@ -497,7 +493,6 @@
         cursor: pointer;
     }
 
-    /* Hidden dropdown content */
     .dropdown-content {
         display: none;
         position: absolute;
@@ -510,7 +505,6 @@
         overflow: hidden;
     }
 
-    /* Dropdown Links */
     .dropdown-content a {
         color: black;
         padding: 10px;
@@ -523,7 +517,6 @@
         background-color: #ddd;
     }
 
-    /* Show dropdown on hover */
     .dropdown:hover .dropdown-content {
         display: block;
     }
@@ -535,12 +528,11 @@
 <body>
 
     <nav class="navbar">
-        <a href=# class="logo"> Movies </a>
+        <a href=# class="logo"> Plan. Organize. Experience the Magic of Cinema. </a>
         <ul class="nav-links">
             {% if user %}
             <li><a href="/movies?user_id={{ user.id }}"> Home </a></li>
             <li> <a href="/genre-report?user_id={{ user.id }}"> Genre Reports </a></li>
-            <!-- Dropdown Menu -->
             <li class="dropdown">
                 <a href="#" class="dropbtn"> My Profile ▼</a>
                 <div class="dropdown-content">
@@ -558,7 +550,7 @@
 
 <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h1>Movies For You</h1>
+        <h1>CinePlan</h1>
 
         {% if user %}  
             <div class="user-info">
