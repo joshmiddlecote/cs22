@@ -9,8 +9,8 @@ def get_unique_genres():
       reader = csv.DictReader(file)
         
       for row in reader:
-          genres = row['genres'].split('|')  # splits genres by '|'
-          unique_genres.update(genres)      # add genres to set, ignoring duplicates
+          genres = row['genres'].split('|')
+          unique_genres.update(genres)
   
   return list(unique_genres)
 

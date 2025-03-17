@@ -32,7 +32,7 @@ cursor.execute("""
 """)
 
 with open('../data/ml-latest-small/awards_final.csv', newline='', encoding='utf-8') as csvfile:
-    csvreader = csv.DictReader(csvfile)  # Read the file as a dictionary
+    csvreader = csv.DictReader(csvfile)
     for row in csvreader:
         year_film = row['year_film']
         year_ceremony = row['year_ceremony']

@@ -1,7 +1,6 @@
 import psycopg2
 import csv
 import os 
-import re
 from dotenv import load_dotenv
 
 
@@ -115,7 +114,6 @@ def main():
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
 
-    # Make sure that all necessary environment variables are set
     if not dbname or not user or not password:
         raise ValueError("Environment variables DB_NAME, DB_USER, and DB_PASSWORD must be set.")
 

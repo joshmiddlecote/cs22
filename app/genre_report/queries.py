@@ -3,14 +3,12 @@ import os
 import psycopg2
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 db_username = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
 db_name = os.getenv("DB_NAME")
 DATABASE_URL = f"postgresql://{db_username}:{db_password}@postgres_db/{db_name}"
 
-# Database connection manager
 @contextmanager
 def get_db():
     conn = psycopg2.connect(DATABASE_URL)
@@ -19,11 +17,9 @@ def get_db():
     finally:
         conn.close()
 
-# Function to fetch most popular genres with their stats
 def get_cult_classic_genres():
-    with get_db() as conn:  # Open a database connection
-        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
-            # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
+    with get_db() as conn:
+        with conn.cursor() as cursor:
             cursor.execute("""
                 SELECT id, name, avg_rating, variance, total_ratings
                 FROM genres
@@ -31,7 +27,6 @@ def get_cult_classic_genres():
                 ORDER BY name;
             """)
             
-            # Fetch all rows returned by the query
             genres = cursor.fetchall()
 
             popularity_scores = []
@@ -45,7 +40,6 @@ def get_cult_classic_genres():
                 popularity_score = (avg_rating * W) + (total_ratings / W)
                 popularity_scores.append(popularity_score)
 
-            # Format the results as a list of dictionaries
             genres_formatted = [
                 {
                     'id': genres[i][0],
@@ -64,19 +58,16 @@ def get_cult_classic_genres():
         
 
 def get_genres():
-    with get_db() as conn:  # Open a database connection
-        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
-            # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
+    with get_db() as conn:
+        with conn.cursor() as cursor:
             cursor.execute("""
                 SELECT id, name, avg_rating, variance, total_ratings
                 FROM genres
                 WHERE name <> '(no genres listed)';
             """)
             
-            # Fetch all rows returned by the query
             genres = cursor.fetchall()
             
-            # Format the results as a list of dictionaries
             genres_formatted = [
                 {
                     'id': genres[i][0],
@@ -95,19 +86,16 @@ def get_genres():
 
 
 def get_niche_interest_genres():
-    with get_db() as conn:  # Open a database connection
-        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries
-            # SQL query to fetch genre_name, avg_rating, variance, and total_ratings
+    with get_db() as conn:
+        with conn.cursor() as cursor:
             cursor.execute("""
                 SELECT id, name, avg_rating, variance, total_ratings
                 FROM genres
                 WHERE name <> '(no genres listed)';
             """)
             
-            # Fetch all rows returned by the query
             genres = cursor.fetchall()
             
-            # Format the results as a list of dictionaries
             genres_formatted = [
                 {
                     'id': genres[i][0],
@@ -118,7 +106,6 @@ def get_niche_interest_genres():
                 }
                 for i in range(len(genres))
                 if genres[i][4] < 8000 and genres[i][2] > 3.5  # Apply filtering conditions
-
             ]
 
             genres_formatted_sorted = sorted(genres_formatted, key=lambda x: x['avg_rating'], reverse=True)
@@ -127,8 +114,8 @@ def get_niche_interest_genres():
         
 
 def get_genre_data_by_id(genre_id):
-     with get_db() as conn:  # Open a database connection
-        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
+     with get_db() as conn:
+        with conn.cursor() as cursor:
           cursor.execute("""
               SELECT 
                     COALESCE(SUM(m.rating_1), 0) AS rating_1,
@@ -157,14 +144,14 @@ def get_genre_data_by_id(genre_id):
                     "genre_name": row[5],
                     "total_ratings": row[6],
                 }
-                for row in genre_data  # Iterate over the fetched data
+                for row in genre_data
             ]
 
           return genres_formatted
 
 def get_top_movies_by_genre_id(genre_id):
-     with get_db() as conn:  # Open a database connection
-        with conn.cursor() as cursor:  # Create a cursor to execute SQL queries    
+     with get_db() as conn:
+        with conn.cursor() as cursor:
           cursor.execute("""
               SELECT m.title, m.average_rating, m.num_ratings, m.poster
               FROM movies m

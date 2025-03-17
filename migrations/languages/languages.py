@@ -1,7 +1,6 @@
 import psycopg2 # type: ignore
 import csv
 import os 
-import re
 from dotenv import load_dotenv
 
 def create_languages_table(cursor, conn):

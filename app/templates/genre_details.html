@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genre Details</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Import Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -26,46 +26,46 @@
         .ratings-labels {
             display: flex;
             justify-content: space-around;
-            font-size: 40px; /* ✅ Make labels larger */
+            font-size: 40px;
             font-weight: bold;
             margin-top: 10px;
         }
         .avg-rating {
-            font-size: 20px; /* Slightly larger */
+            font-size: 20px;
             font-weight: bold;
-            color: #b8860b; /* Gold color */
+            color: #b8860b;
         }
 
         .star {
-            font-size: 20px; /* Slightly larger */
+            font-size: 20px;
             font-weight: bold;
-            color: #b8860b; /* Gold color */
+            color: #b8860b;
         }
 
         .total-ratings {
-            font-size: 14px; /* Smaller font size */
-            color: gray; /* Lighter color */
+            font-size: 14px;
+            color: gray;
             font-style: italic;
         }
 
         .movies-container {
             display: flex;
-            overflow-x: auto; /* Enables horizontal scrolling */
-            scroll-snap-type: x mandatory; /* Ensures smooth snap scrolling */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 20px;
             padding: 10px;
-            white-space: nowrap; /* Prevents wrapping */
+            white-space: nowrap;
         }
 
         .card {
-            flex: 0 0 auto; /* Ensures cards don't shrink */
-            width: 200px; /* Adjust size */
+            flex: 0 0 auto;
+            width: 200px;
             padding: 15px;
             background: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            scroll-snap-align: start; /* Snap effect for smooth scrolling */
+            scroll-snap-align: start;
         }
 
         .card img {
@@ -75,13 +75,11 @@
             border-radius: 10px;
         }
 
-        /* Movie title */
         .card h2 {
             font-size: 16px;
             margin: 10px 0;
         }
 
-        /* Rating styling */
         .card p {
             font-size: 14px;
             color: #555;
@@ -99,7 +97,6 @@
     </div>
 
     <script>
-        // Get data from Jinja2 template
         const ratingsData = {
             labels: ["★", "★★", "★★★", "★★★★", "★★★★★"],
             datasets: [{
@@ -118,7 +115,6 @@
             }]
         };
 
-        // Create bar chart
         const ctx = document.getElementById("ratingsChart").getContext("2d");
         new Chart(ctx, {
             type: "bar",
@@ -126,17 +122,17 @@
             options: {
                 responsive: true,
                 plugins: {
-                    legend: { display: false } // Hide "Number of Ratings" label
+                    legend: { display: false }
                 },
                 scales: {
                     x: {
                       ticks: {
                                 font: { size: 16 },
-                                color: "#b8860b" // ✅ Change label color
+                                color: "#b8860b"
                             }
                     },
                     y: {
-                        display: false // ✅ Hide y-axis numbers
+                        display: false
                     }
                 }
             }

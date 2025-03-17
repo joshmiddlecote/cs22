@@ -32,41 +32,41 @@
             margin: 5px;
             cursor: pointer;
             border: none;
-            border-radius: 20px; /* Makes the buttons rounded */
-            background-color: lightblue; /* light blue color */
+            border-radius: 20px;
+            background-color: lightblue;
             color: black; 
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
         .category-buttons button:hover {
-              background-color: cornflowerblue; /* Darker blue on hover */
+              background-color: cornflowerblue;
           }
         ol li {
-              margin-bottom: 10px; /* Adds space between list items */
+              margin-bottom: 10px;
               font-weight: bold;
           }
           .genre-name {
-            display: block; /* Forces line break below genre name */
+            display: block;
             font-weight: bold;
             font-size: 18px;
-            margin-bottom: 5px; /* Adds space below genre name */
+            margin-bottom: 5px;
         }
 
         .avg-rating {
-            font-size: 20px; /* Slightly larger */
+            font-size: 20px;
             font-weight: bold;
-            color: #b8860b; /* Gold color */
+            color: #b8860b;
         }
 
         .star {
-            font-size: 20px; /* Slightly larger */
+            font-size: 20px;
             font-weight: bold;
-            color: #b8860b; /* Gold color */
+            color: #b8860b;
         }
 
         .total-ratings {
-            font-size: 14px; /* Smaller font size */
-            color: gray; /* Lighter color */
+            font-size: 14px;
+            color: gray;
             font-style: italic;
         }
     </style>
@@ -104,20 +104,17 @@
         </ol>
 
         <script>
-          // Function to get the category from the URL path
           function getCategoryFromURL() {
-              const path = window.location.pathname; // Example: "/genre-report/polarizing"
-              const parts = path.split("/"); // Split by "/"
-              return parts[parts.length - 1]; // Get last part ("popular", "polarizing", etc.)
+              const path = window.location.pathname;
+              const parts = path.split("/");
+              return parts[parts.length - 1];
           }
   
-          // Function to update heading and highlight correct button
           function updateUI() {
-              const category = getCategoryFromURL(); // Get category from URL
+              const category = getCategoryFromURL();
               const heading = document.getElementById("genre-heading");
               const description = document.getElementById("genre-description");
   
-              // Define category names
               const categoryNames = {
                   "most-watched": "Most Watched",
                   "most-liked": "Most Liked",
@@ -134,14 +131,12 @@
                   "niche-interests": "Although movies from these genres have a smaller audience, they tend to receive high ratings"
               }
   
-              // Update heading if the category is recognized
               if (categoryNames[category]) {
                   heading.textContent = categoryNames[category];
                   description.textContent = descriptions[category];
               }
           }
   
-          // Run the function on page load
           updateUI();
       </script>
 </body>

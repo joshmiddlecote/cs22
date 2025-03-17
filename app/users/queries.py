@@ -10,12 +10,9 @@ db_passsword = os.getenv("DB_PASSWORD")
 db_name = os.getenv("DB_NAME")
 DATABASE_URL = f"postgresql://{db_username}:{db_passsword}@postgres_db/{db_name}"
 
-# Initialize argon2 Password Hasher
-# argon2 is a modern, robust password hashing function that provides strong resistance to brute force and side channel attacks
 ph = PasswordHasher()
 
 def hash_password(password):
-    # Generate a hash using the Argon2 hashing algorithm
     return ph.hash(password)
 
 @contextmanager
