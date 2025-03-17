@@ -46,7 +46,7 @@
     <div class="container">
         <h1>Movie Not Found</h1>
         <p>We couldn't find any movie matching your search. Try a different name.</p>
-        <a href="/movies">Go Back to Movies List</a>
+        <a href="/movies{% if user %}?user_id={{ user.id }}{% endif %}">Go Back to Movies List</a>
     </div>
 </body>
 </html>
