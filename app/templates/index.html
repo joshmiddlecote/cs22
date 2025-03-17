@@ -11,12 +11,14 @@
             background-color: #f4f4f9;
             color: #333;
         }
+
         .container {
             width: 80%;
             margin: 20px auto;
             padding: 20px;
             text-align: center;
         }
+
         h1 {
             font-size: 2.5em;
             color: #333;
@@ -46,10 +48,12 @@
         .page-size-selector {
             margin-bottom: 20px;
         }
+
         .page-size-selector label {
             font-size: 1.2em;
             margin-right: 10px;
         }
+
         .page-size-selector select {
             padding: 8px;
             font-size: 1em;
@@ -65,6 +69,15 @@
             margin-top: 20px;
         }
 
+        .movie-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers both the movie and actions */
+            justify-content: center;
+            width: 250px; /* Adjust as needed */
+            margin: 10px auto;
+        }
+
         .movie-card {
             background-color: white;
             border-radius: 10px;
@@ -77,37 +90,84 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100%;
         }
+
         .movie-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
+
         .movie-card h3 {
             font-size: 1.4em;
             color: #333;
             margin: 10px 0;
         }
+
         .movie-card p {
             font-size: 1em;
             color: #777;
             margin-bottom: 10px;
         }
+
         .movie-card .runtime {
             font-size: 1.1em;
             font-weight: bold;
             color: #444;
         }
+
         .movie-poster {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 10px 10px 0 0;
         }
+
         .movie-actions {
             margin-top: 10px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            width: 100%;
+        }
+
+        .movie-actions select {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .movie-actions select:hover {
+            background-color: #e0e0e0;
+            border-color: #007bff;
+        }
+
+        .movie-actions button {
+            width: 59%;
+            padding: 6px 10px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            background-color: #28a745;
+            color: white;
+        }
+
+        .movie-actions button:hover {
+            background-color: #218838;
+        }
+
+        .movie-actions label {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding-bottom: 2%;
+            width: 100%;
         }
 
         form {
@@ -131,6 +191,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .pagination a {
             padding: 10px 20px;
             margin: 0 5px;
@@ -141,9 +202,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+
         .pagination a:hover {
             background-color: #45a049;
         }
+
         .pagination span {
             font-size: 1.2em;
             margin: 0 10px;
@@ -170,10 +233,17 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
-        .search-box button:hover {
-            background-color: #45a049;
+        .search-box button:first-child:hover {
+            background-color: #0000cc;
+            transform: scale(1.01);
+        }
+
+        .search-box button:last-child:hover {
+            background-color: #006400;
+            transform: scale(1.01);
         }
 
         .planner-button {
@@ -182,12 +252,19 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.1em;
+            font-size: 1em;
             transition: background 0.3s;
         }
 
         .planner-button:hover {
             background-color: #0056b3;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .login-box {
@@ -230,13 +307,16 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .toggle-btn:hover {
             background-color: #0056b3;
         }
+
         .filter-box {
             padding: 15px;
             display: none;
         }
+
         select, button {
             width: 100%;
             padding: 8px;
@@ -244,11 +324,13 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+
         label {
             font-weight: bold;
             margin-top: 10px;
             display: block;
         }
+
         .apply-btn {
             background-color: #28a745;
             color: white;
@@ -257,12 +339,15 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         .apply-btn:hover {
             background-color: #218838;
         }
+
         .content {
             flex: 1;
         }
+
         .sidebar {
             width: 250px;
             background-color: #333;
@@ -274,9 +359,11 @@
             transition: left 0.3s;
             padding: 20px;
         }
+
         .sidebar.active {
             left: 0;
         }
+
         .sidebar .planner-button {
             padding: 10px 20px;
             background-color: #007BFF;
@@ -288,9 +375,11 @@
             display: block;
             margin-bottom: 20px;
         }
+
         .sidebar .planner-button:hover {
             background-color: #0056b3;
         }
+
         .toggle-sidebar-btn {
             background-color: #007bff;
             color: white;
@@ -298,9 +387,10 @@
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1.1em;
             margin-bottom: 20px;
         }
+        
         .toggle-sidebar-btn:hover {
             background-color: #0056b3;
         }
@@ -313,10 +403,41 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
+            font-size: 1em;
         }
 
         .add-to-planner:hover {
             background-color: #218838;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background-color: #f0f0f0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .user-info a {
+            background-color: red;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .user-info a:hover {
+            background-color: darkred;
         }
     </style>
 </head>
@@ -332,12 +453,14 @@
                 <a href="/">Logout</a>
             </div>
         {% else %}
-            <form action="/login" method="POST" class="login-box">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-            <a href="/register-user" class="register-link">Don't have an account? Register here</a>
+            <div class="login-container">
+                <form action="/login" method="POST" class="login-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <a href="/register-user" class="register-link">Don't have an account? Register here</a>
+            </div>
         {% endif %}
     </div>
 
@@ -431,34 +554,36 @@
 
     <div class="movie-list">
         {% for movie in movies %}
-        <div class="movie-card">
-            <a href="/movies/{{ movie.id }}">
-                <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
-                <h3>{{ movie.title }}</h3>
-                <p>{{ movie.tagline[:100] }}</p>
-                <p> Rating: {{ movie.rating }}/5.00</p>
-                <p class="runtime">{{ movie.runtime }} minutes</p>
-            </a>
-        </div>
-        {% if user %}
-        <div class="movie-actions">
-            <form action="/add-movie-to-planner/" method="GET">
-                <label for="planner_id_{{ movie.id }}">Select Planner:</label>
-                <select id="planner_id_{{ movie.id }}" name="planner_id">
-                    {% for planner in planners %}
-                    <option value="{{ planner.id }}" {% if planner_id == planner.id|string %}selected{% endif %}>
-                        {{ planner.name }}
-                    </option>
-                    {% endfor %}
-                </select>
+        <div class="movie-card-wrapper">
+            <div class="movie-card">
+                <a href="/movies/{{ movie.id }}">
+                    <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
+                    <h3>{{ movie.title }}</h3>
+                    <p>{{ movie.tagline[:100] }}</p>
+                    <p> Rating: {{ movie.rating }}/5.00</p>
+                    <p class="runtime">{{ movie.runtime }} minutes</p>
+                </a>
+            </div>
+            {% if user %}
+            <div class="movie-actions">
+                <form action="/add-movie-to-planner/" method="GET">
+                    <label for="planner_id_{{ movie.id }}">Select Planner:</label>
+                    <select id="planner_id_{{ movie.id }}" name="planner_id">
+                        {% for planner in planners %}
+                        <option value="{{ planner.id }}" {% if planner_id == planner.id|string %}selected{% endif %}>
+                            {{ planner.name }}
+                        </option>
+                        {% endfor %}
+                    </select>
 
-                <input type="hidden" name="movie_id" value="{{ movie.id }}">
-                <input type="hidden" name="user_id" value="{{ user.id }}">
+                    <input type="hidden" name="movie_id" value="{{ movie.id }}">
+                    <input type="hidden" name="user_id" value="{{ user.id }}">
 
-                <button type="submit">Add to Planner</button>
-            </form>
+                    <button type="submit">Add to Planner</button>
+                </form>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 
