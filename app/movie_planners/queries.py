@@ -53,6 +53,14 @@ def insert_new_movie_planner_item(movie_planner_id, movie_id):
             cursor.execute(sql, tuple([movie_planner_id, movie_id]))
             conn.commit()
 
+def movie_exists_in_planner(movie_planner_id, movie_id):
+     with get_db() as conn:
+        with conn.cursor() as cursor:
+            sql = "SELECT COUNT(*) FROM movie_planner_items WHERE movie_list_id = %s AND movie_id = %s;"
+            cursor.execute(sql, (movie_planner_id, movie_id))
+            result = cursor.fetchone()
+            return result[0] > 0
+
 def delete_movie_from_planner(movie_id, movie_planner_id):
     with get_db() as conn:
         with conn.cursor() as cursor:

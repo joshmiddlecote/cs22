@@ -1,7 +1,6 @@
 import psycopg2
 import csv
 import os
-import requests
 from dotenv import load_dotenv
 
 load_dotenv()

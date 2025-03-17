@@ -106,6 +106,9 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
     languages = language_queries.get_all_languages()
     planners = planner_queries.get_user_movie_planners(user["id"])
 
+    username = user_queries.get_user_details(user["id"])
+    user = {"username": username, "id": user["id"]}
+
     return templates.TemplateResponse("index.html", {"request": request, "page": 1, "size": 10, "movies": movies, "genres": genres, 
         "awards": awards, "actors": actors, "languages": languages, "user": user, "planners": planners})
 
@@ -123,7 +126,8 @@ def register_user(request: Request):
 
 @app.get("/add-movie-to-planner")
 def add_movie_to_planner(request: Request, planner_id: str | None = Query(default=None), movie_id: str | None = Query(default=None), user_id: str | None = Query(default=None)):
-    planner_queries.insert_new_movie_planner_item(int(planner_id), int(movie_id))
+    if not(planner_queries.movie_exists_in_planner(int(planner_id), int(movie_id))):
+        planner_queries.insert_new_movie_planner_item(int(planner_id), int(movie_id))
     return RedirectResponse(url=f"/movies?user_id={user_id}", status_code=303)
 
 @app.get("/add-planner")
@@ -174,7 +178,6 @@ def predict_ratings(request: Request, formData: dict = Body(...)):
 
 @app.get("/genre-report")
 def read_genres(request: Request):
-    # Fetch all genres, default to displaying genres in order of descending average rating
     genres = genre_report_queries.get_genres()
     genres = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
     return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})

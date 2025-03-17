@@ -96,16 +96,14 @@ def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_
     if language_id != None and language_id != "":
         sql += "INNER JOIN languages l ON l.id = m.language_id "
 
-    # we can then add our where clauses based on the filters 
-
     sql += " WHERE 1=1 "
 
     if year != None and year != "":
-        sql += "AND m.year_released >= %s " # might change this to be IN() so we can have a range rather than >=
+        sql += "AND m.year_released >= %s "
         params.append(int(year))
     
     if rating != None and rating != "":
-        sql += "AND m.average_rating >= %s " # same as above for this
+        sql += "AND m.average_rating >= %s "
         params.append(float(rating))
 
     if genre_id != None and genre_id != "":
@@ -130,5 +128,3 @@ def maybe_filter_by_params(sql, year, rating, genre_id, award_id, winner, actor_
     params += [limit, offset]
 
     return sql, params
-
-        
