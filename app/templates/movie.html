@@ -142,9 +142,9 @@
         </div>
     </div>
 
-    <a href="/movies/{{ movie.id }}/audience-analysis" class="analyse-button">Analyse Audience Ratings</a>
+    <a href="/movies/{{ movie.id }}/audience-analysis{% if user %}?user_id={{  user.id }}{%endif%}" class="analyse-button">Analyse Audience Ratings</a>
 
-    <a href="/" class="back-button">Back to Homepage</a>
+    <a href="/movies{% if user %}?user_id={{  user.id }}{%endif%}" class="back-button">Back to Homepage</a>
 
     <footer>
         <p>&copy; 2025 Movie Database. All rights reserved.</p>

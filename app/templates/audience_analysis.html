@@ -229,8 +229,8 @@
 </div>
 
 <div class="container-2">
-    <a href="/movies/{{ movie.id }}" class="back-button">Back to Movie</a>
-    <a href="/" class="back-button">Back to Homepage</a>
+    <a href="/movies/{{ movie.id }}{% if user %}?user_id={{  user.id }}{%endif%}" class="back-button">Back to Movie</a>
+    <a href="/movies/{% if user %}?user_id={{  user.id }}{%endif%}" class="back-button">Back to Homepage</a>
 </div>
 
 <script>
