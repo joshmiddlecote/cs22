@@ -21,7 +21,7 @@ def check_password(stored_hash, password):
         return ph.verify(stored_hash, password) 
     except Exception:
         return False 
-
+    
 app = FastAPI()
 templates = Jinja2Templates(directory="templates/")
 
@@ -51,7 +51,7 @@ def movies(
     else:
         user = None
         planners = None
-
+    
     return templates.TemplateResponse("index.html", 
         {"request": request, "movies": movies, "page": page, 
          "size": size, "rating": rating, "year_released": year_released, 
@@ -101,7 +101,7 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
     user = user_queries.get_user_password(username)
     if user is None or not check_password(user["password"], password):
         return templates.TemplateResponse("invalid_login.html", {"request": request})
-    
+
     movies = movie_queries.get_all_movies()
     genres = genre_queries.get_all_genres()
     awards = award_queries.get_all_awards()
