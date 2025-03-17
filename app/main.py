@@ -61,21 +61,23 @@ def movies(
          "language_id": language_id, "languages": languages, "user": user, "planners": planners})
 
 @app.get("/movies/{movie_id}")
-def read_movie(request: Request, movie_id: int):
+def read_movie(request: Request, movie_id: int, user_id: str | None = Query(default=None)):
     movie = movie_queries.get_movie_by_movie_id(movie_id)
-    return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
+    user = get_user(user_id)
+    return templates.TemplateResponse("movie.html", {"request": request, "movie": movie, "user": user})
 
 @app.get("/movies/name/{movie_name}")
-def read_movie_name(request: Request, movie_name: str):
+def read_movie_name(request: Request, movie_name: str, user_id: str | None = Query(default=None)):
     movie = movie_queries.get_movie_by_movie_name(movie_name)
+    user = get_user(user_id)
 
     if movie is None:
-        return templates.TemplateResponse("no_movie_found.html", {"request": request})
+        return templates.TemplateResponse("no_movie_found.html", {"request": request, "user": user})
     
-    return templates.TemplateResponse("movie.html", {"request": request, "movie": movie})
+    return templates.TemplateResponse("movie.html", {"request": request, "movie": movie, "user": user})
 
 @app.get("/movies/{movie_id}/audience-analysis")
-def analyse_ratings(request: Request, movie_id: int):
+def analyse_ratings(request: Request, movie_id: int, user_id: str | None = Query(default=None)):
     movie_rating_data = audience_queries.get_audience_ratings(movie_id)
     ratings_count = audience_queries.get_ratings_distribution(movie_id)
     movie_genre = audience_queries.get_movie_genre(movie_id)
@@ -86,12 +88,13 @@ def analyse_ratings(request: Request, movie_id: int):
     lowly_rated_movies_same_genre = audience_queries.get_similar_lowly_rated_movies_same_genre(movie_id, movie_rating_data['average_rating'])
     lowly_rated_movies_diff_genre = audience_queries.get_similar_lowly_rated_movies_different_genre(movie_id, movie_rating_data['average_rating'])
     personality = personality_queries.get_personality_correlation_movies(movie_id)
+    user = get_user(user_id)
 
     return templates.TemplateResponse("audience_analysis.html", {"request": request, "movie": movie_rating_data, "ratings_count": ratings_count,
         "movie_genre": movie_genre, "highly_rated_genres": highly_rated_genres, "lowly_rated_genres": lowly_rated_genres,
         "highly_rated_movies_same_genre": highly_rated_movies_same_genre, "highly_rated_movies_diff_genre": highly_rated_movies_diff_genre,
         "lowly_rated_movies_same_genre": lowly_rated_movies_same_genre, "lowly_rated_movies_diff_genre": lowly_rated_movies_diff_genre,
-        "personality": personality})
+        "personality": personality, "user": user})
 
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
@@ -149,13 +152,14 @@ def delete_planner(request: Request, planner_id: str | None = Query(default=None
     return templates.TemplateResponse("movie_planner.html", {"request": request, "planners": planners, "user_id": user_id})
 
 @app.get("/movies/get-prediction-parameters/{movie_name}")
-def predict_ratings(request: Request, movie_name: str):
+def predict_ratings(request: Request, movie_name: str, user_id: str | None = Query(default=None)):
     movie = movie_queries.get_movie_by_movie_name(movie_name)
     if movie:
         movie_id = movie_queries.get_movie_by_movie_name(movie_name)["id"]
     else:
         movie_id = None
-    return templates.TemplateResponse("prediction_parameters.html", {"request": request, "movie_name": movie_name, "movie_id": movie_id})
+    user = get_user(user_id)
+    return templates.TemplateResponse("prediction_parameters.html", {"request": request, "movie_name": movie_name, "movie_id": movie_id, "user": user})
 
 @app.post("/movies/predict-ratings")
 def predict_ratings(request: Request, formData: dict = Body(...)):
@@ -170,47 +174,61 @@ def predict_ratings(request: Request, formData: dict = Body(...)):
     else:
         actual_rating = None
         movie_poster = "https://www.shutterstock.com/image-illustration/movie-poster-mockup-light-bulb-600nw-2383346723.jpg"
-    return templates.TemplateResponse("rating_prediction.html", {"request": request, "movie_name": formData["movie_name"], "movie_poster": movie_poster, "predicted_rating": predicted_rating, "actual_rating": actual_rating})
+
+    user = get_user(formData["user_id"])
+    return templates.TemplateResponse("rating_prediction.html", {"request": request, "movie_name": formData["movie_name"], "movie_poster": movie_poster, "predicted_rating": predicted_rating, "actual_rating": actual_rating, "user": user})
 
 @app.get("/genre-report")
-def read_genres(request: Request):
-    # Fetch all genres, default to displaying genres in order of descending average rating
+def read_genres(request: Request, user_id: str | None = Query(default=None)):
     genres = genre_report_queries.get_genres()
-    genres = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+    genres = sorted(genres, key=lambda x: x['avg_rating'], reverse=True)
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres, "user": user})
 
 @app.get("/genre-report/polarizing")
-def get_most_polarizing_genres(request: Request):
+def get_most_polarizing_genres(request: Request, user_id: str | None = Query(default=None)):
     genres = genre_report_queries.get_genres()  
-    genres_sorted = sorted(genres, key=lambda x: x['variance'], reverse=True) # sorted by variance
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+    genres_sorted = sorted(genres, key=lambda x: x['variance'], reverse=True)
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted, "user": user})
 
 @app.get("/genre-report/most-watched")
-def get_most_polarizing_genres(request: Request):
-    genres = genre_report_queries.get_genres()  # Query sorted by variance
-    genres_sorted = sorted(genres, key=lambda x: x['total_ratings'], reverse=True) # sorted by total no. of ratings
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+def get_most_polarizing_genres(request: Request, user_id: str | None = Query(default=None)):
+    genres = genre_report_queries.get_genres()
+    genres_sorted = sorted(genres, key=lambda x: x['total_ratings'], reverse=True)
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted, "user": user})
 
 @app.get("/genre-report/most-liked")
-def get_most_polarizing_genres(request: Request):
-    genres = genre_report_queries.get_genres()  # Query sorted by variance
-    genres_sorted = sorted(genres, key=lambda x: x['avg_rating'], reverse=True) # sorted by avg rating
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted})
+def get_most_polarizing_genres(request: Request, user_id: str | None = Query(default=None)):
+    genres = genre_report_queries.get_genres()
+    genres_sorted = sorted(genres, key=lambda x: x['avg_rating'], reverse=True)
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres_sorted, "user": user})
 
 @app.get("/genre-report/cult-classics")
-def get_cult_classic_genres(request: Request):
-    genres = genre_report_queries.get_cult_classic_genres()  # Query sorted by popularity score
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+def get_cult_classic_genres(request: Request, user_id: str | None = Query(default=None)):
+    genres = genre_report_queries.get_cult_classic_genres()
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres, "user": user})
 
 @app.get("/genre-report/niche-interests")
-def get_niche_interest_genres(request: Request):
+def get_niche_interest_genres(request: Request, user_id: str | None = Query(default=None)):
     genres = genre_report_queries.get_niche_interest_genres() 
-    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres})
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_report.html", {"request": request, "genres": genres, "user": user})
 
 @app.get("/genre-report/{genre_id}")
-def read_movie(request: Request, genre_id: int):
+def read_movie(request: Request, genre_id: int, user_id: str | None = Query(default=None)):
     genre_data = genre_report_queries.get_genre_data_by_id(genre_id)
     top_movies = genre_report_queries.get_top_movies_by_genre_id(genre_id)
     personality = personality_queries.get_genre_personality_correlation(genre_id)
-    print(personality)
-    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies, "personality": personality})
+    user = get_user(user_id)
+    return templates.TemplateResponse("genre_details.html", {"request": request, "genre_data": genre_data, "top_movies": top_movies, "personality": personality, "user": user})
+
+def get_user(user_id):
+    if user_id:
+        username = user_queries.get_user_details(user_id)
+        return {"username": username, "id": user_id}
+    else:
+        return None

@@ -202,7 +202,7 @@
 
     <br>
     <div class="container">
-        <a href="/" class="back-button">Back to Homepage</a>
+        <a href="/movies{% if user %}?user_id={{ user.id }}{% endif %}" class="back-button">Back to Homepage</a>
     </div>
 
 </body>
