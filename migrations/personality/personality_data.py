@@ -28,30 +28,6 @@ cursor.execute("""
         extraversion FLOAT NOT NULL,
         assigned_metric VARCHAR(255) NOT NULL,
         assigned_condition VARCHAR(255) NOT NULL,
-        movie_1 INT NOT NULL,
-        rating_1 FLOAT NOT NULL,
-        movie_2 INT NOT NULL,
-        rating_2 FLOAT NOT NULL,
-        movie_3 INT NOT NULL,
-        rating_3 FLOAT NOT NULL,
-        movie_4 INT NOT NULL,
-        rating_4 FLOAT NOT NULL,
-        movie_5 INT NOT NULL,
-        rating_5 FLOAT NOT NULL,
-        movie_6 INT NOT NULL,
-        rating_6 FLOAT NOT NULL,
-        movie_7 INT NOT NULL,
-        rating_7 FLOAT NOT NULL,
-        movie_8 INT NOT NULL,
-        rating_8 FLOAT NOT NULL,
-        movie_9 INT NOT NULL,
-        rating_9 FLOAT NOT NULL,
-        movie_10 INT NOT NULL,
-        rating_10 FLOAT NOT NULL,
-        movie_11 INT NOT NULL,
-        rating_11 FLOAT NOT NULL,
-        movie_12 INT NOT NULL,
-        rating_12 FLOAT NOT NULL,
         is_personalised INT NOT NULL,
         enjoy_watching INT NOT NULL
     );
@@ -62,12 +38,12 @@ with open('../data/personality-isf2018/personality-data.csv', newline='', encodi
     next(csvreader)
     
     for row in csvreader:
-        userid, openness, agreeableness, emotional_stability, conscentiousness, extraversion, assigned_metric, assigned_condition, movie_1, rating_1, movie_2, rating_2, movie_3, rating_3, movie_4, rating_4, movie_5, rating_5, movie_6, rating_6, movie_7, rating_7, movie_8, rating_8, movie_9, rating_9, movie_10, rating_10, movie_11, rating_11, movie_12, rating_12, is_personalised, enjoy_watching = row
+        userid, openness, agreeableness, emotional_stability, conscientiousness, extraversion, assigned_metric, assigned_condition, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, is_personalised, enjoy_watching = row
         cursor.execute("""
-            INSERT INTO personality_data (userid, openness, agreeableness, emotional_stability, conscientiousness, extraversion, assigned_metric, assigned_condition, movie_1, rating_1, movie_2, rating_2, movie_3, rating_3, movie_4, rating_4, movie_5, rating_5, movie_6, rating_6, movie_7, rating_7, movie_8, rating_8, movie_9, rating_9, movie_10, rating_10, movie_11, rating_11, movie_12, rating_12, is_personalised, enjoy_watching)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO personality_data (userid, openness, agreeableness, emotional_stability, conscientiousness, extraversion, assigned_metric, assigned_condition, is_personalised, enjoy_watching)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (userid) DO NOTHING;
-        """, (userid, openness, agreeableness, emotional_stability, conscentiousness, extraversion, assigned_metric, assigned_condition, movie_1, rating_1, movie_2, rating_2, movie_3, rating_3, movie_4, rating_4, movie_5, rating_5, movie_6, rating_6, movie_7, rating_7, movie_8, rating_8, movie_9, rating_9, movie_10, rating_10, movie_11, rating_11, movie_12, rating_12, is_personalised, enjoy_watching))
+        """, (userid, openness, agreeableness, emotional_stability, conscientiousness, extraversion, assigned_metric, assigned_condition, is_personalised, enjoy_watching))
 
 conn.commit()
 
