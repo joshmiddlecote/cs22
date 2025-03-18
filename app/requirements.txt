@@ -1,8 +1,8 @@
-fastapi
-uvicorn
-psycopg2
-python-dotenv
-jinja2
-python-multipart
-numpy
-argon2-cffi
+argon2-cffi>=23.1.0
+fastapi>=0.115.11
+jinja2>=3.1.6
+numpy>=2.2.4
+psycopg2>=2.9.10
+python-dotenv>=1.0.1
+python-multipart>=0.0.20
+uvicorn>=0.34.0
